@@ -1,0 +1,41 @@
+table{
+    margin: 10px;
+    padding: 25px;
+}
+p{
+    text-align: justify;
+}
+
+.tb-contenido-principal{
+   box-shadow: 10px 10px 10px 10px;
+}
+.tb-contenido-principal td{
+    padding: 2rem;
+ }
+.tb-conocimientos{
+    background-color: rgb(204, 231, 231);
+}
+.tb-conocimientos td{
+    border: 1px solid blue;
+    text-align: center;
+    padding: 2rem;
+}
+.tb-conocimientos td:hover{
+    background-color: red;
+}
+
+
+.foto-cv{
+    border: 1rem solid red;
+}
+
+.columna-1{
+background-color: rgba(0, 0, 139, 0.151);
+width:20%;
+}
+
+
+.columna-2{
+    background-color: rgba(165, 42, 42, 0.13);
+    width:80%;
+}
