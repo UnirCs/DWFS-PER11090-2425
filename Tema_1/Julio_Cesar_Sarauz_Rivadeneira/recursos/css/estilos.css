@@ -1,41 +1,96 @@
-table{
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+table {
     margin: 10px;
     padding: 25px;
 }
-p{
+
+p {
     text-align: justify;
 }
 
-.tb-contenido-principal{
-   box-shadow: 10px 10px 10px 10px;
+h1 {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    margin: 0px;
 }
-.tb-contenido-principal td{
+
+h2 {
+    font-weight: bold;
+    color: rgb(7, 173, 123);
+    font-size: 40px;
+    margin: 0px;
+}
+
+h3 {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    background-color: rgb(7, 173, 123);
+    padding: 0.5rem;
+
+}
+
+h4 {
+    font-weight: bold;
+    color: black;
+    margin: 0px;
+}
+
+
+
+.tb-contenido-principal {
+    box-shadow: 10px 10px 10px 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.tb-contenido-principal td {
     padding: 2rem;
- }
-.tb-conocimientos{
-    background-color: rgb(204, 231, 231);
 }
-.tb-conocimientos td{
-    border: 1px solid blue;
+
+.tb-conocimientos {
+    background-color: white;
+    margin: 0px;
+}
+
+.tb-conocimientos td {
+    border: 1px solid rgb(7, 173, 123);
     text-align: center;
-    padding: 2rem;
-}
-.tb-conocimientos td:hover{
-    background-color: red;
+    padding: 1rem;
 }
 
-
-.foto-cv{
-    border: 1rem solid red;
+.tb-conocimientos td:hover {
+    background-color: rgba(7, 173, 123, 0.26);
 }
 
-.columna-1{
-background-color: rgba(0, 0, 139, 0.151);
-width:20%;
+.foto-cv {
+    width: 8rem;
+    border-radius: 100px;
+    margin-left: 30%;
+    border: 5px solid rgba(0, 5, 75, 0.438);
+}
+
+.columna-1 {
+    width: 30%;
 }
 
 
-.columna-2{
-    background-color: rgba(165, 42, 42, 0.13);
-    width:80%;
+.columna-2 {
+    width: 70%;
+}
+.estilo-educacion h4{
+    margin-top: 25px !important;
+}
+.estilo-educacion h5{
+    font-weight: normal !important;
+    margin: 0px;
+}
+
+
+
+#Estilo-Experiencia {
+    vertical-align: top;
 }
