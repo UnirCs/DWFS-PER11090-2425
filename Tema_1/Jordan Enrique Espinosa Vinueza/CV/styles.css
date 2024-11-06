@@ -1,0 +1,102 @@
+/* Estilo Generale */
+*{
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    border-radius: 8px;
+}
+
+body{
+    background-color: #FFF;
+    color: #333;
+    padding: 0 0;
+}
+
+.perfil__header{
+    background-color: #1565c0;
+    color: #FFF;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.perfil__header--foto{
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.perfil__header--nombre{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.perfil__header--titulo{
+    font-size: 18px;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+/* Secciones del perfil */
+.perfil__seccion {
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 10px solid #1565c0;
+    border-right: 2px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+/* Título de cada sección */
+.perfil__seccion--titulo {
+    font-size: 20px;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+
+/* Texto y listas dentro de cada sección */
+.perfil__seccion--texto, .perfil__seccion--lista {
+    margin-bottom: 10px;
+}
+
+
+/* Lista y elementos de habilidades y experiencia */
+.perfil__seccion--lista {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.perfil__seccion--item {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
