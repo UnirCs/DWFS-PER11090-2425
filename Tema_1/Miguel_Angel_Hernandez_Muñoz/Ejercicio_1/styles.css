@@ -1,0 +1,38 @@
+
+.contenedor-foto{
+    background-color: rgb(222, 223, 210);
+}
+
+.titulo_experiencia{
+    font-size: 20px;
+}
+
+.contenido {
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.borde {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-width: 1px; 
+    border-radius: 5px;
+    border-color: rgb(184, 182, 182);
+    border-style: solid; 
+    box-shadow: 5px 8px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 , h2 , h3 , h4 , h5  {
+    color: rgb(77, 77, 153);
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.borde_foto{
+    border-radius: 10px;
+}
