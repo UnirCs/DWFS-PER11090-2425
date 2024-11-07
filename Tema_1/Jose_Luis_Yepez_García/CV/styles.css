@@ -11,12 +11,17 @@
   margin: 10px 10px 15px 10px;
   color: white;
   text-align: center;
+  border-radius: 5px;
   box-shadow: rgb(126, 126, 126) 2px 2px 8px 0px;
 }
 
 .cabecera h1 {
   font-size: 1.3em;
   padding: 10px 0;
+}
+.cabecera h2 {
+  font-size: 1.1em;
+  padding: 5px 0;
 }
 
 .cabecera img {
@@ -40,12 +45,12 @@ h3 {
 }
 
 .section:hover {
-  background-color: #dfdfdf;
+  background-color: #f0f0f0;
 }
 
 .section span {
   font-weight: bold;
-  margin: 0 5px;
+  margin: 0 5px 0 0;
 }
 
 .section ul {
