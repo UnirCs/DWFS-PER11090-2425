@@ -2,7 +2,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body{
-    background-color: rgb(110, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
 .pantalla{
     width: 100%;
@@ -37,4 +37,8 @@ body{
 }
 .vacio:hover{
     background-color: rgba(230, 233, 77, 0.589);
+}
+
+.ocupado{
+    background-color: yellow;
 }
