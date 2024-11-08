@@ -22,17 +22,19 @@ body {
 }
 
 .header__name {
+    color: white;
     margin: 16px 0 0 0;
 }
 
 .header__position {
     margin: 12px 0 0 0;
     font-weight: 500;
-    color: white;
+    color: whitesmoke;
 }
 
 .container {
-    outline: solid 2px rgb(223, 223, 223);
+    background-color: white;
+    outline: solid 2.5px rgb(223, 223, 223);
     border-radius: 14px;
     padding: 18px;
     margin: 16px;
