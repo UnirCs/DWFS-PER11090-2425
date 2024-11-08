@@ -44,8 +44,6 @@
     height: 20rem;
     display: grid;
     align-items: center;
-
-   
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
    }
@@ -81,6 +79,7 @@
 .ocupado{
   background-color: burlywood;;
 }
+
 .margen_div{
   background-color: darkgrey;
 }
