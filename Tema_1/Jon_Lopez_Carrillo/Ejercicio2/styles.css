@@ -1,0 +1,156 @@
+header{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #1a202c;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+body{
+    margin: 0;
+    padding: 10px;
+    background-color:#1a202c;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.container{
+    display: flex 1;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+}
+
+.pantalla{
+    height: 15%;
+    background-color: #2d3748;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.butacas {
+    background-color: #2d3748;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.fila-cabecera-columnas,
+.fila {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.columna-numero,
+.columana-cabecera-filas,
+.asiento,
+.asiento-ocupado {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.asiento,
+.asiento-ocupado {
+    width: 1.2rem;
+    height: 1.5rem;
+    margin: 0.4rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.asiento {
+    border-color:#b8b8b8;
+    border: 2px solid;
+}
+
+.asiento:hover {
+    border-color: #b8b8b8;
+    transform: scale(1.1);
+}
+
+.asiento-ocupado {
+    background-color: #b8b8b8;
+    border: 2px solid;
+    cursor: not-allowed;
+}
+
+.formulario {
+    display: grid;
+    place-items: center;
+    background-color: #2d3748;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+  
+.formulario label {
+    text-align: center;
+    margin-bottom: 0.85rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+  
+.formulario input[type="number"] {
+    width: 10%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #b8b8b8;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: #ffffff;
+    border-radius: 0.25rem;
+}
+
+.boton-reserva {
+    width: 13%;
+    background-color: #48bb78;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+.boton-reserva:hover {
+    background-color: #2a794f;
+  }
+
+footer {
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 0.5rem;
+}
+  
+.texto-pie-de-pagina {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #a0aec0;
+}
+  
+footer a {
+    color: #63b3ed;
+    text-decoration: none;
+}
+  
+footer a:hover {
+    text-decoration: underline;
+}
