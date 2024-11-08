@@ -1,0 +1,11 @@
+.contenedor{
+    max-width: 50%;
+    margin: 0 auto;
+
+}
+
+.borde{
+    border-bottom: solid 5px;
+    color: black;
+}
+
