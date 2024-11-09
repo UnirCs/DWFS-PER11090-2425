@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #87a4aa;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+header h2, h3 {
+    font-size: 1.2em;
+    color: #666;
+}
+
+header p {
+    color: #f8f7f7;
+    font-size: 0.9em;
+}
+
+section {
+    margin-bottom: 20px;
+}
+.text-center {
+    text-align: center;
+}
+section h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills div {
+    width: 30%;
+}
+
+.skills h4 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.skills ul {
+    list-style-type: square;
+    margin-left: 20px;
+    font-size: 0.9em;
+}
+
+.experience h4 {
+    font-size: 1em;
+    color: #333;
+}
+
+.experience p {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.left-section {
+    width: 35%;
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.right-section {
+    width: 65%;
+    padding: 20px;
+}
+ 
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/*
+.left-section h1 {
+    font-size: 1.8em;
+    color: #333;
+}
+
+.left-section h2 {
+    font-size: 1.2em;
+    color: #666;
+}
+
+.left-section p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+
+.right-section h3 {
+    font-size: 1.4em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.right-section p {
+    line-height: 1.6;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.right-section h4 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 20px;
+}
+
+.right-section ul {
+    list-style-type: square;
+    margin-left: 20px;
+    font-size: 0.95em;
+    color: #555;
+} */
