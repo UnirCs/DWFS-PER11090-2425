@@ -1,0 +1,43 @@
+* {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.screen-bg {
+  background-color: #333333;
+  height: 12rem;
+  display: grid;
+  align-items: center;
+}
+
+.screen {
+  background-color: #FDFDFD;
+  height: 10rem;
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 1);
+}
+
+.asiento-row {
+ display: flex;
+ gap: .5rem;
+ justify-content: center;
+ align-items: center;
+ margin: 1rem;
+}
+
+.asiento {
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid #ffc107;
+  cursor: pointer;
+}
+
+.ocupado {
+  background-color: #ffc107;
+}
+
+.row-identifier {
+  color: #ffc107;
+}

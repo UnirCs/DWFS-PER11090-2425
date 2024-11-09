@@ -1,0 +1,100 @@
+/* Estilo General */
+*{
+    box-sizing: border-box;
+    margin: 2px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+}
+
+body{
+    background-color: #FFF;
+    color: #333;
+    padding: 0 0;
+}
+
+.perfil__cabecera{
+    margin: auto;
+    background-color: #1a73da;
+    color: #FFF;
+    text-align: center;
+    padding: 30px 0;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.perfil__cabecera--foto{
+    width: 150px;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.perfil__cabecera--nombre{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.perfil__cabecera--titulo{
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+.perfil__seccion {
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 20px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 5px solid #1a73da;
+    border-right: 2px solid #e0e0e0;
+    border-radius: 5px;
+    text-align: justify;
+    
+}
+
+.perfil__seccion--titulo {
+    font-size: 20px;
+    color: #1a73da;
+    margin-bottom: 10px;
+}
+
+.perfil__seccion--texto {
+    margin-bottom: 10px;
+}
+
+.perfil__seccion--lista {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.perfil__seccion--item {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
