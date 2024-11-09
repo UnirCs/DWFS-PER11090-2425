@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f9;
+}
+
+.header__foto-perfil {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.header {
+    text-align: center;
+    margin: 30px auto 30px auto;
+}
+
+.experiencia_laboral__lista,
+.educacion__lista,
+.habilidades__lista {
+    padding-left: 40px;
+}
+
+.experiencia_laboral__item,
+.educacion__item {
+    text-indent: 20px;
+    margin: 10px auto 10px auto;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+.titulo-seccion {
+    color: #00008B;
+    margin: 10px auto 10px auto;
+}
+
+.experiencia_laboral__rol,
+.educacion__tiempo {
+    color: #989898;
+    font-weight: bold;
+}
+
+.acerca-de-mi {
+    margin-top: 10px;
+}

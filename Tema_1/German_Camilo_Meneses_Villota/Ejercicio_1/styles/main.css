@@ -1,0 +1,125 @@
+/* Estructura global */
+.page {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.cv {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 30px;
+}
+
+/* Encabezado */
+.cv__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cv__name {
+  margin: 0;
+  font-size: 2em;
+}
+
+.cv__subtitle {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.cv__contact-info {
+  margin: 10px 0;
+}
+
+.cv__contact-link {
+  color: #000;
+  text-decoration: none;
+}
+
+.cv__contact-link:hover {
+  text-decoration: underline;
+}
+
+.cv__personal-info {
+  color: #333;
+}
+
+/* Estilos para la foto */
+.cv__photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px; /* Centra la imagen y agrega espacio debajo */
+}
+
+/* Secciones */
+.cv__section {
+  margin-bottom: 30px;
+}
+
+.cv__section-title {
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  color: #333;
+}
+
+/* Experiencia laboral */
+.cv__job {
+  margin-top: 20px;
+}
+
+.cv__job-title {
+  color: #555;
+}
+
+.cv__job-duration {
+  color: #999;
+}
+
+.cv__achievement-title {
+  margin-top: 15px;
+  color: #666;
+}
+
+/* Listas */
+.cv__list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.cv__list-item {
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* Habilidades */
+.cv__list--skills {
+  columns: 2;
+}
+
+/* Educación */
+.cv__education {
+  margin-top: 20px;
+}
+
+.cv__education-title {
+  color: #555;
+}
+
+.cv__education-institution {
+  color: #333;
+}
+
+.cv__education-duration {
+  color: #999;
+}
+
+/* Texto */
+.cv__text {
+  line-height: 1.6;
+}
+
