@@ -1,0 +1,104 @@
+
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+}
+
+.cinema
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.pantalla
+{
+    margin: 10px;
+    border: 1px solid yellow;
+}
+
+.pantalla__cabecera
+{
+    margin: 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(77, 76, 76);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    height: 150px;
+    font-size: 24px;
+}
+
+.pantalla__cuerpo
+{
+    margin: 15px;
+    border-radius: 5px;
+    background-color: grey;
+    height: 200px;
+}
+
+.pantalla__butacas
+{
+    height: 320px;
+}
+
+.pantalla__butacas div
+{
+    vertical-align: middle;
+}
+
+.pantalla__pie
+{
+    margin: 15px;
+    border-radius: 5px;
+    background-color: rgb(76, 76, 76);
+    height: 150px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height:30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nombreFila
+{
+    color: yellow;
+}
+
+.butacaDisponible
+{
+    border: 1px solid yellow;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.butacaOcupada
+{
+    border: 1px solid yellow;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-color: yellow;
+}
+
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+.reservacion__butacas
+{
+    width: 50%;
+    color: yellow;
+    text-align: center;
+    vertical-align: middle;
+    margin: 15px auto;
+}
