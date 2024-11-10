@@ -6,19 +6,19 @@ body {
 }
 
 #cinema_title{
-    color: #ff1e1e;
+	color: #33FF00;
 }
 
 #screen {
-    background-color: #ddd;
-    color: #333;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    height: 160px;
+	background-color: #000000;
+	color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border-radius: 5px;
+	font-weight: bold;
+	height: 160px;
 }
 
 .seat-container {
