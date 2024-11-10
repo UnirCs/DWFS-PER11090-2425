@@ -121,10 +121,19 @@ main {
     transition: background-color 0.3s;
     min-width: 180px;
 }
-.tour { background-color: #ff6f61; }
-.giro { background-color: #c2185b; }
-.vuelta { background-color: #8e24aa; }
-.mundiales { background-color: #f9a825; }
+.tour { 
+    background-color: yellow; 
+    color: var(--dark);
+}
+.giro { 
+    background-color: deeppink; 
+}
+.vuelta { 
+    background-color: #FF0000; 
+}
+.mundiales { 
+    background-color: #f9a825; 
+}
 .olimpicos {
     background-image: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #008000, #0000FF, #4B0082, #8A2BE2);
 }
