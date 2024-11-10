@@ -1,0 +1,146 @@
+/* Reset de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e6f2ff; /* Fondo de la página en azul claro */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: #ffffff; /* Fondo del contenedor en blanco */
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.summary p {
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+/* Encabezado del perfil */
+.profile-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-photo {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3B5998;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #3B5998;
+    margin-bottom: 5px;
+}
+
+.profile-title {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Estilos de las secciones */
+section {
+    margin-bottom: 25px;
+    background-color: #f7f9fc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #3B5998;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #8AB4F8;
+    padding-bottom: 5px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Lista de habilidades */
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #3B5998;
+}
+
+ul li::before {
+    content: '•';
+    color: #8AB4F8;
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+}
+
+/* Experiencia profesional */
+.experience-item {
+    margin-bottom: 20px;
+    background-color: #f7f9fc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.experience-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.experience-item p {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    ul li {
+        font-size: 15px;
+    }
+}
