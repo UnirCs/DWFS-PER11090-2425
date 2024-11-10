@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f4f4f9;
+    justify-content: center;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #317caf;
+    padding-bottom: 5px;
+}
+
+section p {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+ul {
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+
+#habilidades ul li {
+    background-color: #317caf;
+    color: #fff;
+    padding: 8px 12px;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 0.9em;
+}
+
+#habilidades ul{
+    text-align: center;
+}
+
+#expLaboral ul {
+    padding-left: 20px;
+}
+
+#expLaboral ul li {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#expLaboral p {
+    font-size: 0.95em;
+    color: #2c3e50;
+}
