@@ -1,0 +1,57 @@
+nav.navbar.bg-primary{
+    height: 100px;
+}
+
+nav.navbar.bg-primary .row{
+    width: 100%;
+    text-align: center;
+}
+
+nav.navbar.bg-primary span{
+    color: white;
+}
+
+section.divisor{
+    height: 100px;
+}
+
+
+.butacas .col{
+    border: 1px solid #8b8b8b;
+    padding: 1em;
+    margin-left: 1em;
+}
+
+
+.fila-1 .col:nth-child(3),
+.fila-1 .col:nth-child(4),
+.fila-2 .col:nth-child(5),
+.fila-3 .col:nth-child(2),
+.fila-5 .col:nth-child(6),
+.fila-5 .col:nth-child(7){
+    background-color: #8b8b8b;
+}
+
+
+.fila{
+    list-style-type: none;
+}
+
+.fila-titulo{
+    border: none !important;
+}
+
+
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+footer{
+    position: absolute;
+    bottom: 0;
+    padding: 1em;
+    width: 100%;
+}
