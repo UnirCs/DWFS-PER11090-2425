@@ -1,0 +1,83 @@
+body {
+    border-radius: 3px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    width: 1000px;
+    height: 1000px;
+  }
+  .header {
+    background-color: #ddffb5;
+    padding: 5px;
+    height: 150px;
+    display: flex;
+    color: #31312f;
+  }
+  
+  .content-perfil {
+    margin-left: 60px;
+    width: 20%;
+  }
+  
+  .content-titulo {
+    margin-left: 90px;
+    width: 80%;
+  }
+  
+  .name {
+    font-size: 3em;
+  }
+  
+  .img-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 14px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .content > div {
+    padding-top: 55px;
+  }
+  
+  .left-panel {
+    background-color: #d3d7ca;
+    padding-left: 10px;
+    width: 40%;
+    height: auto;
+  }
+  
+  .right-panel {
+    background-color: #fbfbfb;
+    padding-right: 10px;
+    width: 60%;
+    height: auto;
+  }
+  
+  .box {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .box > h3,
+  .box > p {
+    padding-left: 20px;
+    margin-bottom: 7px;
+  }
+  
+  .box > ul {
+    margin-top: 8px;
+  }
+  
+  .experience {
+    margin-bottom: 10px;
+  }
+  
+  .about {
+    text-align: justify;
+  }
