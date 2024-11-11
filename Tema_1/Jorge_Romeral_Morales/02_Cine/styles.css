@@ -1,0 +1,87 @@
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: white;
+}
+
+.contenedor{
+    border: 5px solid #3498db;
+    margin: 1%;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    background-color: #aed6f1;
+}
+
+section{
+    height: 60%;
+    align-content: center;
+}
+
+.pantalla{
+    text-align: center;
+    margin: 2% 15%;
+    height: 300px;
+    width: 70%;
+    background-color: black;
+}
+
+.asientos__fila{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.fila__numero{
+    height: 40px;
+    width: 60px;
+    margin-right: 30px;
+    padding-top: 5px;
+}
+
+.fila__butaca{
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    border: 2px solid #3498db;
+}
+
+.fila__butaca--ocupado{
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+    border: 2px solid #3498db;
+    background-color: #3498db;
+}
+
+form{
+    width: 50%;
+    margin: 2% 25%;
+    padding-top: 1%;
+    border-top: 2px solid #3498db;
+}
+
+form div{
+    text-align: center;
+    margin: 15px 0;
+}
+
+footer{
+    text-align: center;
+    padding-top: 2%;
+    height: 150px;
+    background-color: #aed6f1;
+}
+
+.footer__div{
+    display: flex;
+    justify-content: center;
+}
+.footer__div p{
+    margin-left: 15px;
+    margin-right: 15px;
+}

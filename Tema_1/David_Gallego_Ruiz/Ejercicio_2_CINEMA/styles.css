@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: grid;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.encabezado{
+    width: 1300px;
+    height: 100px;
+    border: 2px solid red;
+    color: red;
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.salaCine{
+    place-items: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    background-color: rgba(128, 128, 128, 0.464);
+    border-radius: 10px;
+}
+
+.salaCine__pantalla{
+    width: 1000px;
+    height: 250px;
+    background-color: black;
+    color: gray;
+    display: inline-flex;
+    justify-content: center;
+    align-items:flex-start;
+    padding-top: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.salaCine__asientos {        
+    margin-top: 100px;
+    width: 80%;
+}
+
+
+.asientos__ubicacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    /* width: 210px; */
+    /* display:inline; */
+     
+}
+
+.fila{
+    font-weight: 600;
+    color: brown;
+}
+
+.posicion {
+    width: 45px;
+    height: 40px;
+    color: gray;
+    justify-content: center;
+    border: 2px solid  red;
+    border-top: 5px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.reservado {
+    background-color: rgb(224, 202, 0);
+}
+
+
+.salaCine form {
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(18, 18, 135);
+
+}
+
+.salaCine input {
+    text-align: center;
+    padding: 5px;
+    color: rgb(179, 72, 30);
+    border-radius: 5px;
+}
+
+
+.botonReservar{
+    font-weight: 500;
+    background-color: rgb(224, 202, 0);
+}
+
+.piePagina{
+    width: 1260px;
+    height: 200px;
+    border: 2px solid red;
+    color: white;
+    background-color: rgba(110, 3, 3, 0.868);
+    align-content: center;
+    text-align: center;
+    border-radius: 5px;
+}
