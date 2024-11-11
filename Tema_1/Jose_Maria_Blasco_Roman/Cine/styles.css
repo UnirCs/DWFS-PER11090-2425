@@ -9,7 +9,7 @@ body {
     min-height: 100vh;  /* Altura mínima de la ventana */
     display: flex;
     flex-direction: column;
-    margin: 0;  /* Elimina el margen por defecto */
+
 }
 
 .header {
