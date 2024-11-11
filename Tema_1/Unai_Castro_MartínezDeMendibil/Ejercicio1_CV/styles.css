@@ -1,0 +1,95 @@
+* {    margin: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+.personal_information {
+    text-align: end;
+    background-color: rgb(169, 198, 169);
+    padding: 10px;
+}
+
+.personal_information__title {
+    font-style: italic;
+}
+
+.cabecera {
+    text-align: center;
+}
+
+.cabecera__title__sub {
+    font-style: oblique;
+}
+
+.cabecera__image {
+    transition: transform 0.3s ease;
+    width: 150px;
+}
+
+.cabecera__image:hover {
+    transform: scale(1.1); 
+}
+
+
+.resume {
+    text-align: center;
+    padding: 10px;
+}
+
+.resume__title {
+    color: rgb(169, 198, 169);
+}
+
+.experience {
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px;
+}
+
+.experience__title {
+    color: rgb(169, 198, 169);
+    margin-top: 25px;
+}
+
+.experience__position {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.experience__role,
+.experience__location,
+.experience__dates {
+    margin-left: 15px;
+}
+
+
+
+
+.education {
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px;
+}
+
+.education__title {
+    color: rgb(169, 198, 169);
+}
+
+.education__institution {
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+
+.achievements {
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px;
+}
+
+.achievements__title {
+    color: rgb(169, 198, 169);
+}
+
+
