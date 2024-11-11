@@ -1,0 +1,33 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container__header, .sections_section {
+    border-style: solid;
+    border-width: 2pt;
+    border-color: #F0F0F0;
+    border-radius: 0.5%;
+}
+
+.container__header {
+    text-align: center;
+    background-color: rgba(55,117,204,255);
+    color: white;
+    padding-top: 2%;
+}
+
+.container__header > img {
+    border-radius: 50%;
+    width: 13%;
+}
+
+.sections_section {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.sections_section > h1{
+    color: rgba(55,117,204,255);
+}
