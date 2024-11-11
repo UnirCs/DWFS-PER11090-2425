@@ -22,9 +22,7 @@
         text-align: justify;
 }
 
-.Photo-perfil{ width: 350px;
-               height: 400px;
-               border: solid  }
+.Photo-perfil{ text-align: center }
 
 body {
     background-color: #f5f7fa;
