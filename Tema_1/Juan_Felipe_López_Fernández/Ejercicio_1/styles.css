@@ -1,0 +1,54 @@
+html{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+.row{
+    width: 100%;
+    border-bottom: 1px solid #0000001f;
+    padding: 1em;
+}
+.administracion{
+    border: none;
+}
+
+.resumen-general{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resumen{
+    display: block;
+    width: 100%;
+    text-align: justify;
+}
+
+.foto-perfil{
+    max-width: 300px;
+    height: auto;
+    text-align: center;
+}
+
+.logo-background{
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+}
+
+.logo-background img{
+    position: fixed;
+    z-index: 1;
+    opacity: 0.03;
+    height: 80%;
+}
+
+section{
+    z-index: 10;
+}
+
+.listado{
+    line-height: 2em;
+}
