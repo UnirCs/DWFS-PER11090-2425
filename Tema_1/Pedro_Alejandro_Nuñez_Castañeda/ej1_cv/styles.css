@@ -1,0 +1,26 @@
+.seccion {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border: 2px solid black;
+  padding: 5px;
+}
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+.encabezado__desc {
+  margin: 6px;
+}
+.desc__subtitulo {
+  font-size: small;
+}
+.seccion__titulo {
+  font-weight: bold;
+  color: darkred;
+}
+.item__titulo {
+  font-weight: bold;
+}
