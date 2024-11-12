@@ -1,0 +1,89 @@
+body{
+    margin-top: auto;
+    background: linear-gradient(#FFFFFF, #D5FDFD);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20px;
+}
+
+.contenedor{
+    background-color: black;
+    padding: 5%;
+}
+.nombre{
+    color: #0286F4;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.pantalla{
+    padding-top: 25%;
+    background-color: #C0C0C0;
+}
+
+.butacas{
+    margin-top: 100px;
+    margin-bottom: 50px;
+   
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    border-spacing: 10px 10px;
+}
+
+.butaca{
+    border: 1px solid blue;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    
+}
+
+.reservado{
+    background-color: blue;
+}
+
+.butaca:hover{
+    background-color: red;
+}
+
+.pos{
+    font-weight: bolder;
+    font-size: 20pt;
+    color: white;
+}
+
+.formulario{
+    text-align: center;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    color: white;
+}
+
+.footer{
+    background-color: #0286F4;
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+input[type=text] {
+    width: 60px;
+    height: 30px;
+    margin-top: 7px;
+    text-align: center;
+}
