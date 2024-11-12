@@ -1,0 +1,151 @@
+/* estilo general */
+body {
+    font-family: Arial;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    margin: 30px 300px;
+}
+
+/* Sección cabecera */
+header {
+    display: flex;
+    justify-content: space-between; 
+    text-align: left;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+header a {
+    color: #22c9be;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header .profile-img {
+    width: 170px; 
+    height: auto;
+    border-radius: 30%; 
+}
+
+/* Sección de Experiencia */
+section {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #4ecdc4;
+    padding-bottom: 3px;
+    margin-bottom: 20px;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.experience-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+.experience-item:hover {
+    transform: translateY(-2px);
+}
+
+.experience-item h3 {
+    color: #4ecdc4;
+    font-size: 1.5em;
+    margin: 2px 0px 5px 0px;
+}
+
+.company {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.company-name {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.description li {
+    margin-bottom: 5px;
+}
+
+/* Sección de educación */
+.education-item h3 {
+    color: #4ecdc4;
+    font-size: 1.5em;
+    margin: 2px 0px 5px 0px;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.education-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+}
+
+.education-item:hover {
+    transform: translateY(-2px);
+}
+
+.university {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.university-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/* Cambiar a una sola columna en pantallas pequeñas */
+@media (max-width: 1000px) {
+    .experience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        margin: 10px;
+    }
+}

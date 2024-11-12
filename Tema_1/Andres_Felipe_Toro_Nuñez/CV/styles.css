@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #bee3f8;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    border-radius: 6px;
+}
+
+.paragraph{
+        color: black;
+        margin-bottom: 2rem;
+        border-bottom: solid ;
+}
+
+.paragraph-text{
+        text-align: justify;
+}
+
+.Photo-perfil{ text-align: center }
+
+body {
+    background-color: #f5f7fa;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #e2e8f0;
+}
+
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tag {
+    background-color: #ebf4ff;
+    color: #2c5282;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid #bee3f8;
+}
