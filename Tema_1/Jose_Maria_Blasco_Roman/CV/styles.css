@@ -1,0 +1,118 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo */
+body {
+    font-family: 'Arial', sans-serif, 'Helvetica Neue', sans-serif; /* Fuente moderna */
+    background-color: #f7f7f7; /* Fondo más suave */
+    color: #333;
+    padding: 20px;
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Contenedor principal del CV */
+.cv-container {
+    width: 100%;
+    max-width: 900px; /* Aumenta el máximo de ancho */
+    background-color: #fff;
+    padding: 40px;
+    margin: 0 auto;
+    border-radius: 12px; /* Bordes suaves */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    background-image: linear-gradient(135deg, #f4f4f4 25%, #e1e1e1 75%); /* Fondo suave */
+    transition: transform 0.3s ease-in-out; /* Añade transición para animar el contenedor */
+}
+
+.cv-container:hover {
+    transform: scale(1.02); /* Efecto de aumento al pasar el ratón */
+}
+
+/* Cabecera del CV */
+.cv-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cv-foto {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 4px solid #1668c5; /* Borde azul */
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    transition: transform 0.3s ease; /* Transición al pasar el ratón */
+}
+
+.cv-foto:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+
+.cv-header h1 {
+    font-size: 36px;
+    color: #031a33; /* Color más oscuro para el nombre */
+}
+
+.cv-header p {
+    font-size: 20px;
+    color: #555;
+    font-weight: 500;
+}
+
+.contact-info {
+    font-size: 16px; /* Aumenta el tamaño del texto */
+    color: #666;
+    margin-top: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+}
+
+/* Sección de contenido */
+.cv-section {
+    margin-bottom: 30px; /* Mayor espacio entre las secciones */
+}
+
+.cv-section h2 {
+    font-size: 26px;
+    color: #1668c5; /* Color coherente con el borde de la foto */
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #1668c5; /* Línea de separación debajo del título */
+    text-transform: uppercase; /* Hace que los títulos estén en mayúsculas */
+}
+
+.cv-section ul {
+    list-style-type: none;
+}
+
+.cv-section li {
+    margin-bottom: 20px;
+}
+
+.cv-section li h3 {
+    font-size: 18px;
+    color: #1668c5;
+    font-weight: bold;
+}
+
+.cv-section li p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Estilo del pie de página */
+.cv-footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #888;
+    border-top: 1px solid #e1e1e1;
+    padding-top: 20px;
+}

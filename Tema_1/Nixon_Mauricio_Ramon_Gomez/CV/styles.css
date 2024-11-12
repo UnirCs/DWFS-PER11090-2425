@@ -1,0 +1,81 @@
+.titulo1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.titulo2{
+    font-family: Arial, Helvetica, sans-serif; /* Fuente*/
+    font-style: bold;
+    font-size: large;
+    text-align: center;
+    border: rgb(15, 50, 165) 5px groove;
+    color: darkred;
+}
+.cuadro-general{
+    padding: 10px 15px;
+    border: rgb(0, 0, 0) 20px double;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    background-color: #93a2b3;
+}
+
+
+.negrita{
+    font-weight: bold;
+}
+
+.encabezado_div{
+    border: 20 px outset #00A4BD;
+    color: #2D3E50;
+    background-color: #EAF0F6;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#title3{
+    text-align: center;
+   
+}
+
+
+.resumen_div{
+    border: 10 px outset #006372;
+    color: #2D3E50;
+    background-color: #EAF0F6;
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.habilidades_div{
+
+    border: 10 px outset #00A4BD;
+    color: #2D3E50;
+    background-color: #EAF0F6;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.experiencia_div{
+    border: 10 px outset #00A4BD;
+    color: #2D3E50;
+    background-color: #EAF0F6;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info-personal{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 8 px outset #00A4BD;
+    color: #2D3E50;
+    background-color: #EAF0F6;
+}
+
+.foto:hover {
+    filter: saturate(180%);
+} 
+
+.foto{
+    border-radius: 35%;
+}
