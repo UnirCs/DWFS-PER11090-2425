@@ -1,0 +1,29 @@
+* {
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #aed6f1 ;
+}
+
+.header {
+    text-align: center;
+}
+
+.section {
+    border: 5px solid #45b39d;
+    background-color:#fdfefe;
+}
+
+div > h3 {
+    color: #145a32 ;
+}
+
+div > h4 {
+    color: #28b463  ;
+}
+
+li > h4 {
+    color: #28b463 ;
+}

@@ -1,0 +1,118 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 70%;
+    margin: 20px auto;
+    background: #ffffff;
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    width: 66%;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 40%;
+    background-color: #0098cd;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: #0098cd;
+    font-size: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.section p {
+    margin: 0 0 10px;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-info, .skills {
+    text-align: left;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.contact-info p, .skills p {
+    margin: 5px 0;
+}
+
+.skills ul {
+    list-style: none;
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.skills ul li {
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.logo {
+    background: white;
+    color: #0098cd;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.personal-img {
+    width: 100px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #e2e8f0;
+}
+
+.section-sidebar h2 {
+    color: #ddd;
+    font-size: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-info ul li {
+    color: white;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.section ul li {
+    margin-bottom: 3px;
+    padding: 5px 0;
+}
