@@ -1,16 +1,13 @@
 #container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
     row-gap: 10px;
+    width: auto;
     margin: 0;
-    padding: 20px;
-}
-
-.card {
-    width: 100%;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: aqua;
+    padding: 30px;
 }
 
 .cvHead {
@@ -20,60 +17,70 @@
     justify-content: center;
 }
 
-.cvBody {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
-    
-
-.cvBody .listContactInfo {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    row-gap: 10px;
-    padding: 0;
-}
-
-.listContactInfo li {
-    display: flex;
-    flex-direction: row;
-}
-
-.summary {
-    width: 70%;
-    margin: 10px;
-}
-
-.professionalExpirence .list {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-}
-
-.edication ul {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-}
-
-.edication ul .list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: left;
-    margin: 0;
-    
-}
-
 #PorfilePhoto {
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
 }
 
+.card {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: bisque;
+}
+
+.cvBody {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.cvBody .listContactInfo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 0;
+}
+
 .cvBody .listContactInfo li {
     list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.summary {
+    width: 90%;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.professionalExpirence {
+    width: 43%
+}
+
+.professionalExpirence .list {
+    display: flex;
+    flex-direction: column;
+}
+
+.education {
+    width: 43%;
+}
+
+.education ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.habilities {
+    width: 90%;
 }
