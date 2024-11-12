@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+body {
+    font-family: 'Onest', sans-serif;
+    line-height: 1.6;
+    margin: auto;
+    background-color: #fff;
+    color: #333;
+    max-width: 800px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 60px 0px;
+    padding-inline: 40px;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+}
+
+header h1 {
+    margin: 10px 0;
+    font-size: 2.2em;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+header footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header a {
+    color: #666;
+    text-decoration: none;
+}
+
+header a:hover {
+    scale: 1.1;
+    color: black;
+}
+
+section {
+    padding-block: 10px;
+    padding-inline: 40px;
+}
+
+section h2 {
+    border-bottom: 2px solid #666;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    margin-bottom: 20px;
+}
+
+section ul li h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+section ul li p {
+    margin: 5px 0;
+}
+
+section ul li a {
+    color: #666;
+    text-decoration: none;
+}
+
+section ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+section[class="skills"] ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+section[class="skills"] ul li {
+    background: #eee;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    color: #666;
+    padding: .2rem .6rem;
+}
+
+section[class="skills"] ul li:hover {
+    scale: 1.1;
+    cursor: pointer;
+    border: 1px solid black;
+    color: black;
+}
