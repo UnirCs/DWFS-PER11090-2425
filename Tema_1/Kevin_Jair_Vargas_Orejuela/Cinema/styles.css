@@ -1,0 +1,11 @@
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    display: inline-block;
+}
+
+.row-number {
+    font-weight: bold;
+    margin-right: 10px;
+}
