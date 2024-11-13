@@ -18,28 +18,27 @@ function setup() {
     }
     return butacas;
 }
-//Funcion para buscar en la matriz de butacas el numero de asientos libres contiguos disponibles
+/**
+ * Funcion para sugerir asientos libres contiguos
+ * @param {Array} butacas - Matriz de butacas del cine
+ * @param {number} num - Número de asientos a sugerir
+ * @returns {Array} - Array con los IDs de los asientos sugeridos
+ */
 function suggest(butacas,num){
     let count = 0;
     let asientos = [];
     if(num > N){
         asientos = [];
-        console.log(asientos);
         return asientos;
     }
-    for (let i = N - 1; i >= 0; i--) {
+    for (let i = N-1; i >= 0 && count < num; i--) {
         for (let j = 0; j < N; j++) {
             if(butacas[i][j].estado == false){
                 count++;
                 asientos.push(butacas[i][j].id);
-                if(count == num){
-                    console.log(asientos);
-                    return asientos;
-                }
             }else{
                 count = 0;
                 asientos = [];
-                console.log(asientos);
             }
         }
     }
