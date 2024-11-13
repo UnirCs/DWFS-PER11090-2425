@@ -1,0 +1,94 @@
+header {
+	text-align: center;
+	background-color: darkblue;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height:1em;
+	margin: 5px;
+}
+header h1 {
+	font-family: Sans serif;
+	font-size: 25px;
+	color: white;
+}
+header h2 {
+	font-family: Arial;
+	font-size: 20px;
+	color: white;
+}
+.foto1 {
+	width: 220px;
+	height: 250px;
+	border-radius: 20px;
+}
+.principal {
+	margin: 5px;
+	font-family: arial;
+	font-size: 18px;
+	text-align: justify;
+}
+.principal h2 {
+	/*margin-top: 1em;*/
+	padding: 0em;
+	line-height: 5px;
+	text-align: center;
+	color:red;
+}
+.contenedor {
+	background-color: white;
+}
+.principal section {
+	/*padding-bottom: 2em;*/
+	margin-bottom: 1em;
+}
+.viñeta {
+	width: 20px;
+	height: 20px;
+}
+.viñeta2 {
+	width: 15px;
+	height: 15px;
+}
+.grupoviñetas {
+	text-align: justify;
+	margin-left: 32em;
+}
+.principal p {
+	margin: 6px;
+	line-height: 1.5em;
+}
+#cuerpo {
+	border: 2px solid grey;
+	margin-right: 15px;
+}
+#contacto {
+	text-align: justify;
+	border: 2px solid blue;
+}
+#resumen {
+	text-align: justify;
+	border: 2px solid blue;
+}
+#habilidades {
+	text-align: justify;
+	border: 2px solid blue;
+}
+#experiencia {
+	text-align: justify;
+	border: 2px solid blue;
+}
+footer p {
+	font-weight: bold;
+	text-align: center;
+	font-style: italic;
+	font-size: 18px;
+}
+footer {
+	text-align: center;
+	background-color: orange;
+	margin: 5px;
+}
+#redessociales img {
+	width: 40px;
+	height: 40px;
+}
