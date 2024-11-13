@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    background-color: #333;
+    color: white;
+}
+header h6 {
+    font-style: italic;
+    color: #FFC107;
+}
+main {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+}
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+    border-top: 3px solid #FFC107;
+}
+footer h6 {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #FFC107;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.screen {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+}
+.butaca {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.butaca-disponible {
+    background-color: #4CAF50;
+    color: white;
+}
+.butaca-ocupada {
+    background-color: #D9534F;
+    color: white;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.butaca-seleccionada {
+    background-color: #FFC107;
+    color: black;
+}
+.butaca-disponible:hover {
+    background-color: #17A2B8;
+}
+@media (max-width: 768px) {
+    header, footer {
+        font-size: 1.2em;
+        padding: 0.8rem;
+    }
+    main {
+        padding: 0.8rem;
+        font-size: 0.9em;
+    }
+}
+@media (max-width: 480px) {
+    header, footer {
+        font-size: 1em;
+        padding: 0.6rem;
+    }
+    main {
+        padding: 0.6rem;
+        font-size: 0.85em;
+    }
+}
+@media (max-width: 576px) {
+    .butaca {
+        font-size: 0.8em;
+    }
+}
