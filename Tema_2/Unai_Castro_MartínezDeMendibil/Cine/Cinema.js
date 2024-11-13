@@ -13,7 +13,7 @@ function setup() {
             // Nuevo asiento
             fila.push({
                 id: idContador++,
-                estado: false
+                estado: Math.random() < 0.5 // Estado inicial aleatorio
             });
         }
         butacas.push(fila);
@@ -44,24 +44,25 @@ function suggest(n,butacas){
         return new Set();
     }
 
-    for (let i = butacas.length-1; i >=0; i--) {
+    let idsSuggested = new Set();
+    let found = false;
+
+    for (let i = butacas.length-1; i >=0 && found===false; i--) {
         let fila = butacas[i];
-        let contador = 0;
-        let ids = new Set();
+        let idsAvailable = new Set();
         for (let j = 0; j < fila.length; j++) {
             if (fila[j].estado === false) {
-                contador++;
-                ids.add(fila[j].id);
-                if (contador === n) {
-                    return ids;
+                idsAvailable.add(fila[j].id);
+                if (idsAvailable.size === n) {
+                    found = true;
+                    idsSuggested = new Set(idsAvailable);
                 }
             } else {
-                contador = 0;
-                ids.clear();
+                idsAvailable.clear();
             }
         }
     }
-    return new Set();
+    return idsSuggested
 }
 
 // Prueba de la función suggest
@@ -72,4 +73,7 @@ resultado = suggest(5, butacas);
 console.log(resultado);
 
 resultado = suggest(10, butacas);
+console.log(resultado);
+
+resultado = suggest(11, butacas);
 console.log(resultado);
