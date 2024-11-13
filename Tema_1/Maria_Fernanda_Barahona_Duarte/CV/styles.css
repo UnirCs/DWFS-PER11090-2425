@@ -1,0 +1,34 @@
+img{
+    border-radius: 50%;
+}
+body{
+    margin: 0%
+}
+
+h2{
+    color: #9c334f;
+}
+
+#seccion {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 2px #e2e2e2;
+}
+div.encabezado{
+    text-align: center;
+    background-color: #9c334f;
+    color: white;
+    padding-bottom: 3px;
+}
+
+/*div.contacto{
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 1px 1px 1px 1px #e2e2e2;
+    
+}*/
+
+
+
