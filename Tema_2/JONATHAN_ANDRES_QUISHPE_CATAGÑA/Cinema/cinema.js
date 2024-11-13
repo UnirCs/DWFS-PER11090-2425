@@ -21,7 +21,6 @@ function setup() {
     return butacas;
 }
 
-
 function suggest(numSeats) {
     let butacas = setup();
     const numColumns = butacas[0].length;
@@ -30,22 +29,23 @@ function suggest(numSeats) {
         return new Set();
     }
 
+    let availableSeats = [];
+    let reserved = false;
     for (let row = butacas.length - 1; row >= 0; row--) {
-        let availableSeats = [];
         for (let col = 0; col < numColumns; col++) {
-            if (butacas[row][col].state) {
-                continue;
-            }
-
-            availableSeats.push(butacas[row][col].id);
-
-            if (availableSeats.length === numSeats) {
-                return new Set(availableSeats);
+            if (!butacas[row][col].estado) {
+                if (!reserved) availableSeats.push(butacas[row][col].id);
+                if (availableSeats.length === numSeats) reserved = true;
+            } else {
+                availableSeats = [];
             }
         }
     }
 
-    return new Set();
+    return new Set(availableSeats);
 }
 
+console.log(suggest(11));
+console.log(suggest(2));
+console.log(suggest(5));
 console.log(suggest(9));
