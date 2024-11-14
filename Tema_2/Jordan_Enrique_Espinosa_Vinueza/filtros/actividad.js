@@ -253,9 +253,9 @@ function merge(alphaFirst, alphaSecond) {
             let pixelG = dogPixels[i][j][1] * alphaFirst + catPixels[i][j][1] * alphaSecond;
             let pixelB = dogPixels[i][j][2] * alphaFirst + catPixels[i][j][2] * alphaSecond;
             let pixel = [];
-            pixel.push(pixelR);
-            pixel.push(pixelG);
-            pixel.push(pixelB);
+            pixel.push(pixelR);  //R
+            pixel.push(pixelG);  //G
+            pixel.push(pixelB);  //B
             nuevaFila.push(pixel);
         }
         pixels.push(nuevaFila);

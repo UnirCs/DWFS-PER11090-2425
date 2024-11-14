@@ -55,6 +55,6 @@ let butacas = setup();
 // Imprimir la matriz
 console.log(butacas);
 
-// Probar la función de búsqueda
+// Probar la función
 let resultado = buscarAsientosContiguos(butacas, 3);
 console.log(resultado.size > 0 ? `Asientos sugeridos: ${Array.from(resultado).join(', ')}` : 'No se encontraron suficientes asientos contiguos.');
