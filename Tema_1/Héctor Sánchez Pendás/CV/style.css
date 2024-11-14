@@ -1,0 +1,52 @@
+
+.container{
+    padding:5%;
+}
+.main{
+    margin:2%;
+    font-family: 'Arial', sans-serif;
+}
+.col {
+    display: inline-block;
+    width: 49%;
+    vertical-align: top;
+}
+header{
+    color: #ffffff;
+    border-radius: 20px;
+    background-color: #181919;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+main{
+    margin-left: 2%;
+}
+
+.section-title{
+    border-bottom: 3px solid currentColor;
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 10px;
+    margin-top: 5%;
+}
+.section-list-item{
+    padding-bottom: 1%;
+}
+
+.section-list{
+    padding-left: 3%;
+}
+
+.date{
+    font-size: 0.8rem;
+}
+.section-text{
+}
+
