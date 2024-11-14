@@ -1,0 +1,185 @@
+@font-face {
+  font-family: 'EB Garamond';
+  font-size: 22px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+  font-size: 18px;
+  font-family: EB Garamond;
+  line-height: 22px;
+}
+
+article h2 {
+  font-size: 28px;
+}
+
+.item {
+  margin-bottom: 40px;
+}
+
+article hr, aside hr {
+  width:100%;
+  text-align:left;
+  margin-left:0;
+}
+
+article h3 {
+  font-size: 18px;
+}
+
+article h4 {
+  font-size: 16px;
+}
+
+article h4 {
+  font-size: 16px;
+}
+
+article p, article li {
+  text-align: justify;
+}
+
+article p, article ul {
+  margin-bottom: 10px;
+}
+
+.container {
+  background: #DCDBDB;
+  width: 1000px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+header {
+  background: #fff;;
+}
+
+header nav {
+  width: 100%;
+}
+
+header nav ul {
+  width: 100%;
+  overflow: hidden;
+  list-style: none;
+}
+
+header nav ul li {
+  float: left;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 20px;
+  color: #000;
+}
+
+header nav ul li a:hover {
+  background: #000;
+  color: #fff;
+}
+
+.main {
+  width: 700px;
+  background: #fff;
+  float: right;
+}
+
+.main .imagen {
+  width: 100%;
+}
+
+.main .post {
+  padding: 40px;
+}
+
+.main .post article h2 {
+  margin-bottom: 20px;
+  color: #424242
+}
+
+.main .post article p {
+  margin-bottom: 15px;
+  line-height: 27px;
+}
+
+aside {
+  width: 300px;
+  float: left;
+  background: #161f26;
+  color: #fff;
+}
+
+aside h3{
+  font-size: 18px;
+}
+
+aside .widget {
+  padding: 10px;
+}
+
+aside .imagen img {
+  width: 100%;
+  vertical-align: auto;
+}
+
+aside .widget {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+aside .widget .titulo {
+  color: #fff;
+  font-size: 24px;
+  padding-bottom: 20px;
+  line-height: 30px;
+  text-align: left;
+}
+
+aside .widget ul {
+  list-style: none;
+}
+
+aside .widget ul li {
+  padding: 10px 0;
+  text-align: justify;
+}
+
+aside .widget ul .references{
+  padding: 10px 0;
+  text-align: left;
+}
+
+aside .widget ul li a {
+  text-decoration: none;
+  color: royalblue;
+}
+
+aside .widget ul li a:hover {
+  color: #8f8f8f;
+}
+
+aside .widget p {
+  line-height: 27px;
+}
+
+footer {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
