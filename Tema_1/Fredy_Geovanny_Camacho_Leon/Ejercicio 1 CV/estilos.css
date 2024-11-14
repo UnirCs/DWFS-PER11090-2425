@@ -1,0 +1,172 @@
+:root {
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --highlight: #ffc107;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --background: #ffffff;
+    --accent-bg: #e9f5ff;
+    --accent-border: #cce5ff;
+    --dark-text: #222222;
+    --light-text: #f1f1f1;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    color: var(--dark);
+    background-color: var(--light);
+    max-width: 90%;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--primary);
+    font-weight: bold;
+}
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.profile {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    background-color: var(--accent-bg);
+    padding: 1.5rem;
+    border: 1px solid var(--accent-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--highlight);
+    margin-bottom: 1.5rem;
+}
+.profile h2 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 1.8rem;
+}
+.profile .profession {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    color: var(--light-text);
+    background-color: var(--primary);
+    border-radius: 15px;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.section {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--background);
+    padding: 1.8rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.section-title {
+    font-size: 1.6rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--highlight);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+.section p, .section ul {
+    margin: 0.5rem 0;
+    color: var(--dark-text);
+}
+.skills, .languages {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.skill-item, .language-item {
+    flex: 1;
+    background-color: var(--highlight);
+    color: var(--dark-text);
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+.skill-item:hover, .language-item:hover {
+    background-color: var(--primary);
+    color: var(--light-text);
+}
+.tour, .giro, .vuelta, .mundiales, .olimpicos, .monument {
+    flex: 1;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    margin: 0.5rem;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s;
+    min-width: 180px;
+}
+.tour { 
+    background-color: yellow; 
+    color: var(--dark);
+}
+.giro { 
+    background-color: deeppink; 
+}
+.vuelta { 
+    background-color: #FF0000; 
+}
+.mundiales { 
+    background-color: #f9a825; 
+}
+.olimpicos {
+    background-image: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #008000, #0000FF, #4B0082, #8A2BE2);
+}
+.monument1 {
+    background-color: #4CAF50;
+}
+.monument2 {
+    background-color: #434dbf;
+}
+.monument3 {
+    background-color: dodgerblue;
+}
+.contact-info {
+    margin: 1.5rem 0;
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+footer {
+    background-color: var(--dark);
+    color: var(--light-text);
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1rem;
+}
+footer p {
+    margin: 0.2rem 0;
+}
+.flag-slovenia {
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Slovenia.svg');
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 5px;
+}
