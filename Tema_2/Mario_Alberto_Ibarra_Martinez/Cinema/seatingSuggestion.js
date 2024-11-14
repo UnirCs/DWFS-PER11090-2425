@@ -29,13 +29,14 @@ function suggest(numAsientos) {
         return new Set(); 
     }
 
+    let asientosSugeridos = new Set(); // Variable para almacenar los asientos sugeridos
+
     for (let i = N - 1; i >= 0; i--) {
         let fila = butacas[i];
         let count = 0;
         let asientos = new Set();
 
         for (let j = 0; j < N; j++) {
-            
             if (!fila[j].estado) {
                 count++;
                 asientos.add(fila[j].id);
@@ -46,16 +47,21 @@ function suggest(numAsientos) {
                     for (let k = j; k > j - numAsientos; k--) {
                         fila[k].estado = true;
                     }
-                    return asientos; 
+                    asientosSugeridos = asientos; // Almacenar los asientos en la variable
+                    break; // Salir del bucle interno
                 }
             } else {
                 count = 0; 
                 asientos.clear(); 
             }
         }
+
+        if (asientosSugeridos.size > 0) {
+            break; // Salir del bucle externo si se encontraron asientos
+        }
     }
 
-    return new Set(); 
+    return asientosSugeridos; // Devolver los asientos sugeridos al final
 }
 
 // Ejemplos de uso
