@@ -94,12 +94,12 @@ function greyConverter() {
   let outputPath = 'output/tucan_grey.jpg';
   let pixels = handler.getPixels();
 
-  // Función utilitaria para calcular el promedio del pixel.
-  const average = (red, green, blue) => Math.floor((red + green + blue) / 3);
+  // Función utilitaria para calcular la media de un array.
+  const average = (array) => array.reduce((a, b) => a + b) / array.length;
 
   // Se usa Map para iterar y se desestructura el pixel para transformar la imagen. Asignando el nuevo contenido de los pixeles.
-  pixels = pixels.map(pixel => pixel.map(([red, green, blue]) => {
-    const avg = average(red, green, blue);
+  pixels = pixels.map(pixel => pixel.map(rgb => {
+    const avg = average(rgb);
     return [avg, avg, avg];
   }));
 
@@ -117,12 +117,12 @@ function blackAndWhiteConverter() {
   let outputPath = 'output/tucan_black_and_white.jpg';
   let pixels = handler.getPixels();
 
-  // Función utilitaria para calcular el promedio del pixel.
-  const average = (red, green, blue) => Math.floor((red + green + blue) / 3);
+  // Función utilitaria para calcular la media de un array.
+  const average = (array) => array.reduce((a, b) => a + b) / array.length;
 
   // Se usa Map para iterar y se desestructura el pixel para transformar la imagen. Asignando el nuevo contenido de los pixeles.
-  pixels = pixels.map(pixel => pixel.map(([red, green, blue]) => {
-    const avg = average(red, green, blue);
+  pixels = pixels.map(pixel => pixel.map(rgb => {
+    const avg = average(rgb);
     return avg < 128 ? [0, 0, 0] : [255, 255, 255];
   }));
 
