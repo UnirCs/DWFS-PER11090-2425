@@ -6,7 +6,7 @@ body {
 }
 
 #cinema_title{
-	color: #33FF00;
+	color: #00ffb2;
 }
 
 #screen {
@@ -36,7 +36,7 @@ body {
     justify-content: center;
     border-radius: 5px;
     background-color: #f0f0f0;
-    color: #333;
+    color: #323e55;
     cursor: pointer;
     font-weight: bold;
 }
@@ -44,6 +44,18 @@ body {
 .seat:hover {
     background-color: #ff1e1e;
     color: #fff;
+}
+
+.seat:active{
+    background-color: #03084a;
+    color: #fff;
+
+}
+
+.seat:active:hover{
+    background-color: #ff6a00;
+    color: #72d61b;
+
 }
 
 .seat-label {
@@ -54,7 +66,7 @@ body {
 }
 
 #seat_count {
-    border: 2px solid #ff1e1e;
+    border: 2px solid #251eff;
     border-radius: 5px;
     padding: 10px;
     font-size: 1rem;
@@ -74,7 +86,7 @@ body {
 }
 
 #btn_confirm:hover {
-    background-color: #d61b1b;
+    background-color: #251eff;
 }
 
 .footer {
