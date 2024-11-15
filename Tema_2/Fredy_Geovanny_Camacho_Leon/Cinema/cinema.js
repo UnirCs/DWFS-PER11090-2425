@@ -27,49 +27,38 @@ console.log(butacas);
 
 // Función para sugerir asientos    
 function suggest(butacas, asientosReserva) {
-    // Validar si el número de asientos solicitados excede el tamaño máximo de la fila
     if (asientosReserva > butacas[0].length) {
         return new Set();
     }
-    // Comenzar la búsqueda desde la última fila y columna hasta la primera
-    for (let i = butacas.length - 1; i >= 0; i--) {
+    let reservaAsientos = new Set();
+    let encontrado = false; // Variable de control para saber si se encontró una reserva
+    for (let i = butacas.length - 1; i >= 0 && !encontrado; i--) {
         let fila = butacas[i];
-        let contador = 0; // Contador de asientos totales de la fila actual
-        let asientosConsecutivos = 0; // Contador de asientos consecutivos libres
-        // Buscar asientos consecutivos en la fila, se empieza a buscar desde el final de la columna
-        for (let j = fila.length - 1; j >= 0; j--) { // Recorrer la fila de derecha a izquierda
-            contador++; // Incrementar el contador de asientos total, reservados y libres de la fila
-            if (!fila[j].estado) { // Si el asiento está libre
-                asientosConsecutivos++; // Incrementa el contador de asientos consecutivos libres
-                // Verifica si se alcanzó el número de asientos solicitados
-                if (asientosConsecutivos === contador && asientosConsecutivos === asientosReserva) {
-                    // Crear un Set con los IDs de los asientos seleccionados
-                    let reservaAsientos = new Set();
-                    for (let k = fila[j].id; k < fila[j].id + asientosConsecutivos; k++) {
-                        reservaAsientos.add(k);
-                    }
-                    return reservaAsientos; // Retornar el conjunto de IDs encontrados
+        let asientosConsecutivos = 0;
+        for (let j = fila.length - 1; j >= 0 && !encontrado; j--) {
+            if (!fila[j].estado) { // Asiento libre
+                asientosConsecutivos++;
+                reservaAsientos.add(fila[j].id);
+                if (asientosConsecutivos === asientosReserva) {
+                    encontrado = true; // Indicar que se encontró una secuencia adecuada
                 }
-            } else {
-                // Reinicia el contador total y el contador de consecutivos si el asiento está ocupado -- no cumple condición de asientos consecutivos
-                contador = 0;
+            } else { // Asiento ocupado
+                reservaAsientos.clear();
                 asientosConsecutivos = 0;
             }
         }
     }
-    // Si no se encontró un grupo de asientos consecutivos suficientes
-    return new Set();
+    return reservaAsientos;
 }
-// Reservar asientos TEST
+// Prueba de la función
+const butacasReservadas = suggest(butacas, 6);
 // const butacasReservadas = suggest(butacas, 1);
 // const butacasReservadas = suggest(butacas, 2);
 // const butacasReservadas = suggest(butacas, 3);
-const butacasReservadas = suggest(butacas, 4);
 // const butacasReservadas = suggest(butacas, 5);
 // const butacasReservadas = suggest(butacas, 6);
 // const butacasReservadas = suggest(butacas, 7);
 // const butacasReservadas = suggest(butacas, 8);
 // const butacasReservadas = suggest(butacas, 9);
-
-// Imprimir reserva sugerida
+console.log("Reserva sugerida: ");
 console.log(butacasReservadas);
