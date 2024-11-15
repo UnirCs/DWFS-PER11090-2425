@@ -13,29 +13,59 @@ function setup() {
   return seats;
 }
 
+/**
+ * Busca una secuencia de asientos consecutivos libres en una fila específica.
+ * Si no encuentra suficientes asientos, retorna un array vacío
+ */
+function findConsecutiveSeats(row, numSeats) {
+  let consecutives = [];
+  let bestConsecutives = [];
+  let j = 0;
+
+  while (j < N && bestConsecutives.length < numSeats) {
+    if (!row[j].state) {
+      consecutives.push(row[j].id);
+      if (consecutives.length === numSeats) {
+        bestConsecutives = [...consecutives];
+      }
+    } else {
+      consecutives = [];
+    }
+    j++;
+  }
+
+  return bestConsecutives;
+}
+
+/**
+ * Sugiere una secuencia de asientos consecutivos libres.
+ * Donde seats es la matriz de asientos del cine
+ *       numSeats es la cantidad de asientos consecutivos que se necesitan
+ * Si no encuentra suficientes asientos o el número pedido es inválido, retorna un conjunto vacío
+ */
 function suggest(seats, numSeats) {
-  if (numSeats > N) {
+  if (numSeats > N || numSeats <= 0) {
     return new Set();
   }
-  for (let i = N - 1; i >= 0; i--) {
-    let consecutives = [];
-    for (let j = 0; j < N; j++) {
-      if (!seats[i][j].state) {
-        consecutives.push(seats[i][j].id);
-        if (consecutives.length === numSeats) {
-          return new Set(consecutives);
-        }
-      } else {
-        consecutives = [];
-      }
+  let result = [];
+  let i = N - 1;
+  let found = false;
+
+  while (i >= 0 && !found) {
+    const foundSeats = findConsecutiveSeats(seats[i], numSeats);
+    if (foundSeats.length === numSeats) {
+      result = foundSeats;
+      found = true;
     }
+    i--;
   }
-  return new Set();
+
+  return new Set(result);
 }
 
 let seats = setup();
-//Coloco algunos asientos como ocupados:
-seats[9][5].state = true;cd
+// Coloco algunos asientos como ocupados:
+seats[9][5].state = true;
 seats[9][6].state = true;
 seats[8][2].state = true;
 seats[7][0].state = true;
