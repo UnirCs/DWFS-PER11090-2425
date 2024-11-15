@@ -1,0 +1,72 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    justify-content: center;
+    background-color: #293e49;
+    padding: 20px 80px 80px 80px;
+    color: #ffffff;
+}
+
+header, section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #293e49;
+}
+
+header {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 140px;
+    height: 185px;   
+}
+
+/* Estilos de encabezados */
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #293e49;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #293e49;
+    padding-bottom: 5px;
+}
+
+
+/* Estilos de texto y espaciado */
+p, ul {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Sección de habilidades */
+.skills ul li {
+    margin-bottom: 5px;
+}
+
+/* Estilos de experiencia laboral */
+.job {
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+}

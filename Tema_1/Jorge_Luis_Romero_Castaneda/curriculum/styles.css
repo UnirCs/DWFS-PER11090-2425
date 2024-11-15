@@ -1,0 +1,37 @@
+
+header {
+    text-align: center;
+    background-color: gainsboro;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+header > img {
+    width: 200px;
+    border: 2px solid gray;
+}
+
+#summary {
+    width: 100%;
+    padding: 20px;
+}
+
+
+.data-container {
+    background-color: gainsboro;
+    padding: 10px;
+}
+
+.data-container > section > h2{
+    color: rgb(106, 110, 106);
+}
+
+#experience, #education, #skills {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer {
+    text-align: center;
+}
