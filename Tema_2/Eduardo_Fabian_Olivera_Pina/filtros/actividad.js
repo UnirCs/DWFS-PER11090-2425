@@ -155,7 +155,18 @@ function scaleDown() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
-  
+  let newPixels = []; //nuevo array para la imagen reducida
+  for (let row = 0; row < pixels.length; row+=2) { //itero sobre las filas pares
+    let newRow = [];
+    if (row % 2 === 0) {
+      for (let col = 0; col < pixels[row].length; col+=2) { //itero sobre las columnas pares
+        if (col % 2 === 0) {
+          newRow.push(pixels[row][col]); //guardo el pixel
+        }
+      }
+      newPixels.push(newRow);
+    }
+  }
 
   handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
@@ -170,6 +181,15 @@ function dimBrightness(dimFactor) {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
+  for (let fila = 0; fila < pixels.length; fila++) {
+    for (let pix = 0; pix < pixels[fila].length; pix++) {
+      media = (pixels[fila][pix][0] + pixels[fila][pix][1] + pixels[fila][pix][2])/3;
+      media = media < 128 ? 0 : 255;
+      pixels[fila][pix][0] /= dimFactor; // canal R
+      pixels[fila][pix][1] /= dimFactor; // canal G
+      pixels[fila][pix][2] /= dimFactor; // canal B
+    }
+  }
 
   handler.savePixels(pixels, outputPath);
 }
@@ -186,13 +206,22 @@ function invertColors() {
   let pixels = handler.getPixels();
 
   //Aqui tu codigo
-
+  for (let fila = 0; fila < pixels.length; fila++) {
+    for (let pix = 0; pix < pixels[fila].length; pix++) {
+      media = (pixels[fila][pix][0] + pixels[fila][pix][1] + pixels[fila][pix][2])/3;
+      media = media < 128 ? 0 : 255;
+      pixels[fila][pix][0] = 255 - pixels[fila][pix][0]; // canal R
+      pixels[fila][pix][1] = 255 - pixels[fila][pix][1]; // canal G
+      pixels[fila][pix][2] = 255 - pixels[fila][pix][2]; // canal B
+    }
+  }
   handler.savePixels(pixels, outputPath);
 }
 
 /**
  * merge - Junta dos imagenes con cierto factor de fusion
- * Una forma de conseguirlo es sumar el valor de cada canal de cada píxel de cada imagen, habiéndolo multiplicado antes por el factor de fusión correspondiente.
+ * Una forma de conseguirlo es sumar el valor de cada canal de cada píxel de cada imagen, habiéndolo 
+ * multiplicado antes por el factor de fusión correspondiente.
  * @param alphaFirst - Factor de fusion para la primera imagen
  * @param alphaSecond - Factor de fusion para la segunda imagen
  */
@@ -207,6 +236,25 @@ function merge(alphaFirst, alphaSecond) {
   let pixels = [];
 
   //Aqui tu codigo
+
+  for (let row = 0; row < catPixels.length; row++) {
+    let mergedRow = [];
+    for (let col = 0; col < catPixels[row].length; col++) {
+      //tomo los píxeles de cada imagen
+      let pixelCat = catPixels[row][col];
+      let pixelDog = dogPixels[row][col];
+
+      //aplico la fusión con los factores alpha
+      let mergedPixel = [
+        Math.min(255, Math.round(alphaFirst * pixelCat[0] + alphaSecond * pixelDog[0])), // Red
+        Math.min(255, Math.round(alphaFirst * pixelCat[1] + alphaSecond * pixelDog[1])), // Green
+        Math.min(255, Math.round(alphaFirst * pixelCat[2] + alphaSecond * pixelDog[2]))  // Blue
+      ];
+
+      mergedRow.push(mergedPixel);
+    }
+    pixels.push(mergedRow);
+  }
 
   dogHandler.savePixels(pixels, outputPath);
 }
@@ -230,7 +278,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 6;
+let optionN = 9;
 
 switch (optionN) {
   case 1: redConverter(); break;
