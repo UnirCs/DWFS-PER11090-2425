@@ -34,6 +34,25 @@ function ejemplo() {
 }
 
 /**
+ * Accede a cada pixel en particular y lo pasa a la funcion recibida por parametro para que se aplique la transformación deseada.
+ */
+function transformPixels(pixels, transformFunction) {
+  for (let iRow = 0; iRow < pixels.length; iRow++) {
+    const rows = pixels[iRow];
+
+    for (let iColumn = 0; iColumn < rows.length; iColumn++) {
+      const [red, green, blue] = rows[iColumn];
+      const newValues = transformFunction(red, green, blue, iRow, iColumn);
+      rows[iColumn][0] = newValues[0];
+      rows[iColumn][1] = newValues[1];
+      rows[iColumn][2] = newValues[2];
+    }
+  }
+
+  return pixels;
+}
+
+/**
  * Esta función debe transformar una imagen en escala de rojos.
  *
  * Una forma de conseguirlo es simplemente poner los canales G y B a 0 para cada pixel.
@@ -42,7 +61,8 @@ function redConverter() {
   let outputPath = 'output/tucan_red.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  const newPixels = transformPixels(pixels, (red, green, blue) => [red, 0, 0]);
+  pixels = [...newPixels];
 
   handler.savePixels(pixels, outputPath);
 }
@@ -56,7 +76,8 @@ function greenConverter() {
   let outputPath = 'output/tucan_green.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  const newPixels = transformPixels(pixels, (red, green, blue) => [0, green, 0]);
+  pixels = [...newPixels];
 
   handler.savePixels(pixels, outputPath);
 }
@@ -70,7 +91,8 @@ function blueConverter() {
   let outputPath = 'output/tucan_blue.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  const newPixels = transformPixels(pixels, (red, green, blue) => [0, 0, blue]);
+  pixels = [...newPixels];
 
   handler.savePixels(pixels, outputPath);
 }
@@ -88,7 +110,12 @@ function greyConverter() {
   let outputPath = 'output/tucan_grey.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  const newPixels = transformPixels(pixels, (red, green, blue) => {
+    const media = (red + green + blue) / 3;
+    return [media, media, media];
+  });
+
+  pixels = [...newPixels];
 
   handler.savePixels(pixels, outputPath);
 }
@@ -104,7 +131,13 @@ function blackAndWhiteConverter() {
   let outputPath = 'output/tucan_black_and_white.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  const newPixels = transformPixels(pixels, (red, green, blue) => {
+    const media = (red + green + blue) / 3;
+    const transformed = media < 128 ? 0 : 255;
+    return [transformed, transformed, transformed];
+  });
+
+  pixels = [...newPixels];
 
   handler.savePixels(pixels, outputPath);
 }
@@ -118,8 +151,16 @@ function blackAndWhiteConverter() {
 function scaleDown() {
   let outputPath = 'output/tucan_scale_down.jpg';
   let pixels = handler.getPixels();
+  
+  const newPixels = [];
+  const onlyEvenRows = pixels.filter((_, index) => index % 2 === 0);
 
-  //Aqui tu codigo
+  for (let iRow = 0; iRow < onlyEvenRows.length; iRow++) {
+    const onlyEvenColumn = onlyEvenRows[iRow].filter((_, index) => index % 2 === 0);
+    newPixels.push(onlyEvenColumn);
+  }
+
+  pixels = [...newPixels];
 
   handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
@@ -133,7 +174,11 @@ function dimBrightness(dimFactor) {
   let outputPath = 'output/tucan_dimed.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  const newPixels = transformPixels(pixels, (red, green, blue) => {
+    return [(red/dimFactor), (green/dimFactor), (blue/dimFactor)];
+  });
+
+  pixels = [...newPixels];
 
   handler.savePixels(pixels, outputPath);
 }
@@ -149,7 +194,11 @@ function invertColors() {
   let outputPath = 'output/tucan_inverse.jpg';
   let pixels = handler.getPixels();
 
-  //Aqui tu codigo
+  const newPixels = transformPixels(pixels, (red, green, blue) => {
+    return [(255 - red), (255 - green), (255 - blue)];
+  });
+
+  pixels = [...newPixels];
 
   handler.savePixels(pixels, outputPath);
 }
@@ -170,7 +219,17 @@ function merge(alphaFirst, alphaSecond) {
 
   let pixels = [];
 
-  //Aqui tu codigo
+  pixels = transformPixels(catPixels, (catRed, catGreen, catBlue, iRow, iColumn) => {
+    const dogRed = dogPixels[iRow][iColumn][0];
+    const dogGreen = dogPixels[iRow][iColumn][1];
+    const dogBlue = dogPixels[iRow][iColumn][2];
+
+    const red = ((catRed * alphaSecond) + (dogRed * alphaFirst));
+    const green = ((catGreen * alphaSecond) + (dogGreen * alphaFirst));
+    const blue = ((catBlue * alphaSecond) + (dogBlue * alphaFirst));
+
+    return [red, green, blue];
+  });
 
   dogHandler.savePixels(pixels, outputPath);
 }
@@ -194,7 +253,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 0;
+let optionN = 3;
 
 switch (optionN) {
   case 1: redConverter(); break;
