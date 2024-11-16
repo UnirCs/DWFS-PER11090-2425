@@ -1,0 +1,175 @@
+:root {
+    --primary: #757575;          /* Gray 600 */
+    --primary-dark: #424242;     /* Gray 800 */
+    --primary-light: #f5f5f5;    /* Gray 100 */
+    --accent: #fafafa;           /* Gray 50 */
+    --highlight: #b0bec5;        /* Blue Gray 100 */
+    --highlight-text: #455a64;   /* Blue Gray 800 */
+    --highlight-green: #0d47a1;        /* Green 800 (para acentos) */
+    --highlight-green-light: #90caf9;  /* Green 100 (para un verde claro complementario) */
+}
+/* Sección destacada */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--accent);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+/* Imagen de perfil */
+.profile-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Nombre centrado */
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+}
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #e2e8f0;
+}
+
+.profile-info {
+    font-family: 'Lucida Sans'; 
+}
+
+.profile-info h1{
+    color: var(--highlight-green);
+    font-size: 40px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    border-radius: 8px;
+}
+/* Línea de separación */
+.divider {
+    height: 1px;
+    background-color: var(--highlight-green-light);
+    margin: 10px 0;
+    border: none;
+}
+
+/* Información de contacto */
+.contact-info {
+    font-size: 14px;
+    color: #555;
+}
+
+.contact-info div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.accordion {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.accordion-item {
+    margin-top: 10px;
+    background-color: var(--accent);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    font-size: 22px;
+    color: var(--highlight);
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.arrow {
+    transition: transform 0.3s;
+    margin-right: 12px;
+}
+
+.rotate {
+    transform: rotate(90deg); /* Rotación hacia abajo */
+}
+
+.accordion-button:hover {
+    background-color: var(--highlight-light);
+    color: var(--primary-dark);
+}
+
+.accordion-content {
+    padding: 20px;
+    display: none;
+    background-color: var(--primary-light);
+    border-top: 1px solid var(--highlight-light);
+}
+
+.accordion-content h3 {
+    text-align: center;
+    color: var(--highlight);
+    margin-top: 0;
+}
+
+.accordion-content p i {
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    color: var(--highlight); /* Color del icono para que combine con el tema */
+    font-size: 0.8em; /* Tamaño del icono (ajusta según preferencia) */
+    vertical-align: middle; /* Alineación vertical para que esté centrado con el texto */
+}
+
+.accordion-content p a {
+    font-size: 1.1em; /* Tamaño del texto del enlace, ajusta según preferencia */
+    font-weight: bold; /* Hace que el enlace esté en negrita */
+    color: var(--primary-dark); /* Aplica un color para resaltar el enlace, opcional */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    margin-right: 10px;
+}
+
+/* Estilos para la lista de habilidades */
+.skills-list {
+    display: grid; /* Usamos grid para que los iconos se distribuyan bien */
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); /* Esto hará que los iconos se ajusten al tamaño de la pantalla */
+    gap: 25px; /* Espacio entre los iconos */
+    justify-items: center; /* Centrar los iconos */
+    list-style-type: none; /* Eliminar los puntos de lista */
+    padding: 0;
+    
+}
+
+.skills-list li {
+    font-size: 3rem; /* Tamaño grande de los iconos */
+    color: #333; /* Color de los iconos */
+}
+
+.skills-list li i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto cuando se pasa el mouse sobre el icono */
+.skills-list li:hover i {
+    transform: scale(1.2); /* Agrandar el icono al pasar el mouse */
+    color: #007BFF; /* Cambiar el color del icono al pasar el mouse */
+}

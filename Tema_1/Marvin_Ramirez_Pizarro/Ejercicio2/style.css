@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    padding: 0px;
+    margin: 0px 10%;
+    background: #2c2c2c;
+}
+
+.container{
+    padding: 5px;
+    background: #2c2c2c;
+}
+
+.banner{
+    color: #004c97;
+    background: #cbddf0;
+    font: normal 300 28px Roboto;
+    text-align: center;
+    padding: 40px 10px;
+    margin-bottom: 10px;
+}
+
+.pantalla{
+    padding: 0px 25%;
+    margin-bottom: 10px;
+}
+
+.pantalla > div{
+    background: #e1e8eb;
+    color: #004c97;
+    text-align: center;
+    padding: 10px;
+    font: normal 400 15px Roboto;
+}
+
+.butacas{
+    padding: 0px 15%;
+    margin-bottom: 20px;
+}
+
+.butacas > table{
+    font: normal 500 18px Roboto;
+    color: #004c97;
+    border-collapse: separate;
+    border-spacing: 10px 15px;
+    margin-left: -50px;
+}
+
+tr{
+    margin-bottom: 50px;
+}
+
+td{
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+
+.fila{
+    border: none;
+    text-align: right;
+}
+
+.leyenda{
+    color: #ffffff;
+    text-align: center;
+}
+
+.leyenda > div{
+    display: inline-flex;
+    margin-right: 30px;
+}
+
+.leyenda-circulo{
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.reserva{
+    text-align: center;
+    color: #004c97;
+    font: normal 500 14px Roboto;
+}
+
+.reserva > input{
+    border-radius: 8px;
+    border: none;
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.reserva > button{
+    color: #ffffff;
+    background: #004c97;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    width: 200px;
+    margin-top: 10px;
+    font: normal 600 14px Roboto;
+}
+
+.footer{
+    color: #004c97;
+    background: #cbddf0;
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.disponible{
+    background: #999998 !important;
+}
+
+.disponible:hover{
+    background: #ef9625 !important;
+    cursor: pointer;
+}
+
+.ocupado{
+    background: #3c96bc !important;
+}
+
+.seleccionado{
+    background: #ef9625 !important;
+}
