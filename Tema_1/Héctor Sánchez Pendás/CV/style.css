@@ -72,17 +72,17 @@ main{
 }
 
 ul {
-    display: grid;                 /* Activa el grid layout */
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Define columnas responsivas */
-    gap: 50px;                     /* Espacio entre los elementos */
-    list-style: none;              /* Elimina las viñetas de la lista */
-    padding: 0;                    /* Remueve el relleno predeterminado */
-    margin-bottom: 10px;                     /* Remueve el margen predeterminado */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
 }
 li {
-    background-color: #201f1f;   /* Color de fondo */
-    padding: 15px;                 /* Espaciado interno */
-    text-align: center;            /* Centra el texto */
-    border-radius: 7px;            /* Bordes redondeados */
+    background-color: #201f1f;
+    padding: 15px;
+    text-align: center;
+    border-radius: 7px;
     color: white;
 }
