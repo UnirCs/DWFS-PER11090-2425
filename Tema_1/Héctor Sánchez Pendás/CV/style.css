@@ -74,15 +74,15 @@ main{
 ul {
     display: grid;                 /* Activa el grid layout */
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Define columnas responsivas */
-    gap: 10px;                     /* Espacio entre los elementos */
+    gap: 50px;                     /* Espacio entre los elementos */
     list-style: none;              /* Elimina las viñetas de la lista */
     padding: 0;                    /* Remueve el relleno predeterminado */
-    margin: 0;                     /* Remueve el margen predeterminado */
+    margin-bottom: 10px;                     /* Remueve el margen predeterminado */
 }
 li {
     background-color: #201f1f;   /* Color de fondo */
-    padding: 10px;                 /* Espaciado interno */
+    padding: 15px;                 /* Espaciado interno */
     text-align: center;            /* Centra el texto */
-    border-radius: 5px;            /* Bordes redondeados */
+    border-radius: 7px;            /* Bordes redondeados */
     color: white;
 }
