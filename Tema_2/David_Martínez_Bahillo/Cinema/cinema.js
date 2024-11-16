@@ -50,26 +50,36 @@ function renderButacas() {
 function suggest() {
     const numeroAsientos = parseInt(document.getElementById('numeroAsientos').value);
     let asientosDisponibles = new Set();
+    let filaSeleccionada = -1;
+    let inicioAsientos = -1;
 
     if (numeroAsientos > N)
         return asientosDisponibles;
 
     for (let i = N - 1; i >= 0; i--) {
         let count = 0;
-        for (let j = N - 1; j >= 0; j--) {
+        for (let j = 0; j < N; j++) {
             if (!butacas[i][j].estado) {
                 count++;
                 if (count === numeroAsientos) {
-                    for (k = 0; k < count; k++) {
-                        asientosDisponibles.add(butacas[i][j + k].id);
-                        butacas[i][j + k].estado = true;
-                    }
-                    renderButacas();
-                    return asientosDisponibles;
+                    filaSeleccionada = i;
+                    inicioAsientos = j - numeroAsientos + 1;
                 }
-            }
+            } else
+                count = 0;
         }
+        if (filaSeleccionada !== -1)
+            i = -1;
     }
+
+    if (filaSeleccionada !== -1) {
+        for (let k = 0; k < numeroAsientos; k++) {
+            const index = inicioAsientos + k;
+            asientosDisponibles.add(butacas[filaSeleccionada][index].id);
+            butacas[filaSeleccionada][index].estado = true;
+        }
+        renderButacas();
+    }
+
     return asientosDisponibles;
 }
-
