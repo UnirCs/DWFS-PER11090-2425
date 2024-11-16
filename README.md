@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Máster Universitario en Ingeniería de Software y Sistemas Informáticos
 ## Asignatura Desarrollo Web: Full Stack
 ### Profesor Impartidor (Clases, ejercicios opcionales y examen): [D. Jesús Pérez Melero](https://www.linkedin.com/in/jesusperezmelero/)
@@ -50,3 +51,7 @@ En este punto, tienes el repositorio local actualizado. Haz las adiciones necesa
 
 ### Parte V: Abrir una Pull Request
 * En GitHub, haz una ``Pull Request`` o solicitud de cambios, para que pueda verificar tus ejercicios y aceptarlos en la rama master del repositorio original si todo está bien y no hay conflictos. El origen debe ser el repositorio de tu cuenta de GitHub y, el destino, este repositorio.
+=======
+# DWFS-GLOBAL
+Repositorio de codigo de ejemplo y ejercicios de la asignatura Desarrollo Web: Full Stack del Máster Universitario en Ingeniería de Software y Sistemas Informáticos de la Universidad Internacional de La Rioja
+>>>>>>> upstream/master
