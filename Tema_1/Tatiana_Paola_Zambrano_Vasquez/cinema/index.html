@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIR-CINEMA - Reserva de Butacas</title>
+    <!-- CDN de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- CDN de Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Archivo CSS personalizado -->
+</head>
+<body>
+
+    <!-- Contenedor principal -->
+    <div class="container-fluid my-5">
+
+        <!-- Título -->
+        <h1 class="text-center mb-2">Reserva de Butacas - UNIR-CINEMA <img src="cine.png" alt="icono del cine" class="cine-photo"/></h1>
+        
+        <!-- Representación de la pantalla de cine -->
+        <div class="cinema-screen text-center mb-4">
+            <div class="screen-line"></div>
+            <h3>Pantalla</h3>
+        </div>
+
+        <!-- Selección de butacas -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-12">
+                <div class="seat-row text-center">
+                    <button class="btn btn-primary">1</button>
+                    <button class="btn btn-primary">2</button>
+                    <button class="btn btn-primary">3</button>
+                    <button class="btn btn-danger" disabled>4</button>
+                    <button class="btn btn-primary">5</button>
+                    <button class="btn btn-primary">6</button>
+                    <button class="btn btn-primary">7</button>
+                    <button class="btn btn-danger" disabled>8</button>
+                    <button class="btn btn-primary">9</button>
+                    <button class="btn btn-primary">10</button>
+                </div>
+                <div class="seat-row text-center">
+                    <button class="btn btn-primary">11</button>
+                    <button class="btn btn-primary">12</button>
+                    <button class="btn btn-danger" disabled>13</button>
+                    <button class="btn btn-primary">14</button>
+                    <button class="btn btn-primary">15</button>
+                    <button class="btn btn-primary">16</button>
+                    <button class="btn btn-primary">17</button>
+                    <button class="btn btn-danger" disabled>18</button>
+                    <button class="btn btn-primary">19</button>
+                    <button class="btn btn-primary">20</button>
+                </div>
+                <div class="seat-row text-center">
+                    <button class="btn btn-primary">21</button>
+                    <button class="btn btn-primary">22</button>
+                    <button class="btn btn-danger" disabled>23</button>
+                    <button class="btn btn-primary">24</button>
+                    <button class="btn btn-primary">25</button>
+                    <button class="btn btn-primary">26</button>
+                    <button class="btn btn-primary">27</button>
+                    <button class="btn btn-primary">28</button>
+                    <button class="btn btn-primary">29</button>
+                    <button class="btn btn-primary">30</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario de selección de asientos -->
+        <form id="seat-form" class="text-center">
+            <div class="mb-4">
+                <label for="num-seats" class="form-label">Selecciona el número de asientos:</label>
+                <input type="number" id="num-seats" class="form-control w-25 mx-auto" min="1" max="10" value="1">
+            </div>
+            <button type="submit" class="btn btn-success"><i class="bi bi-send"></i> Confirmar Reserva</button>
+        </form>
+
+        <!-- Footer con información del cine -->
+        <footer class="text-center mt-3">
+            <p>Cine UNIR-CINEMA</p>
+            <p>Dirección:Calle Avenida de la Paz,137.Logroño </p>
+            <p>Teléfono: 941209743</p>
+            <p>Email: cinefullstack@unircinema.com</p>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
