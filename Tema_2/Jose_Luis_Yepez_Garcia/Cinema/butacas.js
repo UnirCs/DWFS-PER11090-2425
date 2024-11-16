@@ -13,7 +13,7 @@ function setup() {
             // Nuevo asiento
             fila.push({
                 id: idContador++,
-                estado: idContador -1 <= 100 && idContador -1 >= 92 || idContador -1 === 89 ? true : false // Estado inicial libre
+                estado: false // Estado inicial libre
             });
         }
         butacas.push(fila);
