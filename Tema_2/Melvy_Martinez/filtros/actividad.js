@@ -253,7 +253,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 3;
+let optionN = 0;
 
 switch (optionN) {
   case 1: redConverter(); break;
