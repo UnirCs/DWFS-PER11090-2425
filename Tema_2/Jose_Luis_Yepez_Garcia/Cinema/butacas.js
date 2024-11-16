@@ -13,7 +13,7 @@ function setup() {
             // Nuevo asiento
             fila.push({
                 id: idContador++,
-                estado: false // Estado inicial libre
+                estado: idContador -1 <= 100 && idContador -1 >= 92 || idContador -1 === 89 ? true : false // Estado inicial libre
             });
         }
         butacas.push(fila);
@@ -25,7 +25,7 @@ function setup() {
 let butacas = setup();
 
 // Imprimir la matriz
-// console.log(butacas);
+console.log(butacas);
 
 // Función para reservar un asiento
 function suggest(numSeats) {
@@ -34,24 +34,26 @@ function suggest(numSeats) {
   }
   
   let seats = [];
+  let done = false;
   for (let i = N - 1; i >= 0; i--) {
     for (let j = N - 1; j >= 0; j--) {
-      // console.log(seats.length === numSeats)
-      if (seats.length === numSeats) {
-        seatsSet = new Set(seats.map(seat => seat.id));
-        return seatsSet;
-      }
-      if (butacas[i][j].estado === false) {
+      if (butacas[i][j].estado === false && !done) {
         seats.push(butacas[i][j]);
-      } else {
+        done = seats.length === numSeats
+      } else if (!done) {
         seats = [];
       }
     }
+    if (!done) seats = []
+  }
+
+  if (done) {
+    return new Set(seats.map(seat => seat.id));
   }
 
   return new Set()
 }
 
-const seatsSelected = suggest(2);
+const seatsSelected = suggest(10);
 
 console.log(seatsSelected)
