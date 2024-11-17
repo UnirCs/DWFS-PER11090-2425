@@ -21,7 +21,22 @@ function setup() {
     return butacas;
 }
 
-function suggest(seats) { 
+function getConsecutiveSeats(row, seats) {
+  let consecutive = new Set();
+
+  for (let i = 0; i < row.length && consecutive.size < seats; i++) {
+    if(row[i].estado) {
+      consecutive = new Set()
+    } else {
+      row[i].estado = true;
+      consecutive.add(row[i])
+    }
+  }
+
+  return consecutive.size === seats? consecutive: new Set();
+}
+
+function suggestWithoutExternalSelection(seats) { 
   let reserved = new Set();
 
   for (let iRow = butacas.length - 1; iRow >= 0 && reserved.size === 0; iRow--) {
@@ -38,21 +53,26 @@ function suggest(seats) {
   return reserved;
 }
 
+function suggest(seats) { 
+  let reserved = new Set();
+
+  for (let iRow = butacas.length - 1; iRow >= 0 && reserved.size === 0; iRow--) {
+    reserved = getConsecutiveSeats(butacas[iRow], seats);
+  }
+
+  return reserved;
+}
+
 // Inicializar la matriz
 let butacas = setup();
+butacas[9][5].estado = true; // Considerando una selección al azar que el primer programa no permitía.
 
-// Pruebas para validar selección de asientos juntos en una fila mediante esta función. No se considera que un ente externo seleccione butacas al azar.
-const response = suggest(2);
-console.log('Set', response); // { { id: 91, estado: true }, { id: 92, estado: true } }
+const response = suggest(5);
+console.log('Set', response);
 
 const response1 = suggest(5);
-console.log('Set', response1); // { id: 93, estado: true }, { id: 94, estado: true }, { id: 95, estado: true }, { id: 96, estado: true }, { id: 97, estado: true }
+console.log('Set', response1); 
 
-const response2 = suggest(1);
-console.log('Set', response2); // { { id: 98, estado: true } }
-
-const response3 = suggest(7);
-console.log('Set', response3); // { id: 81, estado: true }, { id: 82, estado: true }, { id: 83, estado: true }, { id: 84, estado: true }, { id: 85, estado: true }, { id: 86, estado: true }, { id: 87, estado: true }
 
 // Imprimir la matriz
 // console.log(butacas);
