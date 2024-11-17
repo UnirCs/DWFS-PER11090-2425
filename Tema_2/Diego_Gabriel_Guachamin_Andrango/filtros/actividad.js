@@ -50,7 +50,6 @@ function redConverter () {
 
   }
 
-
   handler.savePixels(pixels, outputPath)
 }
 
@@ -75,7 +74,6 @@ function greenConverter () {
 
   }
 
-
   handler.savePixels(pixels, outputPath)
 }
 
@@ -92,14 +90,10 @@ function blueConverter () {
 
   for (let iMatrix of pixels) {
     for (let matrix of iMatrix) {
-
       matrix[0] = 0
       matrix[1] = 0
-
     }
-
   }
-
 
   handler.savePixels(pixels, outputPath)
 }
@@ -121,17 +115,13 @@ function greyConverter () {
 
   for (let iMatrix of pixels) {
     for (let matrix of iMatrix) {
-
       let medianValue = ((matrix[0] + matrix[1] + matrix[2]) / 3)
-
       matrix[0] = medianValue
       matrix[1] = medianValue
       matrix[2] = medianValue
-
     }
 
   }
-
 
   handler.savePixels(pixels, outputPath)
 }
@@ -151,17 +141,12 @@ function blackAndWhiteConverter () {
 
   for (let iMatrix of pixels) {
     for (let matrix of iMatrix) {
-
       let medianValue = ((matrix[0] + matrix[1] + matrix[2]) / 3)
-
       matrix[0] = medianValue < 128 ? 0 : 255
       matrix[1] = medianValue < 128 ? 0 : 255
       matrix[2] = medianValue < 128 ? 0 : 255
-
     }
-
   }
-
 
   handler.savePixels(pixels, outputPath)
 }
@@ -182,14 +167,11 @@ function scaleDown () {
 
   for (let i = 0; i < height; i += 2) {
     let row = []
-
     for (let j = 0; j < width; j += 2) {
       row.push(pixels[i][j])
     }
-
     scaledPixels.push(row)
   }
-
   handler.savePixels(scaledPixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2)
 }
 
@@ -206,15 +188,11 @@ function dimBrightness (dimFactor) {
 
   for (let iMatrix of pixels) {
     for (let matrix of iMatrix) {
-
       matrix[0] /= dimFactor
       matrix[1] /= dimFactor
       matrix[2] /= dimFactor
-
     }
-
   }
-
 
   handler.savePixels(pixels, outputPath)
 }
@@ -242,7 +220,6 @@ function invertColors () {
     }
 
   }
-
 
   handler.savePixels(pixels, outputPath)
 }
@@ -279,11 +256,8 @@ function merge (alphaFirst, alphaSecond) {
       matrix[0] = catMatrix[0] * alphaSecond + dogMatrix[0] * alphaFirst
       matrix[1] = catMatrix[1] * alphaSecond + dogMatrix[1] * alphaFirst
       matrix[2] = catMatrix[2] * alphaSecond + dogMatrix[2] * alphaFirst
-
     }
-
   }
-
 
   dogHandler.savePixels(pixels, outputPath)
 }
@@ -306,7 +280,7 @@ function merge (alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 2;
+let optionN = 9
 
 //objeto de funciones
 const actions = {
@@ -321,4 +295,4 @@ const actions = {
   9: () => merge(0.3, 0.7),
 };
 
-(actions[optionN] || ejemplo)();
+(actions[optionN] || ejemplo)()
