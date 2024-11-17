@@ -23,50 +23,47 @@ function setup() {
     return butacas;
 }
 
-// Devuelve un Set con los id de los asientos contiguos disponibles
 function suggest(seats, numberOfSeats) {
   const seatIds = new Set();
+  let foundSeats = false; // Si se encontraron los asientos consecutivos
 
   // Si el número de asientos solicitados excede el tamaño máximo de la fila, devolver set vacío
   if (numberOfSeats > N) return new Set();
 
-  // Itera partiendo desde la última fila
-  for (let row = N - 1; row >= 0; row--) {
+  // itera partiendo desde la última fila
+  for (let row = N - 1; row >= 0 && !foundSeats; row--) {
 
-    seatIds.clear();
+    seatIds.clear();  // limpiar los IDs de asientos previos
 
     // Recorre cada asiento en la fila actual
-    for (let seat = 0; seat < N; seat++) {
+    for (let seat = 0; seat < N && !foundSeats; seat++) {
 
-      // Si el asiento esta libre
+      // Si el asiento está libre
       if (seats[row][seat].estado === false) {
-        // Se agrega su id al set
-        seatIds.add(seats[row][seat].id);
-        // Si se encontraron los asientos consecutivos que se buscaban, retorna el set con los id's
-        if (seatIds.size === numberOfSeats) {
-          return seatIds;
+        seatIds.add(seats[row][seat].id);  // agrega su id al set        
+        if (seatIds.size === numberOfSeats) { // si se encontraron los asientos consecutivos que se buscaban
+          foundSeats = true;
         }
 
       } else {
-        // Asiento ocupado, inicializa el Set
-        seatIds.clear();
+        seatIds.clear(); // Asiento ocupado, inicializa el Set
       }
     }
   }
-  // No se encontro el numero requerido de asientos juntos, devolver set vacío
-  return new Set();
+  return foundSeats ? seatIds : new Set();  
 }
 
 function reserveSeat(seats, idSeat) {
-  for (let i = 0; i < N; i++) {
-    for (let j = 0; j < N; j++) {
+  let seatReserved  = false
+  for (let i = 0; i < N && !seatReserved ; i++) {
+    for (let j = 0; j < N && !seatReserved ; j++) {
       if (seats[i][j].id === idSeat) {
         seats[i][j].estado = true;
-        return true;
+        seatReserved  = true;
       }
     }
   }
-  return false;
+  return seatReserved ;
 }
 
 function confirmReservation() {
