@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* color: white !important; */
+  background-color: black;
+}
+
+.container {
+  padding: 20px;
+  margin-top: 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 1200px;
+  border: 1px solid #f9d849;
+}
+
+.titulo {
+  background-color: #353a3f;
+  color: white;
+  border: 1px solid black;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  width: 100%;
+}
+
+.pantalla {
+  background-color: #333333;
+  border: 1px solid black;
+  height: 180px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.asientos {
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.fila-asientos {
+  display: flex;
+  justify-content: center;
+}
+.asiento {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #f9d849;
+  margin: 5px;
+}
+
+.reservado {
+  background-color: #f9d849;
+}
+
+/* .fila {
+  width: 100%;
+} */
+
+.texto-fila {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f9d849;
+  margin-right: 20px;
+}
+
+.celda {
+  border: 1px solid red;
+}
+
+.reserva {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 9px;
+  background-color: black;
+}
+.reserva h3 {
+  color: #f9d849;
+}
+.reserva > button {
+  width: 200px;
+  padding: 10px 40px;
+  background-color: #f9d849;
+}
+.reserva > input {
+  width: 150px;
+  padding: 10px 40px;
+  text-align: center;
+  font-size: large;
+}
+
+footer {
+  background-color: #353a3f;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+footer > h6 {
+  padding: 7px;
+}
