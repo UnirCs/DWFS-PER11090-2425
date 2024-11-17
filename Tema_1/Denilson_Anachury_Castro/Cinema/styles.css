@@ -1,0 +1,79 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h6 {
+    margin: 0;
+}
+
+body {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.screen {
+    border: 1px solid var(--accent);
+    text-align: center;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.chairs-container {
+    border: none;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chairs-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: 60px;
+}
+
+.chair {
+    border: 1px solid var(--accent);
+    height: 40px;
+    width: 40px;
+    transition: all 0.3s ease-in-out;
+
+    &.busy {
+        background: var(--accent);
+        border: 1px solid var(--accent);
+    }
+
+    &:not(.busy):hover {
+        background: var(--accent-hover);
+        cursor: pointer;
+    }
+}
+
+.conventions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+
+    .chair {
+        height: 16px;
+        width: 16px;
+
+        &:not(.busy):hover {
+            background-color: transparent;
+            cursor: auto;
+        }
+    }
+}
+
+.number-of-seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    margin-top: 2rem;
+}
