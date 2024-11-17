@@ -25,32 +25,31 @@ function setup() {
 let butacas = setup();
 
 function suggest(numberSeats) {
-    // Verificar si el número de asientos solicitados excede el tamaño de una fila
-    if (numberSeats > N) {
-        return new Set(); // No es posible satisfacer la solicitud
-    }
+    if (numberSeats > N) return new Set(); // Verificación temprana de solicitud inválida
 
-    // Recorrer las filas desde la última hacia la primera
+    let suggestedSeats = new Set();
+
     for (let row = N - 1; row >= 0; row--) {
         let consecutiveSeats = [];
         for (let seat = 0; seat < N; seat++) {
             if (!butacas[row][seat].estado) {
-                // Asiento libre, agregar a la lista temporal
                 consecutiveSeats.push(butacas[row][seat].id);
-                // Verificar si se han encontrado suficientes asientos contiguos
                 if (consecutiveSeats.length === numberSeats) {
-                    return new Set(consecutiveSeats);
+                    suggestedSeats = new Set(consecutiveSeats);
+                    seat = N; // Forzar la salida del bucle interno
                 }
             } else {
-                // Asiento ocupado, reiniciar la lista temporal
-                consecutiveSeats = [];
+                consecutiveSeats = []; // Reiniciar si se encuentra un asiento ocupado
             }
+        }
+        if (suggestedSeats.size > 0) {
+            row = -1; // Forzar la salida del bucle externo
         }
     }
 
-    // No se encontraron suficientes asientos contiguos disponibles
-    return new Set();
+    return suggestedSeats;
 }
 
 // Solicitar una sugerencia de 3 asientos
- suggest(3);
+suggest(3);
+
