@@ -25,32 +25,18 @@ function getConsecutiveSeats(row, seats) {
   let consecutive = new Set();
 
   for (let i = 0; i < row.length && consecutive.size < seats; i++) {
-    if(row[i].estado) {
-      consecutive = new Set()
+    let itemCopy = {...row[i]};
+
+    if(itemCopy.estado) {
+      consecutive = new Set();
     } else {
-      row[i].estado = true;
-      consecutive.add(row[i])
+      itemCopy.estado = true;
+      itemCopy.index = i;
+      consecutive.add(itemCopy);
     }
   }
 
   return consecutive.size === seats? consecutive: new Set();
-}
-
-function suggestWithoutExternalSelection(seats) { 
-  let reserved = new Set();
-
-  for (let iRow = butacas.length - 1; iRow >= 0 && reserved.size === 0; iRow--) {
-    const availablesRow = butacas[iRow].filter(p => p.estado === false);
-    
-    if (availablesRow.length >= seats) {
-      for (let iAva = 0; iAva < seats; iAva++) {
-        availablesRow[iAva].estado = true;
-        reserved.add(availablesRow[iAva]);
-      }
-    }
-  }
-
-  return reserved;
 }
 
 function suggest(seats) { 
@@ -58,6 +44,9 @@ function suggest(seats) {
 
   for (let iRow = butacas.length - 1; iRow >= 0 && reserved.size === 0; iRow--) {
     reserved = getConsecutiveSeats(butacas[iRow], seats);
+    reserved.forEach((item) => {
+      butacas[iRow][item.index].estado = true;
+    });
   }
 
   return reserved;
@@ -75,4 +64,4 @@ console.log('Set', response1);
 
 
 // Imprimir la matriz
-// console.log(butacas);
+console.log(butacas);
