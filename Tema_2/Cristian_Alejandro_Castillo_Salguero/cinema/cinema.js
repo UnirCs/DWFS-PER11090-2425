@@ -10,7 +10,7 @@ function setup() {
         // Nueva fila
         let fila = [];
         for (let j = 0; j < N; j++) {
-            if(idContador >= 87){
+            if(idContador >= 95){
                 // Nuevos asientos ocupados
                 fila.push({
                     id: idContador++,
@@ -31,31 +31,39 @@ function setup() {
 
 
 function suggest(numButacas){
-
+    let butacasAsignadas = false;
+    let butacasLibres = 0;
+    let indiceButaca = -1;
     if(numButacas <= 0 || numButacas > N) return [];
-    
+    let set = [];
+
     for(let i = butacas.length - 1; i >= 0; i--){
-        let set = [];
         for(let j = butacas[i].length - 1; j >= 0; j--){
-            if(butacas[i][j].estado === false){
-                set.push(butacas[i][j].id);
-                if(set.length === numButacas){
-                    set.forEach(butaca => butaca.estado = true);
-                    return set.reverse();
-                } 
-            }else{
-                set = [];
+            if((butacas[i][j].estado === false) && !butacasAsignadas){
+                butacasLibres++;
+                if(indiceButaca === -1){
+                    indiceButaca = j;
+                }
+            }
+            if((butacasLibres === numButacas) && !butacasAsignadas){
+                for(let j = indiceButaca; j >= indiceButaca - numButacas + 1;j--){
+                    set.push({id: butacas[i][j].id, estado: true});
+                }
+                butacasAsignadas = true;
+            }else if((j === 0) && (butacasLibres !== numButacas)){
+                butacasLibres = 0;
+                indiceButaca = -1;
             }
         }
     }
-    return [];
+    return set.reverse();
 }
 
 // Inicializar la matriz
 let butacas = setup();
 
 // Imprimir la matriz
-console.log(butacas);
+//console.log(butacas);
 
 // Imprimir IDs de las butacas seleccionadas
-console.log(res = suggest(9));
+console.log(res = suggest(7));
