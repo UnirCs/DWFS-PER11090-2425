@@ -1,0 +1,76 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8f5;
+    color: #0b3d2e;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    background-color: #07382b;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Representación de los asientos */
+.seats {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #99c2a2;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.seat.occupied {
+    background-color: #466d59;
+    cursor: not-allowed;
+}
+
+.footer {
+    background-color: #07382b;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.selection {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.selection input, .selection button {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1rem;
+}
+
+.text-footer p {
+    margin: 5px;
+}
