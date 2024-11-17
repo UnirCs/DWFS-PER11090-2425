@@ -1,0 +1,73 @@
+/* Estilos Globales */
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Pantalla del cine */
+.pantalla {
+    background-color: #ccc;
+    height: 20px;
+    width: 70%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor de asientos */
+.sillas {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* Estilos de los asientos */
+.silla {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/*Sobre la silla */
+.silla:hover {
+    background-color: #666;
+}
+
+/* silla seleccionada */
+.silla.seleccionada {
+    background-color: #ff9800;
+}
+
+/* silla reservada */
+.silla.reservada {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    margin: 20px auto;
+    width: 50%;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #ff9800;
+    text-decoration: none;
+}
