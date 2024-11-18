@@ -41,33 +41,42 @@ function  SelectSeats(number=0){
 }
 
 function CheckAvailability(number = 0) {
-    for (let i = butacas.length - 1; i >= 0; i--) {
+    let found = false; 
+
+    for (let i = butacas.length - 1; i >= 0 && !found; i--) {
         const fila = butacas[i];
         let seatFree = 0;
-        reserva.asientosReserva = [];
+        let tempReservas = [];
 
+        for (let j = 0; j < fila.fila.length; j++) {
+            const seat = fila.fila[j];
 
-        for (const seat of fila.fila) {
             if (seat.estado === false) {
                 seatFree++;
-                reserva.asientosReserva.push(seat.id);
-
+                tempReservas.push(seat.id);
 
                 if (seatFree === number) {
+                    found = true;
                     reserva.filaReserva = fila.idFila;
-                    for (let k = reserva.asientosReserva.length - 1; k >= 0; k--) {
-                        const asiento = fila.fila.find(s => s.id === reserva.asientosReserva[k]);
-                        if (asiento) {
-                            asiento.estado = true;
-                        }
-                    }
-                    return true;
+                    reserva.asientosReserva = [...tempReservas];
                 }
             } else {
+
                 seatFree = 0;
-                reserva.asientosReserva = [];
+                tempReservas = [];
+            }
+        }
+
+        // Actualizar estado de los asientos si ya encontramos
+        if (found) {
+            for (let id of reserva.asientosReserva) {
+                const asiento = fila.fila.find(s => s.id === id);
+                if (asiento) {
+                    asiento.estado = true;
+                }
             }
         }
     }
-    return false;
+
+    return found;
 }
