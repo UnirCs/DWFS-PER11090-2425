@@ -29,7 +29,7 @@ function suggest(numberSeats) {
 
     let suggestedSeats = new Set();
 
-    for (let row = N - 1; row >= 0; row--) {
+    for (let row = N - 1; suggestedSeats.size < numberSeats; row--) {
         let consecutiveSeats = [];
         for (let seat = 0; seat < N; seat++) {
             if (!butacas[row][seat].estado) {
@@ -41,9 +41,6 @@ function suggest(numberSeats) {
             } else {
                 consecutiveSeats = []; // Reiniciar si se encuentra un asiento ocupado
             }
-        }
-        if (suggestedSeats.size > 0) {
-            row = -1; // Forzar la salida del bucle externo
         }
     }
 
