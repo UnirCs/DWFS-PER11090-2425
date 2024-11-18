@@ -42,22 +42,13 @@ function redConverter() {
   let outputPath = 'output/tucan_red.jpg';
   let pixels = handler.getPixels();  
 
-  //Aqui tu codigo
-  /*
+  //Aqui tu codigo  
   for(let fila = 0; fila < pixels.length; fila++){
     for(let columna=0; columna < pixels[fila].length; columna++){
         pixels[fila][columna][1] = 0;
         pixels[fila][columna][2] = 0;
     }
-  }*/
-
-    for (let fila = 0; fila < pixels.length; fila++) {
-      for (let col = 0; col < pixels[fila].length; col++) {
-        // 0->R red, 1->G green, 2->B blue
-        pixels[fila][col][1] = 0; // Remove green
-        pixels[fila][col][2] = 0; // Remove blue
-      }
-    }
+  }    
   handler.savePixels(pixels, outputPath);
 }
 
@@ -77,7 +68,6 @@ function greenConverter() {
         pixels[fila][columna][2] = 0;
     }
   }
-
   handler.savePixels(pixels, outputPath);
 }
 
@@ -97,7 +87,6 @@ function blueConverter() {
         pixels[fila][columna][1] = 0;
     }
   }
-
   handler.savePixels(pixels, outputPath);
 }
 
@@ -122,7 +111,6 @@ function greyConverter() {
         pixels[fila][columna] = [greyValue, greyValue, greyValue];
     }
   }
-
   handler.savePixels(pixels, outputPath);
 }
 
@@ -148,8 +136,7 @@ function blackAndWhiteConverter() {
             pixels[fila][columna] = [255, 255, 255];
         }
     }
-}
-
+  }
   handler.savePixels(pixels, outputPath);
 }
 
@@ -221,7 +208,7 @@ function invertColors() {
             pixel[2] = 255 - pixel[2];
         }
     }
-  handler.savePixels(pixels, outputPath);
+    handler.savePixels(pixels, outputPath);
 }
 
 /**
