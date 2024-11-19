@@ -39,7 +39,7 @@ function suggest(nAsientosReservar) {
             contador = 0
             butacasReservadasTemp = []
             // console.log("FILA ============= "+i)
-            for (let j = butacas[i].length-1; j >=0; j--) {
+            for (let j = 0; j < butacas[i].length; j++) {
                 if(butacas[i][j].estado === false  && isReservado === false){
                     contador++;
                     butacasReservadasTemp.push(butacas[i][j])
