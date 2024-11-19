@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: rgb(68, 68, 108);
+}
+
+.card{text-align: center;}
+
+.cabecera{
+    background-color: rgb(68, 68, 78);
+    color:white;
+}
+
+#titulo{
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height:4em;
+}
+
+.pantalla{
+    background-color: rgb(48, 48, 48);
+    min-height: 200px;
+    margin: 20px 0;
+}
+
+.selector{
+    margin: 10px;
+    text-align: center;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.butaca {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: 1px solid gray;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.butaca-ocupada{
+    background-color: rgb(68, 68, 78);
+}
+
+.butaca:hover{
+    background-color: rgb(68, 68, 108);
+}
+
+#reservar{
+    display: block;
+    padding: 2px 10px;
+    margin: 15px auto;
+    background-color: rgb(68, 68, 108);
+    border-radius: 5px;
+}
+
+.pie{
+    background-color: rgb(68, 68, 78);
+    color:white;
+    min-height: 80px;
+    padding: 15px 10px 5px;
+}
