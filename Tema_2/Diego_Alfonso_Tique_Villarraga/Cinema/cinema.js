@@ -1,4 +1,4 @@
-// Representación de la sala de cine como una matriz, (5 filas x 10 columnas)
+// Representación de la sala de cine como una matriz (5 - filas x 10 columnas)
 const salaCine = [
     [
         { id: 1, estado: false }, { id: 2, estado: false }, { id: 3, estado: true }, { id: 4, estado: false }, { id: 5, estado: false },
