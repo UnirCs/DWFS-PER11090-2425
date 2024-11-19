@@ -1,0 +1,42 @@
+.pantalla{
+    height: 200px;
+    margin-top: 80px;
+    background-color: white;
+    box-shadow: 0 0 15px 15px white;
+    margin-bottom: 50px;
+}
+
+.butaca{
+    width: 40px;
+    height: 40px;
+    border: 1px solid yellow;
+    margin: 10px 10px;
+}
+.fila{
+    color: white;
+    margin-top: 20px
+}
+
+.textoAmarillo{
+    color: yellow;
+    text-align: center;
+
+}
+
+.ocupado{
+    background-color: yellow;
+}
+
+.piedepagina{
+    background-color: grey;
+    color: white;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.anchura{
+    width: 220px;
+
+}
+
+
