@@ -1,0 +1,48 @@
+.contenedor{
+    max-width: 50%;
+    margin: 0 auto;
+
+}
+
+.foto{
+    border-radius: 1000%;
+    outline: #2c3e50 solid 4px;
+}
+
+.borde{
+    border-bottom: solid 5px;
+    color: black;
+}
+
+.contenidotabla{
+    max-width: 100%;
+
+}
+
+.cabecera{
+    text-align: center;
+}
+
+.datosPersonales{
+    text-align: center;
+}
+
+.resumenrcc{
+    text-align: justify;
+    font-style: italic;
+
+}
+
+.ambito{
+    color: darkblue;
+    font-weight: bold;
+}
+
+.cargo{
+    font-weight: bold;
+}
+
+.institucion{
+    font-weight: bold;
+}
+

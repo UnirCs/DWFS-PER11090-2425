@@ -1,0 +1,102 @@
+html, body {
+    align-items: center;
+	display: flex;
+    justify-content: center;    
+    margin: 0;
+	min-height: 100vh;    
+}
+
+body {    
+    background-color: #343a40;
+    box-sizing: border-box;
+	padding: 40px 0;    
+    width: 100%;
+}
+
+.cinema {
+    background-color: black;
+	border: 2px solid yellow;	
+    max-width: 800px;
+    padding: 40px;
+    width: 100%;
+}
+
+header {
+	background-color: grey;
+}
+
+header h1 {
+    color: white;
+	font-size: 2rem;
+    font-weight: bold;    
+    margin: 0;
+	padding: 0;
+	text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+}
+
+.pantalla {
+	background-color: rgb(49, 46, 46);
+	height: 200px;
+	width: 100%;	
+}
+
+.asientos {
+    align-items: center;
+	display: flex;
+    flex-direction: column;    
+    gap: 10px;
+}
+
+.fila {
+	align-items: center;
+	color: yellow;
+	display: flex;    
+    font-weight: bold;
+    gap: 5px;
+}
+
+.asiento {
+    background-color: black;
+	border: 1px solid yellow;
+    border-radius: 3px;	
+    color: yellow;
+	cursor: pointer;
+	height: 30px;
+    font-size: 0.8rem;
+    line-height: 30px;
+    text-align: center;
+    transition: background-color 0.3s;
+	width: 30px;
+}
+
+.asiento-seleccionado {
+    background-color: yellow;
+	border: 1px solid yellow;
+    border-radius: 3px;	
+    color: yellow;
+	cursor: pointer;
+	height: 30px;
+    font-size: 0.8rem;
+    line-height: 30px;
+    text-align: center;
+    transition: background-color 0.3s;
+	width: 30px;
+}
+
+.reserva p {
+    color: yellow;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.asiento-input {    
+    margin: 0 auto;
+    text-align: center;
+	width: 80px;
+}
+
+footer {
+	background-color: grey;
+	padding: 10px 0 15px 0;
+}

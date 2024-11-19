@@ -1,0 +1,122 @@
+/* sección body */
+body {
+    font-family: Arial;
+    background-color: #09091a;  
+}
+
+/* sección header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/*sección pantalla */
+#sectionPantalla {
+    margin: 20px 300px 0px 300px;
+    padding: 60px;
+    text-align: center;
+    background-color: #ffffff54;
+    color: #ffffff9d;
+    font-style: italic;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/*sección butacas */
+#sectionButacas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.contenedor-filas {
+    position: relative;
+    padding-left: 0px;
+}
+
+.fila {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.numero-fila {
+    position: absolute;
+    left: -60px; 
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    width: auto;
+}
+
+.grupo-izquierda,
+.grupo-derecha {
+    display: flex;
+    gap: 10px;
+}
+
+.pasillo {
+    width: 65px;
+    height: 0px;
+}
+
+.butaca {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #ffffff;
+    border-radius: 5px;
+}
+
+.libre {
+    background-color: #28a745; 
+}
+
+.reservada {
+    background-color: #dc3545; 
+}
+
+/* sección formulario */
+#sectionFormulario {
+    margin: 20px 300px 0px 300px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f8f8f8bf;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 40px;
+    border: 5px solid #fff;
+    border-radius: 8px;
+}
+
+#numeroAsientos{
+    width: 150px;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#botonComprar {
+    width: 100px;
+    height: 37px;
+    font-size: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#botonComprar:hover {
+    background-color: #0259b7;
+    border: 1px solid #021e3d;
+}
+
+/* sección footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
