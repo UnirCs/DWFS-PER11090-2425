@@ -1,0 +1,54 @@
+.screen {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  height: 250px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  background-color: #ddd;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.reserved {
+  background-color: blue !important;
+  cursor: none;
+}
+
+.number {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  margin: 5px;
+}
+
+.letter {
+  display: flex;
+  align-items: center;
+  margin-right: 2px;
+}
+
+.square {
+  width: 25px;
+  height: 25px;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.information > span {
+  margin: 0 5px;
+}
+.selected {
+  background-color: green !important;
+}
