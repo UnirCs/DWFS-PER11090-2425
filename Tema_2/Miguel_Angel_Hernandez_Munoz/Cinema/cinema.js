@@ -44,7 +44,8 @@ function suggest(asientos) {
         return;
     }
 
-    for (let i = butacas.length - 1; i >= 0; i--) { // Empezar desde la última fila
+    let asientosAsignados = false;
+    for (let i = butacas.length - 1; i >= 0 && !asientosAsignados; i--) {
         if (validarDisponiblesPorFila(i) >= asientos && validarAsientosConsecutivos(i, asientos).consecutivos) {
             console.log(`Sugerencia: Fila ${i + 1}`);
 
@@ -55,10 +56,13 @@ function suggest(asientos) {
             }
 
             imprimirCine(butacas);
-            return;
+            asientosAsignados = true
         }
     }
-    console.log("No se encontraron asientos disponibles consecutivos suficientes.");
+
+    if (!asientosAsignados){
+        console.log("No se encontraron asientos disponibles consecutivos suficientes.");
+    }
 }
 
 function validarDisponiblesPorFila(fila) {
@@ -67,26 +71,27 @@ function validarDisponiblesPorFila(fila) {
 
 function validarAsientosConsecutivos(fila, asientos) {
     let consecutivos = 0;
-    let IdsconsecutivosAsignacion = []
-    for (let butaca of butacas[fila]) {
+    let IdsconsecutivosAsignacion = [];
+    let encontradosConsecutivos = false;
+    let response = {}
+    for (let i = 0; i < butacas[fila].length && !encontradosConsecutivos; i++) {
+        let butaca = butacas[fila][i];
         if (!butaca.estado) {
             consecutivos++;
-            IdsconsecutivosAsignacion.push(butaca.id)
-            if (consecutivos >= asientos) {
-                return {
+            IdsconsecutivosAsignacion.push(butaca.id);
+            if (consecutivos >= asientos && !encontradosConsecutivos) {
+                encontradosConsecutivos = true;
+                response =  {
                     consecutivos: true,
                     butacas: IdsconsecutivosAsignacion
-                }
+                };
             }
         } else {
             consecutivos = 0;
-            IdsconsecutivosAsignacion = []
+            IdsconsecutivosAsignacion = [];
         }
     }
-    return {
-        consecutivos: false,
-        butacas: []
-    }
+    return response
 }
 
 function imprimirCine(cine) {
@@ -100,7 +105,4 @@ function imprimirCine(cine) {
 }
 
 imprimirCine(butacas);
-suggest(10)
-suggest(2)
-suggest(1)
 suggest(2)
