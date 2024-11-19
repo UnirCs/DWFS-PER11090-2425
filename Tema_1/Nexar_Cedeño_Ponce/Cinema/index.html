@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reserva de Asientos - UNIR-CINEMA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="my-4 text-center">
+            <div class="titulo">
+                <h1>Reserva de Asientos - UNIR-CINEMA</h1>
+            </div>
+        </header>
+        
+        <section class="screen-section text-center">
+            <div class="screen">
+                <span>Pantalla</span>
+            </div>
+        </section>
+
+        <section class="seating-section">
+            <div class="row text-center">
+                <div class="col">
+                    <label for="A">A</label>
+                    <button class="seat available" data-seat="A1">1</button>
+                    <button class="seat available" data-seat="A2">2</button>
+                    <button class="seat available" data-seat="A3">3</button>
+                    <button class="seat available" data-seat="A4"> 4 </button>
+                    <button class="seat available" data-seat="A5"> 5 </button>
+                    <button class="seat available" data-seat="A6"> 6 </button>
+                    <button class="seat available" data-seat="A7"> 7 </button>
+                    <button class="seat available" data-seat="A8"> 8 </button>
+                </div>
+                <div class="w-100"></div> 
+                <div class="col">
+                    <label for="B">B</label>
+                    <button class="seat available" data-seat="B1">1</button>
+                    <button class="seat available" data-seat="B2">2</button>
+                    <button class="seat available" data-seat="B3">3</button>
+                    <button class="seat unavailable" disabled> 4 </button>
+                    <button class="seat unavailable" disabled> 5 </button>
+                    <button class="seat unavailable" disabled> 6 </button>
+                    <button class="seat unavailable" disabled> 7 </button>
+                    <button class="seat available" data-seat="B8"> 8 </button>
+                    <button class="seat available" data-seat="B9"> 9 </button>
+                    <button class="seat available" data-seat="B10"> 10 </button>
+                    <button class="seat available" data-seat="B11"> 11 </button>
+                    <button class="seat available" data-seat="B12"> 12 </button>
+                </div>
+                <div class="w-100"></div> 
+                <div class="col">
+                    <label for="C">C</label>
+                    <button class="seat available" data-seat="C1">1</button>
+                    <button class="seat available" data-seat="C2">2</button>
+                    <button class="seat available" data-seat="C3">3</button>
+                    <button class="seat available" data-seat="C4"> 4 </button>
+                    <button class="seat available" data-seat="C5"> 5 </button>
+                    <button class="seat available" data-seat="C6"> 6 </button>
+                    <button class="seat available" data-seat="C7"> 7 </button>
+                    <button class="seat available" data-seat="C8"> 8 </button>
+                    <button class="seat unavailable" disabled> 9 </button>
+                    <button class="seat unavailable" disabled> 10 </button>
+                    <button class="seat available" data-seat="C11"> 11 </button>
+                    <button class="seat available" data-seat="C12"> 12 </button>
+                </div>
+                <div class="w-100"></div> 
+                <div class="col">
+                    <label for="D">D</label>
+                    <button class="seat unavailable" disabled> 1 </button>
+                    <button class="seat unavailable" disabled> 2 </button>
+                    <button class="seat unavailable" disabled> 3 </button>
+                    <button class="seat unavailable" disabled> 4 </button>
+                    <button class="seat unavailable" disabled> 5 </button>
+                    <button class="seat unavailable" disabled> 6 </button>
+                    <button class="seat unavailable" disabled> 7 </button>
+                    <button class="seat unavailable" disabled> 8 </button>
+                    <button class="seat unavailable" disabled> 9 </button>
+                    <button class="seat unavailable" disabled> 10 </button>
+                    <button class="seat unavailable" disabled> 11 </button>
+                    <button class="seat unavailable" disabled> 12 </button>
+                </div>
+                <div class="w-100"></div> 
+                <div class="col">
+                    <label for="E">E</label>
+                    <button class="seat available" data-seat="E1">1</button>
+                    <button class="seat available" data-seat="E2">2</button>
+                    <button class="seat available" data-seat="E3">3</button>
+                    <button class="seat available" data-seat="E4"> 4 </button>
+                    <button class="seat available" data-seat="E5"> 5 </button>
+                    <button class="seat unavailable" disabled> 6 </button>
+                    <button class="seat unavailable" disabled> 7 </button>
+                    <button class="seat unavailable" disabled> 8 </button>
+                    <button class="seat unavailable" disabled> 9 </button>
+                    <button class="seat unavailable" disabled> 10 </button>
+                    <button class="seat available" data-seat="E11"> 11 </button>
+                    <button class="seat available" data-seat="E12"> 12 </button>
+                </div>
+                <div class="w-100"></div> 
+                <div class="col">
+                    <label for="F">F</label>
+                    <button class="seat available" data-seat="F1">1</button>
+                    <button class="seat unavailable" disabled>2</button>
+                    <button class="seat unavailable" disabled>3</button>
+                    <button class="seat unavailable" disabled> 4 </button>
+                    <button class="seat unavailable" disabled> 5 </button>
+                    <button class="seat unavailable" disabled> 6 </button>
+                    <button class="seat unavailable" disabled> 7 </button>
+                    <button class="seat unavailable" disabled> 8 </button>
+                    <button class="seat available" data-seat="F9"> 9 </button>
+                    <button class="seat available" data-seat="F10"> 10 </button>
+                    <button class="seat available" data-seat="F11"> 11 </button>
+                    <button class="seat available" data-seat="F12"> 12 </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <form class="mt-4">
+                <div class="form-group text-center">
+                    <label for="numSeats">Indica cuántos asientos quieres reservar</label>
+                    <div class="text-center">
+                        <input type="number" class="form-control num-seats">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary mt-3">Confirmar Reserva</button>
+                </div>
+            </form>
+        </section>
+
+        <footer class="mt-5 text-center">
+            <p>UNIR-CINEMA</p>
+            <p>Dirección: Calle Avenida de la Paz, 137. Logroño</p>
+            <p>Teléfono: 941209743</p>
+            <p>Email: cinefullstack@unircinema.com</p>
+        </footer>
+    </div>
+</body>
+</html>
