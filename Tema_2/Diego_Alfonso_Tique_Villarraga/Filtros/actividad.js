@@ -34,7 +34,7 @@ function ejemplo() {
 }
 
 /**
- * Esta función debe transformar una imagen en escala de rojos.
+ * Esta función, debe transformar una imagen en escala de rojos.
  *
  * Una forma de conseguirlo es simplemente poner los canales G y B a 0 para cada pixel.
  */
