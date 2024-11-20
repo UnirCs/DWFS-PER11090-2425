@@ -1,0 +1,80 @@
+.cine-box{
+    background-color: black;
+    padding: 10px;
+}
+
+.title-box {
+    background-color: #302d34;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.title-box__title{
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.screen-box{
+    background-color: #33393f;
+    color: white;
+    padding: 30px;
+    margin-inline: 260px ;
+    border-radius: 10px;
+    margin-bottom: 10px; 
+}
+
+.screen-box__title{
+    text-align: center;
+}
+
+.seat-table {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    background-color: black;
+    color: antiquewhite;
+}
+
+
+.btn-primary{
+    background-color: #28a745;
+    color: white;
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition: transform 0.2s;
+    margin: 10px;
+}
+
+.btn-danger{
+    margin: 10px;
+    background-color: #dc3545; 
+    color: white;
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    transition: transform 0.2s;
+}
+
+.btn-danger:hover{
+    transform: scale(1.1);
+
+}
+
+.btn-primary:hover{
+    transform: scale(1.1);
+}
+
+.form-label{
+    color: aliceblue;
+}
+
