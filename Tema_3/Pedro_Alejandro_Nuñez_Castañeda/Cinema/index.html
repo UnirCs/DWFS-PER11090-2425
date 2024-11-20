@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tema 03 - Ejercicio 02 - Cinema - Pedro Núñez</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="main">
+  <!-- Encabezado -->
+  <section class="main__encabezado">
+    <h1 class="encabezado__titulo">UNIR-CINEMA</h1>
+  </section>
+  <!-- Pantalla del Cine -->
+  <section class="main__pantalla">
+    <img class="pantalla__img" src="bgpantalla.png" alt="pantalla">
+  </section>
+  <!-- Selección de Butacas -->
+  <section class="main__butacas">
+    <!-- Selección de Butacas -->
+    <div class="butacas__asientos">
+      <!-- Fila 1 -->
+       <div class="asientos__fila">
+        <h3 class="fila__titulo">Fila 1</h3>
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+       </div>
+      <!-- Fila 2 -->
+       <div class="asientos__fila">
+        <h3 class="fila__titulo">Fila 2</h3>
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+       </div>
+      <!-- Fila 3 -->
+       <div class="asientos__fila">
+        <h3 class="fila__titulo">Fila 3</h3>
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+       </div>
+      <!-- Fila 4 -->
+       <div class="asientos__fila">
+        <h3 class="fila__titulo">Fila 4</h3>
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+       </div>
+      <!-- Fila 5 -->
+       <div class="asientos__fila">
+        <h3 class="fila__titulo">Fila 5</h3>
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+       </div>
+      <!-- Fila 6 -->
+       <div class="asientos__fila">
+        <h3 class="fila__titulo">Fila 6</h3>
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca">
+        <area class="fila__butaca__activa">
+        <area class="fila__butaca__activa">
+       </div>
+    </div>
+    <!-- Formulario (#Asientos) -->
+    <form action="post">
+      <div class="form_asientos__input">
+        <label class="input__label" for="asientos">Número de Asientos a Reservar</label>
+        <input class="input__input" oninput="showSuggest(this.value)" type="number" name="asientos" id="asientos" min="0" max="10">
+        <!-- Botón Confirmar -->
+        <input  class="form_asientos__btn" type="submit" value="Confirmar Reserva">
+      </div>
+    </form>
+  </section>
+  <!-- Footer con Info del cine -->
+  <footer class="main__footer">
+    <p class="footer__text">Cine UNIR-CINEMA</p>
+    <p class="footer__text">Dirección: Calle Avenida de la Paz, 137</p>
+    <p class="footer__text">Teléfono: (+89) 965215487</p>
+    <p class="footer__text">Email: contacto@cineunir.com</p>
+  </footer>
+</body>
+<script src="cinema.js"></script>
+</html>
