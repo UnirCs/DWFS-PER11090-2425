@@ -27,36 +27,27 @@ let butacas = setup();
 // Imprimir la matriz
 console.log(butacas);
 
-function suggest(numberOfSeats, rows) {
-    const maxRowSize = rows[0].length;
-    if (numberOfSeats > maxRowSize) {
-        return new Set();
-    }
 
-    for (let i = rows.length - 1; i >= 0; i--) {
-        const row = rows[i];
-        let consecutiveSeats = 0;
-        let startIndex = -1;
-
-        for (let j = 0; j < row.length; j++) {
-            if (row[j] === 0) {
-                if (consecutiveSeats === 0) {
-                    startIndex = j;
+/**
+ * Función para sugerir asientos disponibles.
+ * Se reserva buscando los asientos consecutivos en la fila más lejana a la pantalla.
+ *
+ * @param {number} nSeats - Número de asientos consecutivos requeridos.
+ * @returns {Set<number>} - Conjunto de IDs de los asientos reservados.
+ */
+function suggest(nSeats) {
+    const tempSeats = new Set();
+    if (nSeats <= N) {
+        for (let i = N - 1; i >= 0 && tempSeats.size < nSeats; i--) {
+            tempSeats.clear(); // Aseguramos que el set está vacío antes de buscar asientos en la fila.
+            for (let j = 0; j < N && tempSeats.size < nSeats && N - j >= nSeats - tempSeats.size; j++) {
+                if (!seats[i][j].estado) {
+                    tempSeats.add(seats[i][j].id);
+                } else {
+                    tempSeats.clear();
                 }
-                consecutiveSeats++;
-            } else {
-                consecutiveSeats = 0;
-            }
-
-            if (consecutiveSeats === numberOfSeats) {
-                const seatIds = new Set();
-                for (let k = startIndex; k < startIndex + numberOfSeats; k++) {
-                    seatIds.add(`Row${i + 1}-Seat${k + 1}`);
-                }
-                return seatIds;
             }
         }
     }
-
-    return new Set();
+    return tempSeats;
 }
