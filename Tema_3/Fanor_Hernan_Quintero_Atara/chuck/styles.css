@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(45, 45, 45);
+    color: rgb(255, 221, 0);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    max-width: 500px;
+}
+
+.main-container-button {
+    padding: 20px;
+    background-color: rgb(45, 45, 45);
+    color: rgb(255, 221, 0);
+    border-color: rgb(255, 119, 0);
+    margin-bottom: 20px;
+    max-width: 200px;
+    border-radius: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
