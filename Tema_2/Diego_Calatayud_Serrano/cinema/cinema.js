@@ -1,91 +1,76 @@
-var N = 10
+// Definir el tamaño de la matriz de butacas
+const N = 10; // Número de filas y columnas
 
+// Función para inicializar la matriz de butacas
 function setup() {
-    let idContador = 0
-    let butacas = []
+    let idContador = 1; // Iniciar el contador de IDs en 1 (los humanos no empezamos a contar desde 0)
+    let butacas = [];
 
     for (let i = 0; i < N; i++) {
+        // Nueva fila
         let fila = [];
         for (let j = 0; j < N; j++) {
+            // Nuevo asiento
             fila.push({
                 id: idContador++,
-                estado: false // true: ocupado, false: libre
-            })
+                estado: false // Estado inicial libre
+            });
         }
-        butacas.push(fila)
+        butacas.push(fila);
     }
-    return butacas
+    return butacas;
 }
 
-let butacas = setup()
+// Inicializar la matriz
+let butacas = setup();
 
-const divButacas = document.getElementById('butacas')
+// Imprimir la matriz
+console.log(butacas);
 
-function setButacas() {
-    let rowCount = 0
-
-    butacas.forEach(fila => {
-        const seatsRow = document.createElement('div')
-        seatsRow.className = 'seat-row'
-        seatsRow.id = `fila-${rowCount}`
-        
-        divButacas.appendChild(seatsRow)
-
-        fila.forEach(butaca => {
-            let seatCount = 0
-
-            const seat = document.createElement('div')
-            seat.className = 'seat text-center'
-            seat.id = `seat-${butaca.id}`
-            seat.textContent = butaca.id
-            seatsRow.appendChild(seat)
-
-            seatCount++
-        })
-
-        rowCount++
-    })
+function setTrueSeatStatus(fila, nAsientos) {
+    for (let i = N-1; i >= 0; i--) {
+        if (i >= nAsientos) {
+            console.log("Cambiando el estado de la butaca ", i);
+            butacas[fila][i].estado = true;
+        }
+    }
 }
+// Pongo de la última fila 5 asientos ocupados
+setTrueSeatStatus(N-1, 5)
 
-setButacas()
-
-const inputAsientos = document.getElementById('inputAsientos')
-const btnReservar = document.getElementById('btnReservar')
-
-btnReservar.addEventListener('click', () => {
-    const amount = parseInt(inputAsientos.value)
-    suggest(amount)
-})
-
+console.log(butacas[N-1]);
 function suggest(n) {
-    if (n > N || n <= 0) {
-        alert(`El número debe estar entre 1 y ${N}`);
-        return;
-    }
+    if (n > N) return new Set();
 
-    for (let i = N - 1; i >= 0; i--) {
-        let freeSeatsCount = 0
-        let freeSeats = []
+    let selectedSeats = new Set();
 
-        butacas[i].forEach((butaca, index) => {
-            if (!butaca.estado) {
-                freeSeats.push(index)
-                freeSeatsCount++
+    let busyRowsCount = 0
+    let freeSeatsCount = 0
+    let addSeats = 0
+
+    for (let i = N-1; i >= 0; i--) {
+        for (let j = N-1; j >= 0; j--) {
+            if (butacas[i][j].estado === false) {
+                freeSeatsCount++;
+                if (addSeats < n) {
+                    selectedSeats.add(butacas[i][j]);
+                    addSeats++;
+                }
             }
-        });
-
-        if (freeSeatsCount >= n) {
-            for (let j = 0; j < n; j++) {
-                let seatIndex = freeSeats[j]
-                butacas[i][seatIndex].estado = true; 
-                let seatElement = document.getElementById(`seat-${butacas[i][seatIndex].id}`)
-                seatElement.className = 'seat-used text-center'
-            }
-            break
-        } else {
-            n -= freeSeatsCount
+        }
+        
+        if (n > freeSeatsCount) {
+            busyRowsCount++;
+            selectedSeats.clear()   
         }
     }
+
+    if (busyRowsCount === N) {
+        return new Set();
+    }
+
+    return selectedSeats;
 }
 
-
+const devuelvo = suggest(2);
+console.log("Devuelvo: ", devuelvo);
