@@ -1,0 +1,67 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    padding: 20px;
+    width: 97%;
+}
+
+header {
+    text-align: center;
+    background-color: gainsboro;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.section1 {
+    padding: 10px;
+    background-color: rgb(141, 140, 140);
+    height: 100px;
+}
+
+.section2 {
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+}
+
+.ciname-chairs {
+    background-color: black;
+    margin: 0 auto;
+}
+
+.chair-box {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border: 1px solid yellow;
+}
+
+.chair-box-active{
+    background-color: yellow;
+}
+
+.chair-title {
+    color: yellow;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.section2 form label {
+    color: yellow;
+}
+
+.section2 form button {
+    background-color: yellow;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: gainsboro;
+}
