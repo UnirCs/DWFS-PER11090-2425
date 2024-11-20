@@ -20,15 +20,17 @@ function setup() {
 let butacas = setup();
 
 function suggest(numButs) {
-    if (numButs <= 0 || numButs > buts) return new Set();
+    let result = new Set();
+    let found = false;
 
-    for (let i = buts - 1; i >= 0; i--) {
+    for (let i = buts - 1; i >= 0 && !found; i--) {
         let consecutiveButs = [];
         for (let j = 0; j < buts; j++) {
             if (!butacas[i][j].estado) {
                 consecutiveButs.push(butacas[i][j].id);
                 if (consecutiveButs.length === numButs) {
-                    return new Set(consecutiveButs); 
+                    result = new Set(consecutiveButs); 
+                    found = true;
                 }
             } else {
                 consecutiveButs = [];
@@ -36,5 +38,5 @@ function suggest(numButs) {
         }
     }
 
-    return new Set();
+    return result;
 }
