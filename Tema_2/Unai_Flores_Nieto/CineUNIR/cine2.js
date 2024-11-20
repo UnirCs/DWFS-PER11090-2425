@@ -21,46 +21,49 @@ function setup() {
     return butacas;
 }
 
-// Función para sugerir los asientos a reservar
 function suggest(numAsientos) {
-    let butacasLibres = new Set();
+    let butacasLibres = new Set(); // Conjunto para almacenar los IDs de los asientos seleccionados
+    let encontrado = false;       //  Indicar si se han encontrado los asientos necesarios
 
-    // Recorrer las filas comenzando desde la más lejana
-    for (let i = N - 1; i >= 0; i--) {
-        let asientosSeguidos = 0;
-        let idsAsientos = [];
+    // Recorrer las filas comenzando desde la más lejana a la pantalla
+    for (let i = N - 1; i >= 0 && !encontrado; i--) {
+        let asientosSeguidos = 0; // Contador de asientos libres consecutivos
+        let idsAsientos = [];    // Lista temporal de IDs de los asientos libres consecutivos
 
         // Recorrer los asientos de la fila actual
         for (let j = 0; j < N; j++) {
             if (!butacas[i][j].estado) { // Si el asiento está libre
-                idsAsientos.push(butacas[i][j].id);
-                asientosSeguidos++;
+                idsAsientos.push(butacas[i][j].id); // Agregar el ID del asiento a la lista temporal
+                asientosSeguidos++;                // Incrementar el contador
             } else {
-                // Si el asiento está ocupado, reiniciar
+                // Si el asiento está ocupado, reiniciar la búsqueda en esta fila
                 idsAsientos = [];
                 asientosSeguidos = 0;
             }
 
             // Si encontramos suficientes asientos seguidos
             if (asientosSeguidos === numAsientos) {
-                // Añadir los ids de los asientos seleccionados al conjunto
-                idsAsientos.forEach(id => butacasLibres.add(id));
-                return butacasLibres;
+                idsAsientos.forEach(id => butacasLibres.add(id)); // Añadir los IDs al conjunto
+                encontrado = true; // Marcar que hemos encontrado una solución
             }
         }
     }
 
-    // Si no se encuentran suficientes asientos, devolver un set vacío
-    return new Set();
+    // Si no hemos encontrado suficientes asientos consecutivos, devolver un conjunto vacío
+    if (!encontrado) {
+        return new Set();
+    }
+
+    return butacasLibres; // Devolver los asientos seleccionados
 }
 
 // Inicializar la matriz
 let butacas = setup();
 
-// Modificar algunas butacas para simular que están ocupadas (por ejemplo)
-butacas[5][2].estado = true;  // Asiento 23 ocupado
-butacas[5][3].estado = true;  // Asiento 24 ocupado
-butacas[5][4].estado = true;  // Asiento 25 ocupado
+// Modificar algunas butacas para simular que están ocupadas 
+butacas[5][2].estado = true;  // Asiento 23 está ocupado
+butacas[5][3].estado = true;  // Asiento 24 está ocupado
+butacas[5][4].estado = true;  // Asiento 25 está ocupado
 
 // Llamada de prueba a la función
 let resultado = suggest(3);
