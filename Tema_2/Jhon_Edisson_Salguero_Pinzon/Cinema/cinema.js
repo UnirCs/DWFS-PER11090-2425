@@ -23,6 +23,8 @@ function setup() {
 
 // Función que sugiere la reserva de asientos
 function suggest(butacas, numAsientos) {
+    let resultado = new Set(); // Para almacenar los IDs de asientos seleccionados
+
     // Iterar sobre las filas de la matriz, comenzando desde la fila más lejana
     for (let i = N - 1; i >= 0; i--) {
         let fila = butacas[i];
@@ -34,21 +36,19 @@ function suggest(butacas, numAsientos) {
             if (!fila[j].estado) {
                 consecutivos++;
                 asientosDisponibles.push(fila[j].id);
+                // Verificar si hemos encontrado suficientes asientos consecutivos
+                if (consecutivos === numAsientos) {
+                    // Asignar los asientos y terminar el proceso de búsqueda
+                    resultado = new Set(asientosDisponibles.slice(0, numAsientos));
+                }
             } else {
                 consecutivos = 0;
                 asientosDisponibles = [];
             }
-
-            // Si hemos encontrado suficientes asientos consecutivos
-            if (consecutivos === numAsientos) {
-                // Devolver un Set con los IDs de los asientos seleccionados
-                return new Set(asientosDisponibles);
-            }
         }
     }
 
-    // Si no se encuentran suficientes asientos consecutivos
-    return new Set();
+    return resultado; // Devolver el resultado al final
 }
 
 // Inicializar la matriz
