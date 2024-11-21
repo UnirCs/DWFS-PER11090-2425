@@ -3,11 +3,14 @@ const suggest =(bookingSize) => {
     let disponiblesFila=0
     const reservas = new Set();
 
-    for (let i = butacas.length-1; i>=0 ; i--) { //fila
-       for(let j= butacas[i].length-1; j>=0; j--){ //asientos
-           for(let k=butacas[i].length-1; k>=0;k--){
-               if(butacas[i][k].estado === false){
-                   disponiblesFila++;
+    for (let i = butacas.length-1; i>=0 ; i--) { //cuento las fila
+       for(let j= butacas[i].length-1; j>=0; j--){//cuento los asientos en cada fila
+           if(disponiblesFila===0)
+           {
+               for(let k=butacas[i].length-1; k>=0;k--){ //cuento los asientos disponibles osea diferentes a false
+                   if(butacas[i][k].estado === false){
+                       disponiblesFila++;
+                   }
                }
            }
               if(disponiblesFila>=bookingSize){
@@ -18,21 +21,12 @@ const suggest =(bookingSize) => {
                           contador++;
                       }
                   }
-                  else {
-                      return new Set([]) ;
-                  }
-              }
-              else if(disponiblesFila!==0){
-                  return new Set([]) ;
               }
        }
-       if(contador!==bookingSize){
-           if(contador!==0){
+      /* if(contador!==bookingSize&&contador!==0){
                return new Set([]) ;
-           }
-         }
+         }*/
     }
-    contador=0;
     return reservas;
 
 };
@@ -72,9 +66,14 @@ console.log("Luego pidiendo 3 sillas ======> ");
 console.log(suggest(3));
 console.log("Luego 2 sillas ======> ");
 console.log(suggest(2));
-console.log("Luego 8 sillas ======> ");
-console.log(suggest(8));
+console.log("Luego 4  sillas ======> ");
+console.log(suggest(4));
 console.log("Luego 2 sillas ======> ");
 console.log(suggest(2));
-console.log("Luego 10 sillas ======> ");
-console.log(suggest(10));
+console.log("Luego 2 sillas ======> ");
+console.log(suggest(2));
+console.log(butacas);
+console.log("Luego 2 sillas ======> ");
+console.log(suggest(2));
+console.log("Luego 9 sillas ======> ");
+console.log(suggest(9));
