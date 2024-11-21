@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="contenedor">
+    <input class="contenedor_btnGenerarChiste" onclick="mostrarChiste()" type="button" value="Dame un chiste!">
+    <p id="contenedor_pChiste"></p>
+</div>
+<script>
+    let pChiste = document.getElementById("contenedor_pChiste");
+    let url = "https://api.chucknorris.io/jokes/random";
+
+    async function mostrarChiste() {
+        await fetch(url)
+            .then(response => response.json())
+            .then(json => pChiste.innerHTML = json.value)
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+</script>
+</body>
+</html>
