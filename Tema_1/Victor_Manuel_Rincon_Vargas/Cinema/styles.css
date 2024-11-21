@@ -1,0 +1,31 @@
+.screen {
+    background-color: #ccc;
+    height: 50px;
+    margin: 20px 0;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: #444;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background-color: #6c757d;
+}
+
+.seat.occupied {
+    background-color: #fff;
+    cursor: not-allowed;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+}
