@@ -1,0 +1,238 @@
+:root {
+    --bg: #02040F;
+    --text: #ffff;
+    --presianGreen: #1B998B;
+    --roseQuartz: #A690A4;
+    --coolGray: #A7A5C6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    font-size: 18px;
+    height: 100vh;
+    color: var(--text);
+}
+
+p {
+    line-height: normal;
+}
+
+a {
+    color: var(--coolGray)
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+}
+
+/* COLOR TEXT */
+
+.c-presianGreen {
+    color: var(--presianGreen);
+}
+
+.c-roseQuartz {
+    color: var(--roseQuartz);
+}
+
+.c-coolGray {
+    color: var(--coolGray);
+}
+
+
+/* CSS PAGE */
+
+.font-doto {
+    font-family: "Doto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "ROND" 100;
+}
+
+.instrument-sans {
+    font-family: "Instrument Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    place-items: center;
+    gap: 16px;
+    padding: 2rem 0;
+}
+
+.profile__avatar {
+    --dimension: 300px;
+    position: relative;
+    width: var(--dimension);
+    height: var(--dimension);
+    overflow: hidden;
+}
+
+.profile__avatar::after {
+    content: "";
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(to top, var(--bg), transparent);
+}
+
+.profile__avatar img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 95%;
+    mix-blend-mode: luminosity;
+}
+
+.profile__title {
+    font-size: 20px;
+}
+
+.profile__title span {
+    display: block;
+    font-size: 60px;
+}
+
+.profile__subTitle {
+    margin-top: 4px;
+    font-size: 15px;
+}
+
+.profile__description {
+    font-size: 16px;
+    margin-top: 16px;
+}
+
+.profile__socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.profile__socials_icon {
+    height: 20px;
+}
+
+
+.profile-info {
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+.profile-info__title {
+    font-size: 30px;
+}
+
+.profile-info__content {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 24px;
+}
+
+.profile-info__item {
+    position: relative;
+    padding: 1.3rem 0 1.3rem 3rem;
+}
+
+.profile-infoitem__load {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--coolGray);
+    border-radius: 50%;
+}
+
+.profile-info__item::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 4px;
+    width: 1px;
+    height: 102%;
+    background-color: var(--presianGreen);
+}
+
+.profile-info__item:first-child .profile-infoitem__load {
+    background-color: var(--presianGreen);
+}
+
+.profile-info__item:first-child .profile-infoitem__load::before {
+    content: ' ';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 1px solid var(--presianGreen);
+    animation: pulse 1s infinite;
+}
+
+.profile-info__item:first-child::after {
+    top: 1.5rem;
+}
+
+.profile-info__item:last-child::after {
+    top: 0;
+    height: 1.5rem;
+}
+
+.profile-infoitem__date {
+    font-size: 14px;
+}
+
+.profile-infoitem__certi {
+    font-size: 16px;
+}
+
+
+.profile-info__list {
+    padding: 0 3rem ;
+    list-style-type: none;
+}
+
+.profile-info__list li {
+    position: relative;
+    padding: 4px 0 ;
+}
+
+.profile-info__list li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -3rem;
+    width: 10px;
+    height: 10px;
+    background-color: var(--coolGray);
+    transform: translateY(-50%) rotate(90deg);
+    clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}

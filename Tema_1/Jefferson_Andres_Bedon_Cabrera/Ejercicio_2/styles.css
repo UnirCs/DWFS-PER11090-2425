@@ -1,0 +1,116 @@
+
+.cinema-screen {
+    position: relative;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.screen {
+    height: 150px;
+    background: linear-gradient(45deg, #1a237e, #0d47a1, #1565c0);
+    margin: 0 auto 20px;
+    max-width: 800px;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+}
+
+.screen-label {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.form-label{
+    color: white;
+}
+
+.card-body{
+    text-align: center;
+}
+
+
+.seating-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+}
+
+.seats-row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.row-label {
+    text-align: center;
+    font-weight: bold;
+    color: #6c757d;
+}
+
+
+.seat {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.seat.available {
+    background-color: #495057;
+}
+
+.seat.available:hover {
+    background-color: #198754;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.5);
+}
+
+.seat.occupied {
+    background-color: #dc3545;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.seat.selected {
+    background-color: #198754;
+    box-shadow: 0 0 0 2px rgba(25, 135, 84, 0.5);
+}
+
+
+@media (max-width: 768px) {
+    .seats-row {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .seat {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #444;
+}
