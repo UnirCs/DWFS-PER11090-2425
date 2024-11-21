@@ -1,0 +1,137 @@
+.body {
+  background-color: black;
+}
+
+.title {
+  width: 100%;
+  height: 200px;
+  background-color: #7d8491;
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.title h1,
+h2 {
+  text-align: center;
+  color: #1c1a05;
+  margin-top: 80px;
+  font-size: 120px;
+  margin-bottom: 0;
+}
+
+.sala {
+  width: 90%;
+  height: auto;
+  background: #7d8491;
+  margin: 5% auto;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.sala .pantalla{
+  width: 50%;
+  height: 50px;
+  background: black;
+  margin: 5% auto;
+  text-align: center;
+}
+
+.sala .pantalla h3{
+  color: white;
+}
+
+.sala table,
+th,
+td,
+caption {
+  width: auto;
+  height: auto;
+  margin: 5% auto;
+  border-radius: 20px;
+  padding: 0.3em;
+}
+
+.sala .asiento {
+  margin: 5px;
+  width: 60px;
+  height: 80px;
+}
+
+.sala .asiento .btn {
+  background-color: white;
+  margin: 5px;
+  width: 40px;
+  height: 70px;
+}
+
+.sala .asiento .btn:hover{
+  background-color: green;
+}
+
+.sala .form-control{
+  margin: 0 auto;
+  height: auto;
+  width: auto;
+}
+
+.sala .Asientos {
+  width: auto;
+  height: auto;
+}
+
+.silla {
+  width: 50%;
+  height: auto;
+  background: #7d8491;
+  margin: 5% auto;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.silla table,
+th,
+td,
+caption {
+  width: auto;
+  height: auto;
+  margin: auto;
+  border-radius: 20px;
+  padding: 0.3em;
+}
+
+
+.silla .asiento {
+  margin: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(224, 255, 245);
+  border-radius: 25%;
+}
+
+#Ocupada {
+  background-color: red;
+}
+
+#Reservada {
+  background-color: rgb(48, 43, 43);
+}
+
+#Seleccionada{
+  background-color: green;
+}
+
+.info {
+  width: 100%;
+  height: auto;
+  background-color: #7d8491;
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.info h1{
+  color: #1c1a05;
+  margin-top: 80px;
+  font-size: 60px;
+  margin-bottom: 0;
+}
