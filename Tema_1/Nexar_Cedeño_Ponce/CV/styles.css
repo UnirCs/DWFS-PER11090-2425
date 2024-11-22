@@ -1,0 +1,49 @@
+* {
+    margin: 10px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.page {
+    margin-top: 25px;
+    margin-left: 200px;
+    margin-right: 200px;
+    background-color: rgb(187, 184, 184);
+}
+
+.cabecera {
+    text-align: center;
+    display: flex;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-right: 250px;
+    border-radius: 50%;
+}
+
+div > h3 {
+    border-bottom: solid;
+}
+
+div > h4 {
+    color: rgb(46, 35, 32);
+}
+
+li > h4 {
+    color: rgb(46, 35, 32);
+}
+
+.datos_iniciales{
+    display: flex;
+}
+
+p{
+    color: white;
+}

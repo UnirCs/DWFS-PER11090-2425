@@ -13,7 +13,7 @@ function setup() {
             // Nuevo asiento
             fila.push({
                 id: idContador++,
-                estado: Math.random() < 0.5 // Estado inicial aleatorio
+                estado: false // Estado inicial aleatorio
             });
         }
         butacas.push(fila);
@@ -22,7 +22,7 @@ function setup() {
 }
 
 // Inicializar la matriz
-let butacas = setup();
+const butacas = setup();
 
 // Imprimir la matriz
 console.log(butacas);
@@ -40,6 +40,9 @@ console.log(butacas);
 
 function suggest(n){
     console.log("Número de asientos solicitados: " + n);
+    let butacas = setup();
+    n = parseInt(n)
+
     if (n > N) {
         return new Set();
     }
@@ -62,18 +65,15 @@ function suggest(n){
             }
         }
     }
-    return idsSuggested
+    return console.log("Asientos sugeridos: " + Array.from(idsSuggested));
+
 }
 
-// Prueba de la función suggest
-let resultado = suggest(3, butacas);
-console.log(resultado);
+/*// Prueba de la función suggest
+let resultado = suggest(3);
 
-resultado = suggest(5, butacas);
-console.log(resultado);
+resultado = suggest(5);
 
-resultado = suggest(10, butacas);
-console.log(resultado);
+resultado = suggest(10);
 
-resultado = suggest(11, butacas);
-console.log(resultado);
+resultado = suggest(11);*/
