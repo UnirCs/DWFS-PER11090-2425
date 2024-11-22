@@ -25,36 +25,38 @@ function setup() {
 let butacas = setup();
 
 function suggest(numAsientos) {
-    let asientos =[];
+    let asientos = [];
     let cont = 0; //0 la mas cercana a la pantalla / 9 la más alejada
     let asientosElegidosIds = [];
+    let aux = false;
 
-    if(numAsientos > N){
+    if (numAsientos > N || numAsientos === 0) {
         return asientos;
-    }  
+    }
 
-    for(let i = N-1; i >= 0; i--){
-        for(let j = N-1 ; j >= 0 ; j--){
-            if(!butacas[i][j].estado){
+    for (let i = N - 1; i >= 0; i--) {
+        for (let j = N - 1; j >= 0; j--) {
+            if (!butacas[i][j].estado && cont < numAsientos) {
                 cont++;
                 asientos.push(butacas[i][j]);
-            }else{
-                cont = 0;
-                asientos = [];
-                asientosElegidosIds = [];
-            }
-            if(cont === numAsientos){
-                // Reservar los asientos encontrados
-                for (let k = 0; k < asientos.length; k++) {
-                    asientos[k].estado = true; // Cambiar estado a reservado
+            } else
+                if (cont === numAsientos) {
+                    for (let k = 0; k < asientos.length; k++) {
+                        asientos[k].estado = true; 
+                    }
+                    aux = true;
+                } else {
+                    cont = 0;
+                    asientos = [];
+                    asientosElegidosIds = [];
                 }
-                console.log(asientos);
-                return asientos;
-            }
         }
-         // Reiniciamos el contador y el grupo si no logramos encontrar suficientes en esta fila
-         cont = 0;
-         asientos = [];
+        // Reiniciamos el contador y el grupo si no logramos encontrar suficientes en esta fila
+        if (!aux) {
+            cont = 0;
+            asientos = [];
+        }
+
     }
 
     console.log(asientos);
