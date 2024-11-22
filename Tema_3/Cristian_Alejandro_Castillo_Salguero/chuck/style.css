@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(30, 30, 31);
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text{
+    background-color: rgb(30, 30, 31);
+    height: auto;
+    width: 500px;
+    border: 2px solid rgb(110, 110, 110);
+    border-radius: 5px;
+    padding: 10px;
+    color: rgb(221, 202, 77);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.sendButton{
+    margin-top: 30px;
+    border: 2px solid rgb(221, 202, 77);
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: rgb(221, 202, 77);
+    font-weight: bolder;
+}
+
+.sendButton:hover{
+    background-color: rgb(221, 202, 77);
+    color: rgb(30, 30, 31);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
