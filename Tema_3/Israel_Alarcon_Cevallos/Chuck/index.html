@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Chistes de Chuck Norris</title>
+</head>
+
+<body>
+
+<main class="container">
+  <button onclick="promesa_chiste()" class="fa-2x">Dame un chiste</button>
+  <p id="chiste"></p>
+</main>
+
+<script>
+
+
+  let promesa_chiste = async () => {
+    const retorno_chiste = document.getElementById('chiste');
+    let texto=retorno_chiste.innerHTML;
+
+    await fetch('https://api.chucknorris.io/jokes/random')
+            .then(response => response.json())
+            .then(data => {
+              texto = data.value;
+
+              //Aqui utilizo una API para traducir el chiste de Ingles a Español
+              if(!texto) return;
+              let apiUrl = `https://api.mymemory.translated.net/get?q=${texto}&langpair=en|es`;
+              fetch(apiUrl).then(res => res.json()).then(data => {
+                retorno_chiste.innerText = data.responseData.translatedText;
+              });
+
+            })
+            .catch(error => {
+              console.error('Error:', error);
+            });
+
+  }
+
+</script>
+</body>
+</html>
