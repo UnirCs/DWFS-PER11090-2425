@@ -1,0 +1,46 @@
+#cinema {
+    height: 100vh;
+    width: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cinema-body {
+    height: 100%;
+}
+
+.body-seats {
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-line {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 10px;
+}
+
+.second-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+}
+
+.thrid-line {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+}
+
+#butacas {
+    width: 60px;
+    height: 50px;
+}
