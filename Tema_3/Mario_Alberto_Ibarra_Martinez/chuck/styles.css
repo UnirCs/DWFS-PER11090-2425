@@ -1,0 +1,50 @@
+/* styles.css */
+
+/* Estilo general para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.main-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Estilo del botón */
+.main-container-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.main-container-button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo del párrafo de chistes */
+#jokeParagraph {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+}
