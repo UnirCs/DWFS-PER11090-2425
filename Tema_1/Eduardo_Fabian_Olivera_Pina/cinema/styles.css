@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo general */
+body {
+    background-color: black; 
+    border: 1px solid yellow;
+    margin: 0; 
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+/* Contenedor principal */
+.contenedor {
+    text-align: center;
+    margin: 20px;
+    padding: 50px; /*top y bottom */
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.titulo-ppal {
+    font-size: 30px;
+    color: white;
+}
+
+.espacio-gris {
+    background-color: gray;
+    padding: 150px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.contenedor-gris {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Mapa de asientos */
+.seat-map-container {
+    text-align: center;
+    color: #ffc107;
+}
+
+.seat-map {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* espacios entre las filas y las columnas de la cuadricula */
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.row span {
+    margin-right: 10px;
+    width: 60px;
+    text-align: left;
+    color: #ffc107;
+}
+
+/* Estilos de los asientos */
+.seat {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffc107;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.seat.reserved {
+    background-color: #ffc107;
+    cursor: not-allowed;
+}
+
+/* Estilo del formulario de reserva */
+.reserve-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    margin: 10px 0;
+    color: #000;
+    text-align: center;
+    border: 1px solid #ffc107;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffc107;
+    color: #000;
+    border: 1px solid #ffc107; /* Borde amarillo visible en el botón */
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border 0.3s ease; /* Transición suave para ambos */
+}
+
+button:hover {
+    background-color: #dfca8e; 
+    border: 1px solid black; 
+}
+
