@@ -1,0 +1,29 @@
+img {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    display: block;
+}
+#foto{
+    background-color: darkkhaki;
+}
+H1 {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+H2 {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+.encabezado{
+    color: cornflowerblue;
+    margin-left: 10px;
+}
+div {
+    border: 1px solid black;
+}
+#descripcion {
+    margin-left: 10px;
+}
