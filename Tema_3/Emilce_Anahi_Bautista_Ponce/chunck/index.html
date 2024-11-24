@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chistes Aleatorios</title>
+    <!-- Asegúrate de que el archivo CSS esté en la misma carpeta o ajusta la ruta -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>¡Ríete con un Chiste!</h1>
+        <button class="btnGenerarChiste" onclick="mostrarChiste()">Generar Chiste</button>
+        <p id="contenedor_pChiste">Aquí aparecerá el chiste...</p>
+    </div>
+
+    <script>
+        let pChiste = document.getElementById("contenedor_pChiste");
+        let url = "https://api.chucknorris.io/jokes/random";
+
+        async function mostrarChiste() {
+            // Limpiamos el chiste anterior (si existe) antes de mostrar uno nuevo
+            pChiste.innerHTML = "Cargando...";
+
+            await fetch(url)
+                .then(response => response.json())
+                .then(json => {
+                    // Mostramos el chiste recibido desde la API
+                    pChiste.innerHTML = json.value;
+                    pChiste.classList.add('fade-in');
+                    // Eliminar la animación después de que haya terminado
+                    setTimeout(() => pChiste.classList.remove('fade-in'), 1000);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    pChiste.innerHTML = "Lo siento, no pude obtener el chiste en este momento.";
+                });
+        }
+    </script>
+</body>
+</html>

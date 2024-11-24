@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chistes Chuck Norris</title>
+        <link rel="stylesheet" type="text/css" href="./styles.css">
+        <meta charset="UTF8">
+    </head>
+    <body>
+        <div class="joke">
+            <p id="joke_placeholder" class="joke__paragraph"></p>
+            <button id="joke_fetch_btn" class="joke__button" onclick="fetchJoke()">Dame un Chiste</button>
+        </div>
+        <script type="text/javascript">
+            function fetchJoke() {
+                (async () => {
+                    const response = await fetch("https://api.chucknorris.io/jokes/random");
+                    const json = await response.json();
+                    const joke = json.value;
+                    console.log(joke);
+                    document.getElementById("joke_placeholder").innerHTML = joke;
+                    document.getElementById("joke_fetch_btn").textContent = "Dame otro Chiste";
+                })()
+            }
+        </script>
+    </body>
+</html>

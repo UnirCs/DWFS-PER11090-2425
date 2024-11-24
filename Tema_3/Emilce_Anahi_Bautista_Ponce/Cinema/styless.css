@@ -1,0 +1,95 @@
+* {
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background: linear-gradient(45deg, #ff6f61, #ff9478);
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Títulos */
+h1 {
+    color: white;
+    font-size: calc(2rem + 2vw);
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Pantalla */
+.pantalla {
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ffca85, #ffa726);
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Sillas */
+.silla {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    margin: 5px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.silla:hover {
+    transform: scale(1.1);
+    background-color: #ffd54f;
+}
+
+.silla--active {
+    background-color: #ff7043;
+    border-color: #ff3d00;
+    box-shadow: 0 0 10px rgba(255, 61, 0, 0.5);
+    transform: scale(1.1);
+}
+
+/* Fila */
+.pantalla__fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.fila__num {
+    font-size: 18px;
+    color: #555;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Contenedores */
+.container,
+.container__sillas,
+.pantalla {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.text-footer {
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #00897b;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

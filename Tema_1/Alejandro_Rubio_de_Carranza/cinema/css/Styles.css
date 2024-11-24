@@ -1,0 +1,66 @@
+body{
+
+	width: 45%;
+	margin: 0px auto;
+	margin-top: 10px;	
+	margin-bottom: 10px;	
+	padding: 10px;
+	background: #000000;	
+	border: 1px solid #9B870C;
+}
+
+#cabecera{
+	margin: 10px auto;
+	margin-top: 5px;	
+	margin-bottom: 10px;
+	padding: 15px;
+	background: #525452;
+
+}
+
+
+#Seccion_1{
+	margin: 10px auto;
+	margin-top: 10px;	
+	margin-bottom: 10px;
+	padding: 47px;
+	background: #504949;
+
+}
+
+
+#Pie_de_pagina{
+	margin: 10px auto;
+	margin-top: 10px;	
+	margin-bottom: 5px;
+	padding: 15px;
+	background: #525452;
+
+}
+
+#Casilla{
+
+	padding: 12px;
+	margin: 2px auto;
+	background: #000000;	
+	border: 1px solid #9B870C;
+}
+
+
+#Casilla_ocupada{
+
+	padding: 12px;
+	margin: 2px auto;
+	background: #fcfc00;	
+	border: 1px solid #9B870C;
+}
+
+.stilo_boton_submit{
+	border-radius: 5px;
+	background: #fcfc00;
+}
+
+.stilo_boton_relleno{
+	border-radius: 5px;
+	padding: 5px;
+}
