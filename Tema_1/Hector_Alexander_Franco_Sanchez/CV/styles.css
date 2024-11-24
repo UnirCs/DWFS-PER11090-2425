@@ -1,0 +1,86 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: azure;
+    row-gap: 10px;
+    width: auto;
+    margin: 0;
+    padding: 30px;
+}
+
+.cvHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#PorfilePhoto {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: bisque;
+}
+
+.cvBody {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.cvBody .listContactInfo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 0;
+}
+
+.cvBody .listContactInfo li {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.summary {
+    width: 90%;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.professionalExpirence {
+    width: 43%
+}
+
+.professionalExpirence .list {
+    display: flex;
+    flex-direction: column;
+}
+
+.education {
+    width: 43%;
+}
+
+.education ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.habilities {
+    width: 90%;
+}
