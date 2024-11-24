@@ -50,8 +50,8 @@ function suggest(butacas, numAsientos) {
 // Inicializar la matriz de butacas
 let butacas = setup();
 
-// Ejemplo de uso: buscar 4 asientos
-let resultado = suggest (butacas, 4);
+// Ejemplo de uso: buscar 3 asientos
+let resultado = suggest (butacas, 3);
 
 // Imprimir el resultado
 console.log(resultado);
