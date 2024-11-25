@@ -20,41 +20,61 @@ function setup() {
 }
 
 // Función para buscar asientos
-function buscarAsientosContiguos(butacas, cantidad) {
-    let resultado = new Set();
+function findSeatsInRow(row, numSeats) {
+    let consecutives = [];
+    let bestSeats = [];
+    let j = 0;
 
-    if (cantidad > N) {
-        return resultado;
-    }
-
-    for (let i = N - 1; i >= 0; i--) {
-        for (let j = 0; j <= N - cantidad; j++) {
-            let asientosTemp = [];
-            let disponibles = true;
-
-            for (let k = 0; k < cantidad; k++) {
-                if (butacas[i][j + k].ocupado) {
-                    disponibles = false;
-                    break;
-                }
-                asientosTemp.push(butacas[i][j + k].id);
+    while (j < N && bestSeats.length < numSeats) {
+        if (!row[j].estado) {
+            consecutives.push(row[j].id);
+            row[j].estado = true;
+            if (consecutives.length === numSeats) {
+                bestSeats = [...consecutives];
             }
-
-            if (disponibles) {
-                asientosTemp.forEach(id => resultado.add(id));
-                return resultado;
-            }
+        } else {
+            consecutives = [];
         }
+        j++;
     }
-    return resultado;
+    return bestSeats;
 }
+
+
+// Función que reserva las sillas requeridas en una fila
+function suggest(numSeats, butacas) {
+    if (numSeats > N || numSeats <= 0) {
+        return new Set();
+    }
+    let result = [];
+    let i = N - 1;
+    let seatsComplete = false;
+
+    while (i >= 0 && i< N && !seatsComplete) {
+        const foundSeats = findSeatsInRow(butacas[i], numSeats);
+        if (foundSeats.length === numSeats) {
+            result = foundSeats;
+            seatsComplete = true;
+        }
+        i--;
+    }
+
+    return new Set(result);
+}
+
 
 // Inicializar la matriz
 let butacas = setup();
 
-// Imprimir la matriz
-console.log(butacas);
+butacas[4][5].estado = true;
+butacas[9][5].estado = true;
+butacas[9][6].estado = true;
+butacas[8][2].estado = true;
+butacas[7][0].estado = true;
+butacas[6][5].estado = true;
 
-// Probar la función
-let resultado = buscarAsientosContiguos(butacas, 3);
-console.log(resultado.size > 0 ? `Asientos sugeridos: ${Array.from(resultado).join(', ')}` : 'No se encontraron suficientes asientos contiguos.');
+
+// Se reservan 3 filas cada una de a 5 asientos
+console.log(suggest(5, butacas));
+console.log(suggest(7, butacas));
+console.log(suggest(3, butacas));
