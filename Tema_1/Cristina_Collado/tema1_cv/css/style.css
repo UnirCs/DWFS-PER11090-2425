@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box; }
+
+body{
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 100%; }
+
+a {
+    display: block;
+    text-decoration: none; }
+
+h1, h2{
+    color: white;
+}
+
+p{
+    font-size: 20px;
+}
+
+.centrado__info{
+    width: 80%;
+    padding: 25px;
+    background-color: #70b7e1;
+    margin: 25px auto;
+    border-radius: 10px;
+    display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+    
+}
+
+.centrado__info__fotoperfil{
+    width: 10%;
+    margin-bottom: 10px;
+}
+
+.centrado_body{
+    width: 80%;
+    padding: 25px;
+    margin: auto;
+}
+section{
+    border: 2px solid dimgray;
+    border-radius: 10px;
+    margin: 25px;
+    padding: 50px;
+}
+
+.centrado__contacto p{
+    margin: 30px 50px;
+    display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+
+.centrado__contacto p i{
+    margin-right:20px ;
+    font-size: 35px;
+    color: #70b7e1;
+}
+
+h3{
+    color: #70b7e1;
+    font-size: 35px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.centrado__resumen{
+    line-height: 2;
+}
+
+li {
+    margin: 30px auto 10px;
+    font-size: 25px;
+}
+
+.centrado__habilidades h3{
+    margin-top: 50px;
+}
+
+
+
+
+
