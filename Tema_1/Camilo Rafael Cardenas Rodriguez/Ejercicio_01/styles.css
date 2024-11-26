@@ -1,0 +1,139 @@
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0f0d; /* Fondo verde oscuro */
+    color: #f0f0f0; /* Texto claro */
+    line-height: 1.6;
+}
+
+.cv-container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #1b2b26; /* Verde más oscuro */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #7c0a02; /* Rojo vino */
+}
+
+.name {
+    font-size: 2rem;
+    color: #7c0a02; /* Rojo vino */
+    margin-top: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #a9a9a9; /* Gris claro */
+}
+
+/* Información de contacto */
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info h2 {
+    color: #7c0a02;
+    border-bottom: 2px solid #7c0a02;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.contact-info p:hover {
+    color: #f4e04d; /* Amarillo brillante al pasar el ratón */
+}
+
+/* Resumen */
+.summary {
+    margin-bottom: 20px;
+}
+
+.summary h2 {
+    color: #7c0a02;
+    border-bottom: 2px solid #7c0a02;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.summary p {
+    margin: 0;
+    text-align: justify;
+    transition: color 0.3s ease;
+}
+
+.summary p:hover {
+    color: #f4e04d;
+}
+
+/* Habilidades */
+.skills ul li {
+    display: flex;
+    align-items: center;
+    background: #253a35; /* Verde oscuro intermedio */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.skills ul li i {
+    margin-right: 10px;
+    color: #7c0a02; /* Rojo vino */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.skills ul li:hover {
+    background: #7c0a02; /* Rojo vino al pasar el ratón */
+    transform: scale(1.05);
+}
+
+.skills ul li:hover i {
+    color: #f4e04d; /* Amarillo brillante */
+}
+/* Experiencia laboral */
+.work-experience .job {
+    margin-bottom: 20px;
+}
+
+.work-experience h2 {
+    color: #7c0a02;
+    border-bottom: 2px solid #7c0a02;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.job h3 {
+    color: #f0f0f0;
+    transition: color 0.3s ease;
+}
+
+.job h3:hover {
+    color: #f4e04d; /* Amarillo brillante */
+}
+
+.job p {
+    margin: 5px 0;
+}

@@ -1,0 +1,91 @@
+body {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.header {
+    background-color: #4c4c4c;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: darkgoldenrod;
+}
+
+.screen {
+    background-color: #272727;
+    height: 350px;
+    margin: 20px auto 50px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.seats-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 2px solid darkgreen;
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+
+.seat.occupied {
+    background-color: darkgoldenrod;
+    border: 2px solid darkgoldenrod;
+}
+
+.row-label {
+    color: darkgoldenrod;
+    width: 50px;
+    line-height: 40px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.reservation-form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.reservation-form input {
+    width: 200px;
+    margin: 20px auto;
+}
+
+.confirm-button {
+    background-color: darkgreen;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+.confirm-button:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px rgba(187, 182, 148, 0.6);
+    background-color: darkgreen;
+    color: white;
+}
+
+.footer {
+    background-color: #4c4c4c;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
