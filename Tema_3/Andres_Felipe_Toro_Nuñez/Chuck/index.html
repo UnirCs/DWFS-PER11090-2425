@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Los chistes de Chuck!</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div class="jokes-get">
+        <form>
+            <p><b class="title-joke">Presiona el botón para obtener un chiste</b></p>
+            <button type="button" class="selection-joke" onclick="getJoke()">Dame un chiste!</button><br>
+            <p id="TextJokeGet"><b></b></p>
+        </form>
+    </div>
+    <script>
+        async function getJoke() {
+            await fetch("https://api.chucknorris.io/jokes/random")
+            .then(response => response.json())
+            .then(json => { document.getElementById("TextJokeGet").innerHTML = json.value; });
+    }
+    </script>
+</body>
+</html>

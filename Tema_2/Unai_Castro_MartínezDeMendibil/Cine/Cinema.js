@@ -38,7 +38,7 @@ console.log(butacas);
  *      Se comenzará a buscar asientos juntos en la fila más lejana a la pantalla, por lo que si varias filas pudiesen albergar el número de asientos solicitado, se elegiría siempre la más lejana a la pantalla. El resultado debe ser un Set con los ids de los asientos pre-seleccionados.
  */
 
-function suggest(n,butacas){
+function suggest(n){
     console.log("Número de asientos solicitados: " + n);
     if (n > N) {
         return new Set();
