@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Chuck´s jokes</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <button id="jokesButton" onclick="getJokes()">Dame un chiste!</button>
+            <p id="textWithTheJoke"></p>
+        </div>
+        <script>
+            const getJokes = () => {
+                const jokeElement = document.getElementById("textWithTheJoke");
+                jokeElement.innerHTML = "Loading...";
+                fetch("https://api.chucknorris.io/jokes/random")
+                    .then(response => response.json())
+                    .then(joke => jokeElement.innerHTML = joke.value)
+                    .catch(error => jokeElement.innerHTML = "Oops! Something went wrong.");
+            }
+        </script>
+    </body>
+</html>
