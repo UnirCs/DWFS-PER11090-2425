@@ -1,0 +1,39 @@
+html {
+    background-color: #222222;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.joke {
+    background-color: #535353ee;
+    padding: 10pt;
+    border-radius: 3pt;
+    margin: auto;
+    margin-top: 25vh;
+    width: 50%;
+    height: 25vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.joke__button {
+    background-color: darkgoldenrod;
+    color: #222222;
+    border-radius: 3pt;
+    border-style: solid;
+    border-color: gray;
+    transition-duration: 0.4s;
+}
+
+.joke__button:hover {
+    background-color: rgb(226, 166, 13);
+}
+
+.joke__paragraph {
+    color: white;
+}
