@@ -1,0 +1,12 @@
+html {
+    background-color: #1a1e2b;
+}
+#phJoke {
+    color: #ffd800;
+    margin-left: 10px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
