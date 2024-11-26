@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Cine_UnaiCastro
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+
+    <body class="bg-light">
+
+        <div class="container mt-5">
+            <div class="text-center title-box">
+                <h1 class="title-box__title">UNIR_Cine</h1>
+            </div>
+    
+            <div class="container cine-box">
+                <div class="text-center screen-box my-4">
+                    <h2 class="screen-box__title">Pantalla</h2>
+                </div>
+
+                <table class="table text-center seat-table">
+                    <tbody>
+                    <script>
+                        const rows = 10;
+                        const cols = 10;
+                        document.write("<tbody>");
+                        for (let i = 0; i < rows; i++) {
+                            document.write("<tr>");
+                            document.write(`<td><strong>${i + 1}</strong></td>`); // Números de fila
+                            for (let j = 0; j < cols; j++) {
+                                const id = `${i+1}${j}`;
+                                document.write(`
+                                    <td>
+                                        <button type="button" class="btn btn-primary" id="${id}">
+                                            ${id}
+                                        </button>
+                                    </td>
+                                `);
+                            }
+                            document.write("</tr>");
+                        }
+                        document.write("</tbody>");
+                    </script>
+                    </tbody>
+                </table>
+
+                <div class="mt-4 text-center">
+                    <label for="seatCount" class="form-label">Indica cuántos asientos quieres reservar</label>
+                    <input type="number" oninput="suggest(this.value)" class="form-control w-25 mx-auto" id="seatCount" placeholder="Número de asientos">
+                    <button type="button" class="btn btn-success mt-3">Reservar</button>
+                </div>
+            </div>  
+        </div>
+        <script src="Cinema.js" ></script>
+
+
+
+    </body>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">UNIR_Cine | Dirección: Calle Falsa 123, Ciudad de Ejemplo, País | Teléfono: +123 456 789</p>
+        <p class="mb-0">Email: contacto@unircine.com</p>
+    </footer>
+
+
+    
+</html>

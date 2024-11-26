@@ -1,0 +1,33 @@
+html {
+    background-color: #492d60;
+}
+
+.body {
+    padding: 10pt;
+    border-radius: 3pt;
+    margin: auto;
+    margin-top: 25vh;
+    width: 50%;
+    height: 25vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: #64bf56;
+    color: #222222;
+    font-size: 18px; /* Aumenta el tamaño del texto */
+    padding: 12px 24px; /* Aumenta el tamaño del botón */
+    border-radius: 5pt; /* Puedes ajustar para redondear más */
+    border-style: solid;
+    border-color: gray;
+    transition-duration: 0.4s;
+}
+
+
+.placeholder {
+    color: white;
+}
