@@ -24,10 +24,10 @@ let butacas = setup();
 
 // Función para sugerir asientos
 function suggest(asientosSolicitados) {
-    let resultado = new Set(); // Variable para almacenar el resultado
+    let emptySeat = new Set(); // Variable para almacenar el resultado
 
     if (asientosSolicitados > N) {
-        return resultado; // Si los asientos solicitados exceden el tamaño de la fila, devolver un set vacío
+        return emptySeat; // Si los asientos solicitados exceden el tamaño de la fila, devolver un set vacío
     }
 
     let encontrados = false; // Bandera para saber si hemos encontrado suficientes asientos
@@ -46,7 +46,7 @@ function suggest(asientosSolicitados) {
 
                 // Si hemos encontrado suficientes asientos consecutivos
                 if (contador === asientosSolicitados) {
-                    resultado = new Set(ids); // Guardamos los IDs encontrados
+                    emptySeat = new Set(ids); // Guardamos los IDs encontrados
                     encontrados = true; // Indicamos que hemos encontrado los asientos
                 }
             } else {
@@ -57,7 +57,7 @@ function suggest(asientosSolicitados) {
         }
     }
 
-    return resultado; // Solo un return al final
+    return emptySeat; // Solo un return al final
 }
 
 
