@@ -39,11 +39,14 @@ class SeatHandler {
       return new Set();
     }
 
-    for (let i = this.seats.length - 1; i >= 0; i--) {
+    let foundSeats = new Set();
+    let stopSearch = false;
+
+    for (let i = this.seats.length - 1; i >= 0 && !stopSearch; i--) {
       let consecutiveSeats = new Set();
       let count = 0;
 
-      for (let j = 0; j < this.seats[i].length; j++) {
+      for (let j = 0; j < this.seats[i].length && !stopSearch; j++) {
         const seat = this.seats[i][j];
 
         if (seat.available) {
@@ -52,10 +55,13 @@ class SeatHandler {
 
           if (count === number) {
             consecutiveSeats.forEach((seatId) => {
-              const [row, column] = [seatId[0], parseInt(seatId.slice(1), 10)];
+              const row = seatId[0];
+              const column = parseInt(seatId.slice(1), 10);
               this.markSeatAsReserved(row, column);
             });
-            return consecutiveSeats;
+
+            foundSeats = consecutiveSeats;
+            stopSearch = true;
           }
         } else {
           consecutiveSeats.clear();
@@ -63,8 +69,12 @@ class SeatHandler {
         }
       }
     }
-    alert("No hay suficientes asientos consecutivos disponibles.");
-    return new Set();
+
+    if (foundSeats.size === 0) {
+      alert("No hay suficientes asientos consecutivos disponibles.");
+    }
+
+    return foundSeats;
   }
 
   markSeatAsReserved(row, column) {
