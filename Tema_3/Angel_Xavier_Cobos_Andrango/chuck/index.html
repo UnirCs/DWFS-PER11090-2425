@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chuck</title>
+</head>
+<body>
+    <h1>Chucknorris API</h1>
+    <div class="container">
+        <button class="center-button">Dame un Chiste</button>
+    </div>
+    <div>
+        <p id="joke"></p>
+    </div>
+    <script>
+        let url = "https://api.chucknorris.io/jokes/random"
+        document.querySelector('button').addEventListener('click', function() {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const jokeParagraph = document.querySelector('#joke');
+                    jokeParagraph.innerHTML = data.value;
+                })
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
