@@ -1,0 +1,23 @@
+.title-joke{
+    text-align: center;
+    color: #00acf6;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.jokes-get{
+    text-align: center;
+    background-color: #2c2c2c;
+}
+
+.selection-joke{
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+#TextJokeGet{
+   color: #00acf6;
+   font-weight: bold;
+}

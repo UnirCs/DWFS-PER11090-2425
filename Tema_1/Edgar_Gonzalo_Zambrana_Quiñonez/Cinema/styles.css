@@ -1,0 +1,59 @@
+td{
+	align-content: center;
+	border: 1px solid blue;
+	text-align: center;
+}
+#logo{
+		width: 35px;
+	}
+}
+
+#cartel{
+	height: 25px;
+}
+
+#tablas{
+	width: 60%;
+	margin-left: 15%;
+}
+
+.filas{
+
+}
+
+#logo{
+	width: 150px;
+}
+
+h1, h3, h4{
+	text-align: center;
+	color: #C0392B;
+}
+
+
+h4{
+	margin-top: 20%;
+}
+
+#prox{
+	margin-top: 60%;
+}
+
+#filas1{
+	margin-left: 20%;
+	width: 50%;
+}
+
+
+.reserva{
+	background-color: #C0392B;
+}
+
+div{
+	background-color: #F7F9F9;
+	margin-bottom: 5px;
+	border-style: groove;
+}
+#etiqueta{
+	width: 20%;
+}
