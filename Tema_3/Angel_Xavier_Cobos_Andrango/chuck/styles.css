@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100%; */
+    width: 100%;
+}
+
+.center-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #1D5172;
+    transition: 0.3s all;
+    cursor: pointer;
+    margin: 2rem 0;
+}
+
+.center-button:hover {
+    transform: scale(1.1);
+}
+
+div p{
+    width: 80%;
+    margin: 0 auto;
+}

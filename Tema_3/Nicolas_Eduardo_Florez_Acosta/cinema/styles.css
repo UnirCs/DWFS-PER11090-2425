@@ -1,0 +1,8 @@
+#seats-table tbody tr td:first-child {
+    color: yellow;
+}
+
+#seats-table tbody tr td:hover:not(:first-child) {
+    background-color: yellow;
+    cursor: pointer;
+}
