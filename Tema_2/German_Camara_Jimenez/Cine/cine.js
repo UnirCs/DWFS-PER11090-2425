@@ -21,6 +21,7 @@ function setup() {
     return butacas;
 }
 
+
 function suggest(numAsientos, butacas) {
     const asientosTemporales = new Set();
     if (numAsientos <= N) {
