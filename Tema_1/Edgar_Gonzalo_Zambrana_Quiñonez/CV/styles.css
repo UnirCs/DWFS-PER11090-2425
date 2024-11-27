@@ -1,0 +1,35 @@
+#celda1 {
+	background-color: #58D68D;
+}
+
+#celda2, #celda3, #celda4, #celda5, #celda6{
+	background-color: #D5F5E3;
+	border: 2px solid black; 
+    padding: 10px; 
+    margin: 5px;
+}
+
+#celdalat {
+	background-color: #239B56;
+	display: flex;
+	justify-content: center;
+}
+
+#txtlat{
+	color: #D5F5E3;
+	writing-mode: vertical-rl;
+  	text-orientation: upright;
+  	text-align: center;
+}
+
+.titulo{
+	color: #186A3B;
+}
+
+.texto{
+	margin-left: 25px;
+}
+
+.listatxt{
+	margin-left: 25px;
+}
