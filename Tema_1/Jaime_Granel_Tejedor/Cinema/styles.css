@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    background-color: #1a1a1a;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    width: 90%;
+    padding: 20px;
+    background-color: #222;
+    max-width: 700px;
+    border: 3px solid #333;
+    border-radius: 10px;
+    text-align: center;
+}
+.titulo h1{
+    background-color: #4a4a4a;
+    padding: 15px;
+    border-radius: 8px;
+}
+.pantalla{
+    padding: 80px;
+    font-weight: bold;
+    margin: 20px 0;
+    background-color: #333;
+}
+.asientos-grid{
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    justify-content: center;
+}
+.asientos-filas-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    color: #e1d22a;
+}
+.asientos span{
+    margin: 10px 0;
+}
+.asientos{
+    gap: 10px;
+    flex-direction: column;
+    display:  flex;
+}
+.row{
+    display: flex;
+    gap: 5px;
+}
+.asiento{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffdd00;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+.asiento.selected{
+    background-color: #ffdd00;
+}
+
+.Reserva{
+    margin: 20px 0;
+}
+.Reserva h3{
+    color: #e1d22a;
+}
+#seat-count{
+    width: 60px;
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 4px;
+    text-align: center;
+}
+button {
+    background-color: #ffdd00;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #c3b14b;
+}
+footer {
+    background-color: #4a4a4a;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}

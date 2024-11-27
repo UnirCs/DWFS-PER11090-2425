@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <button class="container__button" id="generateJokeBtn">
+        Dame un chiste!
+      </button>
+      <p class="container__joke" id="jokeLabel">
+        Click 👆🏻 para generar un chiste!
+      </p>
+    </div>
+  </body>
+  <script>
+    const btn = document.getElementById("generateJokeBtn");
+    const joke = document.getElementById("jokeLabel");
+    const BASE_URL = "https://api.chucknorris.io";
+
+    async function getRandomJoke() {
+      const response = await fetch(`${BASE_URL}/jokes/random`);
+      const data = await response.json();
+      return data.value;
+    }
+
+    async function generateJoke() {
+      joke.innerText = "Cargando...";
+      btn.setAttribute("disabled", true);
+
+      try {
+        const randomJoke = await getRandomJoke();
+        joke.innerText = randomJoke;
+      } catch (error) {
+        joke.innerText = "Error al cargar el chiste 😢";
+      } finally {
+        btn.removeAttribute("disabled");
+      }
+    }
+
+    btn.addEventListener("click", generateJoke);
+  </script>
+</html>
