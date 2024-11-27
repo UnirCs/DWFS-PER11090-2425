@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: rgb(224,182,52);
+    background: linear-gradient(45deg, rgb(248, 232, 83) 0%, rgb(206, 156, 18) 75%);
+    transition: transform 0.1s ease;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.joker {
+    margin-top: 20px;
+    font-size: 24px;
+    background-color: antiquewhite;
+    border-radius: .5rem;
+    padding: 10px;
+}
+
+#joke {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #696969;
+    font-style: italic;
+}
