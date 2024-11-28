@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chistes de Chuck Norris</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <main class="container">
+    <section class="jokes-wrapper">
+      <h1 class="joke__title">
+        Chistes aleatorios de <span>Chuck Norris</span>
+      </h1>
+
+      <div class="joke">
+        <p id="joke__text">Presiona el botón para obtener un chiste</p>
+        <button id="joke__btn" class="button">Dame un chiste</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const API_URL = 'https://api.chucknorris.io/jokes/random';
+
+    const $jokeBtn = document.querySelector('#joke__btn');
+    const $jokeText = document.querySelector('#joke__text');
+
+    $jokeBtn.addEventListener('click', async () => {
+      try {
+        $jokeText.textContent = 'Cargando...';
+        const response = await fetch(API_URL);
+        const { value } = await response.json();
+        $jokeText.textContent = value;
+      } catch (error) {
+        $jokeText.textContent = 'Error al obtener el chiste';
+      }
+    });
+
+  </script>
+</body>
+
+</html>
