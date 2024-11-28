@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chunks</title>
+    <!-- SimpleCSS is a classless styling framework -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script type="module">
+
+        /**
+         * Funcion para obtener un elemento por el selector que le pasamos como parametro.
+         */
+        const $ = (el) => document.querySelector(el);
+
+        /**
+         * Funcion que optiene un chiste de Chuck Norris.
+         */
+        const getRandomJoke = () =>
+            fetch('https://api.chucknorris.io/jokes/random')
+                .then(res => res.json())
+                .then(({ value }) => value);
+
+        const renderJoke = (joke) => {
+            jokeContainer.innerHTML = joke;
+        }
+
+        const btn = $('button');
+        const jokeContainer = $('#joke');
+
+        btn.addEventListener(
+            'click',
+            () => getRandomJoke().then(renderJoke)
+        );
+    </script>
+</head>
+
+<body>
+    <section>
+        <button>Dame un chiste</button>
+        <p>
+            <code id="joke"></code>
+        </p>
+    </section>
+</body>
+
+</html>
