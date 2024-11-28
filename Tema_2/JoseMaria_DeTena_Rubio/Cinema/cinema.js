@@ -53,13 +53,15 @@ function suggest(numAsientosPedidos) {
 // Reservar 3 asientos contiguos
 console.log(suggest(3)); // Set { 91, 92, 93 }
 
-// Supongamos que se reservan los asientos 91 a 95
+// Supongamos que se reservan los asientos 91 a 98
 butacas[9][0].estado = true;
 butacas[9][1].estado = true;
 butacas[9][2].estado = true;
 butacas[9][3].estado = true;
 butacas[9][4].estado = true;
 butacas[9][5].estado = true;
+butacas[9][6].estado = true;
+butacas[9][7].estado = true;
 
-// Reservar 6 asientos contiguos
-console.log(suggest(6)); // Set { 81, 82, 83, 84, 85, 86 }
+// Reservar 4 asientos contiguos
+console.log(suggest(4)); // Set { 81, 82, 83, 84 }
