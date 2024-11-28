@@ -24,57 +24,42 @@ function setup() {
 // Inicializar la matriz
 let butacas = setup();
 
-// Imprimir la matriz
-// console.log(butacas);
 
 // Función para reservar un asiento
 
-function suggest(numAsientos) {
-    // Verificar si el número de asientos solicitados excede el tamaño máximo de la fila
-    // o si se introducen valores cero o negativos
-    if (numAsientos > N || numAsientos <= 0) {
-        return new Set();
+function suggest(numAsientosPedidos) {
+    let asientosPropuestos = new Set();
+
+    if(numAsientosPedidos <= 0 || numAsientosPedidos > N) {
+        return asientosPropuestos;
     }
 
-    // Recorrer las filas desde la más lejana a la más cercana
-    for (let i = N - 1; i >= 0; i--) {
-        let fila = butacas[i];
-        let contadorLibres = 0;
-        let inicio = -1;
+    for(let fila = N-1; fila >= 0 && asientosPropuestos.size < numAsientosPedidos; fila--) {
+        asientosPropuestos.clear();
+        for(let asiento = 0; asiento < N && asientosPropuestos.size < numAsientosPedidos && N-asiento >= numAsientosPedidos - asientosPropuestos.size; asiento++) {
+            const { id, estado } = butacas[fila][asiento];
 
-        // Buscar un bloque de asientos contiguos libres en la fila
-        for (let j = 0; j < N; j++) {
-            if (!fila[j].estado) {
-                if (contadorLibres === 0) {
-                    inicio = j;
-                }
-                contadorLibres++;
-                if (contadorLibres === numAsientos) {
-                    // Encontrado un bloque de asientos contiguos libres
-                    let resultado = new Set();
-                    for (let k = inicio; k < inicio + numAsientos; k++) {
-                        resultado.add(fila[k].id);
-                    }
-                    return resultado;
-                }
+            if (!estado) {
+              asientosPropuestos.add(id);
             } else {
-                contadorLibres = 0;
-                inicio = -1;
+              asientosPropuestos.clear();
             }
         }
     }
-
-    // Si no se encuentra ningún bloque de asientos contiguos libres en ninguna fila
-    return new Set();
+    
+    return asientosPropuestos;
 }
 
 // Reservar 3 asientos contiguos
 console.log(suggest(3)); // Set { 91, 92, 93 }
 
-// Supongamos que se reservan los asientos 91, 92 y 93
+// Supongamos que se reservan los asientos 91 a 95
 butacas[9][0].estado = true;
 butacas[9][1].estado = true;
 butacas[9][2].estado = true;
+butacas[9][3].estado = true;
+butacas[9][4].estado = true;
+butacas[9][5].estado = true;
 
-// Reservar 4 asientos contiguos
-console.log(suggest(4)); // Set { 94, 95, 96, 97 }
+// Reservar 6 asientos contiguos
+console.log(suggest(6)); // Set { 81, 82, 83, 84, 85, 86 }
