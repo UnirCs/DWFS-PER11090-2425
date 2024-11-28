@@ -58,8 +58,10 @@ let butacas = setup();
 
 // Prueba de la función
 
+
 let butacasReservadas = suggest(6, butacas);
 let butacasReservadas2 = suggest(6, butacas);
+
 
 
 console.log(butacasReservadas);
