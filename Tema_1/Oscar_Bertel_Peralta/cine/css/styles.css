@@ -1,0 +1,32 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 200px;
+    background-color: #444;
+    color: #fff;
+    margin: 20px auto;
+}
+.seat {
+    width: 30px;
+    height: 30px;
+    background-color: #444;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.seat:hover {
+    background-color: #6c757d;
+}
+.seat.selected {
+    background-color: #df0d0d;
+}
+.reservation-form {
+    max-width: 40%;
+    margin: 0 auto;
+}

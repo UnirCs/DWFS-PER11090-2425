@@ -1,0 +1,40 @@
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.seat-map {
+    margin: 15px 0;
+}
+
+.seat {
+    width: 10px;
+    height: 40px;
+    margin: 1px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seat.available {
+    background-color: #28a745;
+    color: white;
+}
+
+.seat.booked {
+    background-color: #dc3545;
+    color: white;
+}
+.indicador_asiento {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3px;
+}
+
+.fila{
+    font-weight: 600;
+    color: rosybrown;
+}
