@@ -102,3 +102,9 @@ window.onload = () => {
         element.id = `id_${index + 1}`;
     });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('cantAsientos').addEventListener('input', () =>{
+        suggest(document.getElementById('cantAsientos').value);
+    });
+});
