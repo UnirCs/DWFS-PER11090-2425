@@ -53,7 +53,6 @@ function suggest(numSeats) {
 
 sitNum.addEventListener("input", function(e) {
   // const numSeats = parseInt(e.target.value);
-  const numSeats = parseInt(8);
-  const seats = suggest(numSeats);
+  const seats = suggest(8);
   console.log('Asientos sugeridos:', Array.from(seats).join(','));
 });
