@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>SEAT CINEMA SELECTOR</h1>
+    </header>
+    <main>
+      <section class="selection-panel">
+        <div class="selection-panel__film">
+          <h2>Sesión 20:00 - 22 de Noviembre 2024</h3>
+          <h3>El Señor de los Anillos: La Comunidad del Anillo</h3>
+        </div>
+        <div class="selection-panel__seats">
+          <h2 class="underline">Asientos</h2>
+          <div>
+            <seat-selector /> 
+          </div>
+        </div>
+        <div class="selection-panel__location">
+          <h2 class="underline">Ubicación</h2>
+          <div>
+            <p>Cine UNIR-CINEMA</p>
+            <p>Calle Avenida de la Paz, 137. Logroño</p>
+            <p>941209743</p>
+            <p>cinefullstack@info.com</p>
+          </div>
+        </div>
+      </section>
+      <section class="cinema-panel">
+        <img class="cinema-panel__screen" src="./assets/screen.svg" alt="" />
+        <div class="seats-container"></div>
+      </section>
+    </main>
+    <footer>
+      <p>UNIR - 2024</p>
+    </footer>
+    <script src="./components/seat-selector.js"></script>
+    <script src="./js/seat-handler.js"></script>
+    <script src="./js/reservation-system.js"></script>
+  </body>
+</html>
