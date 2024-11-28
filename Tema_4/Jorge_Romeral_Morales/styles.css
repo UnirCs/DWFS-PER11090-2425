@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #155681, #85c1e9);
+}
+
+h3 {
+    color: #f1f1f1; /* Título en amarillo */
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+form {
+    padding: 20px;
+}
+
+.input-field label {
+    color: #f1f1f1; /* Etiqueta de texto claro */
+    font-weight: 500;
+}
+
+.input-field input[type=text],
+.input-field input[type=password],
+.input-field input[type=email] {
+    color: #f1f1f1; /* Color de texto de entrada */
+    border-bottom: 1px solid black; /* Borde amarillo para los inputs */
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus,
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid black; /* Borde amarillo en foco */
+    box-shadow: 0 1px 0 0 black; /* Sombra amarilla en foco */
+}
+
+.btn {
+    background-color: black; /* Botón en amarillo */
+    color: #f1f1f1; /* Texto del botón en oscuro */
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #0d14e0; /* Color del botón al pasar el mouse */
+}
+
+/* Mensajes de error */
+p {
+    color: #ff4444; /* Rojo para errores */
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.error {
+    color: red;
+}
