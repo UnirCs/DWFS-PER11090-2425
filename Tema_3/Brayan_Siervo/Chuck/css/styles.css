@@ -1,0 +1,81 @@
+:root {
+    --bg: #001524;
+    --border: #15616d;
+    --btn: #ff7d00;
+    --text: #ffecd1;
+}
+
+* {
+    font-family: "Commissioner", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    background-color: var(--bg);
+    height: 100vh;
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.commissioner-letter {
+    font-family: "Commissioner", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "FLAR" 0,
+        "VOLM" 0;
+}
+
+
+main {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 12px;
+}
+
+main>img {
+    align-self: center;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    border: 3px var(--border);
+    border-style: dashed solid;
+    padding: 8px 16px;
+    text-align: center;
+}
+
+
+button {
+    padding: 8px 12px;
+    background-color: rgb(from var(--btn) r g b / 0.8);
+    color: var(--bg);
+    border: 0;
+    box-shadow: none;
+    font-size: 19px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--btn);
+}
+
+
