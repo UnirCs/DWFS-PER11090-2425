@@ -1,0 +1,219 @@
+:root {
+  --primary-color: #663399;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: system-ui, Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  line-height: 1.5;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+  line-height: 1;
+}
+
+:is(input, button, a):focus-visible {
+  outline: 1px dashed #333;
+  outline-offset: 2px;
+}
+
+/* -------------------------------------------------- */
+
+.cinema-main-container {
+  background-color: #fff;
+  display: grid;
+  font-size: 14px;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 1000px;
+  overflow-x: hidden;
+}
+
+header {
+  align-items: center;
+  background-color: var(--primary-color);
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+  padding-block: 40px;
+}
+
+.cinema-logo {
+  max-width: 60px;
+}
+
+.cinema-logo__arrow {
+  color: var(--primary-color);
+}
+
+.cinema-seats-container {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.cinema-screen {
+  align-items: center;
+  background: #333;
+  border-radius: 10px;
+  color: #ffffff55;
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  height: 100px;
+  justify-content: center;
+  user-select: none;
+  width: 70%;
+}
+
+.cinema-seat-picker {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.cinema-row {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(10, 1fr);
+  width: fit-content;
+
+  &::before {
+    color: #555;
+    content: attr(data-row-id);
+    font-size: 20px;
+    font-weight: bold;
+    left: -30px;
+    position: absolute;
+  }
+}
+
+.cinema-seat {
+  --seat-color: #ccc;
+
+  align-items: center;
+  color: #333;
+  display: flex;
+  font-size: 10px;
+  font-weight: bold;
+  height: 26px;
+  justify-content: center;
+  user-select: none;
+  width: 30px;
+  z-index: 1;
+
+  &::before {
+    background-color: var(--seat-color);
+    border-radius: 5px;
+    content: "";
+    height: 50%;
+    left: 50%;
+    position: absolute;
+    top: 0px;
+    transform: translateX(-50%);
+    width: 75%;
+    z-index: -1;
+  }
+
+  &:after {
+    background-color: var(--seat-color);
+    border-radius: 5px;
+    bottom: 0px;
+    content: "";
+    height: 65%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.cinema-seat.selected {
+  --seat-color: var(--primary-color);
+  color: #fff;
+}
+
+.cinema-seat.occupied {
+  --seat-color: #d93d3d;
+  color: #fff;
+  opacity: 0.5;
+}
+
+#frm-seats-reservation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 60px;
+}
+
+.input {
+  border-radius: 5px;
+  border: 2px solid #555;
+  padding: 6px;
+}
+
+.btn {
+  --btn-color: #555;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid var(--btn-color);
+  color: var(--btn-color);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--btn-color);
+    border: 2px solid var(--btn-color);
+    color: #fff;
+  }
+}
+
+.btn-primary {
+  --btn-color: var(--primary-color);
+}
+
+footer {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  padding-block: 40px;
+}
