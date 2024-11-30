@@ -27,10 +27,14 @@ function suggest(butacas, numAsientos) {
         return new Set();
     }
 
-    for (let i = N - 1; i >= 0; i--) {
-        let fila = butacas[i];
+    let resultado = new Set();
+    let encontrado = false;
 
+    for (let i = N - 1; i >= 0; i--) {
+
+        let fila = butacas[i];
         let asientosDisponibles = [];
+
         for (let j = 0; j < N; j++) {
             if (!fila[j].estado) {
                 asientosDisponibles.push(fila[j].id);
@@ -39,16 +43,21 @@ function suggest(butacas, numAsientos) {
             }
 
             if (asientosDisponibles.length === numAsientos) {
-                return new Set(asientosDisponibles);
+                resultado = new Set(asientosDisponibles);
+                encontrado = true;
             }
         }
     }
 
-    return new Set();
+    return resultado
 }
 
 // Inicializar la matriz de butacas
 let butacas = setup();
+butacas[0][1].estado = true;
+butacas[0][2].estado = true;
+butacas[3][0].estado = true;
+butacas[3][1].estado = true;
 
 // Ejemplo de uso: buscar 3 asientos
 let resultado = suggest (butacas, 3);
