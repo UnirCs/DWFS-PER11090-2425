@@ -64,6 +64,9 @@ body, html {
     .sit .half.white {
         background-color: #E0E0E0;
     }
+    .sit .half.red {
+        background-color: red;
+    }
 
   .horizontal-line {
     border-top: 2px solid #E0E0E0; 

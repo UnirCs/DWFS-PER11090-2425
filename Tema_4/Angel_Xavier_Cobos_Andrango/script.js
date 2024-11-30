@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 //Inicializar la matriz
 let butacas = setup();
+draw(butacas);
 //Imprimir la matriz
 console.log("Butacas: ", butacas);
 // Función para reservar una butaca
@@ -33,6 +34,41 @@ function setup() {
     return butacas;
 }
 
+function draw(butacas) {
+    let contenedor = document.getElementById('contenedor-sits');
+    contenedor.innerHTML = '';
+
+    let fragment = document.createDocumentFragment();
+
+    for (let i = 0; i < butacas.length; i++) {
+        const divFilaContainer = document.createElement('div');
+        divFilaContainer.classList.add('container-sit');
+
+        const divFila = document.createElement('div');
+        divFila.classList.add('text-row');
+        divFila.textContent = `Fila ${i + 1}`;
+        divFilaContainer.appendChild(divFila);
+
+        for (let j = 0; j < butacas[i].length; j++) {
+            const divContenedorSits = document.createElement('div');
+            divContenedorSits.classList.add('sit');
+
+            const divSuperior = document.createElement('div');
+            divSuperior.classList.add('half', 'black');
+            divContenedorSits.appendChild(divSuperior);
+
+            const divInferior = document.createElement('div');
+            butacas[i][j].estado ? divInferior.classList.add('half', 'red') : divInferior.classList.add('half', 'white');
+            divInferior.setAttribute('id', `sit-${butacas[i][j].id}`);
+            divContenedorSits.appendChild(divInferior);
+
+            divFilaContainer.appendChild(divContenedorSits);
+        }
+        fragment.appendChild(divFilaContainer);
+    }    
+    contenedor.appendChild(fragment);
+}
+
 function valueInput(butacas){
     let seats = document.getElementById('seats');
     seats.addEventListener('change', () => {
@@ -44,12 +80,14 @@ function valueInput(butacas){
 
 
 function suggest(sits, butacas){
+    draw(butacas);
     let mySet = new Set();
     let flag = false;
     if(butacas[0].length < sits){
         console.log("Apartado 1");
         mySet.clear();
         console.log(mySet);
+        alert("No hay suficientes asientos para la cantidad de personas");
     }else if(butacas[0].length >= sits){
         for(let i = butacas.length - 1; i >= 0; i--){
             let count = 0;
@@ -65,7 +103,13 @@ function suggest(sits, butacas){
                 if(count == sits){
                     console.log("Apartado 3");
                     flag = true;
-                    console.log(mySet);   
+                    console.log(mySet);
+                    for(let id of mySet){
+                        let div = document.getElementById(`sit-${id}`);
+                        div.classList.remove('white');
+                        div.classList.add('red');
+                    }
+                    
                 }
             }    
         }
@@ -73,6 +117,7 @@ function suggest(sits, butacas){
             console.log("Apartado 2");
             mySet.clear();
             console.log(mySet);
+            alert("No hay suficientes asientos juntos");
         }
         
     }
