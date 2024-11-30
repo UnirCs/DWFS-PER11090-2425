@@ -32,7 +32,7 @@ body {
     gap: 10px;
 }
 
-.chair-container .chair-selection{
+.chair-container, .chair-selection{
     gap: 20px;
 }
 
@@ -87,4 +87,9 @@ input {
 /* Títulos */
 h2{
     color: #7A7A7A;
+}
+
+hr {
+    border: 3px solid white;
+    width: 50%;
 }
