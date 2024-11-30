@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chistes Chuck</title>
+</head>
+<body class="back-todo">
+
+<div class="chiste_inicio">
+    <h1 class="titulo">Chistes de Chuck Norris</h1>
+
+    <button type="button" class="btn btn-primary btn-lg btn btn-success" id="boton_chiste" onclick="chiste_chuck()"  >DAME UN CHISTE</button>
+    <p id="chiste" class="chiste_parafo">  </p>
+</div>
+
+<script>
+    function chiste_chuck() {
+        (async () => {
+            let url = "https://api.chucknorris.io/jokes/random";
+            let fetchRespChiste = await fetch(url);
+            let jsonChiste = await fetchRespChiste.json();
+            let chiste1 = jsonChiste.value;
+            console.log("Chiste de Chuck: " + chiste1);
+            document.getElementById('chiste').innerHTML = chiste1;
+        })()
+    }
+
+</script>
+
+</body>
+</html>

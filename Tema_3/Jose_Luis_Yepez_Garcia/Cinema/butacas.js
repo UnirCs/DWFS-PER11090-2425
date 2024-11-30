@@ -25,8 +25,9 @@ function setup() {
 let butacas = setup();
 
 // Imprimir la matriz
-console.log(butacas);
+console.log('Butacas inicializadas');
 
+const sitNum = document.getElementById("sit-num");
 // Función para reservar un asiento
 function suggest(numSeats) {
   if (numSeats > N) {
@@ -50,6 +51,8 @@ function suggest(numSeats) {
   return new Set(seats.map(seat => seat.id));
 }
 
-const seatsSelected = suggest(10);
-
-console.log(seatsSelected)
+sitNum.addEventListener("input", function(e) {
+  // const numSeats = parseInt(e.target.value);
+  const seats = suggest(8);
+  console.log('Asientos sugeridos:', Array.from(seats).join(','));
+});
