@@ -1,0 +1,66 @@
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+.container{
+    background-color: #00acf6;
+}
+
+.text-center{
+    background-color: #aed6f1;
+}
+
+.screen {
+    background-color: #555;
+    height: 50px;
+    margin: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.seating-chart {
+    margin-bottom: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #fff;
+    background-color: #444;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seat.available {
+    background-color: #28a745; /* Verde para asientos disponibles */
+}
+
+.seat.taken {
+    background-color: #dc3545; /* Rojo para asientos ocupados */
+}
+
+.seat:hover {
+    background-color: #ffc107; /* Amarillo cuando el puntero está encima */
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.form-control {
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 20px;
+}

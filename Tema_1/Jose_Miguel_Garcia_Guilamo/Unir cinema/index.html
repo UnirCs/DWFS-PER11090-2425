@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIR-CINEMA</title>
+   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+ 
+<body>
+
+<div class="container">
+    <h1 class="text-center my-4">Reservacion de asientos  - UNIR-CINEMA</h1>
+    <div class="pantalla">Pantalla</div>  
+    <table class="asientos">
+        <tr>
+            <td><div class="asiento asiento--disponible" data-asiento="1A">1A</div></td>
+            <td><div class="asiento asiento--ocupada" data-asiento="1B">1B</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="1C">1C</div></td>
+            <td><div class="asiento asiento--ocupada" data-asiento="1D">1D</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="1E">1E</div></td>
+        </tr>
+        <tr>
+            <td><div class="asiento asiento--disponible" data-asiento="2A">2A</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="2B">2B</div></td>
+            <td><div class="asiento asiento--ocupada" data-asiento="2C">2C</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="2D">2D</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="2E">2E</div></td>
+        </tr>
+        <tr>
+            <td><div class="asiento asiento--disponible" data-asiento="3A">3A</div></td>
+            <td><div class="asiento asiento--ocupada" data-asiento="3B">3B</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="3C">3C</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="3D">3D</div></td>
+            <td><div class="asiento asiento--ocupada" data-asiento="3E">3E</div></td>
+        </tr>
+        <tr>
+            <td><div class="asiento asiento--disponible" data-asiento="4A">4A</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="4B">4B</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="4C">4C</div></td>
+            <td><div class="asiento asiento--ocupada" data-asiento="4D">4D</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="4E">4E</div></td>
+        </tr>
+        <tr>
+            <td><div class="asiento asiento--disponible" data-asiento="5A">5A</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="5B">5B</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="5C">5C</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="5D">5D</div></td>
+            <td><div class="asiento asiento--disponible" data-asiento="5E">5E</div></td>
+        </tr>
+    </table>
+    <form class="mt-4" id="formulario-reserva">
+        <div class="formulario-reserva__grupo">
+            <label for="cantidad-asientos">Número de Asientos</label>
+            <input type="number" id="cantidad-asientos" class="form-control" min="1" max="5" placeholder="Introduzca la cantidad a reservar" required>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" id="boton-confirmar">Confirmar Reserva</button>
+    </form>
+</div>
+<footer>
+    <p>UNIR-CINEMA</p>
+    <p>Dirección: Dr Ferry #111 , La Romana</p>
+    <p>Teléfono: (809) 877 3285</p>
+    <p>Email: josemiguel.garcia629@comunidadunir.net</p>
+</footer>
+</body>
+</html>
