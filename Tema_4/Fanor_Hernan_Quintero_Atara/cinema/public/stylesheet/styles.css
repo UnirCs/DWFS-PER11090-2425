@@ -1,0 +1,161 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #5b5b5b;
+    color: #a6a6a6
+}
+
+.header {
+    text-align: center;
+    background-color: #333;
+    color: #a6a6a6;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.container-main {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 10px;
+    justify-items: center;
+}
+
+.container-main img {
+    width: 60px;
+}
+
+.pantalla {
+    margin: auto;
+    background-color: #000;
+    width: 800px;
+    height: 20px;
+    clip-path: polygon(5% 100%, 95% 100%, 100% 0, 0 0);
+    margin: 10px 0 80px;
+}
+
+.general {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.general p {
+    margin: 0 20px;
+}
+
+.silla {
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
+    margin: 5px;
+}
+
+.reservas {
+    color: #fb4b5c;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.reservas input {
+    height: 40px;
+    width: 50px;
+    border-radius: 20%;
+    padding-left: 15px;
+}
+
+footer {
+    background-color: #333;
+    color: #a6a6a6;
+    padding: 0 10px;
+    text-align: end;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer img {
+    width: 100px;
+}
+
+/* Login Page */
+
+.container-main-login {
+    margin-top: 50px;
+}
+
+._logi-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+._logi-form {
+    width: 480px;
+    padding: 0 40px;
+    background-color: #0098cd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-right-radius: 80px;
+    border-end-start-radius: 80px;
+}
+
+._logi-form img {
+    width: 120px;
+}
+
+._logi-form h4 {
+    color: #fff;
+}
+
+._form_item {
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    border: solid 5px #fff;
+    margin: 1px;
+}
+
+._form_item-invalid {
+    border-left: solid 5px #fbb74b;
+}
+
+._form_item-valid {
+    border-left: solid 5px #35e15b;
+}
+
+._login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+._login-inputs {
+    margin: 5% 0;
+}
+
+._login_buttons {
+    margin: 40px 0 20px;
+}
+
+._button-blue {
+    border: 0;
+    background-color: #00506d;
+    width: 120px;
+    padding: 10px 20px;
+    color: #fff;
+    transition: 0.5s;
+}
+
+._button-blue:hover {
+    background-color: #07394a;
+    width: 180px;
+    transition: 0.5s;
+}
