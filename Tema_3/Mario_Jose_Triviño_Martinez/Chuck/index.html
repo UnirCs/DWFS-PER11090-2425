@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chistes de Chuck-Mario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <button class="btn" onclick="getJoke()">Cuentame un chiste!</button>
+    <p class="chiste" id="chiste"></p>
+</div>
+<script>
+    function getJoke(){
+        const pRef=document.getElementById("chiste");
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then(response=>response.json())
+            .then(json => pRef.innerText=json.value);
+    }
+</script>
+</body>
+</html>

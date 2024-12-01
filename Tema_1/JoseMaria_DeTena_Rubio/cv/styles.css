@@ -1,0 +1,214 @@
+/* Notación utilizada: BEM
+BEM = Bloque - Elemento - Modificador
+
+Notación:
+.bloque
+.bloque__elemento (doble guión bajo)
+.bloque__elemento--modificador (doble guión medio)
+*/
+
+/* Reset de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Calibri, 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #e9e3e3;
+}
+
+/* Sección de encabezado */
+.encabezado {
+    width: 50%;          /* 50% del ancho de la pantalla */
+    margin: 0 auto;      /* Centra el contenedor horizontalmente */
+    display: flex;       /* Estructura de columnas con flexbox */
+    align-items: flex-start;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 5px;
+    background-color: white;
+    color:#073585
+}
+
+.encabezado__foto {
+    flex: 1;
+    flex-basis: 30%; /* Ancho para la columna de foto */
+    text-align: center;
+}
+
+.foto__formato {
+    width: 150px;    
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px gray;    
+}
+
+.encabezado__nombre {
+    flex: 2;
+    flex-basis: 70%; /* Ancho para la columna de nombre */
+    text-align: right;    
+}
+
+.nombre__yApellidos {
+    font-size: 40px;
+    font-weight: bold;   
+}
+
+.nombre__cv {
+    font-size: 30px;
+    font-weight: lighter;
+    
+}
+
+.nombre__fecha {
+    font-size: 20px;
+    font-weight: lighter;    
+}
+
+/* Sección de contenidos con todos los epígrafes del CV */
+.contenidos {
+    width: 50%;          /* 50% del ancho de la pantalla */
+    margin: 0 auto;      /* Centra el contenedor horizontalmente */
+    margin: 10px auto;
+    padding: 30px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 20px gray;
+    border-radius: 5px;
+    background-color: white;
+    color:#073585
+}
+
+.contenidos__tituloSeccion {
+    font-size: 30px;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #073585;
+}
+
+/* Áreaa "General and contact information"*/
+.contacto {
+    margin: 0 auto;      /* Centra el contenedor horizontalmente */
+    display: flex;       /* Estructura de columnas con flexbox */
+    align-items: flex-start;
+    margin: 10px auto;
+    padding: 20px;    
+    color:#073585
+}
+
+.contacto__datos {
+    flex: 1;
+    flex-basis: 70%; /* Ancho de columna para datos de contacto */
+    text-align: left;
+    font-size: 18px;
+}
+
+.contacto__linkedin {
+    flex: 2;
+    flex-basis: 30%; /* Ancho de columna para logo de Linkedin */
+    text-align: center;
+}
+
+.linkedin__formatoLogo {
+    width: 30px;    
+}
+
+.linkedin__formatoQR {
+    width: 125px;    
+}
+
+/* Área "Professional profile" */
+.perfil {
+    margin: 0 auto;      /* Centra el contenedor horizontalmente */
+    display: flex;       /* Estructura de columnas con flexbox */
+    align-items: flex-start;
+    margin: 10px auto;
+    padding: 20px; 
+    color:#073585
+}
+
+.perfil__tecnico {
+    flex: 1;
+    flex-basis: 50%; /* Ancho para la columna de perfil técnico */
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px;
+}
+
+.perfil__gestion {
+    flex: 2;
+    flex-basis: 50%; /* Ancho para la columna de perfil de gestión */
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px;
+}
+
+/* Área "Professional experience" */
+.experiencia {
+    margin: 0 auto;      /* Centra el contenedor horizontalmente */
+    display: flex;       /* Estructura de columnas con flexbox */
+    align-items: flex-start;
+    padding: 10px;
+    color:#073585
+}
+
+.experiencia__empresa {
+    flex: 1;
+    flex-basis: 30%; /* Ancho para la columna de logo de empresa */
+    text-align: center;
+}
+
+.empresa__formatoLogo {
+    width: 125px;
+}
+
+.experiencia__descripcion {
+    flex: 2;
+    flex-basis: 70%; /* Ancho para la columna de descripción */
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.descripcion__lista {
+    margin-left: 30px;
+}
+
+/* Área "Education */
+.educacion {
+    margin: 0 auto;      /* Centra el contenedor horizontalmente */
+    display: flex;       /* Estructura de columnas con flexbox */
+    align-items: flex-start;
+    padding: 10px;
+    color:#073585
+}
+
+.educacion__entidad {
+    flex: 1;
+    flex-basis: 30%; /* Ancho para la columna de logo de entidad */
+    text-align: center;
+}
+
+.educacion__formatoLogo {
+    width: 115px;
+}
+
+.educacion__descripcion {
+    flex: 2;
+    flex-basis: 70%; /* Ancho para la columna de descripción */
+    text-align: left;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.educacion__lista {
+    margin-left: 30px;
+}
