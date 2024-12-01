@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CINE UNIR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+  <link rel="stylesheet" href="../css/cineStyles.css">
+  <link rel="icon" href="cine.ico">
+</head>
+<body>
+  <div class="header">
+    <h1>Reserva de Asientos</h1>
+  </div>
+
+  <div class="screen">
+    <h2 style="text-align: center; padding-top: 150px;">PANTALLA</h2>
+  </div>
+
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-box free"></div>
+      <span>Disponible</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-box occupied"></div>
+      <span>Ocupado</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-box suggested"></div>
+      <span>Sugerido</span>
+    </div>
+  </div>
+
+  <div class="seats-container" id="seatsContainer"></div>
+
+  <div class="reservation-form">
+    <label for="numSeats"></label>
+    <input type="number" id="numSeats" placeholder="Número de asientos" min="1" max="10">
+  </div>
+
+  <div class="footer">
+    <p>Sistema de Reserva de Asientos</p>
+  </div>
+  <script src="../js/cineController.js"></script>
+</body>
+</html>
