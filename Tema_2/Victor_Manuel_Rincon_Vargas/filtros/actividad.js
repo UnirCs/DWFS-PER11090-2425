@@ -280,5 +280,5 @@ switch (optionN) {
   case 7: dimBrightness(2); break;
   case 8: invertColors(); break;
   case 9: merge(0.3, 0.7); break;
-  default: ejemplo();
+  default: ejemplo();   
 }

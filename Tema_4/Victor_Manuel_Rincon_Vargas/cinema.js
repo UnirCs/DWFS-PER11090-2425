@@ -38,7 +38,7 @@ butacas = setup();
 function suggest(n) {
     butacas = setup();
     console.log("Número de asientos solicitados: " + n);
-    n = Number(n); // Convertir n a número
+    n = Number(n); // Convertir n a núumero   
     if (n > N) {
         console.log("El número de asientos solicitados excede el tamaño máximo de la fila.");
         return new Set(); // 1

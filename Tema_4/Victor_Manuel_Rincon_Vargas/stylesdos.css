@@ -43,7 +43,7 @@ body {
   
   .btn {
     background-color: #ffd700; /* Botón en amarillo */
-    color: #333; /* Texto del botón en oscuro */
+    color: #333; /* Texto del botón en oscuro */    
   }
   
   .btn:hover {

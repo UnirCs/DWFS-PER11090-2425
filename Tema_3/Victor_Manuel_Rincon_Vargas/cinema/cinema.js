@@ -1,5 +1,5 @@
 // Definir el tamaño de la matriz de butacas
-const N = 10; // Número de filas y columnas
+const N = 10; // Número de filas y columnas   
 let butacas = [];
 
 // Función para inicializar la matriz de butacas

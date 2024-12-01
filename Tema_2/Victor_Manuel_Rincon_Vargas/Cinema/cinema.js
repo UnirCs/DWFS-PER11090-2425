@@ -55,7 +55,7 @@ function suggest(n,butacas){
                     idsSuggested = new Set(idsAvailable);
                 }
             } else {
-                idsAvailable.clear(); // 2
+                idsAvailable.clear(); // 2   
             }
         }
     }

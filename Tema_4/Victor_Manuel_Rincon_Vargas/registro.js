@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Comprobar si hay mensajes de error
       let errorMessages = document.querySelectorAll('.error');
       if (errorMessages.length === 0) {
-        // No hay errores, redirigir a la página de reserva de butacas
+        // No hay errores, redirigir a la página de reserva de butacas  
         window.location.href = 'reserva.html';
       } else {
         alert('Por favor, corrija los errores antes de enviar el formulario.');
