@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es" >
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Ingreso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<div class="wrap">
+  <form id="userForm">
+    <div class="form-header">
+      <h2>Registro de Usuarios</h2>
+    </div>
+    <div class="form-body">
+      <fieldset>
+        <legend><i class="fa fa-user"></i> Información de Usuarios</legend>
+        <input type="text" id="fullName" name="fullName" required>
+        <label for="fullName">Nombres</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <label for="lastName">Apellidos</label>
+        <input type="text" id="address" name="address" required>
+        <label for="address">Dirección</label>
+        <input type="text" id="city" name="city" required>
+        <label for="city">Ciudad</label>
+      </fieldset>
+
+      <fieldset>
+        <legend><i class="fa fa-lock"></i> Cuenta de Acceso</legend>
+        <input type="text" id="username" name="username" required>
+        <label for="username">Nombre de usuario</label>
+        <input type="text" id="email" name="email" required>
+        <label for="email">Correo Electrónico</label>
+        <input type="password" id="password" name="password" required>
+        <label for="password">Crear Contraseña</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <label for="confirmPassword">Confirmar Contraseña</label>
+      </fieldset>
+
+    </div>
+    <div class="form-footer">
+      <button type="submit" class="btn waves-effect waves-light" onclick="">
+        Registrar
+      </button>
+    </div>
+  </form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

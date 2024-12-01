@@ -1,0 +1,28 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+#botonMostrar {
+    background-color: grey;
+    color: yellow;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+h1 {
+
+    color: orange;
+}
+
+#chiste {
+    font-size: 18px;
+    color: orange;
+    margin-top: 20px;
+}
