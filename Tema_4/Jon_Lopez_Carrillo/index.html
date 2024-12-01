@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cinema - Registro Usuario</title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+        <link rel="stylesheet" href="styles/register.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </head>
+    <body>
+
+        <div class="container">
+      
+          <form id="userForm">
+            <h1>Registro de usuario</h1>
+            <div class="input-field">
+              <label for="fullName">Nombre y apellidos</label>
+              <input id="fullName" type="text" name="fullName" class="validate" required>
+            </div>
+      
+            <div class="input-field">
+              <label for="username">Nombre de usuario</label>
+              <input id="username" type="text" name="username" class="validate" required>
+            </div>
+      
+            <div class="input-field">
+              <label for="password">Contraseña</label>
+              <input id="password" type="password" name="password" class="validate" required>
+            </div>
+      
+            <div class="input-field">
+              <label for="confirmPassword">Confirmar contraseña</label>
+              <input id="confirmPassword" type="password" name="confirmPassword" class="validate" required>
+            </div>
+      
+            <div class="input-field">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" class="validate" required>
+            </div>
+      
+            <button type="submit" class="btn btn-primary">
+              Registrar
+            </button>
+          </form>
+        </div>
+        <script src="js/register.js"></script>
+      </body>
+      </html>

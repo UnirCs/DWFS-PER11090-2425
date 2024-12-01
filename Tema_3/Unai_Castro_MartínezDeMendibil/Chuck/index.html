@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <main>
+        <div class="mainContainer">
+            <button onclick="getJoke()" class="mainContainer__Button" id="btn">Get a Chuck Norris joke</button>
+            <p>
+                <span class="mainContainer__text" id="joke"></span>
+            </p>
+        </div>
+    </main>
+    <script>
+        const joke = document.getElementById('joke');
+        const urlLink = 'https://api.chucknorris.io/jokes/random';
+        let getJoke = async () =>{
+            fetch(urlLink)
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    joke.innerText = data.value;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    </script>
+
+</body>
+</html>
