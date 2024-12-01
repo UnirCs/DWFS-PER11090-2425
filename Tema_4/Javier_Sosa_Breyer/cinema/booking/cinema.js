@@ -17,7 +17,7 @@ function setup() {
             // Nuevo asiento
             fila.push({
                 id: idContador++,
-                estado: getRandomStatus() // Estado inicial al asar.
+                estado: getRandomStatus() // Estado inicial al azar.
             });
         }
         butacas.push(fila);
@@ -27,7 +27,7 @@ function setup() {
 }
 
 /**
- * Función para darle valores al asar a un asiento.
+ * Función para darle valores al azar a un asiento.
  *
  * Devuelve true si la variable x vale entre 1 y 5,
  * devuelve false si la variable x vale entre 6 y 10.
