@@ -121,7 +121,7 @@ function suggest(numSeats= 0) {
     const selection = new Set();
 
     // Retornamos directamente si el número de asientos a buscar supera el tamaño de una fila.
-    if (numSeats > N) {
+    if (numSeats > M) {
         return selection;
     }
 
