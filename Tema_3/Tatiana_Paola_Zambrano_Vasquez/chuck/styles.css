@@ -1,0 +1,11 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    justify-content: center;
+    padding: 20px 80px 80px 80px;
+}
