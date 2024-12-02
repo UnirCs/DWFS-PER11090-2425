@@ -141,8 +141,13 @@ window.onload = function () {
   seats = setup(); // carga matriz de asientos
   idsGenerate();  // genera los id para cada asiento en el HTML
 
+  // Asignar evento al input con id=num-seats
+  document.getElementById('num-seats').addEventListener('input', function() {
+    preselection(this.value);
+  });
+  
   // Asignar evento al boton con id = "confirm".
-  //document.getElementById("confirm").onclick = confirmReservation;
+  document.getElementById("confirm").onclick = confirmReservation;
 
 }
 
