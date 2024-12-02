@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema Tres: Chuck Norris API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="cv-container">
+    <!-- Encabezado -->
+    <header class="header">
+        <h1 class="name">Chuck Norris API</h1>
+        <img src="norris.jpg" alt="Chuck Norris API" width="200" height="200" alt ="Chuck Norris API"/>
+    </header>
+    <!-- Llamada al API -->
+    <section class="summary">
+        <input type="button" name="btnChiste" class="button" id="btnChiste" value="Chuck...dime un chiste en Inglés">
+        <p id="txtChiste">Presiona el botón para recibir un chiste</p>
+    </section>
+</div>
+<script>
+    // Función para obtener un chiste del API
+    async function obtenerChiste() {
+        try {
+            const url = "https://api.chucknorris.io/jokes/random";
+            const respuesta = await fetch(url);
+            const data = await respuesta.json();
+            return data.value; // Devuelve el chiste
+        } catch (error) {
+            console.error("Error al obtener el chiste:", error);
+            return "No se pudo obtener un chiste. Intenta de nuevo más tarde.";
+        }
+    }
+
+    // Función para manejar la solicitud al presionar el botón
+    async function manejarSolicitud() {
+        const chisteElement = document.getElementById("txtChiste");
+        chisteElement.textContent = "Cargando chiste..."; // Mensaje temporal
+        const chiste = await obtenerChiste();
+        chisteElement.textContent = chiste; // Actualiza con el chiste obtenido
+    }
+
+    // Asociar el botón al evento de clic
+    document.getElementById("btnChiste").addEventListener("click", manejarSolicitud);
+</script>
+</body>
+</html>
