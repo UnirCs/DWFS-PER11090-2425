@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<script>
+  function getChistes() {
+    fetch('https://api.chucknorris.io/jokes/random')
+            .then(response => response.json())
+            .then(chiste => {
+              document.getElementById('chiste').innerHTML = chiste.value;
+            });
+  }
+</script>
+<div class="container">
+  <h1>App de Chistes</h1>
+
+  <p id="chiste"></p>
+  <button onclick="getChistes()">Dame un chiste!</button>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+header {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+header p {
+    color: #888;
+}
+.profile {
+    display: flex;
+    margin-top: 20px;
+}
+.profile img {
+    border-radius: 50%;
+    max-width: 120px;
+    margin-right: 20px;
+}
+.profile div {
+    flex-grow: 1;
+}
+.section {
+    margin-top: 30px;
+}
+.section h2 {
+    font-weight: 700;
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+ul li {
+    margin-bottom: 10px;
+}
+.skills ul li {
+    background: #3498db;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
