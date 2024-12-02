@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chuck</title>
+</head>
+
+<body>
+
+    <main class="main-container">
+        <button onclick="joke()" class="main-container-button">give me a joke !</button>
+        <p id="laught"></p>
+    </main>
+
+    <script>
+
+        let joke = async () => {
+            /**
+             * @type {HTMLParagraphElement}
+             */
+            const pharagrafItem = document.getElementById('laught');
+
+            await fetch('https://api.chucknorris.io/jokes/random')
+                .then(response => response.json())
+                .then(data => {
+                    pharagrafItem.innerText = data.value;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+        }
+
+    </script>
+
+</body>
+
+
+</html>
