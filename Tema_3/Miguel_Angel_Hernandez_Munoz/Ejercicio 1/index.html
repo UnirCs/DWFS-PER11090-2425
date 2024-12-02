@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris Jokes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Chuck Norris Jokes</h1>
+    <button id="jokeButton">Dame un chiste</button>
+    <p id="jokeText">Presiona el botón para obtener un chiste.</p>
+</div>
+
+<script>
+    const jokeButton = document.getElementById("jokeButton");
+    const jokeText = document.getElementById("jokeText");
+
+    jokeButton.onclick = () => {
+        fetch("https://api.chucknorris.io/jokes/random")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Error al obtener el chiste");
+                }
+                return response.json();
+            })
+            .then(data => {
+                jokeText.innerHTML = data.value;
+            })
+            .catch(error => {
+                console.error(error);
+                jokeText.innerHTML = "No se pudo obtener el chiste. Intenta de nuevo.";
+            });
+    };
+</script>
+
+</body>
+</html>
