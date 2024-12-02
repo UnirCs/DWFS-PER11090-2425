@@ -1,0 +1,32 @@
+/* Bloque principal */
+.page {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f4f4f9;
+}
+
+.joke {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.joke__button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.joke__button:hover {
+    background-color: #0056b3;
+}
+
+.joke__text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
