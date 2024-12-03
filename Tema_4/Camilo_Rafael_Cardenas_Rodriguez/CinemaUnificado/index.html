@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMA 04</title>
+    <link rel="stylesheet" href="js/styles.css">
+    <!--Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+</head>
+<body>
+    <header class="blq__titulo">
+        <h1>UNIR CINEMA 4-D</h1>
+    </header>
+    <main>
+        <section class="blq__asientos">
+            <h3>REGISTRO DE USUARIO</h3>
+            <form action="cinemaUnirCC.html" id="userForm">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" name="txtNombre" id="txtNombre" class="validate">
+                        <label for="txtNombre">Nombres y Apellidos</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">badge</i>
+                        <input type="text" name="txtUsuario" id="txtUsuario">
+                        <label for="txtUsuario">Usuario</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">password</i>
+                        <input type="password" name="txtClave" id="txtClave">
+                        <label for="txtClave">Contraseña</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">password</i>
+                        <input type="password" name="txtClave2" id="txtClave2">
+                        <label for="txtClave2">Confirmar Contraseña</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" name="txtCorreo" id="txtCorreo">
+                        <label for="txtCorreo">E-mail</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">REGISTRAR
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <script language="JavaScript" type="text/javascript" src="js/validaciones.js"></script>
+        </section>
+    </main>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
