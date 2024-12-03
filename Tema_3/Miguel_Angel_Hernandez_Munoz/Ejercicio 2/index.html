@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CINE UNIR</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="contenido">
+
+<div class="container mt-5 titulo">
+    <h1 class="text-center">UNIR-CINEMA</h1>
+</div>
+
+
+<div class="contenedor_sillas">
+    <div class="row">
+        <div class="col-7">
+            <!-- Fila 1 -->
+            <div class="row">
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+            </div>
+            <!-- Fila 2 -->
+            <div class="row">
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+            </div>
+            <!-- Fila 3 -->
+            <div class="row">
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+            </div>
+            <!-- Fila 4 -->
+            <div class="row">
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+            </div>
+            <!-- Fila 5 -->
+            <div class="row">
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+            </div>
+            <!-- Fila 6 -->
+            <div class="row">
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla_ocupada"></div>
+            </div>
+            <!-- Fila 7 -->
+            <div class="row">
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+            </div>
+            <!-- Fila 8 -->
+            <div class="row">
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+            </div>
+            <!-- Fila 9 -->
+            <div class="row">
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+            </div>
+            <!-- Fila 10 -->
+            <div class="row">
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+                <div class="silla_ocupada"></div>
+                <div class="silla"></div>
+            </div>
+        </div>
+        <div class="col-3">
+            <form action="">
+                <label for="cantidad-asientos">Indica cuántos asientos quieres reservar</label>
+                <input type="number" oninput="asignarAsientos()" id="cantidad-asientos" class="form-control" min="1"
+                       max="5"
+                       placeholder="Introduzca la cantidad a reservar" required>
+                <button type="button" class="btn btn-danger btn-block mt-3">Confirmar Reserva</button>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer>
+    <p>UNIR-CINEMA</p>
+    <p>Dirección: España, Madrid</p>
+    <p>Teléfono: +11 321654654</p>
+    <p>Email: cinefullstack@unircinema.com</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>
