@@ -23,20 +23,23 @@ function setup() {
 
 // Implementación de la función `suggest`
 function suggest(butacas, numAsientos) {
-    // Validar que no exceda el tamaño de la fila
-    if (numAsientos > N) return new Set();
+    let resultado = new Set(); // Conjunto para almacenar los IDs de los asientos encontrados
+    let filaEncontrada = false; // Bandera para determinar si se encontró un grupo válido
 
     // Buscar asientos en las filas desde la más lejana hacia la más cercana
-    for (let i = butacas.length - 1; i >= 0; i--) {
+    for (let i = butacas.length - 1; i >= 0 && !filaEncontrada; i--) {
         let consecutivos = 0; // Contador de asientos consecutivos libres
-        let ids = []; // Almacenar IDs de asientos seleccionados
+        let ids = []; // Almacenar temporalmente IDs de asientos seleccionados
 
         for (let asiento of butacas[i]) {
             if (!asiento.estado) { // Si el asiento está libre
                 consecutivos++;
                 ids.push(asiento.id);
+
+                // Si se han encontrado suficientes asientos
                 if (consecutivos === numAsientos) {
-                    return new Set(ids); // Retornar los IDs si encontramos suficientes
+                    resultado = new Set(ids);
+                    filaEncontrada = true; // Marcar como fila válida
                 }
             } else {
                 consecutivos = 0; // Reiniciar si se encuentra un ocupado
@@ -45,17 +48,17 @@ function suggest(butacas, numAsientos) {
         }
     }
 
-    // Si no se encuentran suficientes asientos juntos
-    return new Set();
+    // Retornar el conjunto de asientos encontrados (vacío si no se encontraron suficientes)
+    return resultado;
 }
 
 // Inicializar la matriz
 let butacas = setup();
 
 // Modificar algunos asientos para probar
-butacas[9][7].estado = true; // Ocupamos un asiento
+butacas[8][1].estado = true; // Ocupamos un asiento
 butacas[9][3].estado = true; // Ocupamos otro asiento
 
 // Probar la función suggest
-let resultado = suggest(butacas, 5); // Solicitar 4 asientos consecutivos
+let resultado = suggest(butacas, 5); // Solicitar 5 asientos consecutivos
 console.log(resultado); // Imprime el resultado
