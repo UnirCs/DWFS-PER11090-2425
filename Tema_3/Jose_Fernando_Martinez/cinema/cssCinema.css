@@ -1,0 +1,72 @@
+body{
+    background-color: #2282ec !important;
+    border: black !important;
+}
+
+h1{
+    color: white !important;
+
+}
+.nave{
+    background-color: #004cb6 !important;
+}
+
+.screen{
+    margin-left: 28% !important;
+    margin-right: 20% !important;
+
+}
+
+.custom-checkbox {
+    width: 50px;
+    height: 50px;
+}
+
+.empty{
+    width: 23px;
+    height: 12px;
+}
+
+.btn-outline-primary:hover{
+    background-color: #00409f !important;
+
+}
+
+h5{
+    color: #004cb5 !important;
+}
+.container2{
+    align-content: center;
+    width: 500px !important;
+    height: 200px;
+    margin-left: 35% !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#footer{
+    background-color: #343a40 !important;
+    height: 100%   !important;
+    width: 100% !important;
+    margin-left: 0% !important;
+    padding-top: 50px !important;
+
+}
+
+
+input{
+    border-radius: 10% ;
+}
+.container{
+
+
+    border: 1px solid black;
+    width: 1000px !important;
+    height: 330px;
+    margin-right: 30% !important;
+    margin-left: 20% !important;
+    background-color: antiquewhite;
+    padding: 15px;
+
+ }
