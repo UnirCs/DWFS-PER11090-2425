@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuc chistes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div id="div1">
+        <button onclick="getChiste()">Dame un chiste!</button>
+        <p id="p1"></p>
+    </div>
+
+    <script>
+        async function getChiste() {
+            const url = "https://api.chucknorris.io/jokes/random";
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
+                const json = await response.json();
+                const parrafo = document.getElementById("p1");
+                parrafo.innerHTML = json.value;
+                //console.log(json);
+            } catch (error) {
+                console.error(error.message);
+            }
+        }
+    </script>
+
+</body>
+</html>
