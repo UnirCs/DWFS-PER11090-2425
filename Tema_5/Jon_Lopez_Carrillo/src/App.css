@@ -3,7 +3,7 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow-x: hidden; /* Evita el scroll horizontal */
+  overflow-x: hidden;
 }
 
 .App {
@@ -45,11 +45,11 @@ body, html {
 
 .MovieList {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   width: 100%;
   justify-items: center;
-  box-sizing: border-box;
+  box-sizing: border-box
 }
 
 .movie {
@@ -58,24 +58,30 @@ body, html {
   padding: 12px;
   background-color: #f9f9f9;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  width: auto;
+}
+.movie-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
   width: 100%;
-  max-width: 600px;
 }
 
 .movie img {
-  object-fit: contain;
+  height: 300px;
+  object-fit: cover;
   border-radius: 8px;
-  margin-right: 16px;
 }
 
 .movie-details {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  box-sizing: border-box; 
 }
 
 .movie h3 {

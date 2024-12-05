@@ -37,6 +37,22 @@ export const movies = [
     duracion: '140 min',
     genero: 'Drama',
     puntuacion: '8.0'
+  },
+  {
+    titulo: 'Pelicula 5',
+    imagen: process.env.PUBLIC_URL + '/smile2.jpg',
+    sinopsis: 'Sinopsis de la pelicula 5',
+    duracion: '150 min',
+    genero: 'Romance',
+    puntuacion: '8.5'
+  },
+  {
+    titulo: 'Pelicula 6',
+    imagen: process.env.PUBLIC_URL + '/smile2.jpg',
+    sinopsis: 'Sinopsis de la pelicula 6',
+    duracion: '160 min',
+    genero: 'Acción',
+    puntuacion: '7.5'
   }
 ];
 
