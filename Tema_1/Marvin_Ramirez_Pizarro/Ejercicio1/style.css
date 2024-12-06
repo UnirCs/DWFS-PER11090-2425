@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    padding: 0px;
+    margin: 1% 20%;
+    margin-bottom: 3%;
+}
+.cabecera{
+    width: 98%;
+    background: #e1e8eb;
+    display: inline-flex;
+    padding: 5px 10px;
+}
+
+.foto{
+    flex: 0 0 20%;
+}
+.foto > img{
+    width: 120px;
+    border-radius: 50%;
+}
+
+.informacion{
+    flex: 1;
+    font: normal 14px Roboto;
+    padding-left: 20px;
+}
+
+.informacion div:first-child{
+    font: normal 700 35px Roboto;
+    color: #004c97;
+}
+
+.informacion > div > span{
+    color: #004c97;
+    font: normal 500 16px Roboto;
+}
+
+.titulo{
+    color: #004c97;
+    font: normal 300 28px Roboto;
+    border-bottom: 2px solid #cbddf0;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+p{
+    text-align: justify;
+    font: normal 14px Roboto;
+}
+
+.laboral, .educacion{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px Solid #cbddf0;
+}
+
+.laboral div:first-child, .educacion div:first-child{
+    text-align: left;
+    font: normal 13px Roboto;
+    color: #004c97;
+}
+
+.laboral div:nth-child(2), .educacion div:nth-child(2){
+    text-align: left;
+    font: normal 13px Roboto;
+}
+
+.laboral div:nth-child(3), .educacion div:nth-child(3){
+    font: normal 14px Roboto;
+    margin-bottom: 0;
+    text-align: left;
+    color: #004c97;
+}
+
+.chip > span{
+    color: #004c97;
+    background: #cbddf0;
+    padding: 5px 15px;
+    border-radius: 16px;
+}
