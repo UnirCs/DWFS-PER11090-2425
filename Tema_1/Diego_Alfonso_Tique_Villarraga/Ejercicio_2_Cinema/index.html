@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Butacas - UNIR-CINEMA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="container">
+
+<div class="container">
+    <h1 class="text-center">UNIR-CINEMA</h1>
+    <div class="screen mx-auto"><h3>PANTALLA</h3></div>
+
+    <div class="text-center">
+        <h3>SILLAS DISPONIBLES</h3>
+        <div class="seating-chart">
+            <div class="row">F1
+                <div class="seat available">1</div>
+                <div class="seat available">2</div>
+                <div class="seat taken">3</div>
+                <div class="seat available">4</div>
+                <div class="seat available">5</div>
+                <div class="seat available">6</div>
+                <div class="seat available">7</div>
+                <div class="seat available">8</div>
+                <div class="seat available">9</div>
+                <div class="seat available">10</div>
+            </div>
+            <div class="row">F2
+                <div class="seat available">11</div>
+                <div class="seat taken">12</div>
+                <div class="seat available">13</div>
+                <div class="seat available">14</div>
+                <div class="seat available">15</div>
+                <div class="seat available">16</div>
+                <div class="seat available">17</div>
+                <div class="seat available">18</div>
+                <div class="seat available">19</div>
+                <div class="seat available">20</div>
+            </div>
+            <div class="row">F3
+                <div class="seat available">21</div>
+                <div class="seat taken">22</div>
+                <div class="seat taken">23</div>
+                <div class="seat available">24</div>
+                <div class="seat available">25</div>
+                <div class="seat available">26</div>
+                <div class="seat available">27</div>
+                <div class="seat available">28</div>
+                <div class="seat available">29</div>
+                <div class="seat available">30</div>
+            </div>
+            <div class="row">F4
+                <div class="seat available">31</div>
+                <div class="seat available">32</div>
+                <div class="seat available">33</div>
+                <div class="seat available">34</div>
+                <div class="seat available">35</div>
+                <div class="seat available">36</div>
+                <div class="seat available">37</div>
+                <div class="seat available">38</div>
+                <div class="seat available">39</div>
+                <div class="seat available">40</div>
+            </div>
+            <div class="row">F5
+                <div class="seat taken">41</div>
+                <div class="seat available">42</div>
+                <div class="seat available">43</div>
+                <div class="seat available">44</div>
+                <div class="seat available">45</div>
+                <div class="seat available">46</div>
+                <div class="seat available">47</div>
+                <div class="seat available">48</div>
+                <div class="seat available">49</div>
+                <div class="seat available">50</div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <h4>Indica cuántos asientos quieres reservar:</h4>
+        <select class="form-control w-25 mx-auto" id="seat-select">
+            <option value="1">1 asiento</option>
+            <option value="2">2 asientos</option>
+            <option value="3">3 asientos</option>
+            <option value="4">4 asientos</option>
+            <option value="5">5 asientos</option>
+            <option value="5">6 asientos</option>
+            <option value="5">7 asientos</option>
+            <option value="5">8 asientos</option>
+            <option value="5">9 asientos</option>
+            <option value="5">10 asientos</option>
+            <option value="5">11 asientos</option>
+            <option value="5">12 asientos</option>
+            <option value="5">13 asientos</option>
+            <option value="5">14 asientos</option>
+            <option value="5">15 asientos</option>
+            <option value="5">16 asientos</option>
+            <option value="5">17 asientos</option>
+            <option value="5">18 asientos</option>
+            <option value="5">19 asientos</option>
+            <option value="5">20 asientos</option>
+            <option value="5">21 asientos</option>
+            <option value="5">22 asientos</option>
+            <option value="5">23 asientos</option>
+            <option value="5">24 asientos</option>
+            <option value="5">25 asientos</option>
+            <option value="1">26 asiento</option>
+            <option value="2">27 asientos</option>
+            <option value="3">28 asientos</option>
+            <option value="4">29 asientos</option>
+            <option value="5">30 asientos</option>
+            <option value="5">31 asientos</option>
+            <option value="5">32 asientos</option>
+            <option value="5">33 asientos</option>
+            <option value="5">34 asientos</option>
+            <option value="5">35 asientos</option>
+            <option value="5">36 asientos</option>
+            <option value="5">37 asientos</option>
+            <option value="5">38 asientos</option>
+            <option value="5">39 asientos</option>
+            <option value="5">40 asientos</option>
+            <option value="5">41 asientos</option>
+            <option value="5">42 asientos</option>
+            <option value="5">43 asientos</option>
+            <option value="5">44 asientos</option>
+            <option value="5">45 asientos</option>
+            <option value="5">46 asientos</option>
+            <option value="5">47 asientos</option>
+            <option value="5">48 asientos</option>
+            <option value="5">49 asientos</option>
+            <option value="5">50 asientos</option>
+        </select>
+        <button class="btn btn-warning mt-3" onclick="confirmReservation()">Confirmar Reserva</button>
+    </div>
+
+    <footer class="mt-5">
+        <p>Cine UNIR-CINEMA</p>
+        <p>Dirección: Calle Avenida de la Paz, 137. Logroño</p>
+        <p>Teléfono: 941209743</p>
+        <p>Email: cinefullstack@unircinema.com</p>
+    </footer>
+</div>
+
+<script>
+    // Función para manejar la selección de asientos
+    function confirmReservation() {
+        const selectedSeats = document.getElementById('seat-select').value;
+        alert(`Has seleccionado ${selectedSeats} asiento(s).`);
+    }
+</script>
+
+</body>
+</html>

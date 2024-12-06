@@ -1,0 +1,61 @@
+* {
+    font-family: "Candara", serif;
+}
+
+.jumbotron {
+    background-color: #0081fd;
+}
+
+h1 {
+    padding: 1em;
+    color: white;
+    font-size: calc(2.375rem + 1.5vw);
+}
+
+.pantalla {
+    border-width: 20px;
+    width: 100%;
+    border-style: solid;
+    align-items: center;
+}
+
+.silla {
+    max-height: 30px;
+    max-width: 30px;
+    border-style: solid;
+    border-color: #0dcaf0;
+    fill: gainsboro;
+    margin: 3px;
+}
+
+.silla--active {
+    fill: #00acf6;
+}
+
+.pantalla__fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 70%;
+    width: 100%;
+    align-items: center;
+}
+
+.fila__num {
+    float: left;
+    font-size: 18px;
+    margin-right: 18px;
+}
+
+.container,
+.container__sillas,
+.pantalla {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+
+.text-footer {
+    color: white;
+}

@@ -1,0 +1,151 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 50px;
+    gap: 20px;
+}
+
+header .nombre h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+header .nombre h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 5px 0 0 0;
+}
+
+header .foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+header .foto img {
+    border-radius: 50%;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Main Content */
+.principal {
+    flex: 2;
+    padding: 20px;
+}
+
+.lateral {
+    flex: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+/* Sections */
+h3 {
+    color: #2980b9;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 2em;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #2980b9;
+    margin: 2px 0;
+}
+
+/* Lists */
+ul.curso, ul.skillList {
+    list-style-type: disc;
+    padding: 0;
+}
+
+ul.curso li, ul.skillList li {
+    margin: 10px 0;
+}
+
+/* Flex layout for each list item */
+.curso li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.curso .anyo {
+    flex: 0 0 25%;
+}
+
+.curso .titulo {
+    flex: 0 0 75%;
+}
+
+.curso .anyo p {
+    font-weight: bold;
+}
+
+.curso .titulo h4 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/* Contact and other side sections */
+.hardskills h4 {
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+.hardskills ul {
+    padding-left: 30px;
+}
+
+.contacto p, .idiomas p, .hardskills p {
+    margin: 10px 0;
+}
+
+.contacto a, .idiomas a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+.contacto a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
