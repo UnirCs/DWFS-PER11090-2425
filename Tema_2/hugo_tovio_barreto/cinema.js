@@ -58,7 +58,14 @@ function suggest(asientosSolicitados) {
     }
 
     return resultado; // Solo un return al final
+    
 }
 
+function reserva(numeroSillas) {
+    console.log("Reserva de "+numeroSillas+" Asientos" );
+    console.log(suggest(parseInt(numeroSillas)));
+
+
+}
 
 
