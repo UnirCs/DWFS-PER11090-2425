@@ -1,0 +1,38 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo para la pantalla de cine */
+.cinema-screen .screen-line {
+    width: 60%;
+    height: 2px;
+    background-color: #000;
+    margin: 0 auto;
+}
+
+.cine-photo{
+    width: 70px;
+    height: 70px;   
+}
+
+.seat-row {
+    margin-bottom: 10px;
+}
+
+/* Estilos para el formulario */
+#seat-form {
+    margin-top: 30px;
+}
+
+/* Estilos para el footer */
+footer {
+    font-size: 14px;
+    color: #555;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+
