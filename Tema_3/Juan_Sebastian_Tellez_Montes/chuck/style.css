@@ -1,0 +1,37 @@
+body {
+    background-color: #ff4400e4;
+    color: #000;
+    font-family: 'Impact', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container__button {
+    padding: 10px 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+    background-color: #00157f;
+    color: white;
+    border: 3px solid #00008B;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.container__button:hover {
+    background-color: #0429ce; 
+}
+
+.container_chiste {
+    font-size: 25px;
+    text-align: center;
+    padding: 0px 15vw 0px 15vw;
+}
