@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tema 3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MarcosKlender/night.css@main/dist/night.min.css">
+</head>
+
+<body>
+    <section style="text-align: center;">
+        <h1>Chuck Norris Jokes</h1>
+        <button onclick="getJoke()">Dame un chiste</button>
+        <p id="joke"></p>
+    </section>
+</body>
+
+<script>
+    function getJoke() {
+        fetch('https://api.chucknorris.io/jokes/random')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('joke').innerText = data.value;
+            });
+    }
+</script>
+
+</html>
