@@ -1,0 +1,11 @@
+.movie-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 8px; 
+    justify-content: space-between; 
+}
+
+.movie-grid > * {
+    flex: 1 1 30%; 
+    box-sizing: border-box; 
+}
