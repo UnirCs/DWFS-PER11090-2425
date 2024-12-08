@@ -1,0 +1,101 @@
+.container {
+    background-color: black;
+    width: 60%;
+    height: 100%;
+    border: 2px solid orange;
+    padding: 10px;
+}
+
+body {
+    background-color: #111;
+    margin: 10px;
+}
+
+.pantalla {
+    background-color: #293e5c;
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    margin: 10px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: perspective(800px) rotateX(20deg);
+    transform-origin: bottom center;
+}
+
+.footer {
+    background-color: #293e5c;
+    color: white;
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.espacio {
+    height: 100px;
+    background-color: #172435;
+    margin: 10px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid orange;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.seat.reserved {
+    background-color: orange;
+    cursor: not-allowed;
+}
+
+.seat:hover {
+    background-color: white;
+}
+
+.num {
+    width: 70px;
+    height: 40px;
+    margin: 5px;
+    color: orange;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario label {
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.formulario input {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btnReservar {
+    background-color: orange;
+    color: black;
+    border: 1px solid orange;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.btnReservar:hover {
+    background-color: rgb(182, 117, 117);
+    color: black;
+    border: 1px solid rgb(182, 117, 117);
+}

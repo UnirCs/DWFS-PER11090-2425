@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHUCK-UNIR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://www.unir.net/wp-content/uploads/2023/06/favicon_16x16.png" sizes="32x32">
+</head>
+
+<body>
+    <div class="container">
+        <button onclick="loadChuck()" id="btn-chuck">
+            Dame un chiste
+        </button>
+        <p id="chuck">
+        </p>
+    </div>
+    <script>
+        async function loadChuck() {
+
+            try {
+                const button = document.getElementById("btn-chuck");
+                button.disabled = true;
+                const url = "https://api.chucknorris.io/jokes/random";
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Response status: ${response.status}`);
+                }
+
+                const json = await response.json();
+                const chuck = document.getElementById("chuck");
+                chuck.textContent = json.value;
+                button.disabled = false;
+            } catch (error) {
+                console.error(error.message);
+            } finally {
+
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+td {
+    border-width: 2px;
+}
+
+.table-spacing {
+    border-collapse: separate;
+    border-spacing: 10px;
+}
