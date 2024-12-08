@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SimpleCSS is a classless styling framework -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <script type="text/javascript" src="cinema.js"></script>
+</head>
+
+<body>
+    <section class="screen">
+        Screen
+    </section>
+
+    <section class="chairs-container">
+        <div class="chairs-row">
+            <h6>A</h6>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+        </div>
+        <div class="chairs-row">
+            <h6>B</h6>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair busy"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+        </div>
+        <div class="chairs-row">
+            <h6>C</h6>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair busy"></div>
+            <div class="chair busy"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair busy"></div>
+            <div class="chair busy"></div>
+        </div>
+        <div class="chairs-row">
+            <h6>D</h6>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair busy"></div>
+            <div class="chair busy"></div>
+            <div class="chair busy"></div>
+            <div class="chair busy"></div>
+            <div class="chair busy"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+        </div>
+        <div class="chairs-row">
+            <h6>E</h6>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair busy"></div>
+            <div class="chair"></div>
+            <div class="chair busy"></div>
+            <div class="chair busy"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+            <div class="chair"></div>
+        </div>
+
+        <div class="conventions">
+            <div class="chair"></div> Available
+            <div class="chair busy"></div> Busy
+        </div>
+
+        <h6>How many seats do you want?</h6>
+        <input type="number" min="1" max="10" oninput="suggest(this.value)">
+
+        <button>Reserve</button>
+    </section>
+
+    <footer>
+        <div><strong>UNIR-CINEMA</strong></div>
+        <div><b>Address:</b> Calle Avenida s/n, 08038 Barcelona, Spain</div>
+        <div><b>Phone:</b> +34 45 564 08 37</div>
+        <div><b>Email:</b> cinema@unir.com</div>
+    </footer>
+</body>
+
+</html>
