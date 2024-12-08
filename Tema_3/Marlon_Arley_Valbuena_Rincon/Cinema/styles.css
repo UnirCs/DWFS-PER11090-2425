@@ -1,0 +1,61 @@
+body {
+    background-color: #f0f8ff; /* Azul claro */
+    color: #003366; /* Azul oscuro */
+  }
+  
+  .screen {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, #00509e, #003366);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .seats {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px;
+    justify-content: center;
+  }
+  
+  .seat {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #00509e;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+  }
+  
+  .seat.occupied {
+    background-color: #003366;
+    color: white;
+    cursor: not-allowed;
+  }
+  
+  .seat.selected {
+    background-color: #0074d9;
+    color: white;
+  }
+  
+  footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .btn-confirm {
+    background-color: #0074d9;
+    color: white;
+  }
+  
+  .btn-confirm:hover {
+    background-color: #00509e;
+  }
+  
