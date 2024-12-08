@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEMA 04</title>
+    <link rel="stylesheet" href="js/styles.css">
+</head>
+<body>
+    <header class="blq__titulo">
+        <h1>UNIR CINEMA 4-D</h1>
+    </header>
+    <main>
+        <section class="blq__pantallas">
+            <H3>PANTALLA CINEMA</H3>
+        </section>
+        <section class="blq__asientos">
+            <div class="blq__asientos-fila">
+                <div class="blq__asientos-texto" id="A">Fila 1</div>
+                <div class="blq__asientos-libre" id="A1"></div>
+                <div class="blq__asientos-libre" id="A2"></div>
+                <div class="blq__asientos-libre" id="A3"></div>
+                <div class="blq__asientos-libre" id="A4"></div>
+                <div class="blq__asientos-libre" id="A5"></div>
+                <div class="blq__asientos-libre" id="A6"></div>
+                <div class="blq__asientos-libre" id="A7"></div>
+                <div class="blq__asientos-libre" id="A8"></div>
+                <div class="blq__asientos-libre" id="A9"></div>
+                <div class="blq__asientos-libre" id="A10"></div>
+            </div>
+            <div class="blq__asientos-fila">
+                <div class="blq__asientos-texto" id="B">Fila 2</div>
+                <div class="blq__asientos-libre" id="B1"></div>
+                <div class="blq__asientos-libre" id="B2"></div>
+                <div class="blq__asientos-libre" id="B3"></div>
+                <div class="blq__asientos-libre" id="B4"></div>
+                <div class="blq__asientos-libre" id="B5"></div>
+                <div class="blq__asientos-libre" id="B6"></div>
+                <div class="blq__asientos-ocupado" id="B7"></div>
+                <div class="blq__asientos-ocupado" id="B8"></div>
+                <div class="blq__asientos-ocupado" id="B9"></div>
+                <div class="blq__asientos-libre" id="B10"></div>
+            </div>
+            <div class="blq__asientos-fila">
+                <div class="blq__asientos-texto">Fila 3</div>
+                <div class="blq__asientos-ocupado" id="C1"></div>
+                <div class="blq__asientos-ocupado" id="C2"></div>
+                <div class="blq__asientos-ocupado" id="C3"></div>
+                <div class="blq__asientos-ocupado" id="C4"></div>
+                <div class="blq__asientos-ocupado" id="C5"></div>
+                <div class="blq__asientos-ocupado" id="C6"></div>
+                <div class="blq__asientos-libre" id="C7"></div>
+                <div class="blq__asientos-libre" id="C8"></div>
+                <div class="blq__asientos-libre" id="C9"></div>
+                <div class="blq__asientos-libre" id="C10"></div>
+            </div>
+            <div class="blq__asientos-fila">
+                <div class="blq__asientos-texto">Fila 4</div>
+                <div class="blq__asientos-libre" id="D1"></div>
+                <div class="blq__asientos-libre" id="D2"></div>
+                <div class="blq__asientos-ocupado" id="D3"></div>
+                <div class="blq__asientos-ocupado" id="D4"></div>
+                <div class="blq__asientos-ocupado" id="D5"></div>
+                <div class="blq__asientos-libre" id="D6"></div>
+                <div class="blq__asientos-libre" id="D7"></div>
+                <div class="blq__asientos-ocupado" id="D8"></div>
+                <div class="blq__asientos-ocupado" id="D9"></div>
+                <div class="blq__asientos-libre" id="D10"></div>
+            </div>
+            <div class="blq__asientos-fila">
+                <div class="blq__asientos-texto">Fila 5</div>
+                <div class="blq__asientos-ocupado" id="E1"></div>
+                <div class="blq__asientos-libre" id="E2"></div>
+                <div class="blq__asientos-ocupado" id="E3"></div>
+                <div class="blq__asientos-ocupado" id="E4"></div>
+                <div class="blq__asientos-ocupado" id="E5"></div>
+                <div class="blq__asientos-libre" id="E6"></div>
+                <div class="blq__asientos-ocupado" id="E7"></div>
+                <div class="blq__asientos-ocupado" id="E8"></div>
+                <div class="blq__asientos-ocupado" id="E9"></div>
+                <div class="blq__asientos-ocupado" id="E10"></div>
+            </div>
+            <div class="blq__asientos-fila">
+                <div class="">
+                    <img src="img/leyenda.png" alt="Leyenda" width="100px" height="60px"/>
+                </div>
+            </div>
+        </section>
+        <section>
+            <form id="frm1">
+                <div class="blq__reservar">
+                    <label for="asientos">Usar ratón para Reservar Asientos:</label>
+                    <input type="number" name="asientos" id="asientos" min="0" max="10" value="0" readonly>
+                    <button type="submit">RESERVAR SELECCIÓN CON RATÓN</button>
+                </div>
+            </form>
+            <form id="frm2">
+                <div class="blq__reservar">
+                    <label for="asientos">Usar Algoritmo para Sugerir Reservar Asientos:</label>
+                    <input type="number" name="asientos2" id="asientos2" min="0" max="10" value="0">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">SUGERIR
+                    </button>
+                </div>
+                <script language="javascript" src="js/funcionSuggest.js"></script>
+            </form>
+        </section>
+    </main>
+    <footer class="blq__footer">
+        <p><strong>UNIR CINEMA 4D</strong></p>
+        <p>Dirección: Avenida de la Paz, 137. Logroño</p>
+        <p>Teléfono: 941209743</p>
+        <p>cinemaFS4D@unircinema4d.com</p>
+    </footer>
+<script>
+// Script para seleccionar los asientos
+document.addEventListener('DOMContentLoaded', () => {
+    const cantAsientos = document.getElementById('asientos');
+    let asientosReservados = 0;
+
+    document.querySelectorAll('.blq__asientos-libre').forEach(seat => {
+        seat.addEventListener('click', () => {
+            if (!seat.classList.contains('blq__asientos-ocupado')) {
+                // Alternar clase entre reservado y libre
+                if (seat.classList.contains('blq__asientos-reservado')) {
+                    seat.classList.remove('blq__asientos-reservado');
+                    seat.classList.add('blq__asientos-libre');
+                    asientosReservados--; // Reducir el conteo de asientos reservados
+                } else {
+                    seat.classList.remove('blq__asientos-libre');
+                    seat.classList.add('blq__asientos-reservado');
+                    asientosReservados++; // Aumentar el conteo de asientos reservados
+                }
+
+                // Actualizar el valor del input
+                cantAsientos.value = asientosReservados;
+            }
+        });
+    });
+});
+
+</script>
+</body>
+</html>

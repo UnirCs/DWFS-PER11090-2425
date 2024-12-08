@@ -1,0 +1,192 @@
+/* Main background and text */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text for readability */
+}
+
+/* Header style */
+.blq__titulo {
+    background: linear-gradient(to right, #000000, #1a1a1a); /* Luxurious gradient */
+    color: #fbc02d; /* Gold text for cinematic effect */
+    text-align: center;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.blq__titulo h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Form headers */
+main h3 {
+    color: #fbc02d; /* Matching gold for consistency */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.8rem;
+}
+
+/* Input fields */
+.input-field input {
+    color: #e0e0e0; /* Light text for dark inputs */
+}
+
+.input-field input:focus {
+    border-bottom: 1px solid #fbc02d; /* Gold focus highlight */
+    box-shadow: 0 1px 0 0 #fbc02d;
+}
+
+.input-field label {
+    color: #bdbdbd; /* Softer label color */
+}
+
+.input-field label.active {
+    color: #fbc02d; /* Gold active label */
+}
+
+/* Button */
+.btn {
+    background-color: #fbc02d; /* Gold button */
+    color: #121212; /* Dark text for contrast */
+}
+
+.btn:hover {
+    background-color: #d8a601; /* Slightly darker gold on hover */
+}
+
+/* Icons */
+.material-icons.prefix {
+    color: #fbc02d; /* Gold icons */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .blq__titulo h1 {
+        font-size: 2rem;
+    }
+
+    main h3 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Reset básico */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: black;
+    color: #f0f0f0; /* Texto claro */
+    line-height: 1.6;
+}
+
+.blq__titulo{
+    text-align: center;
+    margin-top: 5px;
+}
+
+.blq__pantallas {
+    max-width: 80%;
+    margin: 20px auto;
+    background: midnightblue;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.blq__asientos {
+    max-width: 80%;
+    margin: 5px auto;
+    background: slategrey; /* Verde más oscuro */
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.blq__form {
+    max-width: 80%;
+    margin: 5px auto;
+    background: #5c6bc0;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.blq__asientos-fila{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.blq__asientos-texto{
+    transform: rotate(270deg); /* Gira el texto 90 grados */
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+}
+
+.blq__asientos-libre{
+    width: 20px;
+    height: 30px;
+    display: flex;
+    border-color: white;
+    border-style: dashed;
+    background-color: black;
+    cursor: pointer;
+    margin:4px;
+}
+
+.blq__asientos-ocupado{
+    width: 20px;
+    height: 30px;
+    display: flex;
+    border-color: white;
+    border-style: dashed;
+    background-color: brown;
+    cursor: not-allowed;
+    margin:4px;
+}
+
+.blq__asientos-reservado{
+    width: 20px;
+    height: 30px;
+    display: flex;
+    border-color: white;
+    border-style: dashed;
+    background-color: white;
+    cursor: pointer;
+    margin:4px;
+}
+
+
+.blq__reservar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 10px auto;
+    background: darkslategrey; /* Verde más oscuro */
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.blq__pie{
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+p{
+    line-height: 3px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+}
+
+.error {
+    color: red;
+}
