@@ -21,34 +21,26 @@ function setup() {
     return butacas;
 }
 
-function suggest(numAsientosReserva, butacas) {
-    let asientosReservados = new Set();
-    let reserva = false;
 
-    if(numAsientosReserva > butacas.length) {
-        return asientosReservados;
-    }
-
-    for(let i = butacas.length -1; i  >= 0 && !reserva; i--) { //Esto es para que empiece a contar desde la última fila, la más alejada de la pantalla
-        let numLibres = 0;
-        for (let j = butacas[i].length -1; j >= 0; j--) {
-
-            if(butacas[i][j].estado === false && numLibres < numAsientosReserva){
-                asientosReservados.add(butacas[i][j].id);
-                numLibres++;
-            } else if (numLibres === numAsientosReserva) {
-                reserva = true;
-            } else {
-                asientosReservados = new Set();
-                numLibres = 0;
+function suggest(numAsientos, butacas) {
+    const asientosTemporales = new Set();
+    if (numAsientos <= N) {
+        for (let i = N - 1; i >= 0 && asientosTemporales.size < numAsientos; i--) {
+            asientosTemporales.clear(); // Aseguramos que el set está vacío antes de buscar asientos en la fila.
+            for (let j = 0; j < N && asientosTemporales.size < numAsientos && N - j >= numAsientos - asientosTemporales.size; j++) {
+                if (!butacas[i][j].estado) {
+                    asientosTemporales.add(butacas[i][j].id);
+                } else {
+                    asientosTemporales.clear();
+                }
             }
         }
     }
 
-    if(reserva) { //Cambiar el estado a ocupada
+    if(asientosTemporales.size !== 0) { //Cambiar el estado a ocupada
         for (let i = 0; i  <butacas.length ; i++) {
             for ( let j = 0; j < butacas[i].length; j++ ) {
-                for (const valor of asientosReservados) {
+                for (const valor of asientosTemporales) {
                     if(butacas[i][j].id === valor){
                         butacas[i][j].estado = true;
                     }
@@ -57,8 +49,7 @@ function suggest(numAsientosReserva, butacas) {
         }
     }
 
-    return asientosReservados;
-
+    return asientosTemporales;
 }
 
 // Inicializar la matriz
@@ -67,7 +58,10 @@ let butacas = setup();
 
 // Prueba de la función
 
-let butacasReservadas = suggest(9, butacas);
+
+let butacasReservadas = suggest(6, butacas);
+let butacasReservadas2 = suggest(6, butacas);
+
 
 
 console.log(butacasReservadas);

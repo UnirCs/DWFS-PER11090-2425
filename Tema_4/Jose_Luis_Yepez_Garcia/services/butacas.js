@@ -2,7 +2,7 @@
 const N = 10; // Número de filas y columnas
 
 // Función para inicializar la matriz de butacas
-function setup() {
+function setup({ reservedSeats = [] } = {}) {
     let idContador = 1; // Iniciar el contador de IDs en 1 (los humanos no empezamos a contar desde 0)
     let butacas = [];
 
@@ -13,7 +13,7 @@ function setup() {
             // Nuevo asiento
             fila.push({
                 id: idContador++,
-                estado: false // Estado inicial libre
+                estado: reservedSeats.includes(idContador - 1) ? true : false // Estado inicial libre
             });
         }
         butacas.push(fila);
@@ -22,13 +22,13 @@ function setup() {
 }
 
 // Inicializar la matriz
-let butacas = setup();
+export const butacas = setup({ reservedSeats: [100, 95, 94, 93, 92, 91, 87, 86, 85, 73, 72, 70, 69, 67, 66, 51] });
 
 // Imprimir la matriz
-console.log(butacas);
+console.log('Butacas inicializadas');
 
 // Función para reservar un asiento
-function suggest(numSeats) {
+export function suggest(numSeats) {
   if (numSeats > N) {
     return new Set();
   }
@@ -49,7 +49,3 @@ function suggest(numSeats) {
 
   return new Set(seats.map(seat => seat.id));
 }
-
-const seatsSelected = suggest(10);
-
-console.log(seatsSelected)
