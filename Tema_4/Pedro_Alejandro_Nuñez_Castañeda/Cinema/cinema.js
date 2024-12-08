@@ -112,3 +112,4 @@ function showSuggest(asientos) {
 }
 
 console.log("Butacas Cargadas",butacas,butacas_html);
+document.querySelector("#btn_asientos").addEventListener("change",(event)=>{showSuggest(event.target.value)})
