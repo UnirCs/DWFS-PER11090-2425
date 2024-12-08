@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>UNIR-CINEMA</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container border-warning mt-4">
+ 
+  <div >
+    <h2 class="container mb-4 text-warning text-center">Registro de Usuario</h2>
+    <form>
+      <div class="form-group text-center form-group">
+        <label for="nombre">Nombre y Apellido</label><br>
+        <input type="text" id="nombre" name="nombre"><br><br>
+
+        <label for="usuario">Nombre de Usuario</label><br>
+        <input type="text" id="usuario" name="usuario"><br><br>
+
+        <label for="pass">Contraseña</label><br>
+        <input type="password" id="pass" name="pass" oninput="validarpass()" required><br><br>
+
+        <label for="repass">Confirmar Contraseña</label><br>
+        <input type="password" id="repass" name="repass" oninput="validarpass()" required><br><br>
+
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="emailusuario"><br><br>
+
+        <button type="button" class="btn btn-warning" onclick="paginaLocal()">Registrar</button>
+
+      </div>
+      <div id="feedback"></div>
+    </form>
+  </div>
+  
+  <script src="cinema.js"></script>
+</body>
+</html>
