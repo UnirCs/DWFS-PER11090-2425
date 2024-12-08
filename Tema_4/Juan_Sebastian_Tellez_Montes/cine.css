@@ -1,0 +1,101 @@
+body{
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    margin: 1%;
+    padding: 1%;
+    border: 4px solid #f1c40f;
+}
+
+.pantalla {
+    margin: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#p1{
+    background-color: #191d8a66;
+    font-size: 24px;
+    height: 200px;
+    line-height: 200px;
+}
+
+#p2{
+    background-color: #85929e;
+    font-size: 50px;
+    height: 400px;
+    line-height: 400px;
+}
+
+#p3{
+    background-color: #5f6a6a; 
+    height: 150px;
+    text-align: center;
+    vertical-align:  middle;
+    line-height:30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.butaca {
+    border: 1px;
+    border-color: yellow;
+    border-style: solid;
+    width: 70px;
+    height: 70px;
+    margin: 2px;
+    
+}
+
+.butaca--seleccionada {
+    border: 1px;
+    border-color: yellow;
+    border-style: solid;
+    width: 70px;
+    height: 70px;
+    margin: 2px;
+    background-color: yellow;
+    
+}
+
+.butaca--reservada {
+    border: 1px;
+    border-color: #565151;
+    border-style: solid;
+    width: 70px;
+    height: 70px;
+    margin: 2px;
+    background-color: #565151;
+    
+}
+
+.fila {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.reservacion
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    color: yellow;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    vertical-align: middle;
+    margin-top: 20px;
+    
+}
