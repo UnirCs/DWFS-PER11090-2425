@@ -1,0 +1,20 @@
+* {
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: rgb(128, 62, 62);
+  }
+  
+  p {
+    font-size: 16px;           /* Tamaño de la fuente */
+    color: #ebdd5e;               /* Color del texto */
+    line-height: 1.5;          /* Altura de línea */
+    text-align: justify;       /* Justificación del texto */
+  }
+
+  h1 {
+    font-size: 20px;           /* Tamaño de la fuente */
+    color: #f1e3e3;               /* Color del texto */
+    text-decoration-line: underline;
+  }
