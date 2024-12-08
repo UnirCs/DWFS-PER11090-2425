@@ -1,0 +1,113 @@
+/* Notación utilizada: BEM
+BEM = Bloque - Elemento - Modificador
+
+Notación:
+.bloque
+.bloque__elemento (doble guión bajo)
+.bloque__elemento--modificador (doble guión medio)
+*/
+
+body {
+    font-family: Calibri, 'Arial Narrow', Arial, sans-serif;
+    padding: 20px;
+    background-color:black;
+    color: white;
+}
+
+.unirCinema {
+    width: 80%;
+    background-color: #3a3a3a;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color:chartreuse;
+    border-radius: 8px;
+}
+
+.pantalla {
+    width: 60%;
+    height: 200px;
+    background-color: darkgrey;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-radius: 8px;
+}
+
+.butacas {
+    width: 60%;
+    margin: 0 auto;    
+}
+
+.butacas__fila {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.fila__numero {
+    color: chartreuse;
+    width: 50px;
+    line-height: 40px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.asiento {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 2px solid chartreuse;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+}
+
+.asiento--ocupado {
+    width: 40px;
+    height: 40px;
+    margin: 5px;    
+    border: 2px solid chocolate;
+    border-radius: 10px;
+    background-color:chocolate;
+}
+
+.reserva {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.reserva__input {
+    width: 100px;
+    height: 30px;
+    margin: 20px auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.reserva__boton {
+    background-color: chartreuse;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+}
+
+.reserva__boton:hover {
+    background-color: chocolate;    
+}
+
+.footer {
+    width: 80%;
+    background-color: #3a3a3a;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color:chartreuse;
+    border-radius: 8px;    
+}

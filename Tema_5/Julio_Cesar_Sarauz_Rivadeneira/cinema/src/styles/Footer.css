@@ -1,0 +1,19 @@
+.footer-head{
+    background-color: black;
+    text-align: center;
+}
+.footer-text{
+    color: white;
+    display: block;
+    font-size: 0.8rem;
+}
+.footer-text:hover{
+    color: rgb(129, 184, 255);
+    display: block;
+    font-size: 0.8rem;
+}
+
+.footer-content{
+   padding-top: 30px;
+   padding-bottom: 50px;
+}
