@@ -64,3 +64,14 @@ function reserve(seatsToReserve) {
         }
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const seatInput = document.getElementById("seats");
+
+    seatInput.addEventListener("input", (e) => {
+        const nSeats = parseInt(e.target.value, 10);
+        if (nSeats > 0 && nSeats <= 5) {
+            suggest(nSeats);
+        }
+    });
+});
