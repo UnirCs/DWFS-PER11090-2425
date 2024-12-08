@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIR Cinema - login</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3>Registro de Usuario</h3>
+        <form id="userForm">
+            <div class="input-field">
+                <input id="nombre" type="text" name="nombre" class="validate" required>
+                <label for="nombre">Nombre y apellidos</label>
+            </div>
+
+            <div class="input-field">
+                <input id="snombre" type="text" name="snombre" class="validate" required>
+                <label for="snombre">Nombre de usuario</label>
+            </div>
+
+            <div class="input-field">
+                <input id="password" type="password" name="password" class="validate" required>
+                <label for="password">Contraseña</label>
+            </div>
+
+            <div class="input-field">
+                <input id="confirmpassword" type="password" name="confirmpassword" class="validate" required>
+                <label for="confirmpassword">Confirmar contraseña</label>
+            </div>
+
+            <div class="input-field">
+                <input id="email" type="email" name="email" class="validate" required>
+                <label for="email">Email</label>
+            </div>
+
+            <button type="submit" class="btn waves-effect waves-light">
+                Registrar
+            </button>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
