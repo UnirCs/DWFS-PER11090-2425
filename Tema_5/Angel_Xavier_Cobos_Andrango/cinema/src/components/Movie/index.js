@@ -1,0 +1,1 @@
+import Movie from './components/Movie';

@@ -1,0 +1,1 @@
+import MovieList from './components/MovieList';
