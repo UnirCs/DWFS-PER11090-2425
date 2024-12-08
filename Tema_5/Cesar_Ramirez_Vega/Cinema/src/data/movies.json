@@ -1,0 +1,92 @@
+[
+  {
+      "id": 1,
+      "title": "Iron Man",
+      "image": "https://image.tmdb.org/t/p/original/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+      "synopsis": "Tras ser secuestrado, el industrial multimillonario y genio inventor Tony Stark construye una armadura de alta tecnología para escapar y decide usar su tecnología para combatir el mal.",
+      "duration": "126 minutos",
+      "genre": "Acción, Ciencia ficción",
+      "rating": "7.9/10"
+  },
+  {
+      "id": 2,
+      "title": "The Avengers",
+      "image": "https://image.tmdb.org/t/p/original/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+      "synopsis": "Nick Fury, director de S.H.I.E.L.D., reúne a un grupo de superhéroes para formar Los Vengadores y salvar al mundo de una amenaza inminente.",
+      "duration": "143 minutos",
+      "genre": "Acción, Aventura, Ciencia ficción",
+      "rating": "8.0/10"
+  },
+  {
+      "id": 3,
+      "title": "Guardians of the Galaxy",
+      "image": "https://image.tmdb.org/t/p/original/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+      "synopsis": "Un grupo de inadaptados intergalácticos se une para detener a un guerrero fanático que amenaza el universo con un poderoso artefacto.",
+      "duration": "121 minutos",
+      "genre": "Acción, Aventura, Ciencia ficción",
+      "rating": "8.0/10"
+  },
+  {
+      "id": 4,
+      "title": "Black Panther",
+      "image": "https://image.tmdb.org/t/p/original/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+      "synopsis": "T'Challa, heredero del reino de Wakanda, asume el manto de Black Panther y debe enfrentarse a un antiguo enemigo que pone en peligro su nación y el mundo.",
+      "duration": "134 minutos",
+      "genre": "Acción, Aventura, Ciencia ficción",
+      "rating": "7.3/10"
+  },
+  {
+      "id": 5,
+      "title": "Spider-Man: Homecoming",
+      "image": "https://image.tmdb.org/t/p/original/c24sv2weTHPsmDa7jEMN0m2P3RT.jpg",
+      "synopsis": "Peter Parker equilibra su vida como estudiante de secundaria con su identidad secreta de Spider-Man mientras enfrenta a un nuevo villano, el Buitre.",
+      "duration": "133 minutos",
+      "genre": "Acción, Aventura, Ciencia ficción",
+      "rating": "7.4/10"
+  },
+  {
+      "id": 6,
+      "title": "Doctor Strange",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/3rXBhCl5jhU5rRlpJxRBH1SMCUb.jpg",
+      "synopsis": "El neurocirujano Stephen Strange busca una cura para sus manos dañadas y descubre el mundo de la magia y las dimensiones alternativas.",
+      "duration": "115 minutos",
+      "genre": "Acción, Aventura, Fantasía",
+      "rating": "7.5/10"
+  },
+  {
+      "id": 7,
+      "title": "Thor: Ragnarok",
+      "image": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/sgVe7blGP5P71STv2TBXmO86qPo.jpg",
+      "synopsis": "Thor debe escapar del planeta Sakaar a tiempo para salvar Asgard de Hela y el inminente Ragnarök.",
+      "duration": "130 minutos",
+      "genre": "Acción, Aventura, Comedia",
+      "rating": "7.9/10"
+  },
+  {
+      "id": 8,
+      "title": "Captain America: The Winter Soldier",
+      "image": "https://image.tmdb.org/t/p/original/tVFRpFw3xTedgPGqxW0AOI8Qhh0.jpg",
+      "synopsis": "Steve Rogers, alias Capitán América, se enfrenta a un nuevo enemigo, el Soldado de Invierno, mientras descubre una conspiración dentro de S.H.I.E.L.D.",
+      "duration": "136 minutos",
+      "genre": "Acción, Aventura, Ciencia ficción",
+      "rating": "7.7/10"
+  },
+  {
+      "id": 9,
+      "title": "Ant-Man",
+      "image": "https://image.tmdb.org/t/p/original/rS97hUJ1otKTTripGwQ0ujbuIri.jpg",
+      "synopsis": "Scott Lang, un ladrón con habilidades especiales, debe aceptar su héroe interior y ayudar a su mentor, el Dr. Hank Pym, a proteger el secreto detrás del traje de Ant-Man.",
+      "duration": "117 minutos",
+      "genre": "Acción, Aventura, Ciencia ficción",
+      "rating": "7.3/10"
+  },
+  {
+      "id": 10,
+      "title": "Captain Marvel",
+      "image": "https://image.tmdb.org/t/p/original/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+      "synopsis": "Carol Danvers se convierte en una de las heroínas más poderosas del universo cuando la Tierra se ve atrapada en medio de una guerra galáctica entre dos razas alienígenas.",
+      "duration": "123 minutos",
+      "genre": "Acción, Aventura, Ciencia ficción",
+      "rating": "6.9/10"
+  }
+]

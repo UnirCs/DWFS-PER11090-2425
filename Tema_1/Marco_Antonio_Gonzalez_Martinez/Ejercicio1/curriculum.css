@@ -1,0 +1,110 @@
+h1 {
+    color: rgb(12, 12, 92);
+}
+h2 {
+    color: rgb(19, 19, 168);
+}
+h3 {
+    color: rgb(19, 19, 168);
+    border-bottom: 1px solid blue;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+.Cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.Cabecera__Informacion {
+    flex: 1 1 20%;
+    padding: 1rem;
+    margin: auto 0;    
+}
+
+
+
+.Informacion__Nombre {
+    font-size: 60;
+    margin-bottom: 0.2rem;
+}
+
+.Informacion__Profesion {
+    font-size: 20;
+    color: rgb(54, 54, 204);
+    margin-top: 0;
+}
+
+.Informacion__Descripcion {
+    flex: 1 1 20%;
+}
+
+.Contenido {
+    display: flex;
+}
+
+.Contenido__Perfil {    
+    width: 25%;
+}
+
+.Perfil__Contacto {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20%;
+    padding: 1rem;
+    margin: auto 0;    
+}
+
+
+
+.Software__Estrellas {
+    margin-left: 3rem;
+}
+
+
+.Contenido__Experiencia {
+    width: 75%;
+}
+
+.Tarjeta__Elemento {
+    display: flex; /* Alinea los elementos en una fila */
+    align-items: center; /* Centra los elementos verticalmente dentro del contenedor */
+    gap: 2rem; /* Espacio entre el label y el subdiv1 */
+}
+
+.Elemento__Especifico {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20%;   
+}
+
+.Elemento__Fecha {
+    width: 15%;
+}
+
+.Label__Relevante {
+    font-size: 16;
+    color: rgb(54, 54, 204);
+    font-weight: bold;
+}
+.Label__Descripcion {
+    text-indent: 20px;
+}
