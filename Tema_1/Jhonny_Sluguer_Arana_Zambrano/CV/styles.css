@@ -1,0 +1,109 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    color: #333;
+}
+
+.cv-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    color: #222;
+}
+
+.cv-header {
+    text-align: center;
+    border-bottom: 3px solid #0072ff;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.cv-header h1 {
+    font-size: 2.5em;
+    color: #0072ff;
+    margin-bottom: 10px;
+}
+
+.cv-header p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.cv-header a {
+    color: #0072ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cv-header a:hover {
+    text-decoration: underline;
+}
+
+.photo-container {
+    width: 99px;
+    height: 131px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 3px solid #00c6ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cv-section {
+    margin-bottom: 20px;
+}
+
+.cv-section h2 {
+    font-size: 1.8em;
+    color: #00c6ff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00c6ff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.job {
+    margin-bottom: 20px;
+}
+
+ul.skills {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul.skills li {
+    background: #0072ff;
+    color: #fff;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+ul.skills li:hover {
+    background: #00c6ff;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
