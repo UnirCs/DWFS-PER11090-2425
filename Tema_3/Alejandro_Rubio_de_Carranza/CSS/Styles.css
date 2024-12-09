@@ -1,0 +1,26 @@
+body{
+	background: #123641;
+}
+
+#boton{
+	color:black;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin-top: 170px;	
+	margin-left: 650px;
+	cursor: pointer; 
+	height: 50px;
+	border-radius: 5px;
+	background-color: #edeeee; 
+
+
+}
+
+
+#chiste{
+	color:#ebc208;
+	margin-left: 300px;
+	font-size: 1.5em;
+	margin-right: 300px;
+	text-align:center;
+}
