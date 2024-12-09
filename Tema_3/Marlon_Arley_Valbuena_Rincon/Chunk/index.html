@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chistes de Chuck Norris</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Chistes de Chuck Norris</h1>
+    <button id="chisteBtn">Dame un chiste</button>
+    <p id="chisteTexto">Haz clic en el botón para ver un chiste.</p>
+  </div>
+
+  <script>
+    // Seleccionamos elementos del DOM
+    const botonChiste = document.getElementById('chisteBtn');
+    const textoChiste = document.getElementById('chisteTexto');
+
+    // Evento para cargar un chiste
+    botonChiste.addEventListener('click', async () => {
+      try {
+        // API de chistes con soporte para español
+        const response = await fetch('https://api.chucknorris.io/jokes/random?lang=es');
+        if (!response.ok) throw new Error('Error al obtener el chiste');
+        
+        const data = await response.json();
+        textoChiste.textContent = data.value; // Mostramos el chiste
+      } catch (error) {
+        textoChiste.textContent = 'Error al cargar el chiste. Inténtalo de nuevo más tarde.';
+        console.error(error);
+      }
+    });
+  </script>
+</body>
+</html>
