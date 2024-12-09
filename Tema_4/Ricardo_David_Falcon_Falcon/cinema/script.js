@@ -33,9 +33,11 @@ function suggest(numAsientos) {
 
       // Iterar por cada asiento en la fila
       for (
-          let j = 0;
-          j < N && tempSeats.size < numAsientos && N - j >= numAsientos - tempSeats.size;
-          j++
+        let j = 0;
+        j < N &&
+        tempSeats.size < numAsientos &&
+        N - j >= numAsientos - tempSeats.size;
+        j++
       ) {
         if (!butacas[i][j].estado) {
           tempSeats.add(butacas[i][j].id); // Añadir el asiento si está libre
@@ -55,8 +57,8 @@ function sugerir(numeroAsiento) {
 
   if (isNaN(numAsientos) || numAsientos <= 0) {
     // Limpiar todas las reservas si el número no es válido
-    document.querySelectorAll('.seat').forEach(seat => {
-      seat.classList.remove('reserved');
+    document.querySelectorAll(".seat").forEach((seat) => {
+      seat.classList.remove("reserved");
     });
     return;
   }
@@ -65,34 +67,45 @@ function sugerir(numeroAsiento) {
   const asientos = suggest(numAsientos);
 
   // Limpiar la clase 'reserved' de todos los asientos antes de aplicar la nueva selección
-  document.querySelectorAll('.seat').forEach(seat => {
-    seat.classList.remove('reserved');
+  document.querySelectorAll(".seat").forEach((seat) => {
+    seat.classList.remove("reserved");
   });
 
   if (asientos.size > 0) {
-    asientos.forEach(asientoId => {
+    asientos.forEach((asientoId) => {
       const asiento = document.getElementById(asientoId);
       if (asiento) {
-        asiento.classList.add('reserved'); // Añadir clase para pintar los asientos seleccionados
+        asiento.classList.add("reserved"); // Añadir clase para pintar los asientos seleccionados
       }
     });
   } else {
-    console.log('No hay asientos disponibles para la cantidad solicitada.');
+    console.log("No hay asientos disponibles para la cantidad solicitada.");
   }
 }
 
 // Función para asignar IDs únicos dinámicamente al DOM de los asientos
 function asignarIdsAsientos() {
-  const filas = document.querySelectorAll('.row'); // Todas las filas de butacas
+  const filas = document.querySelectorAll(".row"); // Todas las filas de butacas
   let idContador = 1;
 
-  filas.forEach(fila => {
-    const asientos = fila.querySelectorAll('.seat'); // Todas las butacas de la fila
-    asientos.forEach(asiento => {
+  filas.forEach((fila) => {
+    const asientos = fila.querySelectorAll(".seat"); // Todas las butacas de la fila
+    asientos.forEach((asiento) => {
       asiento.id = idContador++; // Asignar un ID único incremental
     });
   });
 }
 
-// Asignar IDs al cargar la página
-document.addEventListener('DOMContentLoaded', asignarIdsAsientos);
+// Asignar IDs a los asientos y preparar el evento del input
+document.addEventListener("DOMContentLoaded", () => {
+  asignarIdsAsientos(); // Asigna IDs a los asientos al cargar la página
+
+  // Referencia al input por su ID
+  const inputAsientos = document.getElementById("numAsientos");
+
+  // Agregar un event listener al input
+  inputAsientos.addEventListener("input", function () {
+    const numeroAsientos = parseInt(this.value, 10); // Obtiene el valor del input
+    sugerir(numeroAsientos); // Llama a la función sugerir
+  });
+});
