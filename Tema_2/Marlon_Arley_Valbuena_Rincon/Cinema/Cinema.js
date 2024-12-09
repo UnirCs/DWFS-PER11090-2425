@@ -1,10 +1,10 @@
 // Tamaño de la matriz de butacas
 const N = 10;
 
-// Función para inicializar la matriz de butacas
+// Función para inicializar la matriz de butacas 
 function setup() {
     let idContador = 1; // Iniciar el contador de IDs en 1
-    let butacas = [];
+    butacas = []; // Asegúrate de que la variable butacas esté declarada fuera de la función
 
     for (let i = 0; i < N; i++) {
         let fila = [];
@@ -16,64 +16,70 @@ function setup() {
         }
         butacas.push(fila);
     }
-    return butacas;
 }
 
 // Inicializar la matriz de butacas
-const butacas = setup();
+let butacas; // Declara la variable fuera de la función
+setup(); // Ejecutar la función
 
-// Función para buscar la fila y columna de un asiento por su ID
-function buscarAsiento(butacas, id) {
-    for (let i = 0; i < butacas.length; i++) {
-        for (let j = 0; j < butacas[i].length; j++) {
+// Función para buscar asiento 
+function buscarAsiento(butacas, id, resultado) {
+    let encontrado = false;
+    for (let i = 0; i < butacas.length && !encontrado; i++) {
+        for (let j = 0; j < butacas[i].length && !encontrado; j++) {
             if (butacas[i][j].id === id) {
-                return [i, j];
+                resultado.posicion = [i, j]; // Asignamos la posición encontrada al objeto resultado
+                encontrado = true;
             }
         }
     }
-    return null; // Retorna null si no se encuentra
 }
 
-// Función para sugerir asientos consecutivos
-function suggest(butacas, numAsientos) {
+// Función para sugerir asientos consecutivos 
+function suggest(butacas, numAsientos, resultado) {
     const N = butacas.length;
+    resultado.ids = new Set(); // Iniciar un set vacío para guardar los IDs de los asientos sugeridos
 
-    // Regla 1: Si el número de asientos solicitados excede el tamaño de una fila, devolver Set vacío
-    if (numAsientos > N) {
-        return new Set();
-    }
+    if (numAsientos <= N) {
+        let encontrado = false;
+        let i = N - 1;
 
-    // Buscar en cada fila desde la más lejana
-    for (let i = N - 1; i >= 0; i--) {
-        let consecutivos = 0;
-        let ids = [];
+        while (i >= 0 && !encontrado) {
+            let consecutivos = 0;
+            let ids = [];
+            let j = 0;
 
-        for (let j = 0; j < N; j++) {
-            if (!butacas[i][j].estado) {
-                consecutivos++;
-                ids.push(butacas[i][j].id);
+            while (j < N && !encontrado) {
+                if (!butacas[i][j].estado) {
+                    consecutivos++;
+                    ids.push(butacas[i][j].id);
 
-                // Regla 2: Si se encuentran suficientes asientos consecutivos
-                if (consecutivos === numAsientos) {
-                    // Marcar los asientos como ocupados
-                    ids.forEach(id => {
-                        const [fila, columna] = buscarAsiento(butacas, id);
-                        if (fila !== null && columna !== null) {
-                            butacas[fila][columna].estado = true;
-                        }
-                    });
-
-                    return new Set(ids);
+                    if (consecutivos === numAsientos) {
+                        ids.forEach(id => {
+                            const posicion = { posicion: null }; // Variable para almacenar la posición
+                            buscarAsiento(butacas, id, posicion); // Buscar la posición del asiento
+                            if (posicion.posicion !== null) {
+                                const [fila, columna] = posicion.posicion;
+                                butacas[fila][columna].estado = true;
+                            }
+                        });
+                        ids.forEach(id => resultado.ids.add(id)); // Añadir los IDs al set de resultado
+                        encontrado = true;
+                    }
+                } else {
+                    consecutivos = 0;
+                    ids = [];
                 }
-            } else {
-                consecutivos = 0; // Reiniciar si hay un asiento ocupado
-                ids = [];
+                j++;
             }
+            i--;
         }
     }
 
-    // Regla 3: Si no hay suficientes asientos consecutivos, devolver Set vacío
-    return new Set();
+    // Si no se encontró ningún resultado, dejamos el set vacío
+    if (!resultado.ids.size) {
+        resultado.ids = new Set();
+    }
 }
 
 // Función para imprimir el estado actual de las butacas
@@ -89,14 +95,16 @@ function imprimirEstado(butacas) {
 console.log("Estado inicial de las butacas:");
 imprimirEstado(butacas);
 
-
 // Prueba 1: Solicitar 11 asientos consecutivos (más que el tamaño de la fila)
+setup();
 console.log("\nPrueba 1: Solicitar 11 asientos consecutivos (más que el tamaño de la fila)");
-const resultado2 = suggest(butacas, 11);
-console.log("Resultado:", resultado2);
+let resultado2 = { ids: new Set() }; // Objeto para guardar el resultado
+suggest(butacas, 11, resultado2);
+console.log("Resultado:", resultado2.ids);
 imprimirEstado(butacas);
 
 // Prueba 2: No hay suficientes asientos disponibles consecutivos en ninguna fila
+setup();
 console.log("\nPrueba 2: No hay suficientes asientos disponibles consecutivos en ninguna fila");
 
 // Bloquear butacas para que no haya suficientes consecutivos en ninguna fila
@@ -108,23 +116,25 @@ butacas.forEach(fila => {
     }
 });
 
-const resultado4 = suggest(butacas, 3);
-console.log("Resultado:", resultado4);
+let resultado4 = { ids: new Set() }; // Objeto para guardar el resultado
+suggest(butacas, 3, resultado4);
+console.log("Resultado:", resultado4.ids);
 imprimirEstado(butacas);
 
 // Prueba 3: Solicitar 3 asientos consecutivos
+setup();
 console.log("\nPrueba 3: Solicitar 3 asientos consecutivos");
-const resultado1 = suggest(butacas, 3);
-console.log("Resultado:", resultado1);
+let resultado1 = { ids: new Set() }; // Objeto para guardar el resultado
+suggest(butacas, 3, resultado1);
+console.log("Resultado:", resultado1.ids);
 imprimirEstado(butacas);
 
-
-
-// Prueba 3: Bloquear todos los asientos en la fila más lejana y solicitar 3 asientos consecutivos
-console.log("\nPrueba 3: Bloquear todos los asientos en la fila más lejana y solicitar 3 asientos consecutivos");
+// Prueba 4: Bloquear todos los asientos en la fila más lejana y solicitar 3 asientos consecutivos
+setup();
+console.log("\nPrueba 4: Bloquear todos los asientos en la fila más lejana y solicitar 3 asientos consecutivos");
 butacas[N - 1].forEach(asiento => (asiento.estado = true)); // Bloqueamos todos los asientos de la última fila
-const resultado3 = suggest(butacas, 3);
-console.log("Resultado:", resultado3);
+let resultado3 = { ids: new Set() }; // Objeto para guardar el resultado
+suggest(butacas, 3, resultado3);
+console.log("Resultado:", resultado3.ids);
 imprimirEstado(butacas);
-
 
