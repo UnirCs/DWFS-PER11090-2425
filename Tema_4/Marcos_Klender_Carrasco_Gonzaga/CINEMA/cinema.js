@@ -55,6 +55,11 @@ function suggest(solicitud) {
     return respuesta;
 }
 
+// Uso del DOM para escuchar el evento input
+const inputNumber = document.getElementById('inputNumber');
+inputNumber.addEventListener('input', updateSelection);
+
+
 // Función para actualizar la selección de butacas
 function updateSelection() {
     // Obtener el número de asientos solicitados
