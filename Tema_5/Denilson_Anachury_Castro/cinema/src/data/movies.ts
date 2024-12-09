@@ -11,6 +11,8 @@ export function listOfMovies(): Movie[] {
 
   console.log('Getting list of movies...')
 
+  // ToDo: get data from https://www.themoviedb.org/ in the Tema 6
+
   return [
     {
       title: 'The Lost Horizon',
