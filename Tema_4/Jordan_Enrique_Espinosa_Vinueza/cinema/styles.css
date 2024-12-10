@@ -1,0 +1,134 @@
+/* Estilo generale */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.encabezado {
+    background-color: #1565c0;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.encabezado__titulo {
+    margin: 0;
+}
+
+.cine {
+    padding: 20px;
+    text-align: center;
+}
+
+.cine__pantalla {
+    background-color: #333;
+    color: #fff;
+    margin: 20px auto;
+    width: 60%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cine__pantalla-texto {
+    margin: 0;
+}
+
+.cine__asientos {
+    margin: 20px auto;
+    display: inline-block;
+}
+
+.cine__fila {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cine__fila-numero {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+    width: 60px;
+    text-align: right;
+}
+
+
+.cine__asiento {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid #1565c0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cine__asiento--disponible {
+    background-color: #4caf50;
+}
+
+.cine__asiento--ocupado {
+    background-color: #f44336;
+    cursor: not-allowed;
+}
+
+
+/*TAREA 4*/
+.cine__asiento--sugerido {
+    background-color: #ffeb3b;
+    border-color: #ffc107;
+    cursor: pointer;
+}
+
+
+.cine__reserva-formulario {
+    margin-top: 5px;
+}
+
+.cine__reserva-etiqueta {
+    font-size: 16px;
+}
+
+.cine__reserva-input {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 60%;
+    text-align: center;
+}
+
+.cine__reserva-boton {
+    background-color: #1565c0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cine__reserva-boton:hover {
+    background-color: #0d47a1;
+}
+
+.pie-de-pagina {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    /* Eliminar la propiedad position fixed */
+    position: static;
+    width: 100%;
+}
+
+
+.pie-de-pagina__texto {
+    margin: 5px;
+}
