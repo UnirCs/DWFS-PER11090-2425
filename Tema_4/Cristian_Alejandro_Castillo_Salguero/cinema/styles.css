@@ -1,0 +1,107 @@
+html{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    height: 100%;
+}
+
+body{
+    background-color: black !important;
+}
+.body-div{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border: 2px solid rgb(255, 208, 0);
+    margin: 20px 15%;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    background-color: rgb(52,58,64);
+    margin: 10px;
+    padding: 50px 0;
+}
+
+.screen-container{
+    
+    background-color: rgb(51, 51, 51);
+    height: 200px;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.seats-container{
+    margin-top: 30px;
+}
+
+.text-container{
+    text-align: center;
+    justify-content: center;
+    
+}
+.col-auto > div{
+    transition: 0.2s;
+
+    margin-top: 10px;
+    border: 2px solid rgb(255, 208, 0);
+    border-radius: 5px;
+}
+
+.col-auto > .true {
+    transition: 0.2s;
+    background-color: rgb(255, 208, 0);
+    margin-top: 10px;
+    border: 2px solid rgb(255, 208, 0);
+    border-radius: 5px;
+}
+.fila p{
+    margin-top: -5px;
+    color: rgb(255, 208, 0);
+    width: 40px;
+}
+
+
+
+.seat {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+.texto{
+    margin-top: 20px;
+    color: rgb(255, 208, 0);
+    margin-bottom: 0;
+}
+
+input[type="number"]{
+    padding-left: 30px;
+    margin-top: 10px;
+    width: 70px;
+    border-radius: 3px;
+    border: none;
+}
+
+#btn{
+    margin-top: 10px;
+    background-color: rgb(255, 208, 0);
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+    color: black;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+footer{
+    background-color: rgb(52,58,64);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}

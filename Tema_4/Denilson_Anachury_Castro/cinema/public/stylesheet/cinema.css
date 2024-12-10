@@ -1,0 +1,126 @@
+h6 {
+    margin: 0;
+}
+
+.user-profile-btn {
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--accent-bg);
+    color: var(--text-light);
+    padding: 4px 8px;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+
+    & img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    & svg {
+        height: 1.5rem;
+    }
+}
+
+main input {
+    width: 10rem;
+}
+
+.screen {
+    text-align: center;
+    padding: .5rem;
+    border-width: 2px;
+    background: #272727;
+}
+
+.chairs-container {
+    border: none;
+    margin: 0;
+}
+
+.chairs-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: 60px;
+}
+
+.chair {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    align-content: center;
+    font-size: 12px;
+    border-radius: .3rem;
+    color: var(--text-light);
+
+    &.available {
+        border: 1px solid green;
+        cursor: pointer;
+
+        &:hover {
+            border-width: 2px;
+        }
+    }
+
+    &.selected {
+        background: green;
+    }
+
+    &.occupied {
+        background: red;
+        cursor: auto;
+        pointer-events: none;
+    }
+}
+
+.conventions {
+    gap: .5rem;
+    height: 60px;
+    width: 100%;
+
+    .chair {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+.number-of-seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    margin-top: 2rem;
+}
+
+.flex {
+    display: flex;
+
+    &.row {
+        flex-direction: row;
+    }
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.justify-center {
+        justify-content: center;
+    }
+
+    &.justify-end {
+        justify-content: end;
+    }
+
+    &.align-center {
+        align-items: center;
+    }
+}

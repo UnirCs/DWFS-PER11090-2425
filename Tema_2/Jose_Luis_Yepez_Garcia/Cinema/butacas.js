@@ -35,23 +35,19 @@ function suggest(numSeats) {
   
   let seats = [];
   let done = false;
-  for (let i = N - 1; i >= 0; i--) {
-    for (let j = N - 1; j >= 0; j--) {
-      if (butacas[i][j].estado === false && !done) {
+  for (let i = N - 1; i >= 0 && !done; i--) {
+    for (let j = N - 1; j >= 0 && !done; j--) {
+      if (butacas[i][j].estado === false) {
         seats.push(butacas[i][j]);
         done = seats.length === numSeats
-      } else if (!done) {
+      } else {
         seats = [];
       }
     }
     if (!done) seats = []
   }
 
-  if (done) {
-    return new Set(seats.map(seat => seat.id));
-  }
-
-  return new Set()
+  return new Set(seats.map(seat => seat.id));
 }
 
 const seatsSelected = suggest(10);
