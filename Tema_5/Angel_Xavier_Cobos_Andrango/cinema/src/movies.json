@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Inception",
+        "image": "https://picsum.photos/200/300",
+        "sinopsis": "Un ladrón que roba secretos corporativos...",
+        "duracion": 148,
+        "genero": "Ciencia Ficción",
+        "puntuacion": 8.8
+    },
+    {
+        "title": "Interstellar",
+        "image": "https://picsum.photos/200/300",
+        "sinopsis": "Un grupo de astronautas viaja a través de un agujero de gusano...",
+        "duracion": 169,
+        "genero": "Drama/Ciencia Ficción",
+        "puntuacion": 8.6
+    },
+    {
+        "title": "The Dark Knight",
+        "image": "https://picsum.photos/200/300",
+        "sinopsis": "Batman se enfrenta al Joker, un criminal psicópata...",
+        "duracion": 152,
+        "genero": "Acción/Crimen",
+        "puntuacion": 9.0
+    },
+    {
+        "title": "The Matrix",
+        "image": "https://picsum.photos/200/300",
+        "sinopsis": "Un hacker descubre la verdad sobre su realidad...",
+        "duracion": 136,
+        "genero": "Ciencia Ficción",
+        "puntuacion": 8.7
+    },
+    {
+        "title": "Pulp Fiction",
+        "image": "https://picsum.photos/200/300",
+        "sinopsis": "Las vidas de dos sicarios, un boxeador, y una pareja de criminales...",
+        "duracion": 154,
+        "genero": "Crimen/Drama",
+        "puntuacion": 8.9
+    }
+]
