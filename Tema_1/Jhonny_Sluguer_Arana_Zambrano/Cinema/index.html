@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema UNIR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="cinema-container">
+    <!-- Encabezado -->
+    <header class="header">
+        <h1>CINEMA UNIR</h1>
+    </header>
+
+    <!-- Sección de reserva -->
+    <section class="reservation-section">
+        <label for="seat-number">Indica cuántos asientos quieres reservar:</label>
+        <input type="number" id="seat-number" min="1" max="50" placeholder="0">
+        <button id="confirm-button">Confirmar la reserva</button>
+        <p id="selected-seats-count">Asientos seleccionados: <span>0</span></p>
+    </section>
+
+    <!-- Sala de cine -->
+    <section class="cinema-hall">
+        <p class="screen">Pantalla aquí</p>
+        <div class="seats" id="seats-container">
+            <!-- Filas y asientos generados dinámicamente -->
+        </div>
+    </section>
+
+    <!-- Información del cine -->
+    <footer class="footer">
+        <p>UNIR-CINEMA</p>
+        <p>Dirección: España, Madrid</p>
+        <p>Teléfono: +11 321654654</p>
+        <p>Email: cinefullstack@unircinema.com</p>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
