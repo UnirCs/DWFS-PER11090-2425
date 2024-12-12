@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body, div {
+    height: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 30% auto 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+p, button, h1{
+    justify-self: center;
+}
+
+p {
+    width: 60%; 
+}
+
+button {
+    width: 100px;
+}
