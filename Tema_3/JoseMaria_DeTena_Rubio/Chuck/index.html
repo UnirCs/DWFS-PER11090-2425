@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unas risas con Chuck Norris</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Unas risas con Chuck Norris</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>¡Haz clic en el botón para ver una broma de Chuck Norris!</h2>
+            <button id="btnJoke">Dame un chiste</button>
+            <p id="joke"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Chuck Norris no necesita footer ;-)</p>
+    </footer>
+
+    <script>
+        document.getElementById('btnJoke').addEventListener('click', async () => {
+            try {
+                const response = await fetch('https://api.chucknorris.io/jokes/random');
+                const data = await response.json();
+                document.getElementById('joke').innerHTML = data.value;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        });
+    </script>
+    
+</body>
+</html>
