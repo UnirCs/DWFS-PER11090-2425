@@ -1,0 +1,51 @@
+/* Estilos para el Header */
+.header {
+    background-color: #111; /* Fondo oscuro como una sala de cine */
+    color: #fff; /* Texto blanco */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para efecto de profundidad */
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px; /* Ajusta el tamaño de tu logo */
+    height: auto;
+    margin-right: 15px;
+  }
+  
+  .title {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .navigation ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navigation li {
+    margin-left: 20px;
+  }
+  
+  .navigation a {
+    color: #f1c40f; /* Color dorado como las luces de cine */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navigation a:hover {
+    color: #e74c3c; /* Color rojo para el hover (resaltado) */
+  }
+  
