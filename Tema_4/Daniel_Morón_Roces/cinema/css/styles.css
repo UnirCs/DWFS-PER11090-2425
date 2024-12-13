@@ -1,0 +1,123 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: center; /* Centra el contenido en el eje horizontal */
+    align-items: center; /* Centra el contenido en el eje vertical */
+    height: 100vh; /* Altura completa de la ventana */
+    margin: 0;
+    padding: 0;
+}
+
+.cinema {
+    width: 90%;
+    max-width: 800px; /* Limitar el ancho máximo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinea el contenido dentro de .cinema */
+}
+
+.pantalla {
+    margin: 20px;
+    border: 1px solid yellow;
+    width: 100%; /* Asegura que ocupe el 100% del contenedor .cinema */
+}
+
+.pantalla__cabecera {
+    margin: 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(77, 76, 76);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    height: 150px;
+    font-size: 24px;
+}
+
+.pantalla__cuerpo {
+    margin: 15px;
+    border-radius: 5px;
+    background-color: grey;
+    height: 200px;
+}
+
+.pantalla__butacas {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra la tabla de butacas */
+}
+
+.pantalla__butacas__cuerpo {
+    width: 100%;
+    max-width: 700px; /* Limita el ancho máximo de la tabla */
+}
+
+table {
+    margin: 20px auto; /* Centra la tabla horizontalmente */
+    width: 80%;
+    vertical-align: middle;
+}
+
+.nombreFila {
+    color: yellow;
+}
+
+.butacaDisponible {
+    width: 30px;
+    height: 30px;
+    background-color: green;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.butacaSeleccionada {
+    background-color: yellow;
+}
+
+.butacaReservada {
+    background-color: darkslategray;
+}
+
+.reserva__butacas {
+    width: 100%;
+    text-align: center; /* Centra el texto dentro del contenedor */
+    color: yellow;
+    margin-top: 20px;
+}
+
+.reserva__butacas input {
+    padding: 5px;
+    font-size: 16px;
+    width: 100px;
+    margin: 10px 0;
+}
+
+.reserva__butacas button {
+    background-color: #ffd700; /* Botón amarillo */
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.reserva__butacas button:hover {
+    background-color: #ccac00;
+}
+
+.pantalla__pie {
+    margin: 15px;
+    border-radius: 5px;
+    background-color: rgb(76, 76, 76);
+    height: 150px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
