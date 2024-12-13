@@ -118,4 +118,14 @@ function generarButacas(butacas) {
 }
 
 
+// Seleccionar el campo de entrada por su ID
+const seatsInput = document.querySelector('#seatsToReserve');
+
+// Asignar la función al evento 'input'
+seatsInput.addEventListener('input', (event) => {
+  const value = event.target.value;
+  suggest(butacas, value);
+});
+
+
 
