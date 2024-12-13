@@ -1,0 +1,13 @@
+# REST API Calculator
+
+## Endpoints
+
+| HTTP Method | URI         | Description                           | Query Params                            | Request Body                            | Response Body                                                                                       | HTTP Response Code |
+|-------------|-------------|---------------------------------------|-----------------------------------------|----------------------------------------|---------------------------------------------------------------------------------------------------|--------------------|
+| POST        | /add        | Adds N elements                      | -                                       | `{ "numbers": ["number"] }`          | `{ "id": "string", "result": "number" }`                                                                    | 200                |
+| POST        | /subtract   | Subtracts N elements                 | -                                       | `{ "numbers": ["number"] }`          | `{ "id": "string", "result": "number" }`                                                                    | 200                |
+| POST        | /multiply   | Multiplies 2 elements                | -                                       | `{ "numbers": ["number", "number"] }` | `{ "id": "string", "result": "number" }`                                                                    | 200                |
+| POST        | /divide     | Divides 2 elements                   | -                                       | `{ "numbers": ["number", "number"] }` | `{ "id": "string", "result": "number", "error": "string (optional, in case of division by zero)" }`        | 200 / 400          |
+| POST        | /root       | Calculates the N-th root of a number | -                                       | `{ "number": "number", "index": "number" }` | `{ "id": "string", "result": "number", "error": "string (optional, in case of invalid index)" }`         | 200 / 400          |
+| POST        | /power      | Calculates the N-th power of a number| -                                    | `{ "base": "number", "exponent": "number" }` | `{ "id": "string", "result": "number" }`                                                                    | 200                |
+| GET         | /details    | Returns the details of an operation by ID or the last operation | `?id=string (optional)`                | -                                        | `{ "id": "string", "operation": "string", "parameters": "object", "result": "number", "timestamp": "string (ISO 8601)" }` | 200                |
