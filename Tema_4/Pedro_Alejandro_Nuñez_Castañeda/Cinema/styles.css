@@ -1,0 +1,95 @@
+body {
+  font-size: 16px;
+}
+.main {
+  margin: 1.5rem;
+}
+section {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.main__encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+  padding: 3rem;
+}
+
+.main__pantalla{
+  height: 12rem;
+  background-color: black;
+  padding: 0.5rem;
+}
+.pantalla__img{
+  width: 100%;
+  height: 100%;
+}
+.fila__titulo{
+  font-size: 1rem;
+  color: darkgoldenrod;
+}
+.asientos__fila{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem;
+}
+.fila__butaca{
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid black;
+}
+.fila__butaca__activa{
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid black;
+  background-color: black;
+}
+.fila__butaca__reservada{
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid gray;
+  background-color: gray;
+}
+.main__butacas{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.form_asientos__input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.input__label{
+  color: darkgoldenrod;
+  font-size: 2rem;
+}
+.form_asientos__btn{
+  color: black;
+  font-weight: bold;
+  height: 3rem;
+  width: 80%;
+  background-color: gold;
+  border-radius: 15px;
+}
+.input__input{
+  height: 3rem;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.main__footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  background-color: burlywood;
+}
