@@ -1,0 +1,21 @@
+.header {
+    background: #f8f8f8;
+    padding: .5rem;
+    height: 70px;
+    color: rgb(120, 120, 120);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+}
+
+.header__menu:hover, .header__logo:hover {
+    cursor: pointer;
+}
