@@ -113,6 +113,14 @@ function init() {
     // Configurar evento del input
     const input = document.getElementById('num_asientos');
     input.addEventListener('input', handleInputChange);
+
+    // Agregar listeners al formulario de reserva
+    const reservaFormulario = document.querySelector('.cine__reserva-formulario');
+    reservaFormulario.addEventListener('submit', (event) => {
+        event.preventDefault();
+        // Lógica para manejar la reserva
+        alert('Reserva confirmada');
+    });
 }
 
 // Llamada inicial

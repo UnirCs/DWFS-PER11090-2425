@@ -54,7 +54,7 @@ export const MovieList = () => {
             genre: 'Biography, Drama, History',
             rating: 8.9
         },
-    ];
+    ];    
 
     return (
         <div>
