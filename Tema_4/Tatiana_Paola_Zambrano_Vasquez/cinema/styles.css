@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+}
+
+h4 {
+    color: #000000; /* Título en negro */
+    text-align: center;
+}
+
+form {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-field label {
+    color: #000000; /* Etiqueta de texto negro */
+}
+
+.input-field input[type=text],
+.input-field input[type=password],
+.input-field input[type=email] {
+    color: #000000; /* Color de texto de entrada */
+    border-bottom: 1px solid #0d6efd; /* Borde azul para los inputs */
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus,
+.input-field input[type=email]:focus {
+    border-bottom: 1px solid #0d6efd; /* Borde azul en foco */
+    box-shadow: 0 1px 0 0 #0d6efd; /* Sombra azul en foco */
+}
+
+.btn {
+    background-color: #0d6efd; /* Botón en azul */
+    color: #f1f1f1; /* Texto del botón en claro */
+}
+
+.btn:hover {
+    background-color: #0b5ed7; /* Color del botón al pasar el mouse */
+}
+
+/* Mensajes de error */
+p {
+    color: #ff4444; /* Rojo para errores */
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.error {
+    color: red;
+}
+
+.cine-photo{
+    width: 70px;
+    height: 70px;
+}

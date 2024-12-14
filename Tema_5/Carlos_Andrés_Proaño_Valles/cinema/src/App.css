@@ -1,0 +1,30 @@
+* {
+  font-family: "Candara", serif;
+}
+
+.row-header {
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+h1 {
+  font-size: calc(2.375rem + 1.5vw);
+}
+
+.footer {
+  background-color: #0081fd;
+  margin: 0px auto;
+  padding: 0px auto;
+  color: floralwhite
+}
+
+.jumbotron {
+  padding: 70px 0px 70px 0px;
+  margin: 0px auto;
+  background: #0081fd;
+  color: floralwhite;
+}
+
+.imagen {
+  height: 425px;
+}
