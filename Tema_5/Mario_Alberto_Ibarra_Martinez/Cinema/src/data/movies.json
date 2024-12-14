@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "title": "Inception",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmkq35zEZtIgZWAHKWdGD_IRMUx-c9EOgrcQ&s",
+        "synopsis": "Un ladrón que roba secretos corporativos a través del uso de la tecnología de sueños compartidos se le ofrece la oportunidad de borrar su pasado si puede plantar una idea en la mente de un CEO.",
+        "duration": "148 minutos",
+        "genre": "Acción, Ciencia ficción",
+        "rating": "8.8/10"
+    },
+    {
+        "id": 2,
+        "title": "The Shawshank Redemption",
+        "image": "https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+        "synopsis": "Dos hombres encarcelados se unen a lo largo de varios años, encontrando consuelo y eventual redención a través de actos de decencia común.",
+        "duration": "142 minutos",
+        "genre": "Drama",
+        "rating": "9.3/10"
+    },
+    {
+        "id": 3,
+        "title": "The Dark Knight",
+        "image": "https://image.tmdb.org/t/p/original/1hRoyzDtpgMU7Dz4JF22RANzQO7.jpg",
+        "synopsis": "Cuando la amenaza conocida como el Joker emerge de su misterioso pasado, causa estragos y caos en el pueblo de Gotham, el Caballero Oscuro debe aceptar uno de los mayores desafíos psicológicos y físicos para luchar contra la injusticia.",
+        "duration": "152 minutos",
+        "genre": "Acción, Crimen, Drama",
+        "rating": "9.0/10"
+    },
+    {
+        "id": 4,
+        "title": "Forrest Gump",
+        "image": "https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
+        "synopsis": "La presidencia de Kennedy y Johnson, los acontecimientos de Vietnam, Watergate y otros eventos históricos se desarrollan desde la perspectiva de un hombre de Alabama con un coeficiente intelectual bajo.",
+        "duration": "142 minutos",
+        "genre": "Drama, Romance",
+        "rating": "8.8/10"
+    },
+    {
+        "id": 5,
+        "title": "Pulp Fiction",
+        "image": "https://image.tmdb.org/t/p/original/tj6iPnz18hGfr0LKqWmG6Cp3niO.jpg",
+        "synopsis": "La vida de dos sicarios, un boxeador, la esposa de un gánster y un par de ladrones de restaurante se entrelazan en cuatro cuentos de violencia y redención.",
+        "duration": "154 minutos",
+        "genre": "Crimen, Drama",
+        "rating": "8.9/10"
+    },
+    {
+        "id": 6,
+        "title": "The Matrix",
+        "image": "https://image.tmdb.org/t/p/original/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+        "synopsis": "Un programador pirata aprende del verdadero rol que desempeña en el mundo en el que vive, y se une a una rebelión contra sus controladores.",
+        "duration": "136 minutos",
+        "genre": "Acción, Ciencia ficción",
+        "rating": "8.7/10"
+    },
+    {
+        "id": 7,
+        "title": "Interstellar",
+        "image": "https://image.tmdb.org/t/p/original/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
+        "synopsis": "Un equipo de exploradores viajan a través de un agujero de gusano en el espacio en un intento de asegurar la supervivencia de la humanidad.",
+        "duration": "169 minutos",
+        "genre": "Aventura, Drama, Ciencia ficción",
+        "rating": "8.6/10"
+    },
+    {
+        "id": 8,
+        "title": "The Godfather",
+        "image": "https://image.tmdb.org/t/p/original/iVZ3JAcAjmguGPnRNfWFOtLHOuY.jpg",
+        "synopsis": "El patriarca envejecido de una organización del crimen organizado traslada el control de su clandestino imperio a su hijo reacio.",
+        "duration": "175 minutos",
+        "genre": "Crimen, Drama",
+        "rating": "9.2/10"
+    },
+    {
+        "id": 9,
+        "title": "Fight Club",
+        "image": "https://image.tmdb.org/t/p/original/bptfVGEQuv6vDTIMVCHjJ9Dz8PX.jpg",
+        "synopsis": "Un oficinista insomne y un fabricante de jabón desinhibido forman un club de pelea clandestino que se convierte en algo mucho más.",
+        "duration": "139 minutos",
+        "genre": "Drama",
+        "rating": "8.8/10"
+    },
+    {
+        "id": 10,
+        "title": "Inglourious Basterds",
+        "image": "https://image.tmdb.org/t/p/original/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg",
+        "synopsis": "En la Francia ocupada por los nazis, un plan para asesinar a los líderes nazis por un grupo de soldados judíos americanos coincide con los planes vengativos de la dueña de un teatro.",
+        "duration": "153 minutos",
+        "genre": "Aventura, Drama, Guerra",
+        "rating": "8.3/10"
+    }
+  ]
+  

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMA-UNIR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="encabezado">
+            <h1>UNIR - CINEMA</h1>
+            <h3>Reserva de Sillas del cinema</h3>
+        </div>
+        <div class="screen">PANTALLA / SCREEN</div>
+        <div class="seats-container" id="seatsContainer"></div>
+        <div class="controls">
+            <label for="numSeats">Cantidad de sillas a seleccionar:</label>
+            <input type="number" id="numSeats" min="1" max="100" value="1" oninput="selectContiguousSeats()">
+            <button id="selectSeatsButton" onclick="selectContiguousSeats()">Seleccionar Sillas</button>
+        </div>
+        <div id="message" class="message"></div>
+        <div id="selectedSeatsInfo" class="selected-seats-info"></div>
+        <button id="confirmReservationButton" disabled onclick="confirmReservation()">Confirmar Reserva</button>
+    </div>
+
+    <script src="cinema.js"></script>
+</body>
+</html>
