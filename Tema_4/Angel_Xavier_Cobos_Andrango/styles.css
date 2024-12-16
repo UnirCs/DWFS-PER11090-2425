@@ -1,0 +1,123 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #2C2C2C;
+  }
+
+  .container{
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .cinema-screen {
+    width: 100%;
+    height: 40vh; 
+    background-color: #E0E0E0;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cinema-screen p{
+    font-size: 4rem;
+    color: #2C2C2C;
+  }
+  .container-linea-horizontal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
+
+  .container-sit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .sit {
+    width: 40px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: black 1px solid;
+    overflow: hidden;
+    }
+
+    .sit .half {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sit .half.black {
+        background-color: #42A5F5 ;
+    }
+
+    .sit .half.white {
+        background-color: #E0E0E0;
+    }
+    .sit .half.red {
+        background-color: red;
+    }
+
+  .horizontal-line {
+    border-top: 2px solid #E0E0E0; 
+    width: 100%; 
+    margin: 3rem 0; 
+    max-width: 30%;
+    }
+
+    .input-container{
+        margin: 2rem 0;
+        text-align: center;
+    }
+
+    .input-container label{
+        margin-right: 1rem;
+    }
+    .input-container input{
+        border-radius: 5px;
+        height: 1.5rem;
+    }
+
+    .footer-content{
+        text-align: center;
+        background: lightgray;
+        padding: 0.5rem 0;
+    }
+
+    .btn-selection{
+        background: #4CAF50;
+        color: #2C2C2C;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .btn-selection:hover{
+        background: #45a049;
+    }
+
+    .text-row{
+        color: #BDBDBD;
+        font-size: 1rem;
+    }
+    
+    .form-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .text-footer{
+        margin: 5px;
+        font-size: 1rem;
+    }

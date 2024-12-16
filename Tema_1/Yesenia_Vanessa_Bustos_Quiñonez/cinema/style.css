@@ -1,0 +1,161 @@
+body{
+    box-sizing: border-box;
+    background-color: black;
+    color: #ff0;
+    font-size: 16px;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cinemaPrincipal{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    font-size: 5em;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 30px 0 10px 0;
+    width: 100%;
+}
+
+.interiorCinema{
+    box-sizing: border-box;
+    width: 60%;
+    margin: auto;
+}
+.pantalla{
+    box-sizing: border-box;
+    margin: auto;
+    background-color: #aaa;
+    padding: 5% 0;
+}
+
+.sala{
+    box-sizing: border-box;
+    width: 50%;
+    height: 35vh;
+    margin: auto;
+    padding-top: 2%;
+}
+
+.fila{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.nameFila{
+    box-sizing: border-box;
+    width: 10%;
+    text-align: right;
+}
+.filaButacas{
+    box-sizing: border-box;
+    width: 90%;
+    display: flex;
+    gap: 10px;
+}
+
+.butaca{
+    border: 2px solid #efb810;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 6px;
+    height: 6px;
+    padding: 10px;
+}
+.formulario{
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+    height: 10%;
+    padding-top: 0.5%;
+    text-align: center;
+}
+
+.formulario p{
+    color: #efb810;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+form{
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.butaca[data-id="C2"], 
+.butaca[data-id="C3"],
+.butaca[data-id="A10"],
+.butaca[data-id="D7"]{
+    background-color: #efb810;
+}
+
+input[type="number"]{
+    width: 10%;
+    padding: 0.5% 0;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    width: 20%;
+    margin: 5px auto;
+    border-radius: 10px;
+    padding: 8px 0;
+    color: #ad4b07;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+input[type="submit"]:hover{
+    background-color: #b57c00;
+    border: 2px solid #efb810;
+    color: #fff;
+
+}
+
+footer{
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    background-color: #aaf3;
+    padding: 1px 0;
+    height: 13vh;
+}
+
+footer p{
+    line-height: 0.5;
+    font-size: small;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (max-width: 768px){
+    h1{
+        font-size: 4em;
+    }
+    p{
+        font-size: 0.9em;
+    }
+    .sala{
+        width: 75%;
+    }
+    .interiorCinema{
+        width: 80%;
+    }
+}
+

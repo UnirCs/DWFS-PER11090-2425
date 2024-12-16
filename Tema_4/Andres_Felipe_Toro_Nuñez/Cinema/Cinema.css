@@ -1,0 +1,52 @@
+.cine-photo{
+    width: 50px;
+    height: 50px;
+}
+
+.room{
+    background-color: #bee3f8;
+    border-style: solid;
+    border-spacing: 5px;
+}
+
+.title{
+    text-align: center;
+    background-color:#2c5282;
+}
+
+.screen{
+    background-color: cadetblue;
+    text-align: center;
+}
+
+.table-cell {
+    border: 1px solid black;
+    align-self: stretch;
+    border-spacing: 5px;
+    background-color: #28a745;
+}
+
+.table-cell-nf {
+    border: 1px solid black;
+    align-self: stretch;
+    border-spacing: 5px;
+    background-color: #ffc107;
+}
+
+.table-head {
+    width: 300px;
+    height: 250px;
+    border-spacing: 5px;
+    border: 3px solid black;
+    margin: auto;
+}
+
+.selection-screen{
+    text-align: center;
+
+}
+
+.screen-footer{
+    text-align: center;
+    background-color: #2c5282;
+}
