@@ -84,41 +84,41 @@ function suggest(numAsientos) {
     return resultado;
 }
 
-// Función para validar el input y habilitar/deshabilitar el botón
-function validarInput(numAsientos, botonConfirmar) {
+// Función para manejar la entrada del usuario
+function manejarInput() {
+    const inputAsientos = document.getElementById("cantidad-asientos");
+    const numAsientos = parseInt(inputAsientos.value, 10);
+
     if (!isNaN(numAsientos) && numAsientos > 0 && numAsientos <= N) {
-        botonConfirmar.disabled = false;
+        suggest(numAsientos);
     } else {
-        botonConfirmar.disabled = true;
+        liberarAsientos(); // Liberar si el valor no es válido
     }
 }
 
-// Evento DOMContentLoaded para inicializar
-document.addEventListener("DOMContentLoaded", () => {
-    setup();       // Inicializa la estructura de butacas
-    asignarIDs();  // Asigna IDs a cada asiento en el DOM
-
-    const botonConfirmar = document.getElementById("boton-confirmar");
+// Función para manejar el botón de confirmar
+function manejarBoton() {
     const inputAsientos = document.getElementById("cantidad-asientos");
-    const formulario = document.getElementById("formulario-reserva");
+    const numAsientos = parseInt(inputAsientos.value, 10);
 
-    // Validar el input en cada cambio
-    inputAsientos.addEventListener("input", () => {
-        const numAsientos = parseInt(inputAsientos.value, 10);
-        validarInput(numAsientos, botonConfirmar);
-    });
+    if (!isNaN(numAsientos) && numAsientos > 0 && numAsientos <= N) {
+        suggest(numAsientos);
+    } else {
+        alert("Por favor, ingresa un número válido entre 1 y 10.");
+    }
+}
 
-    // Evento submit del formulario
-    formulario.addEventListener("submit", function(e) {
-        e.preventDefault();
-        const numAsientos = parseInt(inputAsientos.value, 10);
-        if (!isNaN(numAsientos) && numAsientos > 0 && numAsientos <= N) {
-            suggest(numAsientos);
-        } else {
-            alert("Ingresa un número válido entre 1 y 10.");
-        }
-    });
+// Evento DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+    setup();
+    asignarIDs();
 
-    // Al cargar la página, deshabilitamos el botón hasta que el input sea válido
-    validarInput(parseInt(inputAsientos.value, 10), botonConfirmar);
+    const inputAsientos = document.getElementById("cantidad-asientos");
+    const botonConfirmar = document.getElementById("boton-confirmar");
+
+    // Listener para el input
+    inputAsientos.addEventListener("input", manejarInput);
+
+    // Listener para el botón de confirmar
+    botonConfirmar.addEventListener("click", manejarBoton);
 });
