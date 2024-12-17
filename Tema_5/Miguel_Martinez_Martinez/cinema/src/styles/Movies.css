@@ -1,0 +1,25 @@
+.general {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.title{
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: yellowgreen;
+    background-color: #2c2a2a;
+    margin: 0;
+    padding: 20px 0;
+}
+
+.movies__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr)); /* Two cards per row */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the container */
+    justify-items: center; /* Center the cards horizontally */
+    background-color: #2c2a2a;
+}
