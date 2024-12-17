@@ -1,0 +1,23 @@
+.chiste_parafo{
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.chiste_inicio{
+    background: #0a0f0d;
+    align-content: center;
+}
+
+.back-todo{
+    background: #0a0f0d;
+    text-align: center;
+}
+.titulo{
+    font-size: 40px;
+    color: #FFFFFF;
+    text-align: center;
+
+}

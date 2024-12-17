@@ -1,0 +1,87 @@
+body {
+    background-color: #000000 !important;
+}
+
+.cinema {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c6a701;
+    margin: 20px;
+    padding: 20px;
+}
+
+.cinema__header {
+    color: white;
+    background-color: #343a40;
+    text-align: center;
+    padding: 25px;
+}
+
+.cinema__screen {
+    background-color: #333333;
+    height: 250px;
+    margin: 20px auto;
+}
+
+.cinema__seats {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.seats__row{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.row__label {
+    color: #ffd701;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.row__seat {
+    border: 1px solid #ffd701;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #000000;
+}
+
+.row__seat--occupied {
+    border: 1px solid #ffd701;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffd701;
+}
+
+.cinema__form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cinema__form input {
+    width: 10%;
+    margin: 20px auto;
+}
+
+.cinema__form > label {
+    color: #ffd701;
+}
+
+.cinema__footer {
+    background-color: #343a40;
+    text-align: center;
+    color: #FFFF;
+    padding: 20px;
+}
+
+.row__seat--deactivate {
+    border: 1px solid #343a40;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: #343a40;
+}
