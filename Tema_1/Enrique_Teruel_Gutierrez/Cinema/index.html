@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema</title>
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>SEAT CINEMA SELECTOR</h1>
+    </header>
+    <main>
+      <section class="selection-panel">
+        <div class="selection-panel__film">
+          <h2>Sesión 20:00 - 22 de Noviembre 2024</h3>
+          <h3>El Señor de los Anillos: La Comunidad del Anillo</h3>
+        </div>
+        <div class="selection-panel__seats">
+          <h2 class="underline">Asientos</h2>
+          <div>
+            <seat-selector /> 
+          </div>
+        </div>
+        <div class="selection-panel__location">
+          <h2 class="underline">Ubicación</h2>
+          <div>
+            <p>Cine UNIR-CINEMA</p>
+            <p>Calle Avenida de la Paz, 137. Logroño</p>
+            <p>941209743</p>
+            <p>cinefullstack@info.com</p>
+          </div>
+        </div>
+      </section>
+      <section class="cinema-panel">
+        <img class="cinema-panel__screen" src="./assets/screen.svg" alt="" />
+        <div class="seats-container">
+          <div class="row">
+            <div class="seat" id="A1"></div>
+            <div class="seat" id="A2"></div>
+            <div class="seat" id="A3"></div>
+            <div class="seat" id="A4"></div>
+            <div class="seat" id="A5"></div>
+            <div class="seat" id="A6"></div>
+            <div class="seat" id="A7"></div>
+          </div>
+          <div class="row">
+            <div class="seat" id="B1"></div>
+            <div class="seat" id="B2"></div>
+            <div class="seat" id="B3"></div>
+            <div class="seat" id="B4"></div>
+            <div class="seat" id="B5"></div>
+            <div class="seat" id="B6"></div>
+            <div class="seat" id="B7"></div>
+          </div>
+          <div class="row">
+            <div class="seat" id="C1"></div>
+            <div class="seat" id="C2"></div>
+            <div class="seat" id="C3"></div>
+            <div class="seat" id="C4"></div>
+            <div class="seat" id="C5"></div>
+            <div class="seat" id="C6"></div>
+            <div class="seat" id="C7"></div>
+          </div>
+          <div class="row">
+            <div class="seat" id="D1"></div>
+            <div class="seat" id="D2"></div>
+            <div class="seat" id="D3"></div>
+            <div class="seat" id="D4"></div>
+            <div class="seat" id="D5"></div>
+            <div class="seat" id="D6"></div>
+            <div class="seat" id="D7"></div>
+          </div>
+          <div class="row">
+            <div class="seat" id="E1"></div>
+            <div class="seat" id="E2"></div>
+            <div class="seat" id="E3"></div>
+            <div class="seat" id="E4"></div>
+            <div class="seat" id="E5"></div>
+            <div class="seat" id="E6"></div>
+            <div class="seat" id="E7"></div>
+          </div>
+          <div class="row">
+            <div class="seat" id="F1"></div>
+            <div class="seat" id="F2"></div>
+            <div class="seat" id="F3"></div>
+            <div class="seat" id="F4"></div>
+            <div class="seat" id="F5"></div>
+            <div class="seat" id="F6"></div>
+            <div class="seat" id="F7"></div>
+          </div>
+          <div class="row">
+            <div class="seat" id="G1"></div>
+            <div class="seat" id="G2"></div>
+            <div class="seat" id="G3"></div>
+            <div class="seat" id="G4"></div>
+            <div class="seat" id="G5"></div>
+            <div class="seat" id="G6"></div>
+            <div class="seat" id="G7"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>UNIR - 2024</p>
+    </footer>
+    <script src="./components/seat-selector.js"></script>
+    <script src="./js/seat-handler.js"></script>
+    <script src="./js/reservation-system.js"></script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+}
+.encabezado {
+    padding-top: 5em;
+    line-height: 0.5;
+    vertical-align: center;
+    align-items: center;
+    text-align: center;
+    background-color: yellow;
+    width: 100%;
+    height: 10%;
+    color: black;
+}
+
+.screen {
+    width: 80%;
+    height: 50px;
+    background-color: #34495e;
+    margin: 30px auto;
+    color: white;
+    font-weight: bold;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.seats-container {
+    display: grid;
+    grid-template-columns: 60px repeat(10, 40px);
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.seat {
+    width: 40px;
+    height: 30px;
+    background-color: #bdc3c7;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.seat.selected {
+    background-color: #27ae60;
+}
+
+.seat.occupied {
+    background-color: #e74c3c;
+}
+
+.seat:hover {
+    background-color: #95a5a6;
+}
+
+.controls {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #098b04;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3498db;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #e74c3c;
+}
+
+.selected-seats-info {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+.fila-num {
+    text-align: center;
+    font-weight: bold;
+    color: #2c3e50;
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.fila-num span {
+    margin-right: 10px;
+}

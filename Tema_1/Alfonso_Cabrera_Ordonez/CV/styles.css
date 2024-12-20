@@ -1,0 +1,74 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 1;
+    padding: 1;
+    background: #f9f8f8;
+}
+
+.header__foto {
+    width: 200px;
+    height: auto;
+    border-radius: 15%;
+}
+
+.header__nombre-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 40px;
+}
+
+.header__foto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.header__info, .header__nombre {
+    margin-left: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #373636;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #eaeaea;
+}
+
+.contacto, .resumen, .experiencia, .habilidades {
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    padding: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 10px;
+    background-color: #faf9f9;
+}
+
+.experiencia__item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.experiencia__compania, .experiencia__ubicacion {
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.experiencia__funciones {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.experiencia__periodo {
+    font-style: italic;
+}
+

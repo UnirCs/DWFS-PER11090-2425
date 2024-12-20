@@ -1,0 +1,71 @@
+/* Representación visual de la pantalla de cine */
+.cinema-screen {
+    background-color: #ccc;
+    border-radius: 10px;
+    height: 30px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Diseño de las butacas */
+.seat {
+    width: 40px;
+    height: 50px;
+    margin: 5px;
+    background-color: #4CAF50;
+    border-radius: 10px 10px 3px 3px; /* Forma de respaldo redondeada en la parte superior */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Base del respaldo del asiento */
+.seat:before {
+    content: '';
+    width: 30px;
+    height: 5px;
+    background-color: #4CAF50;
+    position: absolute;
+    bottom: -8px; /* Hace que parezca el asiento debajo del respaldo */
+    border-radius: 0 0 3px 3px;
+}
+
+/* Asientos ocupados */
+.seat.occupied {
+    background-color: #d9534f;
+    cursor: not-allowed;
+}
+
+/* Base del respaldo de asientos ocupados en rojo */
+.seat.occupied:before {
+    background-color: #d9534f;
+}
+
+.seat-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+/* Etiqueta de número de fila */
+.seat-row-label {
+    font-weight: bold;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}

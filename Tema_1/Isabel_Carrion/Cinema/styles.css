@@ -1,0 +1,14 @@
+/* Estilos para las butacas */
+.seat {
+    border: 2px solid #3c25d2; /* Color del borde */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px;
+    background-color: #eed1c5; /* Color de fondo */
+    cursor: pointer;
+}
+
+.seat:hover {
+    background-color: #007bff; /* Color al pasar el mouse */
+    color: #fff; /* Color de texto al pasar el mouse */
+}

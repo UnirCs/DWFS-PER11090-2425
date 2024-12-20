@@ -1,0 +1,79 @@
+/* Estilos básicos de la página */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Encabezado principal */
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Imagen redonda */
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 5px 0;
+    color: #333;
+}
+
+header p {
+    color: #555;
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Secciones */
+section {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #1E90FF;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+/* Listas de habilidades y aptitudes */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Información de contacto */
+
+
+/* Experiencia y formación */
+.experiencia-lugar, .estudios-lugar {
+    margin-bottom: 15px;
+}
+
+.experiencia-lugar h3, .estudios-lugar h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 5px 0;
+}
+
+.experiencia-lugar p, .estudios-lugar p {
+    margin: 5px 0;
+    color: #333;
+}

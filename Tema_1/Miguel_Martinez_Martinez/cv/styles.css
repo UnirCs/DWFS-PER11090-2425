@@ -1,0 +1,50 @@
+* {
+    margin: 10px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: rgb(255, 248, 238);
+}
+
+.page {
+    margin-top: 25px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border: 4px solid salmon;
+    border-style: groove;
+    border-radius: 5px;
+
+}
+
+.header {
+    text-align: center;
+}
+
+.section {
+    border: 5px solid rgb(212, 212, 212);
+    background-color: rgb(255, 255, 255);
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+div > h3 {
+    color: rgb(207, 134, 81);
+    border-bottom: dotted;
+}
+
+div > h4 {
+    color: rgb(129, 43, 16);
+}
+
+li > h4 {
+    color: rgb(129, 43, 16);
+}

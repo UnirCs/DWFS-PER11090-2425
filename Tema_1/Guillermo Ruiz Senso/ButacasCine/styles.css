@@ -1,0 +1,48 @@
+.screen {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    border-radius: 5px;
+    height: 90px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.fila{
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.seat {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #48c866; 
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.seat.occupied {
+    background-color: #e31f32;
+    cursor: not-allowed;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #317caf;
+}

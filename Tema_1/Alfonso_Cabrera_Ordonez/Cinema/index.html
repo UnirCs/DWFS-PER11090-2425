@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIR-CINEMA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">UNIR-CINEMA</h1>
+        <div class="screen mt-4 mb-4 text-center">
+            <h2 class="screen">Pantalla</h2>
+        </div>
+        <div class="seats">
+            <!-- Matriz de asientos 5x7 -->
+            <div class="row justify-content-center">
+                <div class="seat">1</div>
+                <div class="seat">2</div>
+                <div class="seat">3</div>
+                <div class="seat">4</div>
+                <div class="seat">5</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="seat">6</div>
+                <div class="seat">7</div>
+                <div class="seat">8</div>
+                <div class="seat">9</div>
+                <div class="seat">10</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="seat occupied">11</div>
+                <div class="seat occupied">12</div>
+                <div class="seat occupied">13</div>
+                <div class="seat">14</div>
+                <div class="seat">15</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="seat">16</div>
+                <div class="seat">17</div>
+                <div class="seat">18</div>
+                <div class="seat">19</div>
+                <div class="seat">20</div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="seat">21</div>
+                <div class="seat">22</div>
+                <div class="seat">23</div>
+                <div class="seat occupied">24</div>
+                <div class="seat occupied">25</div>
+            </div>
+        </div>
+        <form class="mt-4">
+            <div class="form-group">
+                <label for="numSeats"></label>
+                <input type="number" class="form-control" id="numSeats" min="1" max="10" placeholder="Ingresa aquí el número de asientos:">
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Confirmar Reserva</button>
+            </div> 
+        </form>
+    </div>
+    <footer class="mt-5 text-center">
+        <p>UNIR-CINEMA</p>
+        <p>Dirección: Calle 6 de Diciembre</p>
+        <p>Teléfono: +593 123 456 789</p>
+        <p>Email: info@unir-cinema.com</p>
+    </footer>
+</body>
+</html>

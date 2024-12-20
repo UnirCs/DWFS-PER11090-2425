@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIR-CINEMA</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1>UNIR-CINEMA</h1>
+        </header>
+
+        <div class="screen">Pantalla</div>
+
+        <div id="seat-selection">
+            <div class="row">
+                <div class="fila">Fila 1</div>
+                <div class="seat">1</div>
+                <div class="seat occupied">2</div>
+                <div class="seat">3</div>
+                <div class="seat">4</div>
+                <div class="seat occupied">5</div>
+            </div>
+            <div class="row">
+                <div class="fila">Fila 4</div>
+                <div class="seat">1</div>
+                <div class="seat">2</div>
+                <div class="seat occupied">3</div>
+                <div class="seat">4</div>
+                <div class="seat">5</div>
+            </div>
+            <div class="row">
+                <div class="fila">Fila 3</div>
+                <div class="seat">1</div>
+                <div class="seat occupied">2</div>
+                <div class="seat">3</div>
+                <div class="seat occupied">4</div>
+                <div class="seat">5</div>
+            </div>
+            <div class="row">
+                <div class="fila">Fila 4</div>
+                <div class="seat occupied">1</div>
+                <div class="seat occupied">2</div>
+                <div class="seat">3</div>
+                <div class="seat">4</div>
+                <div class="seat">5</div>
+            </div>
+        </div>
+
+        <form class="mt-4">
+            <div class="form-group">
+                <label for="num-seats">Seleccione el número de asientos:</label>
+                <input type="number" id="num-seats" class="form-control" min="1" max="5" placeholder="Número de asientos">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Confirmar Reserva</button>
+        </form>
+    </div>
+
+    <footer class="mt-5">
+        <p><strong>UNIR-CINEMA</strong></p>
+        <p>Dirección: Calle La Flaca 22, Madrid</p>
+        <p>Teléfono: 968 26 54 44</p>
+        <p>Email: contacto@unircinema.com</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

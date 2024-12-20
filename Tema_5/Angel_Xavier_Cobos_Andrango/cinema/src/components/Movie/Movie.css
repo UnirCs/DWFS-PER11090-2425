@@ -1,0 +1,33 @@
+.movie {
+    margin: 1rem;
+    width: 18rem;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+.img-movie{
+    width: 7rem;
+    border-radius: 1rem;
+}
+
+.btn-reservar{
+    background: #4CAF50;
+    color: #2C2C2C;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin-top: 1rem;
+}
+
+.btn-reservar:hover{
+    background: #45a049;
+}
+
+.movie-text{
+    margin: 0.5rem;
+}

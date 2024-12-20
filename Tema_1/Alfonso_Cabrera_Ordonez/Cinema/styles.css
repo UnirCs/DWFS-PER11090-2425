@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1.text-center {
+    letter-spacing: 20px;
+}
+
+h2.screen {
+    letter-spacing: 15px;
+}
+
+.screen {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.seats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.seat {
+    background-color: #767373;
+    height: 25px;
+    width: 50px;
+    margin: 1px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    line-height: 25px;
+}
+
+.seat.occupied {
+    background-color: red;
+}
+
+form {
+    width: 50%;
+    max-width: 350px; 
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-top: 1px solid #dee2e6;
+}
+

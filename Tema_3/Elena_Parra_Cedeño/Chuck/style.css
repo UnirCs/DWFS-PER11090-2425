@@ -1,0 +1,36 @@
+body {
+    font-family: cursive;
+}
+header div {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-btn {
+    width: 51%;
+    text-align: center;
+}
+
+.content-chiste {
+    width: 50%;
+    display: flex;
+    text-align: center;
+    font-size: larger;
+}
+
+.btn-basic {
+    padding: 10px 20px;
+    background-color: #17a589;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
