@@ -1,0 +1,65 @@
+body {
+    background-color: rgb(15, 15, 15);
+}
+
+.container {
+    color: yellowgreen;
+    background-color: rgb(87, 87, 87);
+    text-align: center;
+    padding: 40px;
+}
+
+.screen {
+    background-color: rgb(30, 92, 1);
+    height: 350px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 5px;
+}
+
+.seats {
+    margin: auto;
+    width: 630px;
+}
+
+.seats__seat {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 2px solid yellowgreen;
+}
+
+.seats__seat__reserved {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 2px solid yellowgreen;
+    background-color: yellowgreen;
+}
+
+.seats__seat__occupied {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 2px solid darkgreen;
+    background-color: darkgreen;
+}
+
+.label {
+    color: yellowgreen;
+    font-weight: bold;
+}
+
+.form {
+    color: yellowgreen;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.card {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(87, 87, 87);
+    margin-top: 15px;
+}

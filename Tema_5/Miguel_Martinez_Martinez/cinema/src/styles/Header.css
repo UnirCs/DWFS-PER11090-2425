@@ -1,0 +1,15 @@
+.header {
+    background-color: #474747;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid rgb(50, 143, 50);
+    border-bottom: 2px solid rgb(50, 143, 50);
+}
+
+.header_text{
+    color: rgb(50, 143, 50);
+    font-weight: bold;
+    text-align: center;
+}
