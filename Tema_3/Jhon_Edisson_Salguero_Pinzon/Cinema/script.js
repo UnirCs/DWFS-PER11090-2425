@@ -1,5 +1,10 @@
 const N = 13;
 const NFilas = 5;
+let butacas = null;
+
+window.onload = function() {
+    butacas = setup();
+}
 
 function setup() {
     let idContador = 1;
@@ -18,12 +23,21 @@ function setup() {
 }
 
 function suggest(nAsientosReservar) {
+    if (!nAsientosReservar || nAsientosReservar.trim() === '') {
+        return;
+    }
+
     let butacasReservadas = new Set();
-    let butacas = setup();
     nAsientosReservar = parseInt(nAsientosReservar);
 
+    if (nAsientosReservar <= 0) {
+        console.log("Por favor ingrese un número positivo de asientos");
+        return;
+    }
+
     if (nAsientosReservar > N * NFilas) {
-        return console.log("No hay suficientes asientos disponibles.");
+        console.log("No hay suficientes asientos disponibles.");
+        return;
     }
 
     let listaButacas = butacas.flat();
@@ -35,14 +49,14 @@ function suggest(nAsientosReservar) {
             secuenciaActual.push(butaca);
         } else {
             if (secuenciaActual.length >= nAsientosReservar) {
-                consecutivosLibres.push(secuenciaActual);
+                consecutivosLibres.push([...secuenciaActual]);
             }
             secuenciaActual = [];
         }
     });
 
     if (secuenciaActual.length >= nAsientosReservar) {
-        consecutivosLibres.push(secuenciaActual);
+        consecutivosLibres.push([...secuenciaActual]);
     }
 
     let secuencia = consecutivosLibres.find(secuencia => secuencia.length >= nAsientosReservar);
@@ -52,10 +66,13 @@ function suggest(nAsientosReservar) {
             butaca.estado = true;
             butacasReservadas.add(butaca.id);
         });
+        console.log("Asientos sugeridos: " + Array.from(butacasReservadas).join(", "));
+        
+        actualizarUI(Array.from(butacasReservadas));
+    } else {
+        console.log("No se encontraron asientos consecutivos disponibles");
     }
-
-    return console.log("Asientos sugeridos: " + Array.from(butacasReservadas));
 }
 
-console.log("Butacas Inicializadas");
-suggest(10);
+function actualizarUI(asientosReservados) {
+}
