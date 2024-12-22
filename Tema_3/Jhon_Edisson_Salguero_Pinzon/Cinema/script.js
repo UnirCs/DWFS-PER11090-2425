@@ -30,8 +30,7 @@ function suggest(nAsientosReservar) {
     let consecutivosLibres = [];
     let secuenciaActual = [];
 
-    for (let i = 0; i < listaButacas.length; i++) {
-        let butaca = listaButacas[i];
+    listaButacas.forEach(butaca => {
         if (butaca.estado === false) {
             secuenciaActual.push(butaca);
         } else {
@@ -40,21 +39,19 @@ function suggest(nAsientosReservar) {
             }
             secuenciaActual = [];
         }
-    }
+    });
 
     if (secuenciaActual.length >= nAsientosReservar) {
         consecutivosLibres.push(secuenciaActual);
     }
 
-    for (let i = 0; i < consecutivosLibres.length; i++) {
-        if (consecutivosLibres[i].length >= nAsientosReservar) {
-            for (let j = 0; j < nAsientosReservar; j++) {
-                let butacaReservada = consecutivosLibres[i][j];
-                butacaReservada.estado = true;
-                butacasReservadas.add(butacaReservada.id);
-            }
-            break;
-        }
+    let secuencia = consecutivosLibres.find(secuencia => secuencia.length >= nAsientosReservar);
+
+    if (secuencia) {
+        secuencia.slice(0, nAsientosReservar).forEach(butaca => {
+            butaca.estado = true;
+            butacasReservadas.add(butaca.id);
+        });
     }
 
     return console.log("Asientos sugeridos: " + Array.from(butacasReservadas));
