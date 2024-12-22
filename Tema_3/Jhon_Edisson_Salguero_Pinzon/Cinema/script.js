@@ -1,12 +1,10 @@
 // Definir el tamaño de la matriz de butacas
 const N = 13; // Número de columnas
 const NFilas = 5; // Número de filas
-
 // Función para inicializar la matriz de butacas
 function setup() {
     let idContador = 1; // Iniciar el contador de IDs en 1 (los humanos no empezamos a contar desde 0)
     let butacas = [];
-
     // Inicializar las filas y butacas
     for (let i = 0; i < NFilas; i++) {
         let fila = [];
@@ -20,18 +18,14 @@ function setup() {
     }
     return butacas;
 }
-
 // Función para sugerir butacas disponibles para la reserva
 function suggest(nAsientosReservar) {
     let butacasReservadas = new Set(); // Conjunto para almacenar las butacas reservadas
     let butacasReservadasTemp = []; // Arreglo temporal para almacenar las butacas seleccionadas
     let contador = 0;
     let isReservado = false;
-
     let butacas = setup(); // Inicializar la matriz de butacas
-
     nAsientosReservar = parseInt(nAsientosReservar); // Convertir la cantidad de asientos a reservar en número entero
-
     // Verificar si la cantidad de asientos a reservar es mayor que el total de asientos disponibles
     if (nAsientosReservar > N) {
         return console.log("Asientos sugeridos: " + Array.from(butacasReservadas));
@@ -64,9 +58,7 @@ function suggest(nAsientosReservar) {
     // Mostrar las butacas reservadas
     return console.log("Asientos sugeridos: " + Array.from(butacasReservadas));
 }
-
 // Inicializar la matriz de butacas
 console.log("Butacas Inicializadas");
-
 // Pruebas de la función suggest
 // suggest(10);
