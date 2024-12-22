@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #14141499;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.header__options {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.header__logo {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2rem;
+}
+
+.divider {
+  width: 1px;
+  background-color: #ffffff89;
+  height: 35px;
+}

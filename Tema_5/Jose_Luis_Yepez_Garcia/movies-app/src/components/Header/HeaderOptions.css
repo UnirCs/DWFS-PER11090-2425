@@ -1,0 +1,20 @@
+.header__options__option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header__options__option:hover {
+  background-color: #3e3e3ecb;
+}
+
+.header__options__option__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
