@@ -1,0 +1,14 @@
+.main{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  background-color: rgb(21, 30, 30);
+  font-weight: bold;
+}
+.form__input{
+  max-height: 40px;
+}
+.form__text{
+  color: rgb(36, 94, 242);
+}

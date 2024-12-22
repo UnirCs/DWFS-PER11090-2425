@@ -1,0 +1,84 @@
+body{
+    background-color: #4a5568;
+}
+.header-class{
+    height: 70px;
+    width: 90%;
+    margin: auto;
+    background-color: #272727;
+    border-radius: 15px;
+}
+
+.header-text{
+    padding: 10px;
+    text-align: center;
+    color: #e2e8f0;
+}
+
+.card-movie{
+    height: 540px;
+    border: #0a0f0d 1px solid;
+    width: 500px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(91,89,91,0.66);
+    border-radius: 40px;
+
+}
+.sinopsis-movie{
+    margin: auto;
+    padding: 20px;
+}
+.movie-details-text{
+    margin: auto;
+}
+.movie-details{
+    display: flex;
+
+    margin: auto;
+}
+.img-movie{
+    height: 300px;
+    margin: auto;
+    display: flex;
+}
+
+.card-text{
+    text-align: center;
+}
+
+.div-cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 15px;
+    width: 2000px;
+    border: #0a0f0d 1px solid;
+    padding: 20px;
+    background-color: rgba(0,0,0,0.52)
+}
+
+.footer-movies{
+    border: #0a0f0d 1px solid;
+
+    border-radius: 15px;
+
+    width: 800px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.button-select-seat{
+    margin: auto;
+    border: #0a0f0d 1px solid;
+    border-radius: 15px;
+    width: 200px;
+    height: 30px;
+    background-color: #0bcd2d;
+}
+
+.div-button{
+    padding: 15px;
+    display: flex;
+}
