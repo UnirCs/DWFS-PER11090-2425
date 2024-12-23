@@ -1,0 +1,63 @@
+#pantalla {
+    background-color: darkgrey;
+    height: 200px;
+    margin: auto;
+    display: block;
+}
+#banner, #pie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: yellow;
+    text-align: center;
+    margin: auto;
+}
+#banner {
+    height: 200px;
+    margin: auto;
+}
+#contenedor {
+    background-color: lightblue;
+    padding: 10px;
+}
+#principal {
+    border: 3px solid #f3063d;
+}
+#asientos {
+    display: grid;
+    grid-template-columns: repeat(11, 40px); /*Esto es que la malla se divide en 10 columnas del tamaño indicado (la primera columna es para el texto de "Fila X")*/
+    grid-template-rows: auto;
+    gap: 10px; /*Para que haya espacio entre asientos y no estén pegados*/
+    justify-content: center;
+}
+
+.asiento {
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.ocupado {
+    background-color: red;
+}
+
+.fila {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#reserva {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}

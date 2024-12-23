@@ -1,0 +1,48 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #0b4bd7;
+    color: #471dee;
+}
+
+h1 {
+    margin: 20px 0;
+    font-size: 2rem;
+    color: #e6c47b;
+}
+
+button {
+    background-color: #e6ae37;
+    color: #2a1191;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-bottom: 40px;
+}
+
+button:hover {
+    background-color: #ad8f45;
+}
+
+p {
+    border-radius: 4px;
+    background-color: #e6ae37;
+    width: 80%;
+    margin: 20px auto;
+}
+
+#texto {
+    max-width: 400px;
+}
+
+#jokeContainer {
+    font-size: 1.2rem;
+    text-shadow: rgb(226, 231, 60) 2px 1px;
+    line-height: 1.5;
+    max-width: 600px;
+    padding: 10px;
+}
