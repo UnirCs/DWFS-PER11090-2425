@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chuck_Norris_Jokes</title>
+	<link rel="stylesheet" type="text/css" href="CSS/Styles.css">
+	<!-- <script type="text/javascript" defer async src="JavaScript_files/actividad.js"></script> -->
+</head>
+<body>
+
+
+	<button id='boton' onclick="myFunction()">Dame un chiste!</button>
+
+	<p id="chiste"></p>
+
+	<script>
+		async function myFunction() {
+
+		let url = "https://api.chucknorris.io/jokes/random";
+    	let fetchResponse = await fetch(url);
+    	let json = await fetchResponse.json();
+    	let fact = json.value;
+
+		document.getElementById("chiste").innerHTML = fact;
+
+		}
+	</script>
+
+</body>
+</html>
