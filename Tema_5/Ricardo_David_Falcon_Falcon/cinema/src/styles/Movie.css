@@ -1,0 +1,68 @@
+/* Estilos para la tarjeta de película */
+.movie-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px); /* Efecto al pasar el mouse */
+}
+
+.movie-image {
+    width: 100%;
+    height: 450px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+}
+
+.movie-details {
+    padding: 15px;
+    text-align: left;
+}
+
+.movie-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Amarillo */
+}
+
+.movie-sinopsis {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.movie-details p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Estilos para el botón "Comprar" */
+.movie-button {
+    background-color: #ffcc00; /* Amarillo */
+    color: #1a1a1a; /* Texto oscuro */
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.movie-button:hover {
+    background-color: #e6b800; /* Amarillo más oscuro */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
