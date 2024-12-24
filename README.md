@@ -48,5 +48,5 @@ En este punto, tienes el repositorio local actualizado. Haz las adiciones necesa
        git commit -m "Mensaje que describa los cambios realizados"
        git push origin master
 
-### Parte V: Abrir una Pull Request
+### Parte V: Abrir una Pull Request.
 * En GitHub, haz una ``Pull Request`` o solicitud de cambios, para que pueda verificar tus ejercicios y aceptarlos en la rama master del repositorio original si todo está bien y no hay conflictos. El origen debe ser el repositorio de tu cuenta de GitHub y, el destino, este repositorio.
