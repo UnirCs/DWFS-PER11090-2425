@@ -1,0 +1,11 @@
+.movie__list__container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+}
+
+.movie__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
