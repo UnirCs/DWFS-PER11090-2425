@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+h2 {
+  text-align: center;
+}
+
+.sala-cine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fila {
+  display: flex;
+}
+
+.butaca {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-color: #28a745;
+  cursor: pointer;
+}
+
+.butaca.ocupada {
+  background-color: #dc3545;
+}
+
+.butaca.seleccionada {
+  background-color: #ffc107;
+}
+
+.confirmar-reserva {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #26a69a;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #2bbbad;
+}
+
+.mensaje {
+  margin-top: 15px;
+  font-size: 1.1em;
+  color: #ffc107;
+}

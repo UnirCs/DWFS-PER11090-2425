@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <!-- Archivo de estilos personalizados -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Contenedor Principal -->
+    <div class="container">
+        <h3 class="center-align white-text">Registro de Usuario</h3>
+
+        <!-- Card para el formulario -->
+        <div class="card card-form z-depth-3">
+            <div class="card-content">
+                <!-- Formulario de Registro -->
+                <form id="registro-form" class="col s12">
+                    
+                    <!-- Campo de Nombre y Apellido -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="nombre" type="text" class="validate" required>
+                            <label for="nombre">Nombre y Apellido</label>
+                        </div>
+                    </div>
+
+                    <!-- Campo de Nombre de Usuario -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="nombreUsuario" type="text" class="validate" required>
+                            <label for="nombreUsuario">Nombre de Usuario</label>
+                        </div>
+                    </div>
+
+                    <!-- Campo de Contraseña -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="contrasena" type="password" class="validate" required>
+                            <label for="contrasena">Contraseña</label>
+                        </div>
+                    </div>
+
+                    <!-- Campo de Confirmar Contraseña -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="confirmarContrasena" type="password" class="validate" required>
+                            <label for="confirmarContrasena">Confirmar Contraseña</label>
+                        </div>
+                    </div>
+
+                    <!-- Campo de Email -->
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate" required>
+                            <label for="email">Correo Electrónico</label>
+                        </div>
+                    </div>
+
+                    <!-- Botón de Enviar -->
+                    <div class="row">
+                        <div class="col s12 center-align">
+                            <button type="submit" class="btn waves-effect waves-light">
+                                Registrarse
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+</html>

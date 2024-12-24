@@ -1,0 +1,31 @@
+/* Estilos para la pantalla del cine */
+.screen {
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para las butacas */
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #28a745;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.seat.occupied {
+    background-color: #dc3545;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
