@@ -1,0 +1,10 @@
+.footer-content{
+    text-align: center;
+    background: lightgray;
+    padding: 0.5rem 0;
+}
+
+.text-footer{
+    margin: 5px;
+    font-size: 1rem;
+}

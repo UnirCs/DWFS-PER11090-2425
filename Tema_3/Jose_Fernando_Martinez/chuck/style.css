@@ -1,0 +1,31 @@
+body{
+    background-color: antiquewhite;
+}
+.container{
+    display: flex;
+    width: 80%;
+    height: 200px;
+    background-color: mediumspringgreen;
+    flex-direction: column;
+    margin:  auto;
+
+}
+button{
+    width: 200px;
+    height: 30px;
+    margin-left: 40%;
+    background-color: #0bcd2d;
+}
+button:hover {
+    background-color: #004cb6;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+h1{
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}

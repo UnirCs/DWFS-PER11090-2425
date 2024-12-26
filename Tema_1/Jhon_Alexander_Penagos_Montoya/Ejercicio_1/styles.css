@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+.perfil {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    
+}
+
+
+.header {
+    display: flex;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #111010;
+    border-radius: 8px;
+    background-color: #000000;
+}
+
+.foto_perfil {
+    width: 300px;
+    height: 300px;
+    border-radius: 80%;
+    margin: 2rem auto;
+    padding: 2rem;
+    
+}
+
+.personal-info h1 {
+    color: #f6f9fc;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    }
+
+.personal-info p {
+    color: #f7f9fc;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.section {
+    margin-bottom: 2rem;
+    
+}
+
+.section h2 {
+    color: #2d3748;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.experience-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.experiencia1 {
+    background-color: rgb(206, 230, 252);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.experiencia1 p {
+    display: flex;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    padding: 1rem; 
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
+}
+.experiencia1 li {
+    
+    color: #080353;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem; 
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    background-color: #f9f9f9;
+}
+.text-block__title {
+    color: #080353;
+    font-size: 2rem;
+
+}
+
+.Histo_Lab {
+    
+    color: #080353;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem; 
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    background-color: #f9f9f9;
+}
+.Resu_prof p{
+    color: #080353;
+    text-align: justify;
+    font-size: 1.0rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f9f9f9; 
+}
+.Herramient_Utili{
+    color: #080353;
+    text-align: justify;
+    font-size: 1.0rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border: 1px solid #350505;
+    border-radius: 8px;
+    background-color: #e4e2db2f; 
+}
+.l1{
+    color: #080353;
+    text-align: justify;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    padding: 0.1rem; 
+   
+    border-radius: 45px;
+    background-color: #c4eef13f;
+}
+.l2{
+    color: #080353;
+    text-align: justify;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    padding: 0.1rem; 
+    
+    border-radius: 45px;
+    background-color: #bdc4ff3f; 
+     
+}
+.l3{
+    color: #080353;
+    text-align: justify;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    padding: 0.1rem; 
+   
+    border-radius: 45px;
+    background-color: #7faff73f; 
+     
+}
+.l4{
+    color: #080353;
+    text-align: justify;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    padding: 0.1rem; 
+   
+    border-radius: 45px;
+    background-color: #38f17f3f; 
+     
+}
+.l5{
+    color: #080353;
+    text-align: justify;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    padding: 0.1rem; 
+   
+    border-radius: 45px;
+    background-color: #e9c7ec3f; 
+     
+}
+.l6{
+    color: #080353;
+    text-align: justify;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    padding: 0.1rem; 
+    
+    border-radius: 45px;
+    background-color: #cee9eb3f; 
+     
+}

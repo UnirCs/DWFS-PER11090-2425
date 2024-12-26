@@ -1,0 +1,101 @@
+/* styles.css */
+
+/* Estilos generales */
+body {
+    background-color: #222;
+    color: #fff;
+}
+
+h1 {
+    color: #fff;
+}
+
+/* Contenedor del título */
+.title-container {
+    background-color: #626666ab;
+    border: 1px solid #615d93;
+    border-radius: 8px;
+    padding: 15px;
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor de la pantalla */
+.screen-container {
+    background-color: #666;
+    border: 1px solid #615d93;
+    border-radius: 8px;
+    padding: 15px;
+    width: 80%;
+    margin: 0 auto;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor de butacas */
+.seats-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Butacas */
+.seats {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #444;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seat.occupied {
+    background-color: yellow;
+    cursor: not-allowed;
+}
+
+/* Formulario */
+.form-label {
+    font-weight: bold;
+}
+
+#seatCount {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #ffc107;
+    text-align: center;
+}
+
+/* Contenedor de nombres de filas */
+.row-labels {
+    text-align: center;
+}
+
+.row-seats {
+    height: 40px; /* Debe coincidir con la altura de los asientos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffc107;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: #444;
+    color: #ccc;
+    margin-top: 20px;
+    padding: 20px;
+}
