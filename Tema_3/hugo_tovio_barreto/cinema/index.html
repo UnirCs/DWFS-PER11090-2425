@@ -7,7 +7,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body onload="suggest(5)"> <!-- Llamada de prueba a suggest() al cargar la página -->
     <div class="container mt-4">
         <!-- Representación de la sala de cine -->
         <div class="row mt-4">
@@ -16,7 +16,6 @@
                 <div class="cinema-container">
                     <!-- Representación de la sala con asientos -->
                     <div class="cinema-seating">
-                        <!-- Fila de butacas -->
                         <div class="row">
                             <div class="col seat available">A1</div>
                             <div class="col seat available">A2</div>
@@ -77,26 +76,23 @@
                 <form action="#">
                     <div class="form-group">
                         <label for="numAsientos">Número de Asientos</label>
-                        <input  type="text" class="form-control" id="numAsientos" placeholder="¿Cuántos asientos?" oninput="reserva(this.value)">
+                        <input type="text" class="form-control" id="numAsientos" placeholder="¿Cuántos asientos?" oninput="suggest(this.value)">
                     </div>
-                    <button class="btn btn-primary btn-block">Confirmar Reserva</button>
+                    <button class="btn btn-primary btn-block" type="button" onclick="suggestSeats()">Confirmar Reserva</button>
                 </form>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center ">
+    <footer class="bg-dark text-white text-center">
         <p>UNIR-CINEMA</p>
         <p>Dirección: Calle Ficticia 123, Ciudad</p>
         <p>Teléfono: +34 900 123 456</p>
         <p>Email: contacto@unir-cinema.com</p>
     </footer>
+
     
-    
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="cinema.js"></script>
 </body>
 </html>

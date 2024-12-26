@@ -6,6 +6,7 @@ import './ListaPelis.css';
 
 
 function MovieList() {
+
   const peliculas = [
     {
       id: 1,
@@ -39,6 +40,7 @@ function MovieList() {
   return (
     <div className="movie-list">
       {peliculas.map((pelicula) => (
+        
         <Pelicula key={pelicula.id} pelicula={pelicula} />
       ))}
     </div>

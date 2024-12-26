@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer';
 function Movies() {
   return (
     <div>
-      <Header />
+      <Header state={false} />
       <ListaPelis />
       <Footer />
     </div>
