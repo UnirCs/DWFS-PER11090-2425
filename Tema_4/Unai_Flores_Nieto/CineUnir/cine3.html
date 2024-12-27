@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Butacas - UNIR-CINEMA</title>
+
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!-- Enlace al archivo CSS personalizado -->
+    <link rel="stylesheet" href="cine3.css">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1 class="center-align">Reserva de Butacas - UNIR-CINEMA</h1>
+        
+        <!-- Representación de la pantalla del cine -->
+        <div class="cinema-screen center-align">Pantalla</div>
+
+        <!-- Contenedor para las butacas -->
+        <div class="seat-selection"></div>
+
+        <!-- Formulario para seleccionar el número de asientos deseados -->
+        <form class="mt-4">
+            <div class="input-field">
+                <label for="numSeats">Número de asientos:</label>
+                <input type="number" id="numSeats" min="1" max="8" required>
+            </div>
+        </form>
+    </div>
+
+    <footer class="center-align">
+        <p><strong>UNIR-CINEMA</strong></p>
+        <p>Dirección: C/Doctor Ferran, Rubí, España</p>
+        <p>Teléfono: +633 100 366</p>
+        <p>Email: unaifn03@gmail.com</p>
+    </footer>
+
+    <!-- Materialize JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="cine3.js"></script>
+</body>
+</html>
+

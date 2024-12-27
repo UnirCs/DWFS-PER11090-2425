@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="StylesLogin.css">
+    <script defer src="loginJs.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Registro</h2>
+        <form id="registerForm">
+            <label for="firstName">Nombre y apellidos:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="confirmPassword">Confirmar Contraseña:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <button id="registrarButton" type="submit">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>
