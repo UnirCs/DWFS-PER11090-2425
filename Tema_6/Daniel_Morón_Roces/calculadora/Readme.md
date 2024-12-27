@@ -48,27 +48,19 @@ Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de 
 
 
 ## Operaciones
-| Método HTTP | URI             | Query Params | Cuerpo de la Petición         | Cuerpo de la Respuesta                                                    | Códigos de Respuesta |
-|-------------|-----------------|--------------|-------------------------------|---------------------------------------------------------------------------|----------------------|
-| POST        | /sumar          |              | { "numeros": [2, 2, 2] }      | { "resultado": 6, "id": "12", "mensaje": "Operación exitosa" }            | 200, 400             |
-| POST        | /restar         |              | { "numeros": [2, 2, 2] }      | { "resultado": -2, "id": "13", "mensaje": "Operación exitosa" }           | 200, 400             |
-| POST        | /multiplicar    |              | { "numeros": [2, 2] }         | { "resultado": 4, "id": "14", "mensaje": "Operación exitosa" }            | 200, 400             |
-| POST        | /dividir        |              | { "numeros": [2, 2] }         | { "resultado": 1, "id": "15", "mensaje": "Operación exitosa" }            | 200, 400, 422        |
-| POST        | /raiz           |              | { "numero": 4, "indice": 2 }  | { "resultado": 2, "id": "16", "mensaje": "Operación exitosa" }            | 200, 400             |
-| POST        | /potencia       |              | { "base": 2, "exponente": 2 } | { "resultado": 4, "id": "17", "mensaje": "Operación exitosa" }            | 200, 400             |
-| GET         | /operacion/{id} |              |                               | { "operacion": "2+2", "resultado": 4, "mensaje": "Operación encontrada" } | 200, 404             |
+| Método HTTP | URI                    | Query Params | Cuerpo de la Petición         | Cuerpo de la Respuesta                                                                                           | Códigos de Respuesta |
+|-------------|------------------------|--------------|-------------------------------|------------------------------------------------------------------------------------------------------------------|----------------------|
+| POST        | /sumas                 |              | { "numeros": [2, 2, 2] }      | { "tipo": "suma", "numeros": [2, 2, 2], "resultado": 6, "id": "12", "mensaje": "Suma exitosa" }                  | 200, 400             |
+| GET         | /sumas/{id}            |              |                               | { "tipo": "suma", "numeros": [2, 2, 2], "resultado": 6, "mensaje": "Suma encontrada" }                           | 200, 404             |
+| POST        | /restas                |              | { "numeros": [2, 2, 2] }      | { "tipo": "resta", "numeros": [2, 2, 2], "resultado": -2, "id": "13", "mensaje": "Resta exitosa" }               | 200, 400             |
+| GET         | /restas/{id}           |              |                               | { "tipo": "resta", "numeros": [2, 2, 2], "resultado": 6, "mensaje": "Suma encontrada" }                          | 200, 404             |
+| POST        | /multiplicaciones      |              | { "numeros": [2, 2] }         | { "tipo": "multiplicacion", "numeros": [2, 2], "resultado": 4, "id": "14", "mensaje": "Multiplicacion exitosa" } | 200, 400             |
+| GET         | /multiplicaciones/{id} |              |                               | { "tipo": "multiplicacion", "numeros": [2, 2], "resultado": 4, "mensaje": "Multiplicacion encontrada" }          | 200, 404             |
+| POST        | /divisiones            |              | { "numeros": [2, 2] }         | { "tipo": "division", "numeros": [2, 2], "resultado": 1, "id": "15", "mensaje": "Division exitosa" }             | 200, 400             |
+| GET         | /divisiones/{id}       |              |                               | { "tipo": "division", "numeros": [2, 2], "resultado": 1, "mensaje": "Division encontrada" }                      | 200, 404             |       
+| POST        | /raices                |              | { "numero": 4, "indice": 2 }  | { "tipo": "raiz", "resultado": 2,  "numero": 4, "indice": 2, "id": "16", "mensaje": "Raiz exitosa" }             | 200, 400             |
+| GET         | /raices/{id}           |              |                               | { "tipo": "raiz", "resultado": 2,  "numero": 4, "indice": 2, "mensaje": "Raiz encontrada" }                      | 200, 404             |
+| POST        | /potencias             |              | { "base": 2, "exponente": 2 } | { "tipo": "potencia", "resultado": 4,  "base": 2, "exponente": 2, "id": "17", "mensaje": "Potencia exitosa" }    | 200, 400             |
+| GET         | /potencias/{id}        |              |                               | { "tipo": "potencia", "resultado": 4,  "base": 2, "exponente": 2,  "mensaje": "Potencia encontrada" }            | 200, 404             |
 
-
-
-
-## Operaciones
-| Método HTTP | URI             | Query Params | Cuerpo de la Petición        | Cuerpo de la Respuesta                 | Códigos de Respuesta |
-|-------------|-----------------|--------------|------------------------------|----------------------------------------|----------------------|
-| POST        | /sumar          |              | { "numeros": [2, 2, 2] }     | { "resultado": 6, "id": "12" }         | 200, 400, 404, 500   |
-| POST        | /restar         |              | { "numeros": [2, 2, 2] }     | { "resultado": -2, "id": "13" }        | 200, 400, 404, 500   |
-| POST        | /multiplicar    |              | { "numeros": [2, 2] }        | { "resultado": 4, "id": "14" }         | 200, 400, 404, 500   |
-| POST        | /dividir        |              | { "numeros": [2, 2] }        | { "resultado": 1, "id": "15" }         | 200, 400, 404, 500   |
-| POST        | /raiz           |              | { "numero": 4, "indice": 2 } | { "resultado": 2, "id": "16" }         | 200, 400, 404, 500   |
-| POST        | /potencia       |              | { "numero": 2, "indice": 2 } | { "resultado": 4, "id": "17" }         | 200, 400, 404, 500   |
-| GET         | /operacion/{id} |              |                              | { "operacion": "2+2", "resultado": 4 } | 200, 400, 404, 500   |
 
