@@ -1,0 +1,145 @@
+/* Estilo y header */
+body {
+    font-family: Calibri, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+
+    min-height: 100vh;  /* Altura mínima de la ventana */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header {
+    background-color: #1668c5;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Butacas */
+
+.cine {
+    padding: 20px;
+    text-align: center;
+}
+
+.cine__pantalla {
+    background-color: #333;
+    color: #fff;
+    margin: 20px auto;
+    width: 60%;
+    height: 80px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.pelicula img {
+    display: block;
+    margin: 0 auto;
+    width: 30%;         /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto;        /* Mantiene la relación de aspecto original de la imagen */
+    object-fit: cover;   /* Hace que la imagen cubra el área del contenedor, recortando si es necesario */
+}
+
+.cine__pantalla--texto {
+    margin: auto;
+    text-align: center;
+}
+
+.filas {
+    margin-left: 30px;
+}
+
+.cine__asientos {
+    margin: 0 auto;               /* Centra el contenedor de asientos */
+    display: flex;                /* Usamos flexbox para facilitar la alineación */
+    flex-wrap: wrap;              /* Permite que los asientos se ajusten en varias filas */
+    justify-content: center;      /* Centra los asientos horizontalmente */
+    text-align: center;
+}
+
+.cine__asiento {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    text-align: center;
+    line-height: 40px;
+    border: 2px solid #171717;
+    border-radius: 50%;
+    background-color: #4caf50;
+
+}
+
+.reserved {
+    background-color: #f44336; /* Un color que indique que está ocupado */
+    cursor: not-allowed;
+}
+
+/*.cine__asiento--disponible {
+    background-color: #4caf50;
+}
+
+.cine__asiento--disponible:hover {
+    background-color: #e1d22a;
+    color: #151313;
+}
+
+.cine__asiento--ocupado {
+    background-color: #f44336;
+    cursor: not-allowed;
+}
+
+
+/* Formulario */
+
+.cine__reserva-formulario {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cine__reserva-input {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    width: 20%;
+    text-align: center;
+}
+
+.cine__reserva-boton {
+    background-color: #43bd12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cine__reserva-boton:hover {
+    background-color: #0d47a1;
+}
+
+
+/* Footer*/
+
+.footer {
+    background-color: #1668c5;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top:auto
+}
+
+.pie-de-pagina__texto {
+    margin: 5px;
+}
