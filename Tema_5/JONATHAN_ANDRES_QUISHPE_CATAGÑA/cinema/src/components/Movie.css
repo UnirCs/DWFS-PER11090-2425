@@ -1,0 +1,35 @@
+.movie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    width: 20rem;
+}
+
+p {
+    margin: 0.3rem;
+    text-align: center;
+}
+
+.movie img {
+    width: 100%;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #40005d;
+    background-color: #40005d;
+    color: white;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
