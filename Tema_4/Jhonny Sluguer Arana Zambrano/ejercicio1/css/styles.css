@@ -1,0 +1,90 @@
+
+/* General */
+body {
+    background-color: #121212 !important; /* Fondo negro para toda la página */
+}
+
+h3 {
+    color: #ffffff !important; /* Título en blanco */
+}
+
+.card-form {
+    background-color: #1f1f1f !important; /* Fondo negro para la tarjeta */
+    border-radius: 15px !important; /* Bordes redondeados */
+    padding: 20px !important; /* Espacio interno (padding) */
+    margin-top: 40px; /* Margen superior */
+    color: #ffffff; /* Texto blanco */
+}
+
+.input-field input {
+    color: #ffffff !important; /* Color del texto de los inputs */
+}
+
+.input-field label {
+    color: #bdbdbd !important; /* Color del texto del label */
+}
+
+.input-field input:focus + label {
+    color: #ffffff !important; /* Color del label al hacer foco */
+}
+
+.input-field input:focus {
+    border-bottom: 1px solid #26a69a !important; /* Color de borde al hacer foco */
+    box-shadow: 0 1px 0 0 #26a69a !important; /* Sombra al hacer foco */
+}
+
+.btn {
+    background-color: #26a69a !important; /* Color del botón */
+    border-radius: 20px !important; /* Bordes redondeados del botón */
+}
+
+.btn:hover {
+    background-color: #2bbbad !important; /* Color del botón al pasar el mouse */
+}
+
+
+/* Estilos para la pantalla del cine */
+.screen {
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos para las butacas */
+.seat {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: #28a745; /* Verde: libre */
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.seat.occupied {
+    background-color: #dc3545; /* Rojo: ocupado */
+    pointer-events: none; /* No seleccionable */
+}
+
+.seat.suggested {
+    background-color: #ffc107; /* Amarillo: sugerido */
+}
+
+.seat.selected {
+    background-color: #007bff; /* Azul: seleccionado manualmente */
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
