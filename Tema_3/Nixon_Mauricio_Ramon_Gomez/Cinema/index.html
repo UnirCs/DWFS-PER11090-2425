@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>CINEMA</title>
+</head>
+<body>
+<div class="margen_div">
+    <div class="nombre_div">
+        <br>
+        <br>
+        <h1 class="titulo1" id="title1"> CINEMA UNIR 2024</h1>
+        <br>
+    </div>
+
+    <div class="container pantalla">
+        <div class="pantalla_int">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2 class="text1">PANTALLA</h2>
+        </div>
+    </div>
+
+    <div class="container screen-bg">
+        <div class="screen"></div>
+    </div>
+    <div class="container butacas_div">
+        <div class="row asiento-fila">
+            <div class="asiento-text-fila">Fila 1</div>
+            <div class="asiento ocupado" id="A1">A</div>
+            <div class="asiento" id="B1" >B</div>
+            <div class="asiento" id="C1">C</div>
+            <div class="asiento" id="D1">D</div>
+            <div class="asiento" id="E1">E</div>
+            <div class="asiento" id="F1">F</div>
+            <div class="asiento" id="G1">G</div>
+            <div class="asiento" id="H1">H</div>
+            <div class="asiento" id="I1">I</div>
+            <div class="asiento" id="J1">J</div>
+        </div>
+
+        <div class="row asiento-fila">
+            <div class="asiento-text-fila">Fila 2</div>
+            <div class="asiento" id="A2">A</div>
+            <div class="asiento" id="B2">B</div>
+            <div class="asiento ocupado" id="C2">C</div>
+            <div class="asiento" id="D2">D</div>
+            <div class="asiento" id="E2">E</div>
+            <div class="asiento" id="F2">F</div>
+            <div class="asiento" id="G2">G</div>
+            <div class="asiento" id="H2">H</div>
+            <div class="asiento" id="I2">I</div>
+            <div class="asiento" id="J2">J</div>
+        </div>
+
+        <div class="row asiento-fila">
+            <div class="asiento-text-fila">Fila 3</div>
+            <div class="asiento" id="A3">A</div>
+            <div class="asiento" id="B3">B</div>
+            <div class="asiento" id="C3">C</div>
+            <div class="asiento" id="D3">D</div>
+            <div class="asiento" id="E3">E</div>
+            <div class="asiento" id="F3">F</div>
+            <div class="asiento" id="G3">G</div>
+            <div class="asiento" id="H3">H</div>
+            <div class="asiento" id="I3">I</div>
+            <div class="asiento ocupado" id="J3">J</div>
+        </div>
+
+        <div class="row asiento-fila">
+            <div class="asiento-text-fila">Fila 4</div>
+            <div class="asiento" id="A4">A</div>
+            <div class="asiento" id="B4">B</div>
+            <div class="asiento" id="C4">C</div>
+            <div class="asiento" id="D4">D</div>
+            <div class="asiento" id="E4">E</div>
+            <div class="asiento" id="F4">F</div>
+            <div class="asiento ocupado" id="G4">G</div>
+            <div class="asiento ocupado" id="H4">H</div>
+            <div class="asiento" id="I4">I</div>
+            <div class="asiento" id="J4">J</div>
+        </div>
+
+        <div class="row asiento-fila">
+            <div class="asiento-text-fila">Fila 5</div>
+            <div class="asiento" id="A5">A</div>
+            <div class="asiento" id="B5">B</div>
+            <div class="asiento" id="C5">C</div>
+            <div class="asiento" id="D5">D</div>
+            <div class="asiento ocupado" id="E5">E</div>
+            <div class="asiento" id="F5">F</div>
+            <div class="asiento ocupado" id="G5">G</div>
+            <div class="asiento" id="H5">H</div>
+            <div class="asiento" id="I5">I</div>
+            <div class="asiento" id="J5">J</div>
+        </div>
+        <br>
+    </div>
+
+    <div class="seleccion_asiento">
+        <h4> Seleccionar la cantidad de asientos que desea</h4>
+        <div class="seleccion">
+            <input type="number" class="form-control mx-auto" id="boton_pers">
+            <br>
+            <input type="number" id="id-seat" oninput="suggest(5)">
+            <br>
+            <button type="button" class="btn btn-primary btn-lg btn btn-success" id="boton_env">CONFIRMAR RESERVACIÓN</button>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+
+    <div class="text-center foot_color">
+        <h6 class="text-uppercase fw-bold">
+            <br>
+            <i class="fas fa-gem "></i>UNIR-CINEMA
+        </h6>
+        <h6 class="text-uppercase fw-bold">Contact</h6>
+        <p><i class="fas fa-home"></i> Av. de las Americas y Amazonas</p>
+        <p>
+            <i class="fas fa-envelope"></i>
+            info@unir.com.edu
+        </p>
+        <p><i class="fas fa-phone"></i> + 57 234 567 89</p>
+    </div>
+    <div class="foot_color text-center p-4">
+        <a class="text-reset fw-bold" >CLASE - DESARROLLO WEB: FULL STACK - 2024</a>
+    </div>
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+<script src="cinema.js"> </script>
+</body>
+</html>

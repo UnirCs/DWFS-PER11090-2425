@@ -1,0 +1,73 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+html {
+    height: 100%;
+}
+
+/* Contenedores principales */
+.root, section {
+    display: flex;
+    flex-direction: column;
+}
+
+.root {
+    gap: 20px;
+}
+
+.container-data {
+    display: flex;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 20px;
+}
+
+.skills-container {
+    margin-bottom: 5%;
+}
+
+/* Estilo para encabezados */
+h1 {
+    color: #fff; /* Corregido el uso de "ffffff" */
+}
+
+p, h3, h4, ul {
+    padding-left: 2%;
+}
+
+li {
+    margin-left: 4%;
+}
+
+/* Cabecera */
+.header {
+    padding: 5% 10% 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+}
+
+/* Imágenes */
+img {
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+/* Secciones */
+section {
+    gap: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 0 5%;
+    padding: 2% 3%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}

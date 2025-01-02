@@ -1,0 +1,79 @@
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #212529;
+    color: white;
+    margin-top: 25px;
+    border-radius: 25px;
+}
+.main-content {
+    border-color: gold;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #212529;
+    color: white;
+    margin-top: 25px;
+}
+
+.screen {
+    background-color: darkgrey;
+    height: 200px !important;
+}
+
+.screen p {
+    font-size: xx-large;
+    text-align: center;
+    font-weight: 200;
+    position: relative;
+    margin-top: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.seats-row {
+    display: flex;
+    justify-content: center;
+}
+.seat {
+    border-width: 1px;
+    border-style: solid;
+    border-color: gold;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    text-align: center;
+}
+
+.seats {
+    margin-top: 15px;
+}
+
+.seat-used {
+    background-color: gold;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+}
+
+.seat:hover {
+    background-color: gold;
+}
+
+.btn-book {
+    background-color: gold;
+    border-color: darkgoldenrod;
+}
+
+.btn-book:hover {
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod;
+}
