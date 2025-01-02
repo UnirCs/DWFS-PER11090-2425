@@ -1,3 +1,21 @@
+window.onload = function () {
+
+  let buttonGet = document.querySelector("#button-get");
+  buttonGet.onclick = function () {
+    Reserva();
+  };
+
+};
+
+async function Reserva() {
+
+  let butacas = setup();
+  var userInput = parseInt(document.getElementById('userInput').value);
+  let butacasReservadas=seleccion(butacas, userInput);
+  console.log("Reserva: ");
+  console.log(butacasReservadas);
+
+}
 // Definir el tamaño de la matriz de butacas
 const N = 10; // Número de filas y columnas
 
@@ -23,12 +41,6 @@ function setup() {
 
 }
 
-// Inicializar la matriz
-butacas = setup();
-
-// Imprimir la matriz
-//console.log(butacas);
-
 function seleccion(butacas, personas) {
 
   if (personas > butacas[0].length) {
@@ -40,17 +52,17 @@ function seleccion(butacas, personas) {
 
   for (let i = butacas.length - 1; i >= 0 && !encontrado; i--) {
     let fila = butacas[i];
-    let consecutivos = 0;
+    let asientosConsecutivos = 0;
     for (let j = fila.length - 1; j >= 0 && !encontrado; j--) {
       if (!fila[j].estado) { 
-        consecutivos++;
+        asientosConsecutivos++;
         reservaAsientos.add(fila[j].id);
-        if (consecutivos === personas) {
+        if (asientosConsecutivos === personas) {
           encontrado = true;  
         }
       } else { 
         reservaAsientos.clear();
-        consecutivos = 0;
+        asientosConsecutivos = 0;
       }
     }
   }
@@ -69,7 +81,3 @@ function actualizarAsientos(butacas, reserva) {
   }
   return butacas;
 }
-
-const butacasReservadas = seleccion(butacas, 9);
-console.log(butacas);
-console.log("Reserva : " + butacasReservadas);
