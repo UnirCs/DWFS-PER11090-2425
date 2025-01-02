@@ -1,0 +1,37 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Pantalla */
+.screen {
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Butacas */
+.seat {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.seat.available {
+    background-color: #28a745; /* Libre */
+}
+
+.seat.occupied {
+    background-color: #dc3545; /* Ocupado */
+    cursor: not-allowed;
+}

@@ -1,0 +1,41 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Pantalla del cine */
+.screen {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Butacas */
+.seat {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.seat.available {
+    background-color: #28a745;
+}
+
+.seat.occupied {
+    background-color: #dc3545;
+    cursor: not-allowed;
+}
+
+.seat:hover.available {
+    background-color: #218838;
+}

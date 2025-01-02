@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtros RGB con JavaScript</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Filtros RGB con JavaScript</h1>
+  <input type="file" id="imageLoader" accept="image/*" />
+  <canvas id="imageCanvas"></canvas>
+  <div>
+    <button onclick="applyFilter('red')">Filtro Rojo</button>
+    <button onclick="applyFilter('green')">Filtro Verde</button>
+    <button onclick="applyFilter('blue')">Filtro Azul</button>
+    <button onclick="applyFilter('grey')">Escala de Grises</button>
+    <button onclick="applyFilter('bw')">Blanco y Negro</button>
+    <button onclick="applyFilter('invert')">Invertir Colores</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

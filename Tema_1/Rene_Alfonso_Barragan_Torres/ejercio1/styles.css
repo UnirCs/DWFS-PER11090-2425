@@ -1,0 +1,64 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Encabezado */
+.cv-header {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 0px;
+}
+
+.cv-header .foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Secciones */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+/* Listas */
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+/* Contacto */
+.contacto p {
+    margin: 5px 0;
+}
+
+/* Experiencia */
+.trabajo {
+    margin-bottom: 20px;
+}
+
+.trabajo h3 {
+    margin: 0;
+    font-weight: bold;
+}
