@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #3f0072;
+  --secondary-color: #00c798;
+  --bg-color: #470101;
+  --text-color: #ffffff;
+  --font-family: Arial, sans-serif;
+  --black: #000000;
+}
+html{
+  padding: 0px;
+  margin: 0px;
+  background-color: var(--bg-color);
+}
+.App{
+  color: var(--text-color);
+  width: 100%;
+  height: 100%;
+}
+.movielist__list{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.movie__container{
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+}
+.movie__img{
+  width: 20rem;
+  height: 16rem;
+}
+.movie__sinimg{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+.movie__attrs{
+  display: flex;
+  flex-direction: column;
+}
+.movie__button{
+  margin-top: 1rem;
+  width: 12rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--secondary-color);
+  color: var(--black);
+}
