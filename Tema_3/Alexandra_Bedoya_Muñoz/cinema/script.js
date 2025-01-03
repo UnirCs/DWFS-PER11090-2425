@@ -29,24 +29,32 @@ function updateButacas() {
 }
 function suggest(asientosSolicitados) {
     if (asientosSolicitados > N) return new Set();
-    for (let i = butacas.length - 1; i >= 0; i--) {
+
+    let resultado = new Set();
+    let encontrado = false;
+
+    for (let i = butacas.length - 1; i >= 0 && !encontrado; i--) {
         let consecutivos = 0;
         let inicio = -1;
-        for (let j = 0; j < butacas[i].length; j++) {
+
+        for (let j = 0; j < butacas[i].length && !encontrado; j++) {
             if (!butacas[i][j].estado) {
                 consecutivos++;
                 if (consecutivos === 1) inicio = j;
+
                 if (consecutivos === asientosSolicitados) {
-                    return new Set(
+                    resultado = new Set(
                         butacas[i].slice(inicio, inicio + asientosSolicitados).map(asiento => asiento.id)
                     );
+                    encontrado = true; 
                 }
             } else {
                 consecutivos = 0;
             }
         }
     }
-    return new Set();
+
+    return resultado;
 }
 
 //funcion al momento de dar clic en el boton CONFIRMAR RESERVA
@@ -72,6 +80,7 @@ function sillaReservada() {
     });
     document.getElementById("output").textContent = `Reserva OK para los asientos: ${Array.from(suggestion).join(", ")}`;
     updateButacas();
+    document.getElementById("contador_silla").value=0;
 }
 
 //metodo añadido para mostrar de manera dinamica a medida que va cambiando la cantidad
