@@ -1,0 +1,76 @@
+/* Archivo: styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.photo-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.photo img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 2px solid #007BFF;
+}
+
+header h1 {
+    margin: 0;
+    color: #007BFF;
+}
+
+header p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+h2 {
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+ul {
+    list-style: square;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience h3 {
+    margin: 0;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 20px;
+}

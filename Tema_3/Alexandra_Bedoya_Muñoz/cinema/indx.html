@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIR-Cinema</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="textoUnir">
+      <h1>UNIR-CINEMA</h1>
+    </div>
+    <div class="cajas"></div>
+  </div>
+
+  <div class="container">
+    <table class="table text-center silla-container">
+      <tbody id="sillas-cine">
+        <tr>
+          <td class="row-label">Fila 1</td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Fila 2</td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Fila 3</td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Fila 4</td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Fila 5</td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Fila 6</td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Fila 7</td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+        </tr>
+
+        <tr>
+          <td class="row-label">Fila 8</td>
+          <td class="silla ocupada"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Fila 9</td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Fila 10</td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+          <td class="silla ocupada"></td>
+          <td class="silla"></td>
+          <td class="silla"></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="text-center mt-3">
+      <p class="cantidad">Indica cuántos asientos quieres reservar</p>
+      <input type="number" class="form-control" id="contador_silla" min="1" oninput="cantReservas(this.value)">
+      <button class="btn btn-yellow mt-3" onclick="sillaReservada()">Confirmar Reserva</button>
+      <p id="output" class="mt-3"></p>
+    </div>
+  </div>
+
+  <div class="footer mt-4">
+    <p>Cine UNIR-CINEMA</p>
+    <p>Dirección: Calle Avenida de la Paz, 137, Logroño</p>
+    <p>Teléfono: 941209743</p>
+    <p>Email: cinefullstack@unircinema.com</p>
+  </div>
+
+
+  </script>
+</body>
+</html>
