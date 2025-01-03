@@ -1,0 +1,45 @@
+/* src/Movie.css */
+.movie {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    height: 50;
+  }
+  
+  .movie-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .movie h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .btn-seleccionar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-seleccionar:hover {
+    background-color: #218838;
+  }
+  

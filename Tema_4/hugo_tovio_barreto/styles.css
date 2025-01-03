@@ -1,0 +1,131 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.scream{
+    color: #f2f3f5;
+    background-color: #041424;
+}
+
+/* Fondo para el contenedor principal */
+.container {
+    background-color: aqua;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px; /* Agrega bordes redondeados si lo deseas */
+}
+
+/* Estilos para la sala de cine */
+.cinema-seating {
+    margin-top: 20px;
+}
+.cinema-name {
+    
+    color: white;
+    font-size: 100px;
+    font-weight:200;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+.row {
+    margin-bottom: 10px;
+}
+
+.seat {
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.available {
+    background-color: #010101;
+    color: white;
+}
+
+
+
+.seat:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para el formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilos para el footer */
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+}
+ /* Estilo para la sala de cine */
+ .cinema-container {
+    border: 5px solid #333; /* Borde alrededor de toda la sala */
+    padding: 20px;
+    margin-bottom: 50px; /* Para separar de la parte inferior */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra para darle efecto de profundidad */
+    background-color: #f8f9fa; /* Color de fondo de la sala */
+}
+
+/* Estilo para las filas de butacas */
+.cinema-seating .row {
+    border-bottom: 2px solid #000; /* Borde entre las filas */
+    margin-bottom: 10px; /* Separación entre filas */
+}
+
+/* Estilo para los asientos */
+.cinema-seating .seat {
+    background-color: #ddd;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #aaa;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cinema-seating .seat.available {
+    background-color: #28a745; /* Verde para asientos disponibles */
+}
+
+.cinema-seating .seat.occupied {
+    background-color: #dc3545; /* Rojo para asientos ocupados */
+}
+
+.cinema-seating .seat:hover {
+    background-color: #0062cc; /* Cambiar color al pasar el mouse */
+    color: white;
+}
+
+/* Añadir un margen para el área entre el formulario y el cine */
+.cinema-seating {
+    margin-bottom: 50px; /* Ajusta el margen si es necesario */
+}
+
+/* Estilo para el formulario */
+.form-container {
+    margin-top: 30px;
+}
+
+/* Ajuste en el espacio entre butacas y footer */
+footer {
+    margin-top: 30px;
+}
+
+/* Responsividad y alineación */
+@media (max-width: 768px) {
+    .cinema-seating .row {
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Fondo para el contenedor principal */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+/* Estilos para la sala de cine */
+.cinema-seating {
+    margin-top: 20px;
+}
+
+.row {
+    margin-bottom: 10px;
+}
+
+.seat {
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.available {
+    background-color: #28a745;
+    color: white;
+}
+
+.seat:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para el formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilos para el footer */
+footer {
+    margin-top: 30px;
+    padding: 10px 0;
+}
+
+/* Responsividad y alineación */
+@media (max-width: 768px) {
+    .cinema-seating .row {
+        flex-wrap: wrap;
+    }
+}
