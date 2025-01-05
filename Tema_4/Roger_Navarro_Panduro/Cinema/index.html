@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>UNIR-CINEMA</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="container border border-warning mt-4">
+  <header class="container text-center my-3 bg-dark text-white py-5">
+    <h2>UNIR-CINEMA</h2>
+  </header>
+
+  <div class="container screen-bg"> 
+  </div>
+
+  <div class="container my-4">
+    <div class="asiento-row">
+      <label class="row-identifier">Fila 1</label>
+      <div id="42" class="asiento"></div>
+      <div id="43" class="asiento"></div>
+      <div id="44" class="asiento"></div>
+      <div id="45" class="asiento"></div>
+      <div id="46" class="asiento"></div>
+      <div id="47" class="asiento"></div>
+      <div id="48" class="asiento"></div>
+      
+    </div>
+    <div class="asiento-row">
+      <label class="row-identifier">Fila 2</label>
+      <div id="35" class="asiento"></div>
+      <div id="36" class="asiento"></div>
+      <div id="37" class="asiento"></div>
+      <div id="38" class="asiento"></div>
+      <div id="39" class="asiento"></div>
+      <div id="40" class="asiento"></div>
+      <div id="41" class="asiento"></div>
+      
+    </div>
+    <div class="asiento-row">
+      <label class="row-identifier">Fila 3</label>
+      <div id="28" class="asiento"></div>
+      <div id="29" class="asiento"></div>
+      <div id="30" class="asiento"></div>
+      <div id="31" class="asiento"></div>
+      <div id="32" class="asiento"></div>
+      <div id="33" class="asiento"></div>
+      <div id="34" class="asiento"></div>
+      
+    </div>
+    <div class="asiento-row">
+      <label class="row-identifier">Fila 4</label>
+      <div id="21" class="asiento"></div>
+      <div id="22" class="asiento"></div>
+      <div id="23" class="asiento"></div>
+      <div id="24" class="asiento"></div>
+      <div id="25" class="asiento"></div>
+      <div id="26" class="asiento"></div>
+      <div id="27" class="asiento"></div>
+      
+    </div>
+    <div class="asiento-row">
+      <label class="row-identifier">Fila 5</label>
+      <div id="14" class="asiento"></div>
+      <div id="15" class="asiento"></div>
+      <div id="16" class="asiento"></div>
+      <div id="17" class="asiento"></div>
+      <div id="18" class="asiento"></div>
+      <div id="19" class="asiento"></div>
+      <div id="20" class="asiento"></div>
+      
+    </div>
+
+    <div class="asiento-row">
+      <label class="row-identifier">Fila 6</label>
+      <div id="7" class="asiento"></div>
+      <div id="8" class="asiento"></div>
+      <div id="9" class="asiento"></div>
+      <div id="10" class="asiento"></div>
+      <div id="11" class="asiento"></div>
+      <div id="12" class="asiento"></div>
+      <div id="13" class="asiento"></div>
+      
+    </div>
+
+    <div class="asiento-row">
+      <label class="row-identifier">Fila 7</label>
+      <div id="1" class="asiento"></div>
+      <div id="2" class="asiento"></div>
+      <div id="3" class="asiento"></div>
+      <div id="4" class="asiento"></div>
+      <div id="5" class="asiento"></div>
+      <div id="6" class="asiento"></div>
+      <div class="asiento bloqueado"></div>
+      
+    </div>
+  </div>
+
+  <div class="container mb-4 text-warning text-center">
+    <form>
+      <div class="form-group text-center">
+        <label>Indica cuantos Asientos quieres Reservar</label>
+        <input type="number" id="numero" oninput="selecciona()" class="form-control w-25 mx-auto">
+      </div>
+      <button type="submit" class="btn btn-warning">Confirmar Reserva</button>
+    </form>
+  </div>
+  
+  <footer class="bg-dark text-white text-center my-4 py-4">
+    <p>Cine UNIR-CINEMA</p>
+    <p>Dirección: Calle Avenida de la Paz, 137. Logroño</p>
+    <p>Teléfono: 941209743</p>
+    <p>Email: cinefullstack@unircinema.com</p>
+  </footer>
+  <script src="cinema.js"></script>
+</body>
+</html>

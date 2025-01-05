@@ -1,0 +1,32 @@
+.btn-principal {
+
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+
+
+}
+
+.btn-principal:hover {
+    background-color: #45a049;
+}
+
+.btn-principal:active {
+    background-color: rgb(24, 245, 4);
+}
+
+.container {
+    display: flex;
+
+}
+
+.container>div {
+
+    margin: 10px;
+
+
+}

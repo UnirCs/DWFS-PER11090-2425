@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <link rel="stylesheet" href="public/stylesheet/cinema.css">
+    <script type="module" src="public/javascript/scripts.js"></script>
+</head>
+
+<body>
+
+<div class="user-profile-btn">
+    <img src="public/img/user.png" alt="User">
+    <div id="userName"></div>
+    <svg data-slot="icon" fill="currentColor" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path clip-rule="evenodd" fill-rule="evenodd"
+              d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"></path>
+    </svg>
+</div>
+
+<main>
+    <section class="screen">
+        Screen
+    </section>
+
+    <section id="chairsContainer" class="flex align-center column chairs-container">
+    </section>
+
+    <div class="flex justify-end align-center conventions">
+        <div class="chair available"></div>
+        Available
+        <div class="chair selected"></div>
+        Selected
+        <div class="chair occupied"></div>
+        Occupied
+    </div>
+
+    <div class="flex justify-center">
+        <!--suppress HtmlFormInputWithoutLabel -->
+        <input type="number" placeholder="Seats" disabled>
+    </div>
+</main>
+
+<footer>
+    <div><strong>UNIR-CINEMA</strong></div>
+    <div><b>Address:</b> Calle Avenida s/n, 08038 Barcelona, Spain</div>
+    <div><b>Phone:</b> +34 45 564 08 37</div>
+    <div><b>Email:</b> cinema@unir.com</div>
+</footer>
+</body>
+
+</html>

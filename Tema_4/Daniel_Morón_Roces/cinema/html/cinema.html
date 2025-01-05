@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>UNIR CINEMA</title>
+    <meta charset="UTF-8"></head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<div class="cinema">
+    <div class="col-12 pantalla">
+        <!-- Reserva de butacas de salas del cine "UNIR-CINEMA" -->
+        <div class="pantalla__cabecera"> UNIR-CINEMA </div>
+        <div class="pantalla__cuerpo"></div>
+        <!-- Muestra de butacas -->
+        <div class="pantalla__butacas" >
+            <div class="pantalla__butacas__cuerpo" >
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="nombreFila">Fila 1</td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="nombreFila">Fila 2</td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="nombreFila">Fila 3</td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="nombreFila">Fila 4</td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                    </tr>
+                    <tr>
+                        <td class="nombreFila">Fila 5</td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                        <td><div class="butacaDisponible"></div></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="reserva__butacas">
+                    <span class="m-1">Indica cuántos asientos quieres reservar</span>
+                    <br/>
+                    <input type="number" name="reserva_cantidad" id="reserva_cantidad"
+                           min="1" max="12">
+                    <br/>
+                    <button type="button" class="btn btn-warning m-1">Confirmar Reserva</button>
+                </div>
+            </div>
+        </div>
+        <div class="pantalla__pie">
+            <span>Cine UNIR-CINEMA</span>
+            <br/>
+            <span>Dirección: Calle Avenida de la Paz,137. Logroño</span> <br/>
+            <span>Teléfono: 941209743</span>
+            <br/>
+            <span>Email: cinefullstack@unircinema.com</span>
+        </div>
+    </div>
+</div>
+<script src="../js/cinema.js"></script>
+</body>
+</html>
