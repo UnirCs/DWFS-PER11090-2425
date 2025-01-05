@@ -1,0 +1,20 @@
+.movie-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .movie-list h2 {
+    text-align: center;
+  }
+  
+  .movie-list-grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  
+  
