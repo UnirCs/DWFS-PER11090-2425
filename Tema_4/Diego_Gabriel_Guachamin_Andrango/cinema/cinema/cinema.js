@@ -19,7 +19,8 @@ function generarFila (filaIndex) {
 
   for (let j = 0; j < seat; j++) {
     const id = filaIndex * seat + j + 1
-    const estado = Math.random() < 0.1 // 10% de probabilidad de ocupado
+    const cryptoRandom = crypto.getRandomValues(new Uint32Array(1))[0] / (2**32);
+    const estado = cryptoRandom < 0.1; // 10% de probabilidad de "ocupado"
     fila.push({ id, estado })
 
     const butaca = document.createElement('div')
