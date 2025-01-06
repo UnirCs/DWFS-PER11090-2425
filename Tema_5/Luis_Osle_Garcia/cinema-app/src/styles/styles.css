@@ -1,0 +1,79 @@
+/* Estilos para el Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Estilos para el Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+/* Estilos para cada caja de peliculas */
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    height: 510px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.movie:hover {
+    transform: scale(1.05);
+}
+
+.movie .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.movie .button-container button {
+    margin-top: auto;
+}
+
+.movie img {
+    width: 150px;
+    height: 170px;
+    border-radius: 8px;
+    display: block;
+}
+
+.movie h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.movie p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.titulo-principal {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 32px;
+}
