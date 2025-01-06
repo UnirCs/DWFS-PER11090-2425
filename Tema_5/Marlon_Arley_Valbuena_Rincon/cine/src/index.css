@@ -1,0 +1,16 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: white;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  cursor: pointer;
+}
