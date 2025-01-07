@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIR-CINEMA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<!-- Header -->
+<div class="header">
+    <h1>Reserva de asientos -UNIR Cines-</h1>
+</div>
+
+<!-- Película -->
+<div class="pelicula img">
+    <img src="returnoftheking.webp" alt="return of the king">
+</div>
+
+
+<!-- Ubicación Pantalla -->
+<section class="cine">
+    <div class="cine__pantalla">
+        <h2 class="cine__pantalla--texto">Pantalla</h2>
+    </div>
+
+    <!-- Tabla de asientos -->
+    <table class="cine__asientos">
+        <tr>
+            <td class="filas">Fila 1</td>
+            <td class="cine__asiento cine__asiento--disponible">1A</td>
+            <td class="cine__asiento cine__asiento--disponible">1B</td>
+            <td class="cine__asiento cine__asiento--disponible">1C</td>
+            <td class="cine__asiento cine__asiento--disponible">1D</td>
+            <td class="cine__asiento cine__asiento--ocupado">1E</td>
+            <td class="cine__asiento cine__asiento--disponible">1F</td>
+            <td class="cine__asiento cine__asiento--disponible">1G</td>
+            <td class="cine__asiento cine__asiento--disponible">1H</td>
+            <td class="cine__asiento cine__asiento--disponible">1I</td>
+            <td class="cine__asiento cine__asiento--disponible">1J</td>
+        </tr>
+        <tr>
+            <td class="filas">Fila 2</td>
+            <td class="cine__asiento cine__asiento--disponible">2A</td>
+            <td class="cine__asiento cine__asiento--disponible">2B</td>
+            <td class="cine__asiento cine__asiento--disponible">2C</td>
+            <td class="cine__asiento cine__asiento--disponible">2D</td>
+            <td class="cine__asiento cine__asiento--ocupado">2E</td>
+            <td class="cine__asiento cine__asiento--ocupado">2F</td>
+            <td class="cine__asiento cine__asiento--ocupado">2G</td>
+            <td class="cine__asiento cine__asiento--ocupado">2H</td>
+            <td class="cine__asiento cine__asiento--ocupado">2I</td>
+            <td class="cine__asiento cine__asiento--disponible">2J</td>
+        </tr>
+        <tr>
+            <td class="filas">Fila 3</td>
+            <td class="cine__asiento cine__asiento--disponible">3A</td>
+            <td class="cine__asiento cine__asiento--disponible">3B</td>
+            <td class="cine__asiento cine__asiento--disponible">3C</td>
+            <td class="cine__asiento cine__asiento--disponible">3D</td>
+            <td class="cine__asiento cine__asiento--ocupado">3E</td>
+            <td class="cine__asiento cine__asiento--disponible">3F</td>
+            <td class="cine__asiento cine__asiento--disponible">3G</td>
+            <td class="cine__asiento cine__asiento--disponible">3H</td>
+            <td class="cine__asiento cine__asiento--ocupado">3I</td>
+            <td class="cine__asiento cine__asiento--ocupado">3J</td>
+        </tr>
+        <tr>
+            <td class="filas">Fila 4</td>
+            <td class="cine__asiento cine__asiento--disponible">4A</td>
+            <td class="cine__asiento cine__asiento--disponible">4B</td>
+            <td class="cine__asiento cine__asiento--disponible">4C</td>
+            <td class="cine__asiento cine__asiento--disponible">4D</td>
+            <td class="cine__asiento cine__asiento--ocupado">4E</td>
+            <td class="cine__asiento cine__asiento--disponible">4F</td>
+            <td class="cine__asiento cine__asiento--disponible">4G</td>
+            <td class="cine__asiento cine__asiento--disponible">4H</td>
+            <td class="cine__asiento cine__asiento--disponible">4I</td>
+            <td class="cine__asiento cine__asiento--disponible">4J</td>
+        </tr>
+        <tr>
+            <td>Fila 5</td>
+            <td class="cine__asiento cine__asiento--disponible">5A</td>
+            <td class="cine__asiento cine__asiento--disponible">5B</td>
+            <td class="cine__asiento cine__asiento--disponible">5C</td>
+            <td class="cine__asiento cine__asiento--disponible">5D</td>
+            <td class="cine__asiento cine__asiento--ocupado">5E</td>
+            <td class="cine__asiento cine__asiento--disponible">5F</td>
+            <td class="cine__asiento cine__asiento--disponible">5G</td>
+            <td class="cine__asiento cine__asiento--disponible">5H</td>
+            <td class="cine__asiento cine__asiento--disponible">5I</td>
+            <td class="cine__asiento cine__asiento--disponible">5J</td>
+        </tr>
+    </table>
+</section>
+
+<!-- Formulario de reserva // añadimos la llamada a la función suggest-->
+<section class="cine__reserva-formulario">
+    <form id="formulario-reserva">
+        <div class="formulario-reserva__grupo">
+            <label for="cantidad-asientos">¿Cuantos asientos quieres reservar? (Máx.5)</label>
+                <input type="number" id="cantidad-asientos" class="cine__reserva-input" min="1" max="5" required oninput="ejecutarSuggest()">
+
+        </div>
+        <button type="button" class="cine__reserva-boton" id="boton-confirmar">Confirmar Reserva</button>
+    </form>
+</section>
+
+<!-- Pie de página -->
+<footer class="footer">
+    <p>UNIR-CINEMA</p>
+</footer>
+
+<!-- Referencia al script -->
+<script src="cine.js"></script>
+<script>
+    let butacas = setup(); // Inicializar la matriz de butacas
+
+    function ejecutarSuggest() {
+        let cantidad = document.getElementById('cantidad-asientos').value;
+        let resultado = suggest(butacas, parseInt(cantidad));
+        console.log("Resultado de suggest:", resultado);
+    }
+</script>
+
+
+
+
+</body>
+</html>
