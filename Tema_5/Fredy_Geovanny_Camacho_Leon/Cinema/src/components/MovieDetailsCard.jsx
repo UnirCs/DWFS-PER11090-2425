@@ -44,10 +44,8 @@ const MovieDetailsCard = ({ movie, onBackToStore }) => {
         <div className="movie-details__buttons">
           <button
             className="movie-details__button movie-details__button--back"
-            onClick={onBackToStore}
-          >
-            <i className="fas fa-arrow-left p-2"></i>
-            Volver a la Sala de Cine
+            onClick={onBackToStore}>
+          <i className="fas fa-arrow-left p-2"></i>Volver a la Sala de Cine
           </button>
         </div>
       </div>
