@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch API - Chiste</title>
+</head>
+
+<body>
+    <h1>Generador de Chistes</h1>
+    <button id="obtenerChiste">Obtener Chiste</button>
+    <p id="chiste">Haz clic en el botón para obtener un chiste.</p>
+
+    <script>
+        document.getElementById("obtenerChiste").addEventListener("click", function () {
+            fetch("https://api.chucknorris.io/jokes/random")
+                .then(response => response.json())
+                .then(data => document.getElementById("chiste").textContent = data.value)
+                .catch(error => document.getElementById("chiste").textContent = "Hubo un error al obtener el chiste.");
+        });
+    </script>
+</body>
+</html>
