@@ -1,0 +1,71 @@
+.book-search {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    text-align: center;
+}
+
+.book-search input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: larger;
+}
+
+.book-search button {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: #76ce29;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 20px;
+    font-size: 12px;
+}
+
+.book-search button:hover {
+    background-color: #2980b9;
+}
+
+.book-search ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.book-search li {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.book-search li:last-child {
+    border-bottom: none;
+}
+
+.book-search p {
+    color: #999;
+}
+
+.buscar {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.boton_buscar{
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.boton_buscar:hover {
+    background-color: #2980b9;
+}
