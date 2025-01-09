@@ -1,0 +1,20 @@
+.movie-list {
+  display: flex;
+  flex-wrap: wrap; /* Para que las tarjetas se envuelvan si no caben en una sola fila */
+  gap: 20px; /* Espacio entre las tarjetas */
+  justify-content: flex-start; /* Alinea las tarjetas al principio */
+  margin: 20px; /* Puedes ajustar el margen según necesites */
+}
+
+.pelicula-card {
+  width: 300px; /* Ajusta el tamaño de las tarjetas */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.pelicula-card:hover {
+  transform: scale(1.05); /* Efecto de hover */
+}
