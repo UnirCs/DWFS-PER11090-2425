@@ -78,6 +78,3 @@ function getConsecutiveChairsIntoAvailableRow(arr, reserva) {
     }
     return consecutiveChairs;
 }
-
-console.log(suggest(4)); // [true, true, true, true, true, true, true, true, true, true]
-
