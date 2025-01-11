@@ -1,8 +1,7 @@
-// Definir el tamaño de la matriz de butacas
-const N = 10; // Número de filas y columnas
+const N = 10;
 
 // Función para inicializar la matriz de butacas
-function setup() {
+function setupCinemaSeats() {
     let idContador = 1; // Iniciar el contador de IDs en 1 (los humanos no empezamos a contar desde 0)
     let butacas = [];
 
@@ -21,50 +20,48 @@ function setup() {
     return butacas;
 }
 
-// Inicializar la matriz
-let butacas = setup();
-butacas[7][0].estado = false; // Reservar una butaca
-butacas[7][1].estado = false;
-butacas[7][2].estado = false;
-butacas[7][3].estado = false;
-butacas[7][4].estado = false;
-butacas[7][5].estado = false;
-butacas[7][6].estado = false;
-butacas[7][7].estado = false;
-butacas[7][8].estado = false;
-butacas[7][9].estado = false;
+let seats = setupCinemaSeats();
+seats[7][0].estado = true;
+seats[7][1].estado = true;
+seats[7][2].estado = true;
+seats[7][3].estado = true;
+seats[7][4].estado = true;
+seats[7][5].estado = false;
+seats[7][6].estado = false;
+seats[7][7].estado = false;
+seats[7][8].estado = false;
+seats[7][9].estado = false;
 
-// Imprimir la matriz
-console.log(butacas);
 
 function suggest() {
 
     const input = document.getElementById('inputNumberChairs');
     const reserva = input.value;
-    console.log(`Number of tickets: ${reserva}`);
 
     if(reserva > N) {
+        alert(`The number of tickets exceeds the number of chairs:  ${reserva}`);
         return [];
     }
 
-    let reserveNumber = new Array(reserva).fill(0);
+    let reserveNumber = new Array(parseInt(reserva)).fill(1).toReversed();
     let availableRows = [];
 
-    butacas.forEach(x => {
+    seats.forEach(x => {
         let availableChair = x.map(x => x.estado === true ? 1 : 0)
         availableRows.push(availableChair.toString().includes(reserveNumber.toString()));
     });
 
     let availableChairs = availableRows.includes(true)
-        ? butacas[availableRows.lastIndexOf(true)].filter(x => x.estado === false)
+        ? seats[availableRows.lastIndexOf(true)].filter(x => x.estado === true)
         : [];
 
-    console.log("Available chairs: ", getConsecutiveChairsIntoAvailableRow(availableChairs.map(x => x.id), reserva));
-    return getConsecutiveChairsIntoAvailableRow(availableChairs.map(x => x.id), reserva);
+    const freeChairs = getConsecutiveAvailableSeats(availableChairs.map(x => x.id), reserva);
+    console.log(freeChairs)
+    return freeChairs;
 }
 
-function getConsecutiveChairsIntoAvailableRow(arr, reserva) {
-    let consecutiveChairs = [];
+function getConsecutiveAvailableSeats(arr, reserva) {
+    let freeSeats = [];
     for (let i = 0; i <= arr.length - reserva; i++) {
         let isConsecutive = true;
         for (let j = 1; j < reserva; j++) {
@@ -73,8 +70,9 @@ function getConsecutiveChairsIntoAvailableRow(arr, reserva) {
             }
         }
         if (isConsecutive) {
-            consecutiveChairs.push(arr.slice(i, i + reserva));
+            freeSeats.push(arr.slice(i, i + reserva));
         }
     }
-    return consecutiveChairs;
+    return freeSeats;
 }
+
