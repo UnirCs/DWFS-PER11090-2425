@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chistes de Chuck Norris</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>API Chistes de Chuck Norris</h1>
+<!-- Botón que, al ser presionado, pedirá un nuevo chiste -->
+<button id="btnChiste">Dame un chiste</button>
+
+<!-- Párrafo donde se mostrará el chiste obtenido de la API -->
+<p id="chiste"></p>
+
+<script>
+  // Al cargar el documento, se añade el evento onClick al botón
+  document.getElementById("btnChiste").onclick = () => {
+    // Realizamos la petición a la API de chistes de Chuck Norris
+    fetch("https://api.chucknorris.io/jokes/random")
+            .then(response => {
+              // Convertimos la respuesta a JSON
+              return response.json();
+            })
+            .then(data => {
+              // 'data' es el objeto con la información del chiste
+              // La propiedad 'data.value' contiene el texto del chiste
+              document.getElementById("chiste").innerHTML = data.value;
+            })
+
+  };
+</script>
+</body>
+</html>

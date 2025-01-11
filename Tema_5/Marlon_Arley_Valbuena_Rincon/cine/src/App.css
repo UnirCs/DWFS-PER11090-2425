@@ -1,0 +1,52 @@
+.movie-list {
+  display: flex;
+  flex-wrap: nowrap; /* Evita que los elementos se muevan a otra fila */
+  overflow-x: auto; /* Permite el desplazamiento horizontal si hay muchas películas */
+  gap: 20px; /* Espacio entre las tarjetas */
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.movie-card {
+  width: 300px; /* Ajusta el ancho de las tarjetas */
+  height: 400px; /* Ajusta la altura de las tarjetas */
+  background-color: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0; /* Asegura que todas las tarjetas mantengan su tamaño */
+}
+
+.movie-card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.movie-details {
+  padding: 15px;
+  color: #fff;
+}
+
+.movie-details h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.movie-details p {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.movie-details a {
+  margin-top: 10px;
+  color: #ff6347;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.movie-details a:hover {
+  color: #fff;
+}
