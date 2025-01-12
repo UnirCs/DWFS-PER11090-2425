@@ -1,0 +1,152 @@
+/* styles.css */
+
+@font-face {
+  font-family: 'EB Garamond';
+  font-size: 22px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #f2f2f2;
+}
+
+body {
+  background: #f2f2f2;
+  font-size: 18px;
+  font-family: 'EB Garamond', serif;
+  line-height: 22px;
+}
+
+.container {
+  background: #000;
+  width: 1000px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 5px;
+  border: 2px solid peru;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+header {
+  background: #424242;
+  width: 100%;
+  overflow: hidden;
+  list-style: none;
+  border-radius: 5px;
+  border: 1px solid peru;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  height: 100px;
+  padding: 40px;
+  text-align: center;
+  color: peru;
+  text-shadow: 2px 2px 4px #000;
+}
+
+section {
+  width: 70%;
+  background: #000;
+  float: right;
+  border-radius: 5px;
+  border: 1px solid peru;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+section article {
+  width: 100%;
+}
+
+section article div {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section article table {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-collapse: collapse;
+}
+
+section article table th {
+  width: 10px;
+  height: 10px;
+}
+
+section article table th.chair {
+  border: 1px solid peru;
+  border-radius: 2px;
+  background: #333;
+  transition: background 0.3s;
+}
+
+section article table th.chair:hover {
+  background: peru;
+}
+
+section article form {
+  text-align: center;
+  padding: 20px;
+}
+
+section article form input {
+  color: #161f26;
+}
+
+#button {
+  background: peru;
+  color: #fff !important;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#button:hover {
+  background: #d2691e;
+}
+
+aside {
+  width: 30%;
+  float: left;
+  background: #424242;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid peru;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+aside h2 {
+  padding: 10px;
+  text-align: center;
+  color: peru;
+  text-shadow: 2px 2px 4px #000;
+  text-underline-mode: none;
+}
+
+aside ul li {
+  padding: 10px;
+  list-style: none;
+  border-bottom: 1px solid peru;
+}
+
+footer {
+  width: 100%;
+  overflow: hidden;
+  clear: both;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 5px;
+  border: 1px solid peru;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
