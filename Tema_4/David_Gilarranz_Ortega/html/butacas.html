@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF8">
+        <title>UNIR-CINEMA</title>
+        <link rel="stylesheet" href="../css/butacas.css">
+    </head>
+    <body>
+        <div class="cine">
+            <div class="cine__header">
+                <h1 class="header__titulo">UNIR-CINEMA</h1>
+            </div>
+            <div id="cine__pantalla"></div>
+            <div class="cine__seleccion">
+                <table id="butacas" class="seleccion__tabla"></table>
+                <p class="seleccion__texto">Indica cuántos asientos quieres reservar</p>
+                <form class="seleccion__formulario">
+                    <input type="number" min="0" id="num_butacas" class="formulario__texto" name="num_butacas">
+                    <input type="button" id="reservar" class="formulario__boton" value="Reservar"> 
+                </form>
+            </div>
+            <div class="cine__footer">
+                <p class="text-center">Cine UNIR-CINEMA</p>
+                <p class="text-center">Dirección: Calle avenida de la Paz, 137. Logroño</p>
+                <p class="text-center">Teléfono: 941209743</p>
+                <p class="text-center">Email: cinefullstack@unircinema.com</p>
+            </div>
+        </div>
+        <script src="../js/butacas.js"></script>
+    </body>
+</html>
