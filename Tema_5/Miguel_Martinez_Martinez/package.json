@@ -10,6 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "miguel_martinez_martinez": "file:",
     "react-scripts": "^5.0.1"
   }
 }
