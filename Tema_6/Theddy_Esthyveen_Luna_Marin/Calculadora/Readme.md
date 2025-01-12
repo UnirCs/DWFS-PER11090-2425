@@ -2,153 +2,113 @@
 
 ## Descripción
 
-Esta API REST permite realizar diversas operaciones matemáticas y registrar cada cálculo en una memoria. Cada operación genera un ID único que se puede utilizar para consultar los detalles de la misma más adelante.
+Esta API REST permite realizar diversas operaciones matemáticas y registrar cada cálculo en una memoria. Cada tipo de operación tiene su propio recurso, y todas las operaciones realizadas pueden ser consultadas.
 
-### Funcionalidades soportadas
-- **Sumar, Restar, Multiplicar, Dividir, Raíz N-ésima y Potencia N-ésima:** Realiza operaciones matemáticas específicas.
-- **Consultar detalles de las operaciones:** Obtén los detalles de las operaciones realizadas utilizando su ID.
+---
+
+## Funcionalidades soportadas
+
+1. **Operaciones básicas:**
+    - Sumas
+    - Restas
+    - Multiplicaciones
+    - Divisiones
+    - Raíces N-ésimas
+    - Potencias N-ésimas
+2. **Gestión de operaciones:**
+    - Consultar todas las operaciones de un tipo específico.
+    - Consultar detalles de cualquier operación registrada.
 
 ---
 
 ## Recursos identificados
-1. **Operaciones específicas (sumas, restas, multiplicaciones, divisiones, raíces, potencias):** Recursos separados para cada tipo de cálculo.
+
+- **Sumas (sumas):** Representan todas las sumas realizadas.
+- **Restas (restas):** Representan todas las restas realizadas.
+- **Multiplicaciones (multiplicaciones):** Representan todas las multiplicaciones realizadas.
+- **Divisiones (divisiones):** Representan todas las divisiones realizadas.
+- **Raíces (raices):** Representan todas las raíces N-ésimas realizadas.
+- **Potencias (potencias):** Representan todas las potencias N-ésimas realizadas.
 
 ---
 
 ## Endpoints y métodos HTTP
 
-### **Modelo Específico (orientado a recursos separados)**
-
-| Método HTTP | Endpoint            | Parámetros de consulta | Cuerpo de la petición                          | Cuerpo de la respuesta                                                                  | Códigos HTTP de respuesta                |
-|-------------|---------------------|------------------------|-----------------------------------------------|----------------------------------------------------------------------------------------|------------------------------------------|
-| POST        | /sumas              | -                      | `{"numeros": [3, 4]}`                         | `{"idOperacion": "123", "resultado": 7}`                                               | 201 Creado, 400 Solicitud Incorrecta     |
-| POST        | /restas             | -                      | `{"numeros": [10, 3]}`                        | `{"idOperacion": "124", "resultado": 7}`                                               | 201 Creado, 400 Solicitud Incorrecta     |
-| POST        | /multiplicaciones   | -                      | `{"numeros": [3, 4]}`                         | `{"idOperacion": "125", "resultado": 12}`                                              | 201 Creado, 400 Solicitud Incorrecta     |
-| POST        | /divisiones         | -                      | `{"numeros": [10, 2]}`                        | `{"idOperacion": "126", "resultado": 5}`                                               | 201 Creado, 400 Solicitud Incorrecta, 422 División por Cero |
-| POST        | /raices             | -                      | `{"numero": 27, "grado": 3}`                  | `{"idOperacion": "127", "resultado": 3}`                                               | 201 Creado, 400 Solicitud Incorrecta     |
-| POST        | /potencias          | -                      | `{"numero": 2, "exponente": 3}`               | `{"idOperacion": "128", "resultado": 8}`                                               | 201 Creado, 400 Solicitud Incorrecta     |
-| GET         | /operaciones/{id}   | -                      | -                                             | `{"idOperacion": "123", "tipo": "suma", "numeros": [3, 4], "resultado": 7}`            | 200 OK, 404 No Encontrado                |
+| Método HTTP | Endpoint        | Parámetros de consulta | Cuerpo de la petición                       | Respuesta JSON                                    | Códigos HTTP                 |
+|-------------|-----------------|------------------------|---------------------------------------------|--------------------------------------------------|------------------------------|
+| POST        | /sumas          | -                      | `{"numeros": [3, 4]}`                       | `{"id": "integer", "resultado": 7}`              | 201 Creado, 400 Bad Request  |
+| GET         | /sumas          | -                      | -                                           | `[{"id": "integer", "numeros": [3, 4], "resultado": 7}]` | 200 OK                       |
+| POST        | /restas         | -                      | `{"numeros": [10, 4]}`                      | `{"id": "integer", "resultado": 6}`              | 201 Creado, 400 Bad Request  |
+| GET         | /restas         | -                      | -                                           | `[{"id": "integer", "numeros": [10, 4], "resultado": 6}]` | 200 OK                       |
+| POST        | /multiplicaciones | -                    | `{"numeros": [2, 5]}`                       | `{"id": "integer", "resultado": 10}`             | 201 Creado, 400 Bad Request  |
+| GET         | /multiplicaciones | -                    | -                                           | `[{"id": "integer", "numeros": [2, 5], "resultado": 10}]` | 200 OK                       |
+| POST        | /divisiones     | -                      | `{"numeros": [10, 2]}`                      | `{"id": "integer", "resultado": 5}`              | 201 Creado, 400 Bad Request, 422 División por Cero |
+| GET         | /divisiones     | -                      | -                                           | `[{"id": "integer", "numeros": [10, 2], "resultado": 5}]` | 200 OK                       |
+| POST        | /raices         | -                      | `{"numero": 16, "grado": 2}`                | `{"id": "integer", "resultado": 4}`              | 201 Creado, 400 Bad Request  |
+| GET         | /raices         | -                      | -                                           | `[{"id": "integer", "numero": 16, "grado": 2, "resultado": 4}]` | 200 OK                       |
+| POST        | /potencias      | -                      | `{"numero": 2, "exponente": 3}`             | `{"id": "integer", "resultado": 8}`              | 201 Creado, 400 Bad Request  |
+| GET         | /potencias      | -                      | -                                           | `[{"id": "integer", "numero": 2, "exponente": 3, "resultado": 8}]` | 200 OK                       |
 
 ---
 
 ## Descripción detallada de los endpoints
 
-### **Modelo Específico (recursos separados)**
+### **Operaciones básicas**
 
-1. **Crear una suma:**
-   - **Endpoint:** `POST /sumas`
-   - **Descripción:** Suma los números proporcionados.
-   - **Ejemplo de petición:**
-     ```json
-     {
-       "numeros": [3, 4]
-     }
-     ```
-   - **Ejemplo de respuesta:**
-     ```json
-     {
-       "idOperacion": "123",
-       "resultado": 7
-     }
-     ```
+1. **Sumas**
+    - **Crear suma:** `POST /sumas`
+        - Registra una nueva suma.
+        - **Ejemplo de petición:**
+          ```json
+          {
+            "numeros": [3, 4]
+          }
+          ```
+        - **Ejemplo de respuesta:**
+          ```json
+          {
+            "id": 1,
+            "resultado": 7
+          }
+          ```
+    - **Consultar todas las sumas:** `GET /sumas`
+        - Recupera todas las sumas registradas.
+        - **Ejemplo de respuesta:**
+          ```json
+          [
+            {
+              "id": 1,
+              "numeros": [3, 4],
+              "resultado": 7
+            }
+          ]
+          ```
 
-2. **Crear una resta:**
-   - **Endpoint:** `POST /restas`
-   - **Descripción:** Resta los números proporcionados.
-   - **Ejemplo de petición:**
-     ```json
-     {
-       "numeros": [10, 3]
-     }
-     ```
-   - **Ejemplo de respuesta:**
-     ```json
-     {
-       "idOperacion": "124",
-       "resultado": 7
-     }
-     ```
-
-3. **Crear una multiplicación:**
-   - **Endpoint:** `POST /multiplicaciones`
-   - **Descripción:** Multiplica los números proporcionados.
-   - **Ejemplo de petición:**
-     ```json
-     {
-       "numeros": [6, 3]
-     }
-     ```
-   - **Ejemplo de respuesta:**
-     ```json
-     {
-       "idOperacion": "125",
-       "resultado": 18
-     }
-     ```
-
-4. **Crear una división:**
-   - **Endpoint:** `POST /divisiones`
-   - **Descripción:** Divide los números proporcionados. Devuelve un error si el divisor es 0.
-   - **Ejemplo de petición:**
-     ```json
-     {
-       "numeros": [10, 2]
-     }
-     ```
-   - **Ejemplo de respuesta:**
-     ```json
-     {
-       "idOperacion": "126",
-       "resultado": 5
-     }
-     ```
-
-5. **Calcular una raíz N-ésima:**
-   - **Endpoint:** `POST /raices`
-   - **Descripción:** Calcula la raíz N-ésima de un número.
-   - **Ejemplo de petición:**
-     ```json
-     {
-       "numero": 27,
-       "grado": 3
-     }
-     ```
-     ```
-   - **Ejemplo de respuesta:**
-     ```json
-     {
-       "idOperacion": "127",
-       "resultado": 3
-     }
-     ```
-
-6. **Calcular una potencia N-ésima:**
-   - **Endpoint:** `POST /potencias`
-   - **Descripción:** Eleva un número al exponente indicado.
-   - **Ejemplo de petición:**
-     ```json
-     {
-       "numero": 2,
-       "exponente": 4
-     }
-     ```
-   - **Ejemplo de respuesta:**
-     ```json
-     {
-       "idOperacion": "128",
-       "resultado": 16
-     }
-     ```
-
-7. **Consultar detalles de una operación:**
-   - **Endpoint:** `GET /operaciones/{id}`
-   - **Descripción:** Obtén detalles de una operación específica utilizando su ID.
-   - **Ejemplo de respuesta:**
-     ```json
-     {
-       "idOperacion": "123",
-       "tipo": "suma",
-       "numeros": [3, 4],
-       "resultado": 7
-     }
-     ```
+2. **Restas**
+    - **Crear resta:** `POST /restas`
+        - Registra una nueva resta.
+        - **Ejemplo de petición:**
+          ```json
+          {
+            "numeros": [10, 4]
+          }
+          ```
+        - **Ejemplo de respuesta:**
+          ```json
+          {
+            "id": 2,
+            "resultado": 6
+          }
+          ```
+    - **Consultar todas las restas:** `GET /restas`
+        - Recupera todas las restas registradas.
+        - **Ejemplo de respuesta:**
+          ```json
+          [
+            {
+              "id": 2,
+              "numeros": [10, 4],
+              "resultado": 6
+            }
+          ]
+          ```
