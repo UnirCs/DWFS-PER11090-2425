@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Butacas - UNIR-CINEMA</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="suggest(5)"> <!-- Llamada de prueba a suggest() al cargar la página -->
+    <div class="container mt-4">
+        <!-- Representación de la sala de cine -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h3 class="text-center btn-primary">Pantalla de Cine</h3>
+                <div class="cinema-container">
+                    <!-- Representación de la sala con asientos -->
+                    <div class="cinema-seating">
+                        <div class="row">
+                            <div class="col seat available">A1</div>
+                            <div class="col seat available">A2</div>
+                            <div class="col seat available">A3</div>
+                            <div class="col seat available">A4</div>
+                            <div class="col seat available">A5</div>
+                            <div class="col seat available">A6</div>
+                        </div>
+                        <div class="row">
+                            <div class="col seat available">B1</div>
+                            <div class="col seat available">B2</div>
+                            <div class="col seat available">B3</div>
+                            <div class="col seat available">B4</div>
+                            <div class="col seat available">B5</div>
+                            <div class="col seat available">B6</div>
+                        </div>
+                        <div class="row">
+                            <div class="col seat available">C1</div>
+                            <div class="col seat available">C2</div>
+                            <div class="col seat available">C3</div>
+                            <div class="col seat available">C4</div>
+                            <div class="col seat available">C5</div>
+                            <div class="col seat available">C6</div>
+                        </div>
+                        <div class="row">
+                            <div class="col seat available">D1</div>
+                            <div class="col seat available">D2</div>
+                            <div class="col seat available">D3</div>
+                            <div class="col seat available">D4</div>
+                            <div class="col seat available">D5</div>
+                            <div class="col seat available">D6</div>
+                        </div>
+                        <div class="row">
+                            <div class="col seat available">E1</div>
+                            <div class="col seat available">E2</div>
+                            <div class="col seat available">E3</div>
+                            <div class="col seat available">E4</div>
+                            <div class="col seat available">E5</div>
+                            <div class="col seat available">E6</div>
+                        </div>
+                        <div class="row">
+                            <div class="col seat available">E1</div>
+                            <div class="col seat available">E2</div>
+                            <div class="col seat available">E3</div>
+                            <div class="col seat available">E4</div>
+                            <div class="col seat available">E5</div>
+                            <div class="col seat available">E6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario de selección -->
+        <div class="row form-container">
+            <div class="col-md-4">
+                <h3>Seleccionar Asientos</h3>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="numAsientos">Número de Asientos</label>
+                        <input type="text" class="form-control" id="numAsientos" placeholder="¿Cuántos asientos?" oninput="suggest(this.value)">
+                    </div>
+                    <button class="btn btn-primary btn-block" type="button" onclick="suggestSeats()">Confirmar Reserva</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center">
+        <p>UNIR-CINEMA</p>
+        <p>Dirección: Calle Ficticia 123, Ciudad</p>
+        <p>Teléfono: +34 900 123 456</p>
+        <p>Email: contacto@unir-cinema.com</p>
+    </footer>
+
+    
+    <script src="cinema.js"></script>
+</body>
+</html>
