@@ -1,0 +1,106 @@
+:root {
+  --background-color: #f9f9f9;
+  --content-bg-color: #ffffff;
+  --primary-color: #007bff;
+  --primary-hover-color: #0056b3;
+  --error-color: #dc3545;
+  --text-color: #333;
+  --secondary-text-color: #555;
+  --font-family: "Roboto", sans-serif;
+  --font-size-lg: 6rem;
+  --font-size-md: 1.2rem;
+  --font-size-sm: 1rem;
+  --spacing-sm: 10px;
+  --spacing-md: 20px;
+  --spacing-lg: 30px;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  text-align: center;
+  padding: var(--spacing-md);
+  position: relative;
+}
+
+.not-found__header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.not-found__back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  box-shadow: var(--box-shadow);
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.not-found__back-button:hover {
+  background-color: var(--primary-hover-color);
+  transform: scale(1.05);
+}
+
+.not-found__content {
+  max-width: 600px;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  background-color: var(--content-bg-color);
+  text-align: center;
+}
+
+.not-found__title {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  color: var(--error-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.not-found__text {
+  font-size: var(--font-size-md);
+  color: var(--secondary-text-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .not-found__title {
+    font-size: 4rem;
+  }
+
+  .not-found__text {
+    font-size: 1rem;
+  }
+
+  .not-found__back-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .not-found__header {
+    top: 10px;
+  }
+}
