@@ -24,7 +24,8 @@ function setup() {
 // Función para sugerir asientos
 function suggest(numeroAsientos) {
     const resultado = new Set(); // Conjunto para almacenar los IDs de los asientos preseleccionados
-
+    let butacas = setup();
+	let found = true
     if (numeroAsientos > N) {
         // Si el número de asientos solicitados excede el tamaño máximo de la fila
         return resultado;
@@ -33,27 +34,22 @@ function suggest(numeroAsientos) {
     // Comenzar a buscar desde la última fila (la más lejana a la pantalla)
     for (let i = N - 1; i >= 0; i--) {
         let consecutivos = 0; // Contador para asientos consecutivos libres
-        let inicioFila = -1; // Índice de inicio para asientos consecutivos
-
+		let available_seats = [];
+        
         for (let j = 0; j < N; j++) {
             if (!butacas[i][j].estado) {
                 // Si el asiento está libre
                 consecutivos++;
-                if (inicioFila === -1) {
-                    inicioFila = j; // Marcar el inicio de los consecutivos
-                }
-
-                if (consecutivos === numeroAsientos) {
+				available_seats.push(butacas[i][j].id);
+                if (consecutivos === numeroAsientos && found===true) {
                     // Si encontramos suficientes asientos consecutivos
-                    for (let k = inicioFila; k < inicioFila + numeroAsientos; k++) {
-                        resultado.add(butacas[i][k].id);
-                    }
-                    return resultado; // Retornar el conjunto con los IDs de los asientos
-                }
+	                selected_seats = new Set(available_seats);
+                    found = false
+				}
             } else {
                 // Reiniciar la búsqueda en caso de encontrar un asiento ocupado
                 consecutivos = 0;
-                inicioFila = -1;
+                available_seats = [];
             }
         }
     }
