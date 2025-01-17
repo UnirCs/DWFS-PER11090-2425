@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desarrollo Web Full Stack - Tema 3</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+
+    const anApi = 'https://api.chucknorris.io/jokes/random';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const jokeParagraph = document.getElementById('joke');
+      const button = document.getElementById('buttonJoke');
+
+      const loader = async () => {
+        try {
+          const response = await fetch(anApi);
+          const data = await response.json();
+          jokeParagraph.textContent = data.value;
+        } catch (error) {
+          console.error('Error fetching joke:', error);
+          jokeParagraph.textContent = 'Imposible get a joke.';
+        }
+      };
+
+      button.addEventListener('click', loader);
+    });
+
+  </script>
+</head>
+<body>
+<header>
+  <h1>Promesas en Java Script</h1>
+</header>
+<main>
+  <section id="home">
+    <h2>Practica de chistes Chuck Norris</h2>
+    <button id="buttonJoke">Dame un Chiste</button>
+    <p id="joke"></p>
+  </section>
+  <section id="about">
+    <h2>Tema 3</h2>
+    <p>Javascript avanzado</p>
+  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Jhon Roberth Fernandez Ortiz</p>
+    <p>jhonfernandez0303@gmail.com</p>
+  </section>
+</main>
+<footer>
+</footer>
+</body>
+</html>
