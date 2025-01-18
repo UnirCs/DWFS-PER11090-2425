@@ -1,0 +1,187 @@
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background-color: #4c4c4c;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+#closeSession {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 5px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+#closeSession:hover {
+    background-color: cornflowerblue;
+    border-color: cornflowerblue;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.screen {
+    background-color: #272727;
+    height: 150px;
+    width: 80%;
+    margin: 20px auto 50px;
+    border-radius: 0 0 800px 800px;
+    position: relative;
+    overflow: hidden;
+    transform: perspective(500px) rotateX(180deg);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen h3 {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.seats-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.seat {
+    width: 50px;
+    height: 70px;
+    background-color: #1e1e1e;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid #fff;
+    text-align: center;
+    line-height: 70px;
+    font-size: 14px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.seat:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+.seat::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: #fff;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+.seat.occupied {
+    background-color: cornflowerblue;
+    color: white;
+    border: 2px solid white;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.seat.occupied::after {
+    background: black;
+}
+
+.row-label {
+    color: cornflowerblue;
+    width: 50px;
+    line-height: 70px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+
+.butaca-selected {
+    background-color: #32cd32;
+    border: 2px solid #fff;
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(50, 205, 50, 0.8);
+}
+
+.reservation-form {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.reservation-form input {
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    transition: border-color 0.3s;
+}
+
+.reservation-form input:focus {
+    border-color: cornflowerblue;
+    outline: none;
+    box-shadow: 0 0 10px rgba(100, 149, 237, 0.7);
+}
+
+.confirm-button {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.confirm-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(187, 182, 148, 0.6);
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.footer {
+    background-color: #4c4c4c;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+.footer p {
+    margin: 5px 0;
+}
