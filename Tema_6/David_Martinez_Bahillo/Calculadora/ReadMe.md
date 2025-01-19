@@ -15,17 +15,19 @@ Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de 
 
 # Resolución del ejercicio
 
-| Método Http | Endpoint              | Cuerpo JSON de la petición    | Respuesta JSON de la petición                                     | Códigos HTTP de respuesta posibles |
-|-------------|-----------------------|-------------------------------|-------------------------------------------------------------------|------------------------------------|
-| POST        | /api/v1/sumar         | `{"numeros": [2, 2, 2]}`      | `{"id": "integer", "numeros": [2, 2, 2], "resultado": 6}`         | 200, 400                           |
-| POST        | /api/v1/restar        | `{"numeros": [2, 2, 2]}`      | `{"id": "integer", "numeros": [2, 2, 2], "resultado": 5}`         | 200, 400                           |
-| POST        | /api/v1/multiplicar   | `{"numeros": [3, 4]}`         | `{"id": "integer", "numeros": [3, 4], "resultado": 12}`           | 200, 400                           |
-| POST        | /api/v1/dividir       | `{"numeros": [8, 2]}`         | `{"id": "integer", "numeros": [8, 2], "resultado": 4}`            | 200, 400, 402                      |
-| POST        | /api/v1/raiz          | `{"numeros": 25, "indice": 2}`| `{"id": "integer", "numeros": 25, "n": 2, "resultado": 5}`        | 200, 400, 402                      |
-| POST        | /api/v1/potencia      | `{"base": 2, "exponente": 3}` | `{"id": "integer", "base": 2, "exponente": 3, "resultado": 8}`    | 200, 400                           |
-| GET         | /api/v1/operacion/{id}|                               | `{"id": "integer", "operacion": "sumar", "resultado": 6}`         | 200, 400                           |
+| Método HTTP | Endpoint        | Parámetros de consulta | Cuerpo de la petición                       | Respuesta JSON                                    | Códigos HTTP                 |
+|-------------|-----------------|------------------------|---------------------------------------------|--------------------------------------------------|------------------------------|
+| POST        | /sumas          | -                      | `{"numeros": [3, 4]}`                       | `{"id": "integer", "resultado": 7}`              | 201 Creado, 400   |
+| GET         | /sumas          | -                      | -                                           | `[{"id": "integer", "numeros": [3, 4], "resultado": 7}]` | 200                        |
+| POST        | /restas         | -                      | `{"numeros": [10, 4]}`                      | `{"id": "integer", "resultado": 6}`              | 201 Creado, 400   |
+| GET         | /restas         | -                      | -                                           | `[{"id": "integer", "numeros": [10, 4], "resultado": 6}]` | 200                        |
+| POST        | /multiplicaciones | -                    | `{"numeros": [2, 5]}`                       | `{"id": "integer", "resultado": 10}`             | 201 , 400   |
+| GET         | /multiplicaciones | -                    | -                                           | `[{"id": "integer", "numeros": [2, 5], "resultado": 10}]` | 200                       |
+| POST        | /divisiones     | -                      | `{"numeros": [10, 2]}`                      | `{"id": "integer", "resultado": 5}`              | 201, 400, 422 División por Cero |
+| GET         | /divisiones     | -                      | -                                           | `[{"id": "integer", "numeros": [10, 2], "resultado": 5}]` | 200                        |
+| POST        | /raices         | -                      | `{"numero": 16, "grado": 2}`                | `{"id": "integer", "resultado": 4}`              | 201 , 400    |
+| GET         | /raices         | -                      | -                                           | `[{"id": "integer", "numero": 16, "grado": 2, "resultado": 4}]` | 200                        |
+| POST        | /potencias      | -                      | `{"numero": 2, "exponente": 3}`             | `{"id": "integer", "resultado": 8}`              | 201, 400   |
+| GET         | /potencias      | -                      | -                                           | `[{"id": "integer", "numero": 2, "exponente": 3, "resultado": 8}]` | 200                        |
 
-
-200: OK
-400: KO
-402: IMPROCESABLE
+---
