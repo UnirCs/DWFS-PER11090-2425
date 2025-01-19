@@ -18,7 +18,6 @@ Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de 
 | Método HTTP | Endpoint        | Parámetros de consulta | Cuerpo de la petición                       | Respuesta JSON                                    | Códigos HTTP                 |
 |-------------|-----------------|------------------------|---------------------------------------------|--------------------------------------------------|------------------------------|
 | POST        | /sumas          | -                      | `{"numeros": [3, 4]}`                       | `{"id": "integer", "resultado": 7}`              | 201 
-, 400   |
 | GET         | /sumas          | -                      | -                                           | `[{"id": "integer", "numeros": [3, 4], "resultado": 7}]` | 200                        |
 | POST        | /restas         | -                      | `{"numeros": [10, 4]}`                      | `{"id": "integer", "resultado": 6}`              | 201 , 400   |
 | GET         | /restas         | -                      | -                                           | `[{"id": "integer", "numeros": [10, 4], "resultado": 6}]` | 200                        |
