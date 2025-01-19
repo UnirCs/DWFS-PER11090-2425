@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "imagen": "/images/movies/1.jpeg",
+        "nombre": "MUFASA",
+        "categoria": "Aventura",
+        "sinopsis": "Precuela de 'El rey león' (2019). Rafiki debe transmitir la leyenda de Mufasa a la joven cachorro de león Kiara, hija de Simba y Nala, con Timón y Pumba aportando su estilo característico. La historia se cuenta en flashbacks y presenta a Mufasa como un cachorro huérfano, perdido y solo hasta que conoce a un simpático león llamado Taka, heredero de un linaje real. Este encuentro casual pone en marcha un viaje de un extraordinario grupo de inadaptados que buscan su destino. Y sus vínculos se pondrán a prueba mientras trabajan juntos para escapar de un enemigo amenazador y letal.",
+        "duracion": "2h 10min",
+        "idiomas": [
+            "Inglés",
+            "Español"   
+        ]
+    },
+    {
+        "id": 2,
+        "imagen": "/images/movies/2.jpeg",
+        "nombre": "SONIC 3",
+        "categoria": "Aventura",
+        "sinopsis": "Sonic, Tails y Knuckles se enfrentarán al Dr. Eggman antes de que conquiste el mundo. Eggman tendrá un nuevo aliado",
+        "duracion": "2h 00min",
+        "idiomas": [
+            "Inglés",
+            "Español"   
+        ]
+    },
+    {
+        "id": 3,
+        "imagen": "/images/movies/3.jpeg",
+        "nombre": "MOANA 2",
+        "categoria": "Animada",
+        "sinopsis": "Tras recibir una inesperada llamada de sus antepasados, Moana debe viajar a los lejanos mares de Oceanía y adentrarse en peligrosas aguas perdidas para vivir una aventura sin precedentes.",
+        "duracion": "1h 50min",
+        "idiomas": [
+            "Inglés",
+            "Español"   
+        ]
+    },
+    {
+        "id": 4,
+        "imagen": "/images/movies/4.jpeg",
+        "nombre": "NOSFERATU",
+        "categoria": "Terror",
+        "sinopsis": "Una historia gótica de obsesiones entre una joven atormentada en la Alemania del siglo XIX y el antiguo vampiro de Transilvania que la acecha, trayendo consigo un inefable horror.",
+        "duracion": "2h 25min",
+        "idiomas": [
+            "Inglés",
+            "Español"   
+        ]
+    }
+]
