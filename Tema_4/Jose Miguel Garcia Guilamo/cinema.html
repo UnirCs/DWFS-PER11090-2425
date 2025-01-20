@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIR-CINEMA</title>
+   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/cinema.css">
+ 
+<body>
+
+<div class="container">
+    <h1 class="text-center my-4">Reservacion de asientos  - UNIR-CINEMA</h1>
+    <div class="pantalla">Pantalla</div>  
+    <div id="asientos-container" class="asientos"></div>
+    <form class="mt-4" id="formulario-reserva">
+        <div class="formulario-reserva__grupo">
+            <label for="cantidad-asientos">Número de Asientos</label>
+            <input type="number" id="cantidad-asientos" class="form-control" min="1" max="5" placeholder="Introduzca la cantidad a reservar" required>
+        </div>
+        <button type="button" class="btn btn-primary btn-block" id="boton-confirmar">Confirmar Reserva</button>
+    </form>
+</div>
+<footer>
+    <p>UNIR-CINEMA</p>
+    <p>Dirección: Dr Ferry #111 , La Romana</p>
+    <p>Teléfono: (809) 877 3285</p>
+    <p>Email: josemiguel.garcia629@comunidadunir.net</p>
+</footer>
+</body>
+<script src="./js/cinema.js"></script>
+</html>

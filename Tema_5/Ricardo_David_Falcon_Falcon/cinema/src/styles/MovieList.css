@@ -1,0 +1,12 @@
+/* Contenedor principal de las películas */
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Espacio entre tarjetas */
+    justify-content: center;
+    /* Centra las tarjetas */
+    padding: 20px;
+    background-color: #121212;
+    /* Fondo oscuro general */
+}

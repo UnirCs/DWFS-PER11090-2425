@@ -1,0 +1,127 @@
+.movie-details__card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+}
+
+.movie-details__image {
+  width: 98%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.movie-details__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.movie-details__nombre {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.movie-details__category,
+.movie-details__duration,
+.movie-details__languages {
+  font-size: 1rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.movie-details__description {
+  font-size: 1rem;
+  color: #666;
+  text-align: justify;
+}
+
+.movie-details__buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.movie-details__button {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.movie-details__button--back {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.movie-details__button--back:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .movie-details__card {
+    padding: 15px;
+  }
+
+  .movie-details__nombre {
+    font-size: 1.5rem;
+  }
+
+  .movie-details__category,
+  .movie-details__description,
+  .movie-details__languages {
+    font-size: 0.9rem;
+  }
+
+  .movie-details__button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-details__image {
+    width: 120px;
+    height: 160px;
+  }
+
+  .movie-details__nombre {
+    font-size: 1.2rem;
+  }
+
+  .movie-details__button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+    height: 50px;
+  }
+}
