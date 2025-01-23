@@ -1,0 +1,107 @@
+body
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+}
+
+.cinema
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border: 1px;
+    border-color: yellow;
+    border-style: solid;
+}
+
+.pantallafondo {
+    margin: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: rgb(77, 76, 76);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    height: 150px;
+    font-size: 24px;
+}
+
+.pantallaescenario {
+    margin: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: gray;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    height: 150px;
+    font-size: 24px;
+}
+
+
+.reservacion {
+    color: yellow;
+    border-radius: 5px;
+    background-color: black;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 35px;
+    height: 170px;
+	width: 50%;
+    font-size: 16px;
+	padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.footercinema {
+    margin: 15px;
+    color: white;
+    border-radius: 5px;
+    background-color: rgb(77, 76, 76);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 35px;
+    height: 170px;
+    font-size: 14px;
+	padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.butaca {
+    border: 1px;
+    border-color: yellow;
+    border-style: solid;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+}
+
+.seleccionada {
+    border: 1px;
+    border-color: yellow;
+    border-style: solid;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    background-color: yellow;
+}
+
+.fila {
+    color: yellow;
+}
+
+table
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    vertical-align: middle;
+    margin-top: 20px;
+}
