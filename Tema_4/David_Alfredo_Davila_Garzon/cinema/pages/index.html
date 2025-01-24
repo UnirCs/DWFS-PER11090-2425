@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Cinema</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="cine.ico">
+    <link rel="stylesheet" href="../css/indexStyles.css">
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Registro de Usuario</h1>
+      <form action="/login" method="POST" novalidate>
+        <div class="register-form">
+          <label for="names">Nombres y Apellidos</label>
+          <input id="names" type="text" name="names" required>
+        </div>
+
+        <div class="register-form">
+          <label for="username">Usuario</label>
+          <input id="username"  type="text" name="username" pattern="^[a-zA-Z0-9_]{4,16}$" required>
+          <div class="error">Entre 4 y 16 caracteres</div>
+        </div>
+
+        <div class="register-form">
+          <label for="password">Contraseña</label>
+          <input id="password" type="password" name="password" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" required>
+          <div class="error">Al menos 6 caracteres y al menos 1 número</div>
+        </div>
+
+        <div class="register-form">
+          <label for="repassword">Confirmar contraseña</label>
+          <input id="repassword" type="password" name="repassword" required>
+          <div class="error">Las contraseñas no coinciden</div>
+        </div>
+
+        <div class="register-form">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required>
+          <div class="error">Ingrese un email válido</div>
+        </div>
+
+        <button type="submit">Registrar</button>
+      </form>
+    </div>
+    <script src="../js/indexController.js"></script>
+  </body>
+</html>

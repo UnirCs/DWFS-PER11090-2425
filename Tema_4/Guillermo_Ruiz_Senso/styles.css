@@ -1,0 +1,82 @@
+.screen {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 35px;
+    border-radius: 8px;
+    height: 90px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.fila{
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.seat {
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #48c866; 
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.seat.occupied {
+    background-color: #e31f32;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background-color: #458a47;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #317caf;
+    font-size: 0.95rem;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .screen {
+        font-size: 1rem;
+        padding: 30px;
+        height: 70px;
+    }
+
+    .seat {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
+}
