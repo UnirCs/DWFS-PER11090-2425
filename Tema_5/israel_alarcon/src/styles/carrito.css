@@ -1,0 +1,146 @@
+/* Estilos globales */
+
+h1, h2, h3 {
+    color: #444;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Botones */
+.boton_carrito {
+    background-color: #007bff;
+    color: white;
+    width: 50px;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Apple SD Gothic Neo";
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.boton_carrito:hover {
+    background-color: #0056b3;
+}
+
+/* Navegación */
+nav {
+    background-color: #007bff;
+    padding: 14px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Contenedor principal */
+.contenedor {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #383636;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Total y pagar */
+.total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.total button {
+    margin-top: 10px;
+    background-color: #28a745;
+}
+
+.total button:hover {
+    background-color: #218838;
+}
+
+/* Mensaje vacío */
+.empty-cart {
+    color: #777;
+    text-align: center;
+    font-style: italic;
+}
+
+.linea {
+    border-top: 1px solid #6e6a6a;
+    height: 2px;
+    max-width: 600px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+
+
+.boton_remove {
+    background-color: #007bff;
+    color: white;
+    width: 60px;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Apple SD Gothic Neo";
+    justify-content: center;
+    font-size: 14px;
+    display: inline-flex
+}
+
+.boton_remove:hover {
+    background-color: #0056b3;
+}
+
+.cart-button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cart-button:hover {
+    background-color: #0056b3;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
