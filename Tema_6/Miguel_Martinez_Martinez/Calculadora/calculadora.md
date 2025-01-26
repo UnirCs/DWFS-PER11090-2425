@@ -13,15 +13,6 @@ Las operaciones que la API debe soportar son las siguientes:
 
 Nuestra calculadora tendrá memoria y siempre se podrán consultar los datos de operaciones realizadas, a través de un ID de operación.
 
-## Recursos
-
-- Suma
-- Resta
-- Multiplicación
-- División
-- Raiz
-- Potencia
-
 |Método HTTP                   |URI                    |Cuerpo de la petición                            |Cuerpo de la respuesta                                              |Códigos de respuesta                                   |
 |------------------------------|-----------------------|-------------------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------|
 |POST                          |/sumar                 |{"numbers": [2,2,2]}                             |{"id":1, "numbers":[2,2,2], "operation": sumar, "result":6}         |201 Created, 400 Bad Request, 500 Internal Server Error|
