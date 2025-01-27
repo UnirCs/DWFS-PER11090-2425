@@ -21,8 +21,8 @@ import reactor.core.publisher.Flux;
 @FieldDefaults(level = PRIVATE, makeFinal = true)
 public class PutRequestDecorator extends ServerHttpRequestDecorator {
 
-  GatewayRequest gatewayRequest;
   ObjectMapper objectMapper;
+  GatewayRequest gatewayRequest;
 
   public PutRequestDecorator(GatewayRequest gatewayRequest, ObjectMapper objectMapper) {
     super(gatewayRequest.getExchange().getRequest());
@@ -39,7 +39,9 @@ public class PutRequestDecorator extends ServerHttpRequestDecorator {
   @Override
   @NonNull
   public URI getURI() {
-    return fromUri((URI) gatewayRequest.getExchange().getAttributes().get(GATEWAY_REQUEST_URL_ATTR)).build().toUri();
+    return fromUri((URI) gatewayRequest.getExchange().getAttributes().get(GATEWAY_REQUEST_URL_ATTR))
+        .build()
+        .toUri();
   }
 
   @Override

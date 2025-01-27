@@ -2,6 +2,7 @@ package com.unir.gateway.decorator;
 
 import static jakarta.ws.rs.HttpMethod.DELETE;
 import static jakarta.ws.rs.HttpMethod.GET;
+import static jakarta.ws.rs.HttpMethod.PATCH;
 import static jakarta.ws.rs.HttpMethod.POST;
 import static jakarta.ws.rs.HttpMethod.PUT;
 
@@ -32,10 +33,11 @@ public class RequestDecoratorFactory {
    */
   public ServerHttpRequestDecorator getDecorator(GatewayRequest request) {
     return switch (request.getTargetMethod().name().toUpperCase()) {
-      case GET -> new GetRequestDecorator(request);
+      case GET -> new GetRequestDecorator(request);//No se envía objectMapper porque GET no debería tener body
       case POST -> new PostRequestDecorator(request, objectMapper);
       case PUT -> new PutRequestDecorator(request, objectMapper);
-      case DELETE -> new DeleteRequestDecorator(request, objectMapper);
+      case PATCH -> new PatchRequestDecorator(request, objectMapper);
+      case DELETE -> new DeleteRequestDecorator(request);//No se envía objectMapper porque DELETE no debería tener body
       default -> throw new IllegalArgumentException("Invalid http method");
     };
   }
