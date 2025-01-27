@@ -50,8 +50,12 @@ body {
     transition-duration: 0.2s;
 }
 
-.butaca.reservada {
+.butaca.sugerida {
     background-color: #ffd703;
+}
+
+.butaca.reservada {
+    background-color: #434343;
 }
 
 .butaca:hover {
