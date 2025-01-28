@@ -1,0 +1,14 @@
+.header {
+    background-color: #7d3c98;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 100px;
+    line-height: 170px;
+}
+
+.header__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
