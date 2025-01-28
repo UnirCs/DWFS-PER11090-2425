@@ -1,0 +1,69 @@
+.pantalla {
+    width: 80%;
+    height: 20%;
+    background-color: #ccc;
+    margin: 20px auto;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#formulario-reserva {
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+
+.formulario-reserva__grupo {
+    margin: 15px;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.fila {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.asiento-libre {
+    background-color: #28a745;
+}
+
+.asiento-ocupado {
+    background-color: #dc3545;
+    cursor: not-allowed;
+}
+
+.asiento-sugerido {
+  background-color: #ffc107;
+  border: 2px solid ;
+}
+
+
+#asientos-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    position: relative;
+}
