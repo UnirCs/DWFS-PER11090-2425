@@ -1,0 +1,7 @@
+# API de una calculadora online
+
+
+| Método HTTP                            | URI                        | Query Params  | Cuerpo de la Petición                                                                       | Cuerpo de la Respuesta                                                                | Códigos de Respuesta                                    |
+|----------------------------------------|----------------------------|---------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|---------------------------------------------------------|
+| POST                                    | /operations            | N/A  | `{"type": "sum", "operands": [2, 2, 2]} o {"type": "subtract", "operands": [10, 2, 3]} o Se puede usar "type": "multiply", "divide", "root", "power", etc. según la operación ` | `{"operationId": 101, "type": "sum", "operands": [2,2,2], "result": 6}`           | 200 OK<br/>400 Bad Request<br/>500 Internal Server Error   |
+| GET                                     | /operations/{operationId}  | N/A  | N/A                                                                                         |                                                        `{"operationId": 101, "type": "sum", "operands": [2,2,2], "result": 6"}`           | 200 OK<br/>400 Bad Request<br/>500 Internal Server Error   |
