@@ -26,18 +26,13 @@ img{
     margin-left: 5rem;
 }
 
-.section_container_right{
-    background: black;
-    width: 100%;
-    margin-left: 2rem;
-}
-
 .section_container_left_comp{
     color: white;
-    margin-top: 32vw;;
+    margin-top: 32vw;
     margin-left:8%;
 }
 .section_container_right{
+    margin-left: 2rem;
     width: 70%;
     background: white;
     margin-top: 2rem;
