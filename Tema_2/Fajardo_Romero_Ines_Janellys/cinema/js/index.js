@@ -9,12 +9,6 @@ function setup() {
     for (let i = 0; i < filas; i++) {
         let fila = [];
         for (let j = 0; j < columnas; j++) {
-            if( j === 13){
-                fila.push({
-                    id: 0,
-                    estado: false
-                });
-            }
             fila.push({
                 id: idContador++,
                 estado: false
@@ -32,13 +26,13 @@ function suggest(numeroAsientos) {
     let encontrado = false;
 
     for (let fila = 0; fila < butacas.length && !encontrado; fila++) {
-        if(butacas[fila].length - 1 >= numeroAsientos ) {
+        if(butacas[fila].length >= numeroAsientos ) {
 
             let numeroAsientosDesOcupados = butacas[fila].filter(asientos => !asientos.estado).length;
             if(numeroAsientosDesOcupados  >= numeroAsientos ){
                 let asientosSeleccionados = 0;
                 for(let column = 0; column < butacas[fila].length  && asientosSeleccionados < numeroAsientos; column++) {
-                    if(!butacas[fila][column].estado && butacas[fila][column].id !== 0){
+                    if(!butacas[fila][column].estado){
                         butacas[fila][column].estado = true;
                         asientosOcupados.add(butacas[fila][column].id);
                         asientosSeleccionados++;
@@ -61,6 +55,6 @@ console.log(suggest(14));
 console.log(suggest(14));
 console.log(suggest(14));
 console.log(suggest(12));
-console.log(suggest(5));
+console.log(suggest(2));
 
 
