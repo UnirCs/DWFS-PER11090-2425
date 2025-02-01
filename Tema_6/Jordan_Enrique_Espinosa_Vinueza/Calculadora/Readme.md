@@ -1,7 +1,7 @@
 ## 🧮 API de Calculadora Online
 
 ### 📌 Descripción
-Esta API permite realizar operaciones matemáticas básicas y avanzadas, además de almacenar el historial de operaciones realizadas.
+Esta API permite realizar operaciones matemáticas básicas y avanzadas, además de almacenar el historial de operaciones realizadas
 
 ### 📌 Operaciones Soportadas
 La API debe soportar las siguientes operaciones matemáticas:

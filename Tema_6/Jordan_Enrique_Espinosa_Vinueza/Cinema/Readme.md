@@ -1,7 +1,7 @@
 ## 🎬 **API de Reservas de Butacas de Cine**
 
 ### 📌 **Descripción**
-Esta API permite gestionar la cartelera de un cine, la administración de salas, usuarios y la reserva de butacas. También incluye el proceso de pago de las reservas.
+Esta API permite gestionar la cartelera de un cine, la administración de salas, usuarios y la reserva de butacas. También incluye el proceso de pago de las reservas
 
 ### 📌 **Operaciones Soportadas**
 La API debe permitir:

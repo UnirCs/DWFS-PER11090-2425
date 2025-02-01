@@ -1,7 +1,7 @@
 ## 🎯 **API de Hundir la Flota**
 
 ### 📌 **Descripción**
-Esta API permite gestionar partidas del juego **Hundir la Flota** entre usuarios registrados o anónimos. Cada partida tiene un tablero de **10x10** para cada jugador, donde se colocan barcos según las reglas del juego. Los jugadores pueden disparar, consultar el estado de la partida y registrar resultados.
+Esta API permite gestionar partidas del juego **Hundir la Flota** entre usuarios registrados o anónimos. Cada partida tiene un tablero de **10x10** para cada jugador, donde se colocan barcos según las reglas del juego. Los jugadores pueden disparar, consultar el estado de la partida y registrar resultados
 
 ### 📌 **Recursos de la API**
 Para simplificar el diseño, la API manejará **tres recursos principales**:
