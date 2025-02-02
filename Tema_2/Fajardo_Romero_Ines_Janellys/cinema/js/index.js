@@ -25,36 +25,42 @@ function suggest(numeroAsientos) {
     let asientosOcupados = new Set([]);
     let encontrado = false;
 
-    for (let fila = 0; fila < butacas.length && !encontrado; fila++) {
-        if(butacas[fila].length >= numeroAsientos ) {
-
-            let numeroAsientosDesOcupados = butacas[fila].filter(asientos => !asientos.estado).length;
-            if(numeroAsientosDesOcupados  >= numeroAsientos ){
+    let fila = 0;
+    while (fila < butacas.length && !encontrado) {
+        let asientosFila = butacas[fila];
+        if (asientosFila.length >= numeroAsientos) {
+            let asientosDisponibles = butacas[fila].filter(asientos => !asientos.estado).length;
+            if (asientosDisponibles >= numeroAsientos) {
                 let asientosSeleccionados = 0;
-                for(let column = 0; column < butacas[fila].length  && asientosSeleccionados < numeroAsientos; column++) {
-                    if(!butacas[fila][column].estado){
-                        butacas[fila][column].estado = true;
-                        asientosOcupados.add(butacas[fila][column].id);
+                let columna = 0;
+
+                while (columna < asientosFila.length && asientosSeleccionados < numeroAsientos) {
+                    let asiento = asientosFila[columna];
+                    if (!asiento.estado) {
+                        asiento.estado = true;
+                        asientosOcupados.add(asiento.id);
                         asientosSeleccionados++;
                     }
+                    columna++;
                 }
                 encontrado = true;
             }
         }
+        fila++;
     }
 
-    if (!encontrado) {
-        return new Set();
-    }
-
-    return asientosOcupados;
+    return encontrado ? asientosOcupados : new Set();
 }
+
+
+
+
 
 console.log(suggest(14));
 console.log(suggest(14));
 console.log(suggest(14));
 console.log(suggest(14));
 console.log(suggest(12));
-console.log(suggest(2));
+console.log(suggest(5));
 
 
