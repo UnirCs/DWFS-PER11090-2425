@@ -6,7 +6,7 @@ let handler = new ImageHandler(path);
 
 
 /**
- * Ejemplo de construccion de una imagen
+ * Ejemplo de construction de una imagen
  */
 function ejemplo() {
 
@@ -38,17 +38,31 @@ function ejemplo() {
  *
  * Una forma de conseguirlo es simplemente poner los canales G y B a 0 para cada pixel.
  */
-function redConverter() {
-    let outputPath = 'output/tucan_red.jpg';
+function converterColor(color) {
     let pixels = handler.getPixels();
     let valor = 0;
-    for(const fila of pixels) {
-        for(const column of pixels[fila]) {
-            pixels[fila][column] = [pixels[fila][column][0],valor, valor ];
+
+    for(let fila = 0; fila < pixels.length; fila++) {
+        for (let column = 0; column < pixels[fila].length; column++) {
+            if(color === "red") {
+                pixels[fila][column] = [pixels[fila][column][0],valor, valor ];
+            }
+            else if(color === "blue"){
+                pixels[fila][column] = [valor, valor, pixels[fila][column][2]];
+            }
+            else if(color === "green"){
+                pixels[fila][column] = [valor, pixels[fila][column][1], valor ];
+            }
         }
     }
+    return pixels;
+}
 
-   handler.savePixels(pixels, outputPath);
+
+
+function redConverter() {
+    let outputPath = 'output/tucan_red.jpg';
+    handler.savePixels(converterColor("red"), outputPath);
 }
 
 /**
@@ -58,14 +72,7 @@ function redConverter() {
  */
 function greenConverter() {
     let outputPath = 'output/tucan_green.jpg';
-    let pixels = handler.getPixels();
-    let valor = 0;
-    for(const fila of pixels) {
-        for(const column of pixels[fila]) {
-            pixels[fila][column] = [valor, pixels[fila][column][1], valor ];
-        }
-    }
-    handler.savePixels(pixels, outputPath);
+    handler.savePixels(converterColor("green"), outputPath);
 }
 
 /**
@@ -75,15 +82,7 @@ function greenConverter() {
  */
 function blueConverter() {
     let outputPath = 'output/tucan_blue.jpg';
-    let pixels = handler.getPixels();
-    let valor = 0;
-    for(const fila of pixels) {
-        for(const column of pixels[fila]) {
-            pixels[fila][column] = [valor, valor, pixels[fila][column][2]];
-        }
-    }
-
-    handler.savePixels(pixels, outputPath);
+    handler.savePixels(converterColor("blue"), outputPath);
 }
 
 /**
@@ -92,15 +91,16 @@ function blueConverter() {
  * Una forma de conseguirlo es calcular la media de los valores RGB de cada pixel y
  * asignarle a cada canal de RGB esa media.
  *
- * Es decir, si un pixel tiene el valor [100, 120, 200], su media es 140 y por lo tanto
+ * Es decir, si un pixel tiene el valor [100, 120, 200], su media es 140 y, por lo tanto,
  * lo debemos transformar en el pixel [140, 140, 140].
  */
 function greyConverter() {
     let outputPath = 'output/tucan_grey.jpg';
     let pixels = handler.getPixels();
 
-    for(const fila of pixels) {
-        for(const column of pixels[fila]) {
+    for(let fila = 0; fila < pixels.length; fila++) {
+        for (let column = 0; column < pixels[fila].length; column++) {
+
             let suma = pixels[fila][column].reduce((acumulador, valor) => acumulador + valor, 0);
             let media = suma / pixels[fila][column].length;
             pixels[fila][column] = [media, media, media];
@@ -114,7 +114,7 @@ function greyConverter() {
  * Esta función debe transformar una imagen a su equivalente en Blanco y negro.
  *
  * Una forma de conseguirlo es calcular la media de los valores RGB de cada pixel y
- * si esta es menor que 128 transforamr el pixel en negro [0, 0, 0] o, en caso contrario,
+ * si esta es menor que 128 transformer el pixel en negro [0, 0, 0] o, en caso contrario,
  * transformar el pixel en blanco [255, 255, 255].
  */
 function blackAndWhiteConverter() {
@@ -122,9 +122,9 @@ function blackAndWhiteConverter() {
     let pixels = handler.getPixels();
     let valorBlanco = 255;
     let valorNegro = 0;
+    for(let fila = 0; fila < pixels.length; fila++) {
+        for (let column = 0; column < pixels[fila].length; column++) {
 
-    for(const fila of pixels) {
-        for(const column of pixels[fila]) {
             let suma = pixels[fila][column].reduce((acumulador, valor) => acumulador + valor, 0);
             let media = suma / pixels[fila][column].length;
 
@@ -133,6 +133,7 @@ function blackAndWhiteConverter() {
             }else{
                 pixels[fila][column] = [valorBlanco, valorBlanco, valorBlanco];
             }
+
         }
     }
 
@@ -143,7 +144,7 @@ function blackAndWhiteConverter() {
  * Esta función debe reducir la imagen a la mitad.
  *
  * Una forma de conseguirlo es quitar los valores de las filas y columnas pares.
- * Otra forma es crear la imagen de nuevo unicamente con los valores de las filas y columnas pares.
+ * Otra forma es crear la imagen de nuevo unidamente con los valores de las filas y columnas pares.
  */
 function scaleDown() {
     let outputPath = 'output/tucan_scale_down.jpg';
@@ -151,14 +152,13 @@ function scaleDown() {
 
     let filaPar = [];
 
-    for(const fila of pixels) {
+    for (let fila = 0; fila < pixels.length; fila += 2) {
         let columnPar = [];
-        for(const column of pixels[fila]) {
+        for (let column = 0; column < pixels[fila].length; column += 2) {
             columnPar.push(pixels[fila][column]);
         }
         filaPar.push(columnPar);
     }
-
     pixels = filaPar;
     handler.savePixels(pixels, outputPath, handler.getShape()[0] / 2, handler.getShape()[1] / 2);
 }
@@ -172,8 +172,8 @@ function dimBrightness(dimFactor) {
     let outputPath = 'output/tucan_dimed.jpg';
     let pixels = handler.getPixels();
 
-    for(const fila of pixels) {
-        for(const column of pixels[fila]) {
+    for(let fila = 0; fila < pixels.length; fila++) {
+        for (let column = 0; column < pixels[fila].length; column++) {
             pixels[fila][column][0]  =  pixels[fila][column][0] /dimFactor ;
             pixels[fila][column][1]  =  pixels[fila][column][1] /dimFactor ;
             pixels[fila][column][2]  =  pixels[fila][column][2] /dimFactor ;
@@ -188,15 +188,14 @@ function dimBrightness(dimFactor) {
  *
  * Una forma de conseguirlo es asignar a cada valor RGB de cada píxel el valor 255 - valorRGB.
  *
- * Por ejemplo, si un pixel tiene valor [10, 20, 50] su nuevo valor sera [255 - 10, 255 - 20, 255 - 50] => [245, 235, 205]
+ * Por ejemplo, si un pixel tiene valor [10, 20, 50] su nuevo valor será [255 - 10, 255 - 20, 255 - 50] => [245, 235, 205]
  */
 function invertColors() {
     let outputPath = 'output/tucan_inverse.jpg';
     let pixels = handler.getPixels();
     let valor = 255;
-
-    for(const fila of pixels) {
-        for(const column of pixels[fila]) {
+    for(let fila = 0; fila < pixels.length; fila++) {
+        for (let column = 0; column < pixels[fila].length; column++) {
             pixels[fila][column][0]  =  valor - pixels[fila][column][0];
             pixels[fila][column][1]  =  valor - pixels[fila][column][1];
             pixels[fila][column][2]  =  valor - pixels[fila][column][2];
@@ -222,14 +221,16 @@ function merge(alphaFirst, alphaSecond) {
 
     let pixels = [];
 
-    for(const fila of pixels) {
+    for (let fila = 0; fila < catPixels.length; fila++) {
         let filaFusionada = [];
-        for(const column of pixels[fila]) {
+        for (let column = 0; column < catPixels[fila].length; column++) {
             let r = (catPixels[fila][column][0] * alphaSecond) + (dogPixels[fila][column][0] * alphaFirst);
             let g = (catPixels[fila][column][1] * alphaSecond) + (dogPixels[fila][column][1] * alphaFirst);
             let b = (catPixels[fila][column][2] * alphaSecond) + (dogPixels[fila][column][2] * alphaFirst);
+
             filaFusionada.push([r, g, b]);
         }
+
         pixels.push(filaFusionada);
     }
 
@@ -242,7 +243,7 @@ function merge(alphaFirst, alphaSecond) {
  * NO DEBES MODIFICAR ESTAS LÍNEAS DE CÓDIGO
  *
  * Ejecuta el archivo actividad.js tal como se indica en el archivo Readme.md
- * En la carpeta output/ apareceran los resultados para cada uno de los casos
+ * En la carpeta output/ aparecerían los resultados para cada uno de los casos
  *
  *     Ejecutar ejemplo: 0
  *     Conversor a rojos: 1
@@ -255,7 +256,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 9;
+let optionN = 3;
 
 switch (optionN) {
     case 1: redConverter(); break;
