@@ -45,14 +45,24 @@ function ejemplo() {
  */
 function redConverter() {
     let outputPath = 'output/tucan_red.jpg';
-    let pixelsR = handler.getPixels();
+    let pixels = handler.getPixels();
     let valor = 0;
-    for(let fila = 0; fila < pixelsR.length; fila++) {
+
+    let filaPixel = [];
+    for(let pixelFila of pixels){
+        let columnaPixel = [];
+        for(let pixelColumna of pixelFila){
+            columnaPixel.push([pixelColumna[0], valor, valor]);
+        }
+        filaPixel.push(columnaPixel);
+    }
+
+    /*for(let fila = 0; fila < pixelsR.length; fila++) {
         for (let column = 0; column < pixelsR[fila].length; column++) {
             pixelsR[fila][column] = [pixelsR[fila][column][0],valor, valor ];
         }
-    }
-    handler.savePixels(pixelsR, outputPath);
+    }*/
+    handler.savePixels(filaPixel, outputPath);
 }
 
 /**
@@ -64,13 +74,22 @@ function greenConverter() {
     let outputPath = 'output/tucan_green.jpg';
     let pixelsG = handler.getPixels();
     let valor = 0;
-    for(let fila = 0; fila < pixelsG.length; fila++) {
+
+    let filaPixel = [];
+    for(let pixelFila of pixelsG){
+        let columnaPixel = [];
+        for(let pixelColumna of pixelFila){
+            columnaPixel.push([valor, pixelColumna[1], valor]);
+        }
+        filaPixel.push(columnaPixel);
+    }
+    /*for(let fila = 0; fila < pixelsG.length; fila++) {
         for (let column = 0; column < pixelsG[fila].length; column++) {
             pixelsG[fila][column] = [valor, pixelsG[fila][column][1], valor ];
         }
-    }
+    }*/
 
-    handler.savePixels(pixelsG, outputPath);
+    handler.savePixels(filaPixel, outputPath);
 }
 
 /**
@@ -261,7 +280,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 1;
+let optionN = 2;
 
 switch (optionN) {
     case 1: redConverter(); break;
