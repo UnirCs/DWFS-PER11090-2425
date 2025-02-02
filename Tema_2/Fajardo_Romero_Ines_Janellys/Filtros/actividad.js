@@ -45,14 +45,14 @@ function ejemplo() {
  */
 function redConverter() {
     let outputPath = 'output/tucan_red.jpg';
-    let pixels = handler.getPixels();
+    let pixelsR = handler.getPixels();
     let valor = 0;
-    for(let fila = 0; fila < pixels.length; fila++) {
-        for (let column = 0; column < pixels[fila].length; column++) {
-            pixels[fila][column] = [pixels[fila][column][0],valor, valor ];
+    for(let fila = 0; fila < pixelsR.length; fila++) {
+        for (let column = 0; column < pixelsR[fila].length; column++) {
+            pixelsR[fila][column] = [pixelsR[fila][column][0],valor, valor ];
         }
     }
-    handler.savePixels(pixels, outputPath);
+    handler.savePixels(pixelsR, outputPath);
 }
 
 /**
@@ -62,15 +62,15 @@ function redConverter() {
  */
 function greenConverter() {
     let outputPath = 'output/tucan_green.jpg';
-    let pixels = handler.getPixels();
+    let pixelsG = handler.getPixels();
     let valor = 0;
-    for(let fila = 0; fila < pixels.length; fila++) {
-        for (let column = 0; column < pixels[fila].length; column++) {
-            pixels[fila][column] = [valor, pixels[fila][column][1], valor ];
+    for(let fila = 0; fila < pixelsG.length; fila++) {
+        for (let column = 0; column < pixelsG[fila].length; column++) {
+            pixelsG[fila][column] = [valor, pixelsG[fila][column][1], valor ];
         }
     }
 
-    handler.savePixels(pixels, outputPath);
+    handler.savePixels(pixelsG, outputPath);
 }
 
 /**
@@ -80,14 +80,14 @@ function greenConverter() {
  */
 function blueConverter() {
     let outputPath = 'output/tucan_blue.jpg';
-    let pixels = handler.getPixels();
+    let pixelsB = handler.getPixels();
     let valor = 0;
-    for(let fila = 0; fila < pixels.length; fila++) {
-        for (let column = 0; column < pixels[fila].length; column++) {
-            pixels[fila][column] = [valor, valor, pixels[fila][column][2]];
+    for(let fila = 0; fila < pixelsB.length; fila++) {
+        for (let column = 0; column < pixelsB[fila].length; column++) {
+            pixelsB[fila][column] = [valor, valor, pixelsB[fila][column][2]];
         }
     }
-    handler.savePixels(pixels, outputPath);
+    handler.savePixels(pixelsB, outputPath);
 }
 
 /**
@@ -101,18 +101,18 @@ function blueConverter() {
  */
 function greyConverter() {
     let outputPath = 'output/tucan_grey.jpg';
-    let pixels = handler.getPixels();
+    let pixelsGr = handler.getPixels();
 
-    for(let fila = 0; fila < pixels.length; fila++) {
-        for (let column = 0; column < pixels[fila].length; column++) {
+    for(let fila = 0; fila < pixelsGr.length; fila++) {
+        for (let column = 0; column < pixelsGr[fila].length; column++) {
 
-            let suma = pixels[fila][column].reduce((acumulador, valor) => acumulador + valor, 0);
-            let media = suma / pixels[fila][column].length;
-            pixels[fila][column] = [media, media, media];
+            let suma = pixelsGr[fila][column].reduce((acumulador, valor) => acumulador + valor, 0);
+            let media = suma / pixelsGr[fila][column].length;
+            pixelsGr[fila][column] = [media, media, media];
         }
     }
 
-    handler.savePixels(pixels, outputPath);
+    handler.savePixels(pixelsGr, outputPath);
 }
 
 /**
@@ -124,25 +124,25 @@ function greyConverter() {
  */
 function blackAndWhiteConverter() {
     let outputPath = 'output/tucan_black_and_white.jpg';
-    let pixels = handler.getPixels();
+    let pixelsBW = handler.getPixels();
     let valorBlanco = 255;
     let valorNegro = 0;
-    for(let fila = 0; fila < pixels.length; fila++) {
-        for (let column = 0; column < pixels[fila].length; column++) {
+    for(let fila = 0; fila < pixelsBW.length; fila++) {
+        for (let column = 0; column < pixelsBW[fila].length; column++) {
 
-            let suma = pixels[fila][column].reduce((acumulador, valor) => acumulador + valor, 0);
-            let media = suma / pixels[fila][column].length;
+            let suma = pixelsBW[fila][column].reduce((acumulador, valor) => acumulador + valor, 0);
+            let media = suma / pixelsBW[fila][column].length;
 
             if(media < 128){
-                pixels[fila][column] = [valorNegro, valorNegro, valorNegro];
+                pixelsBW[fila][column] = [valorNegro, valorNegro, valorNegro];
             }else{
-                pixels[fila][column] = [valorBlanco, valorBlanco, valorBlanco];
+                pixelsBW[fila][column] = [valorBlanco, valorBlanco, valorBlanco];
             }
 
         }
     }
 
-    handler.savePixels(pixels, outputPath);
+    handler.savePixels(pixelsBW, outputPath);
 }
 
 /**
@@ -175,17 +175,17 @@ function scaleDown() {
  */
 function dimBrightness(dimFactor) {
     let outputPath = 'output/tucan_dimed.jpg';
-    let pixels = handler.getPixels();
+    let pixelsDim = handler.getPixels();
 
-    for(let fila = 0; fila < pixels.length; fila++) {
-        for (let column = 0; column < pixels[fila].length; column++) {
-            pixels[fila][column][0]  =  pixels[fila][column][0] /dimFactor ;
-            pixels[fila][column][1]  =  pixels[fila][column][1] /dimFactor ;
-            pixels[fila][column][2]  =  pixels[fila][column][2] /dimFactor ;
+    for(let fila = 0; fila < pixelsDim.length; fila++) {
+        for (let column = 0; column < pixelsDim[fila].length; column++) {
+            pixelsDim[fila][column][0]  =  pixelsDim[fila][column][0] /dimFactor ;
+            pixelsDim[fila][column][1]  =  pixelsDim[fila][column][1] /dimFactor ;
+            pixelsDim[fila][column][2]  =  pixelsDim[fila][column][2] /dimFactor ;
         }
     }
 
-    handler.savePixels(pixels, outputPath);
+    handler.savePixels(pixelsDim, outputPath);
 }
 
 /**
@@ -197,17 +197,17 @@ function dimBrightness(dimFactor) {
  */
 function invertColors() {
     let outputPath = 'output/tucan_inverse.jpg';
-    let pixels = handler.getPixels();
+    let pixelsIn = handler.getPixels();
     let valor = 255;
-    for(let fila = 0; fila < pixels.length; fila++) {
-        for (let column = 0; column < pixels[fila].length; column++) {
-            pixels[fila][column][0]  =  valor - pixels[fila][column][0];
-            pixels[fila][column][1]  =  valor - pixels[fila][column][1];
-            pixels[fila][column][2]  =  valor - pixels[fila][column][2];
+    for(let fila = 0; fila < pixelsIn.length; fila++) {
+        for (let column = 0; column < pixelsIn[fila].length; column++) {
+            pixelsIn[fila][column][0]  =  valor - pixelsIn[fila][column][0];
+            pixelsIn[fila][column][1]  =  valor - pixelsIn[fila][column][1];
+            pixelsIn[fila][column][2]  =  valor - pixelsIn[fila][column][2];
         }
     }
 
-    handler.savePixels(pixels, outputPath);
+    handler.savePixels(pixelsIn, outputPath);
 }
 
 /**
