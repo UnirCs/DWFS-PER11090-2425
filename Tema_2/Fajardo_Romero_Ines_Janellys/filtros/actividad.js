@@ -56,12 +56,6 @@ function redConverter() {
         }
         filaPixel.push(columnaPixel);
     }
-
-    /*for(let fila = 0; fila < pixelsR.length; fila++) {
-        for (let column = 0; column < pixelsR[fila].length; column++) {
-            pixelsR[fila][column] = [pixelsR[fila][column][0],valor, valor ];
-        }
-    }*/
     handler.savePixels(filaPixel, outputPath);
 }
 
@@ -83,11 +77,6 @@ function greenConverter() {
         }
         filaPixel.push(columnaPixel);
     }
-    /*for(let fila = 0; fila < pixelsG.length; fila++) {
-        for (let column = 0; column < pixelsG[fila].length; column++) {
-            pixelsG[fila][column] = [valor, pixelsG[fila][column][1], valor ];
-        }
-    }*/
 
     handler.savePixels(filaPixel, outputPath);
 }
@@ -101,12 +90,17 @@ function blueConverter() {
     let outputPath = 'output/tucan_blue.jpg';
     let pixelsB = handler.getPixels();
     let valor = 0;
-    for(let fila = 0; fila < pixelsB.length; fila++) {
-        for (let column = 0; column < pixelsB[fila].length; column++) {
-            pixelsB[fila][column] = [valor, valor, pixelsB[fila][column][2]];
+
+    let filaPixel = [];
+    for(let pixelFila of pixelsB){
+        let columnaPixel = [];
+        for(let pixelColumna of pixelFila){
+            columnaPixel.push([valor, valor, pixelColumna[2]]);
         }
+        filaPixel.push(columnaPixel);
     }
-    handler.savePixels(pixelsB, outputPath);
+
+    handler.savePixels(filaPixel, outputPath);
 }
 
 /**
@@ -122,16 +116,17 @@ function greyConverter() {
     let outputPath = 'output/tucan_grey.jpg';
     let pixelsGr = handler.getPixels();
 
-    for(let fila = 0; fila < pixelsGr.length; fila++) {
-        for (let column = 0; column < pixelsGr[fila].length; column++) {
-
-            let suma = pixelsGr[fila][column].reduce((acumulador, valor) => acumulador + valor, 0);
-            let media = suma / pixelsGr[fila][column].length;
-            pixelsGr[fila][column] = [media, media, media];
+    let filaPixel = [];
+    for(let pixelFila of pixelsGr){
+        let columnaPixel = [];
+        for(let pixelColumna of pixelFila){
+            let suma = pixelColumna.reduce((acumulador, valor) => acumulador + valor, 0);
+            let media = suma / pixelColumna.length;
+            columnaPixel.push([media, media, media]);
         }
+        filaPixel.push(columnaPixel);
     }
-
-    handler.savePixels(pixelsGr, outputPath);
+    handler.savePixels(filaPixel, outputPath);
 }
 
 /**
@@ -146,22 +141,23 @@ function blackAndWhiteConverter() {
     let pixelsBW = handler.getPixels();
     let valorBlanco = 255;
     let valorNegro = 0;
-    for(let fila = 0; fila < pixelsBW.length; fila++) {
-        for (let column = 0; column < pixelsBW[fila].length; column++) {
 
-            let suma = pixelsBW[fila][column].reduce((acumulador, valor) => acumulador + valor, 0);
-            let media = suma / pixelsBW[fila][column].length;
+    let filaPixel = [];
+    for(let pixelFila of pixelsBW){
+        let columnaPixel = [];
+        for(let pixelColumna of pixelFila){
+            let suma = pixelColumna.reduce((acumulador, valor) => acumulador + valor, 0);
+            let media = suma / pixelColumna.length;
 
             if(media < 128){
-                pixelsBW[fila][column] = [valorNegro, valorNegro, valorNegro];
+                columnaPixel.push([valorNegro, valorNegro, valorNegro]);
             }else{
-                pixelsBW[fila][column] = [valorBlanco, valorBlanco, valorBlanco];
+                columnaPixel.push([valorBlanco, valorBlanco, valorBlanco]);
             }
-
         }
+        filaPixel.push(columnaPixel);
     }
-
-    handler.savePixels(pixelsBW, outputPath);
+    handler.savePixels(filaPixel, outputPath);
 }
 
 /**
@@ -280,7 +276,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 2;
+let optionN = 5;
 
 switch (optionN) {
     case 1: redConverter(); break;
