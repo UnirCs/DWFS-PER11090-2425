@@ -6,7 +6,7 @@ let handler = new ImageHandler(path);
 
 
 /**
- * Ejemplo de construction de una imagen
+ * Ejemplo de construcción de una imagen
  */
 function ejemplo() {
 
@@ -38,31 +38,20 @@ function ejemplo() {
  *
  * Una forma de conseguirlo es simplemente poner los canales G y B a 0 para cada pixel.
  */
-function converterColor(color) {
-    let pixels = handler.getPixels();
-    let valor = 0;
-
-    for(let fila = 0; fila < pixels.length; fila++) {
-        for (let column = 0; column < pixels[fila].length; column++) {
-            if(color === "red") {
-                pixels[fila][column] = [pixels[fila][column][0],valor, valor ];
-            }
-            else if(color === "blue"){
-                pixels[fila][column] = [valor, valor, pixels[fila][column][2]];
-            }
-            else if(color === "green"){
-                pixels[fila][column] = [valor, pixels[fila][column][1], valor ];
-            }
-        }
-    }
-    return pixels;
-}
+function converterColor() {}
 
 
 
 function redConverter() {
     let outputPath = 'output/tucan_red.jpg';
-    handler.savePixels(converterColor("red"), outputPath);
+    let pixels = handler.getPixels();
+    let valor = 0;
+    for(let fila = 0; fila < pixels.length; fila++) {
+        for (let column = 0; column < pixels[fila].length; column++) {
+            pixels[fila][column] = [pixels[fila][column][0],valor, valor ];
+        }
+    }
+    handler.savePixels(pixels, outputPath);
 }
 
 /**
@@ -72,7 +61,15 @@ function redConverter() {
  */
 function greenConverter() {
     let outputPath = 'output/tucan_green.jpg';
-    handler.savePixels(converterColor("green"), outputPath);
+    let pixels = handler.getPixels();
+    let valor = 0;
+    for(let fila = 0; fila < pixels.length; fila++) {
+        for (let column = 0; column < pixels[fila].length; column++) {
+            pixels[fila][column] = [valor, pixels[fila][column][1], valor ];
+        }
+    }
+
+    handler.savePixels(pixels, outputPath);
 }
 
 /**
@@ -82,7 +79,14 @@ function greenConverter() {
  */
 function blueConverter() {
     let outputPath = 'output/tucan_blue.jpg';
-    handler.savePixels(converterColor("blue"), outputPath);
+    let pixels = handler.getPixels();
+    let valor = 0;
+    for(let fila = 0; fila < pixels.length; fila++) {
+        for (let column = 0; column < pixels[fila].length; column++) {
+            pixels[fila][column] = [valor, valor, pixels[fila][column][2]];
+        }
+    }
+    handler.savePixels(pixels, outputPath);
 }
 
 /**
@@ -114,7 +118,7 @@ function greyConverter() {
  * Esta función debe transformar una imagen a su equivalente en Blanco y negro.
  *
  * Una forma de conseguirlo es calcular la media de los valores RGB de cada pixel y
- * si esta es menor que 128 transformer el pixel en negro [0, 0, 0] o, en caso contrario,
+ * si esta es menor que 128 transformar el pixel en negro [0, 0, 0] o, en caso contrario,
  * transformar el pixel en blanco [255, 255, 255].
  */
 function blackAndWhiteConverter() {
@@ -256,7 +260,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 3;
+let optionN = 1;
 
 switch (optionN) {
     case 1: redConverter(); break;
