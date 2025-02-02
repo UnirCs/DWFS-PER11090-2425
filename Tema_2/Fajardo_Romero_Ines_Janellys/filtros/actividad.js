@@ -191,16 +191,17 @@ function scaleDown() {
 function dimBrightness(dimFactor) {
     let outputPath = 'output/tucan_dimed.jpg';
     let pixelsDim = handler.getPixels();
+    let filaPixel = [];
 
-    for(let fila = 0; fila < pixelsDim.length; fila++) {
-        for (let column = 0; column < pixelsDim[fila].length; column++) {
-            pixelsDim[fila][column][0]  =  pixelsDim[fila][column][0] /dimFactor ;
-            pixelsDim[fila][column][1]  =  pixelsDim[fila][column][1] /dimFactor ;
-            pixelsDim[fila][column][2]  =  pixelsDim[fila][column][2] /dimFactor ;
+    for(let pixelFila of pixelsDim){
+        let columnaPixel = [];
+        for(let pixelColumna of pixelFila){
+            columnaPixel.push([pixelColumna[0] /dimFactor, pixelColumna[1] /dimFactor , pixelColumna[2] /dimFactor]);
         }
+        filaPixel.push(columnaPixel);
     }
 
-    handler.savePixels(pixelsDim, outputPath);
+    handler.savePixels(filaPixel, outputPath);
 }
 
 /**
@@ -214,15 +215,16 @@ function invertColors() {
     let outputPath = 'output/tucan_inverse.jpg';
     let pixelsIn = handler.getPixels();
     let valor = 255;
-    for(let fila = 0; fila < pixelsIn.length; fila++) {
-        for (let column = 0; column < pixelsIn[fila].length; column++) {
-            pixelsIn[fila][column][0]  =  valor - pixelsIn[fila][column][0];
-            pixelsIn[fila][column][1]  =  valor - pixelsIn[fila][column][1];
-            pixelsIn[fila][column][2]  =  valor - pixelsIn[fila][column][2];
-        }
-    }
 
-    handler.savePixels(pixelsIn, outputPath);
+    let filaPixel = [];
+    for(let pixelFila of pixelsIn){
+        let columnaPixel = [];
+        for(let pixelColumna of pixelFila){
+            columnaPixel.push([valor-pixelColumna[0], valor-pixelColumna[1], valor-pixelColumna[2]]);
+        }
+        filaPixel.push(columnaPixel);
+    }
+    handler.savePixels(filaPixel, outputPath);
 }
 
 /**
@@ -276,7 +278,7 @@ function merge(alphaFirst, alphaSecond) {
  *     Negativo: 8
  *     Fusion de imagenes: 9
  */
-let optionN = 5;
+let optionN = 8;
 
 switch (optionN) {
     case 1: redConverter(); break;
