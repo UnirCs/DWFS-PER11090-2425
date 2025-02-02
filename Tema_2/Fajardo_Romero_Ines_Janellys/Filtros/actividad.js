@@ -42,8 +42,8 @@ function redConverter() {
     let outputPath = 'output/tucan_red.jpg';
     let pixels = handler.getPixels();
     let valor = 0;
-    for(let fila = 0; fila < pixels.length; fila++) {
-        for (let column = 0; column < pixels[fila].length; column++) {
+    for(const fila of pixels) {
+        for(const column of pixels[fila]) {
             pixels[fila][column] = [pixels[fila][column][0],valor, valor ];
         }
     }
