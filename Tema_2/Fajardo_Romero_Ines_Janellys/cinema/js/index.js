@@ -29,20 +29,8 @@ function suggest(numeroAsientos) {
     while (fila < butacas.length && !encontrado) {
         let asientosFila = butacas[fila];
         if (asientosFila.length >= numeroAsientos) {
-            let asientosDisponibles = butacas[fila].filter(asientos => !asientos.estado).length;
-            if (asientosDisponibles >= numeroAsientos) {
-                let asientosSeleccionados = 0;
-                let columna = 0;
-
-                while (columna < asientosFila.length && asientosSeleccionados < numeroAsientos) {
-                    let asiento = asientosFila[columna];
-                    if (!asiento.estado) {
-                        asiento.estado = true;
-                        asientosOcupados.add(asiento.id);
-                        asientosSeleccionados++;
-                    }
-                    columna++;
-                }
+            if (contarAsientosDisponibles(asientosFila) >= numeroAsientos) {
+                asientosOcupados = ocuparAsientos(asientosFila, numeroAsientos);
                 encontrado = true;
             }
         }
@@ -52,8 +40,26 @@ function suggest(numeroAsientos) {
     return encontrado ? asientosOcupados : new Set();
 }
 
+const contarAsientosDisponibles = (asientosFila) => asientosFila.filter(asientos => !asientos.estado).length;
 
+function ocuparAsientos(asientosFila, numeroAsientos) {
 
+    let asientosOcupados = new Set([]);
+    let asientosSeleccionados = 0;
+    let columna = 0;
+
+    while (columna < asientosFila.length && asientosSeleccionados < numeroAsientos) {
+        let asiento = asientosFila[columna];
+        if (!asiento.estado) {
+            asiento.estado = true;
+            asientosOcupados.add(asiento.id);
+            asientosSeleccionados++;
+        }
+        columna++;
+    }
+
+    return asientosOcupados;
+}
 
 
 console.log(suggest(14));
@@ -61,6 +67,6 @@ console.log(suggest(14));
 console.log(suggest(14));
 console.log(suggest(14));
 console.log(suggest(12));
-console.log(suggest(5));
+console.log(suggest(2));
 
 
