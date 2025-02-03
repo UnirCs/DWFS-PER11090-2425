@@ -1,0 +1,30 @@
+:root {
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --font-family: "Roboto", sans-serif;
+  --spacing-sm: 15px;
+  --spacing-md: 20px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app__main {
+  flex: 1; /* Ocupa el espacio restante entre Header y Footer */
+  padding: var(--spacing-md);
+}
+
+/* Responsividad */
+@media (max-width: 576px) {
+  .app__main {
+    padding: var(--spacing-sm);
+  }
+}
