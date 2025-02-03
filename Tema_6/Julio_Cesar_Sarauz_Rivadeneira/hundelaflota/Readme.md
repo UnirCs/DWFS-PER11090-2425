@@ -52,48 +52,48 @@ Este documento describe la API REST para un sistema de gestión de juegos de bat
 
 ## Endpoints
 
-| Método HTTP | URI                                         | Query Params | Cuerpo de la Petición                                                                 | Cuerpo de la Respuesta                                                                                  | Códigos de Respuesta                                          |
+| Método HTTP | URI| Query Params | Cuerpo de la Petición | Cuerpo de la Respuesta| Códigos de Respuesta |
 |-------------|---------------------------------------------|--------------|----------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|-------------------------------------------------------------|
-| POST        | /juegos                                     | N/A          | `{"jugador1": "jugador1", "jugador2": "jugador2"}`                               | `{"juegoId": 1, "jugador1": "jugador1", "jugador2": "jugador2", "estado": "esperando"}`      | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
-| DELETE      | /juegos/{juegoId}                          | N/A          | N/A                                                                                   | `{"mensaje": "juego eliminado"}`                                                                    | 200 OK<br/>404 Not Found<br/>500 Internal Server Error        |
-| PATCH       | /juegos/{juegoId}                          | N/A          | `{"estado": "iniciado"}`                                                           | `{"juegoId": 1, "estado": "iniciado", "jugador1": "jugador1", "jugador2": "jugador2"}`      | 200 OK<br/>400 Bad Request<br/>404 Not Found<br/>500 Internal Server Error |
-| PATCH       | /juegos/{juegoId}                          | N/A          | `{"estado": "terminado", "ganador": "jugador1"}`                                | `{"juegoId": 1, "estado": "terminado", "ganador": "jugador1"}`                                 | 200 OK<br/>400 Bad Request<br/>404 Not Found<br/>500 Internal Server Error |
-| GET         | /juegos/{juegoId}                          | N/A          | N/A                                                                                   | `{"juegoId": 1, "jugador1": "jugador1", "jugador2": "jugador2", "estado": "esperando", "ganador": null}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error        |
-| POST        | /juegos/{juegoId}/jugadores/{jugadorId}/barcos | N/A          | `{"barco": [{"tipo": "4-cuadros", "posicion": [1,1], "orientacion": "vertical"}, {...}]}` | `{"mensaje": "barco agregado con exito"}`                                                          | 201 Created<br/>400 Bad Request<br/>404 Not Found<br/>500 Internal Server Error |
-| DELETE      | /juegos/{juegoId}/jugadores/{jugadorId}/barcos/{barcoId} | N/A          | N/A                                                                                   | `{"mensaje": "barco eliminado"}`                                                                    | 200 OK<br/>404 Not Found<br/>500 Internal Server Error        |
-| GET         | /juegos/{juegoId}/jugadores/{jugadorId}/barcos | N/A          | N/A                                                                                   | `{"barco": [{"tipo": "4-cuadros", "posicion": [1,1], "orientacion": "vertical"}, {...}]}`     | 200 OK<br/>404 Not Found<br/>500 Internal Server Error        |
-| POST        | /juegos/{juegoId}/jugadores/{jugadorId}/disparos | N/A          | `{"etiquetajugadorId": "jugador2", "posicion": [5,5]}`                            | `{"disparoId": 1, "jugadorId": "jugador1", "etiquetajugadorId": "jugador2", "posicion": [5,5], "resultado": "golpe"}` | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
-| GET         | /juegos/{juegoId}/disparos                 | N/A          | N/A                                                                                   | `{"disparo": [{"jugadorId": "jugador1", "etiquetajugadorId": "jugador2", "posicion": [5,5], "resultado": "golpe"}]}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error        |
-| POST        | /usuarios                                  | N/A          | `{"usuario": "john_doe", "email": "john@example.com", "password": "password"}` | `{"usuarioId": 1, "usuario": "john_doe", "email": "john@example.com"}`                        | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
-| GET         | /usuarios/{usuarioId}                     | N/A          | N/A                                                                                   | `{"usuarioId": 1, "usuario": "john_doe", "email": "john@example.com"}`                        | 200 OK<br/>404 Not Found<br/>500 Internal Server Error        |
-| DELETE      | /usuarios/{usuarioId}                     | N/A          | N/A                                                                                   | `{"mensaje": "usuario eliminado"}`                                                                  | 200 OK<br/>404 Not Found<br/>500 Internal Server Error        |
+| POST  | /juegos            | N/A  | `{"jugador1": "jugador1", "jugador2": "jugador2"}` | `{"juegoId": 1, "jugador1": "jugador1", "jugador2": "jugador2", "estado": "esperando"}`| 201 Created<br/>400 Bad Request<br/>500 Internal Server Error              |
+| DELETE| /juegos/{juegoId}  | N/A  | N/A                                                | `{"mensaje": "juego eliminado"}`                                                       | 200 OK<br/>404 Not Found<br/>500 Internal Server Error                     |
+| PATCH | /juegos/{juegoId}  | N/A  | `{"estado": "iniciado"}`                           | `{"juegoId": 1, "estado": "iniciado", "jugador1": "jugador1", "jugador2": "jugador2"}` | 200 OK<br/>400 Bad Request<br/>404 Not Found<br/>500 Internal Server Error |
+| PATCH | /juegos/{juegoId}  | N/A  | `{"estado": "terminado", "ganador": "jugador1"}`   | `{"juegoId": 1, "estado": "terminado", "ganador": "jugador1"}`                         | 200 OK<br/>400 Bad Request<br/>404 Not Found<br/>500 Internal Server Error |
+| GET   | /juegos/{juegoId}  | N/A  | N/A | `{"juegoId": 1, "jugador1": "jugador1", "jugador2": "jugador2", "estado": "esperando", "ganador": null}`                              | 200 OK<br/>404 Not Found<br/>500 Internal Server Error|
+| POST  | /juegos/{juegoId}/jugadores/{jugadorId}/barcos | N/A  | `{"barco": [{"tipo": "4-cuadros", "posicion": [1,1], "orientacion": "vertical"}, {...}]}` | `{"mensaje": "barco agregado con exito"}` | 201 Created<br/>400 Bad Request<br/>404 Not Found<br/>500 Internal Server Error |
+| DELETE| /juegos/{juegoId}/jugadores/{jugadorId}/barcos/{barcoId} | N/A  | N/A | `{"mensaje": "barco eliminado"}`                                                                | 200 OK<br/>404 Not Found<br/>500 Internal Server Error|
+| GET   | /juegos/{juegoId}/jugadores/{jugadorId}/barcos           | N/A  | N/A | `{"barco": [{"tipo": "4-cuadros", "posicion": [1,1], "orientacion": "vertical"}, {...}]}`       | 200 OK<br/>404 Not Found<br/>500 Internal Server Error|
+| POST  | /juegos/{juegoId}/jugadores/{jugadorId}/disparos | N/A  | `{"etiquetajugadorId": "jugador2", "posicion": [5,5]}` | `{"disparoId": 1, "jugadorId": "jugador1", "etiquetajugadorId": "jugador2", "posicion": [5,5], "resultado": "golpe"}` | 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
+| GET   | /juegos/{juegoId}/disparos | N/A  | N/A | `{"disparo": [{"jugadorId": "jugador1", "etiquetajugadorId": "jugador2", "posicion": [5,5], "resultado": "golpe"}]}`          | 200 OK<br/>404 Not Found<br/>500 Internal Server Error|
+| POST  | /usuarios  | N/A  | `{"usuario": "john_doe", "email": "john@example.com", "password": "password"}` | `{"usuarioId": 1, "usuario": "john_doe", "email": "john@example.com"}`| 201 Created<br/>400 Bad Request<br/>500 Internal Server Error |
+| GET   | /usuarios/{usuarioId}  | N/A  | N/A | `{"usuarioId": 1, "usuario": "john_doe", "email": "john@example.com"}`| 200 OK<br/>404 Not Found<br/>500 Internal Server Error|
+| DELETE| /usuarios/{usuarioId}  | N/A  | N/A | `{"mensaje": "usuario eliminado"}` | 200 OK<br/>404 Not Found<br/>500 Internal Server Error|
 
 
 ## Descripción de los Recursos:
 
-### 1. **Partida (juego):**
+### 1. **Partida (juegos):**
 - **Atributos:**
   - `juegoId`: Identificador único de la partida.
   - `jugador1`: Jugador 1.
   - `jugador2`: Jugador 2.
-  - `estado`: Estado de la partida (por ejemplo, `esperando`, `iniciado`, `ended`).
+  - `estado`: Estado de la partida (por ejemplo, `esperando`, `iniciado`, `fin`).
   - `ganador`: El ganador de la partida, si está disponible.
 
-### 2. **Jugador (jugador):**
+### 2. **Jugador (jugadores):**
 - **Atributos:**
   - `jugadorId`: Identificador único del jugador.
   - `usuario`: Nombre del jugador.
   - `barco`: Barcos que el jugador ha colocado en su cuadrícula.
   - `disparo`: Disparos realizados por el jugador.
 
-### 3. **Barco (barco):**
+### 3. **Barco (barcos):**
 - **Atributos:**
   - `barcoId`: Identificador único del barco.
   - `tipo`: Tipo de barco (4, 3, 2 o 1 cuadrado).
   - `posicion`: Posición en la cuadrícula (array de coordenadas [x, y]).
   - `orientacion`: Dirección del barco (horizontal o vertical).
 
-### 4. **Disparo (disparo):**
+### 4. **Disparo (disparos):**
 - **Atributos:**
   - `disparoId`: Identificador único del disparo.
   - `jugadorId`: Jugador que realiza el disparo.
@@ -101,7 +101,7 @@ Este documento describe la API REST para un sistema de gestión de juegos de bat
   - `posicion`: Posición del disparo (coordenada [x, y]).
   - `resultado`: resultadoado del disparo (`golpe` o `miss`).
 
-### 5. **Usuario (usuario):**
+### 5. **Usuario (usuarios):**
 - **Atributos:**
   - `usuarioId`: Identificador único del usuario.
   - `usuario`: Nombre de usuario.
