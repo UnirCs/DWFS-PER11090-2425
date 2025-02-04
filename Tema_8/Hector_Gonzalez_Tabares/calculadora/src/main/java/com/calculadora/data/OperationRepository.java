@@ -1,7 +1,6 @@
-package com.unir.api_calculadora.repository;
+package com.calculadora.data;
 
-
-import com.unir.api_calculadora.model.Operacion;
+import com.calculadora.modelo.Operacion;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,10 +1,10 @@
-package com.unir.api_calculadora;
+package com.calculadora;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiCalculadoraApplicationTests {
+class CalculadoraApplicationTests {
 
 	@Test
 	void contextLoads() {

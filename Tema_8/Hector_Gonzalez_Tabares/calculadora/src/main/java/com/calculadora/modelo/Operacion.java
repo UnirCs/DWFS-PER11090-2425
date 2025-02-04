@@ -1,21 +1,20 @@
-package com.unir.api_calculadora.model;
+package com.calculadora.modelo;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
-
+@Entity
+@Table(name = "operaciones")
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Entity
-@Table(name = "Operations")
-public class Operacion {
 
+public class Operacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,13 +22,13 @@ public class Operacion {
     private String operationType;
     private String operands;
     private double result;
-    private LocalDateTime timestamp;
-    // Getters and setters omitted for brevity
+
+    public Operacion() {}
 
     public Operacion(String operationType, String operands, double result) {
         this.operationType = operationType;
         this.operands = operands;
         this.result = result;
-        this.timestamp = LocalDateTime.now();
     }
+
 }

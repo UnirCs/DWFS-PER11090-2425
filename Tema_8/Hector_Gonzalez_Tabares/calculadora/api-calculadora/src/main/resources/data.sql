@@ -1,6 +1,0 @@
-INSERT INTO Operations (operation_type, operands, result, timestamp) VALUES ('Suma', '[2,3,5]', 10, CURRENT_TIMESTAMP)
-INSERT INTO Operations (operation_type, operands, result, timestamp) VALUES('Resta', '[10,3,2]', 5, CURRENT_TIMESTAMP)
-INSERT INTO Operations (operation_type, operands, result, timestamp) VALUES('Multiplicacion', '[4,5]', 20, CURRENT_TIMESTAMP)
-INSERT INTO Operations (operation_type, operands, result, timestamp) VALUES('Division', '[20,4]', 5, CURRENT_TIMESTAMP)
-INSERT INTO Operations (operation_type, operands, result, timestamp) VALUES('Raiz', '16^(1/2)', 4, CURRENT_TIMESTAMP)
-INSERT INTO Operations (operation_type, operands, result, timestamp) VALUES('Potencia', '2^3', 8, CURRENT_TIMESTAMP)
