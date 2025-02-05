@@ -29,13 +29,14 @@ public class RequestDecoratorFactory {
      * @return a ServerHttpRequestDecorator that decorates the GatewayRequest object
      * @throws IllegalArgumentException if the HTTP method of the request is neither GET nor POST
      */
-        public ServerHttpRequestDecorator getDecorator(GatewayRequest request) {
-            return switch (request.getTargetMethod().name().toUpperCase()) {
-                case "GET" -> new GetRequestDecorator(request);
-                // case "POST" -> new PostRequestDecorator(request, objectMapper);
-                // case "POST" -> new PutRequestDecorator(request, objectMapper);
-                case "POST" -> new DeleteRequestDecorator(request, objectMapper);
-                default -> throw new IllegalArgumentException("Invalid http method");
-            };
-        }
+    public ServerHttpRequestDecorator getDecorator(GatewayRequest request) {
+        return switch (request.getTargetMethod().name().toUpperCase()) {
+            case "GET" -> new GetRequestDecorator(request);
+            case "POST" -> new PostRequestDecorator(request, objectMapper);
+            case "PUT" -> new PutRequestDecorator(request, objectMapper);
+            case "PATCH" -> new PatchRequestDecorator(request, objectMapper);
+            case "DELETE" -> new DeleteRequestDecorator(request, objectMapper);
+            default -> throw new IllegalArgumentException("Invalid http method");
+        };
+    }
 }
