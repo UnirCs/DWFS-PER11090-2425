@@ -1,9 +1,16 @@
 body{
     background: #000;
 }
+
+.font-color{
+    color: antiquewhite
+}
 .logo-cinema{
     width:50px;
     height:44px;
+}
+.font-confirmar{
+    color: black
 }
 .nav-cinema{
     display: flex;
