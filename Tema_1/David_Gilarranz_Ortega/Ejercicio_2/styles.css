@@ -81,6 +81,7 @@ body {
 .formulario__boton:hover {
     background-color: #ffdd33;
     box-shadow: 0 1px 15px #b09303;
+    cursor: pointer;
 }
 
 /* Estilos para el footer */
