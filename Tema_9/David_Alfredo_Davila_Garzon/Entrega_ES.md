@@ -869,7 +869,7 @@ Parte VI) Crear otro índice y modificar el alias
         curl -XPUT 'https://<user>:<password>@unir-search-6369338872.us-east-1.bonsaisearch.net:443/employees-v2/_bulk' --data-binary @Employees_raw.json -H 'Content-Type: application/json'
     Se modifica el alias:
     ####
-        curl --location 'https://8tjpfh8foh:2ezbmbvspa@unir-search-6369338872.us-east-1.bonsaisearch.net:443/_aliases' \
+        curl --location 'https://<user>:<password>@unir-search-6369338872.us-east-1.bonsaisearch.net:443/_aliases' \
         --header 'Content-Type: application/json' \
         --data '{
             "actions": [
@@ -900,7 +900,7 @@ Parte VI) Crear otro índice y modificar el alias
     ####
     Request:
     ####
-        curl --location --request GET 'https://8tjpfh8foh:2ezbmbvspa@unir-search-6369338872.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
+        curl --location --request GET 'https://<user>:<password>@unir-search-6369338872.us-east-1.bonsaisearch.net:443/employees-alias/_search' \
         --header 'Content-Type: application/json' \
         --data '{
             "query": {
@@ -938,7 +938,7 @@ Parte VI) Crear otro índice y modificar el alias
     ####
     Request:
     ####
-        curl --location 'https://8tjpfh8foh:2ezbmbvspa@unir-search-6369338872.us-east-1.bonsaisearch.net:443/_aliases' \
+        curl --location 'https://<user>:<password>@unir-search-6369338872.us-east-1.bonsaisearch.net:443/_aliases' \
         --header 'Content-Type: application/json' \
         --data '{
             "actions": [
