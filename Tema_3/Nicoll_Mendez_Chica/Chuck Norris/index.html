@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Chistes de Chuck Norris</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="https://api.chucknorris.io/img/chucknorris_logo_coloured_small@2x.png" alt="Imagen de Chuck" />
+
+    </div>
+    <div class="joke-container">
+        <h1>Chistes de Chuck Norris: </h1>
+        <p id="joke"></p>
+    </div>
+    <div class="button-container">
+        <button onclick=getJoke()>Obtener chiste</button>
+    </div>
+    <script>
+        window.onload = function () {
+
+            let buttonGet = document.querySelector("#button-get");
+
+            buttonGet.onclick = function () {
+                getJoke();
+            };
+
+        };
+
+        async function getJoke() {
+            let url = "https://api.chucknorris.io/jokes/random";
+            let fetchResponse = await fetch(url);
+            let json = await fetchResponse.json();
+            let joke = json.value;
+            console.log(joke);
+            let parrafo = document.getElementById('#joke');
+            document.getElementById('joke').innerHTML = joke;
+        }
+    </script>
+
+</body>
+
+</html>
