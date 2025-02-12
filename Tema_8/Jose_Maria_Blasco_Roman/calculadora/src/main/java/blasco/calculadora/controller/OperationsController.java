@@ -1,8 +1,13 @@
 package blasco.calculadora.controller;
 
-import blasco.calculadora.data.model.Operation;
-import blasco.calculadora.model.OperationDto;
+import blasco.calculadora.data.model.CalculatorOperation;
+import blasco.calculadora.controller.model.OperationDto;
 import blasco.calculadora.service.OperationsService;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.Operation;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,12 +20,31 @@ public class OperationsController {
     public OperationsController(OperationsService operationsService) {
         this.operationsService = operationsService;
     }
-
     @PostMapping("/add")
+    @Operation(
+            operationId = "addNumbers",
+            summary = "Sumar números",
+            description = "Suma los números proporcionados separados por coma.",
+            requestBody = @io.swagger.v3.oas.annotations.parameters.RequestBody(
+                    description = "Datos de los números a sumar.",
+                    required = true,
+                    content = @Content(mediaType = "application/json", schema = @Schema(implementation = OperationDto.class))
+            )
+    )
+    @ApiResponse(
+            responseCode = "200",
+            description = "Operación realizada con éxito.",
+            content = @Content(mediaType = "application/json", schema = @Schema(implementation = Operation.class))
+    )
+    @ApiResponse(
+            responseCode = "400",
+            description = "Error en los datos proporcionados para la operación."
+    )
     public ResponseEntity<Operation> addNumbers(@RequestBody OperationDto request) {
         Operation operation = operationsService.addNumbers(request.getNumbers());
         return ResponseEntity.ok(operation);
     }
+
 
     @PostMapping("/subtract")
     public ResponseEntity<Operation> subtractNumbers(@RequestBody OperationDto request) {

@@ -9,7 +9,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Operation {
+public class CalculatorOperation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,9 +17,10 @@ public class Operation {
     private String numbers;
     private Double result;
 
-    public Operation(String type, String numbers, Double result) {
+    public CalculatorOperation(String type, String numbers, Double result) {
         this.type = type;
         this.numbers = numbers;
         this.result = result;
     }
 }
+

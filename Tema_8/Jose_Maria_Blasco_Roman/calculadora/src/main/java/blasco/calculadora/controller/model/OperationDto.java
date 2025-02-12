@@ -1,4 +1,4 @@
-package blasco.calculadora.model;
+package blasco.calculadora.controller.model;
 
 import lombok.Getter;
 import lombok.Setter;

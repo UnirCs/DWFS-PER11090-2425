@@ -1,0 +1,143 @@
+{
+    "info": {
+        "name": "Calculadora Microservice",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Add Numbers",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"numbers\": \"10,20,30\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/operations/add",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "operations",
+                        "add"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Subtract Numbers",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"numbers\": \"100,30,20\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/operations/subtract",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "operations",
+                        "subtract"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Multiply Numbers",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"numbers\": \"2,3,4\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/operations/multiply",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "operations",
+                        "multiply"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Divide Numbers",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"numbers\": \"100,25\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/operations/divide",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "operations",
+                        "divide"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Operation by ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:8080/api/operations/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "operations",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}
