@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     //Asignar manejadores de eventos a los campos del formulario
     document.getElementById('nombreCompleto').addEventListener('change', validateNombreCompleto);
     document.getElementById('usuario').addEventListener('change', validateUsuario);
-    document.getElementById('contrasena').addEventListener('change', validateContrasena);
+    document.getElementById('password').addEventListener('change', validatepassword);
     document.getElementById('confirmacion').addEventListener('change', validateConfirmacion);
     document.getElementById('correo').addEventListener('change', validateCorreo);
 });
@@ -50,23 +50,23 @@ const validateUsuario =()=>{
 }
 
 //Validar el campo de contraseña
-const validateContrasena=()=>{
-    let contrasena = document.getElementById('contrasena').value;
-    let contrasenaError = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
-    if(!contrasenaError.test(contrasena)){
-        createErrorMensaje('contrasena', 'La contraseña debe tener mínimo 8 caracteres, con números y letras mayúsculas y minúsculas.');
+const validatepassword=()=>{
+    let password = document.getElementById('password').value;
+    let passwordError = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    if(!passwordError.test(password)){
+        createErrorMensaje('password', 'La contraseña debe tener mínimo 8 caracteres, con números y letras mayúsculas y minúsculas.');
     }
     else{
-        removeErrorMensaje('contrasena');
+        removeErrorMensaje('password');
     }
 }
 
-//Validar confirmacion de la contrasena
+//Validar confirmacion de la contraseña
 const validateConfirmacion=()=>{
-    let contrasena= document.getElementById('contrasena').value;
+    let password= document.getElementById('password').value;
     let confirmacion=document.getElementById('confirmacion').value;
-    if(contrasena!==confirmacion){
-        createErrorMensaje('confirmacion', 'Las contrseñas no coinciden.');
+    if(password!==confirmacion){
+        createErrorMensaje('confirmacion', 'Las contraseñas no coinciden.');
     }
     else{
         removeErrorMensaje('confirmacion');
@@ -90,7 +90,7 @@ document.getElementById('formulario').addEventListener('submit', (event)=>{
     //Ejecutar todas las validaciones antes de enviar el formulario
     validateNombreCompleto();
     validateUsuario();
-    validateContrasena();
+    validatepassword();
     validateConfirmacion();
     validateCorreo();
 
@@ -99,7 +99,7 @@ document.getElementById('formulario').addEventListener('submit', (event)=>{
     if(errorMensajes.length===0){
         //No hay errores, se puede procesar el formulario
         alert('Formulario enviado con éxito!');
-        window.location.replace("../cinema/index.html");
+        window.location.replace("cinema.html");
     }
     else{
         //Hay errores, se informa al usuario
