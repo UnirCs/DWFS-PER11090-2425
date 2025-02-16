@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuck Norris Jokes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Chuck Norris Jokes</h1>
+        <p>Get your daily dose of Chuck Norris jokes</p>
+    </header>
+    
+    <section id="joke">
+        <p id="p-joke"></p>
+    </section>
+    
+    <button id="btn-joke">Get a joke</button>
+    <footer>
+        <p>&copy; 2025 Chuck Norris</p>
+    </footer>
+    <script>
+        const btnJoke = document.getElementById('btn-joke');
+        const pJoke = document.getElementById('p-joke');
+        
+        btnJoke.addEventListener('click', () => {
+            fetch('https://api.chucknorris.io/jokes/random')
+                .then(response => response.json())
+                .then(data => {
+                    pJoke.textContent = data.value;
+                });
+        });
+    </script>
+</body>
