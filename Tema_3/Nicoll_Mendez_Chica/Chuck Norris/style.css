@@ -1,0 +1,41 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.joke-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.joke-container img{
+    height: 150px;
+    width: 300px;
+}
+
+.joke-container h1{
+    left: 40%;
+    color:coral;
+    
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container button {
+    border: none;
+    outline: 0;
+    padding: 10px;
+    color: white;
+    background-color: coral;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+    font-size: 15px;
+    border-radius: 5px;
+}
