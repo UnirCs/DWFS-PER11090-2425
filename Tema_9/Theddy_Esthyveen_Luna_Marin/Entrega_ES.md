@@ -285,7 +285,21 @@
 #
 1) Crea un nuevo índice de la misma forma que hiciste al principio, pero ahora llámalo employees-v2 y mete en él todos los datos del fichero de prueba. Modifica el alias employees-alias que creaste antes para que apunte tanto al índice employees original como al nuevo employees-v2. Puedes comprobar que lo has hecho correctamente ejecutando la operación "Obtener todos los alias" de la colección de Postman.
     ```
+   curl --location '{{elasticsearch-host}}/_alias'
 2) Realiza alguna de las consultas anteriores. ¿Qué observas?
     ```
+   Se duplican los resultados
 3) Elimina employees del conjunto de índices a los que hace referencia el alias.
     ```
+   curl --location '{{elasticsearch-host}}/_aliases' \
+    --header 'Content-Type: application/json' \
+    --data '{
+     "actions": [
+     {
+      "remove": {
+       "index": "employees",
+       "alias": "employees-alias"
+       }
+      }
+     ]
+    }'
