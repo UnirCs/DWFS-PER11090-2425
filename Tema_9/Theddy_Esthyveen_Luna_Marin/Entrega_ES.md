@@ -135,20 +135,152 @@
     }'
 7) Obtener empleados cuyo nombre sea NATALIE.
     ```
+    curl --location --request GET '{{elasticsearch-host}}/employees-alias/_search' \
+    --header 'Content-Type: application/json' \
+    --data '{
+        "query": {
+            "match": {
+                "FirstName": {
+                "query": "NATALIE"
+                }
+            }
+        }
+   }'
 8) Obtener empleados cuya dirección sea o contenga Street. Revisa la documentación sobre queries sobre campos search-as-you-type
     ```
+   curl --location --request GET '{{elasticsearch-host}}/employees-alias/_search' \
+    --header 'Content-Type: application/json' \
+    --data '{
+     "query": {
+      "multi_match": {
+       "query": "Street",
+       "type": "bool_prefix",
+       "fields": [
+        "Address",
+        "Address._2gram",
+        "Address._3gram"
+       ]
+      }
+     }
+    }'
 9) Obtener empleados cuya dirección sea o contenga wood.
     ```
+   curl --location --request GET '{{elasticsearch-host}}/employees-alias/_search' \
+    --header 'Content-Type: application/json' \
+    --data '{
+      "query": {
+      "multi_match": {
+      "query": "Wood",
+      "type": "bool_prefix",
+      "fields": [
+       "Address",
+       "Address._2gram",
+       "Address._3gram"
+       ]
+      }
+     }
+    }'
 10) Obtener empleados interesados en Wrestling.
     ```
-11) Obtener el número de hombres y mujeres interesad@s en Wrestling.Revisa la documentación sobre term aggregations
+    curl --location --request GET '{{elasticsearch-host}}/employees-alias/_search' \
+    --header 'Content-Type: application/json' \
+    --data '{
+     "query": {
+      "match": {
+       "Interests": "Wrestling"
+      }
+     }
+    }'
+11) Obtener el número de hombres y mujeres interesad@s en Wrestling.
     ```
-12) En base a la consulta anterior, obtener la edad media de cada grupo (grupo hombres y grupo mujeres). Revisa la documentación sobre sub-agregaciones y sobre la agregación avg
+    curl --location --request GET '{{elasticsearch-host}}/employees-alias/_search' \
+    --header 'Content-Type: application/json' \
+    --data '{
+     "size": 0,
+     "query": {
+      "match": {
+      "Interests": "Wrestling"
+      }
+     },
+     "aggs": {
+      "gender_count": {
+       "terms": {
+        "field": "Gender"
+        }
+       }
+      }
+    }'
+12) En base a la consulta anterior, obtener la edad media de cada grupo (grupo hombres y grupo mujeres).
     ```
-13) Obtener el número de empleados en función de los siguientes tramos de salario: menor de 60.000 dólares (tramo 1), entre 60.000 dólares y 67.000 dólares (tramo 2) y superior a 67.000 dólares (tramo 3). Revisa la documentación sobre range aggregations
+    curl --location --request GET '{{elasticsearch-host}}/employees-alias/_search' \
+    --header 'Content-Type: application/json' \
+    --data '{
+    "size": 0,
+    "query": {
+     "match": {
+      "Interests": "Wrestling"
+      }
+     },
+    "aggs": {
+     "gender_count": {
+      "terms": {
+       "field": "Gender"
+       },
+      "aggs": {
+       "average_age": {
+        "avg": {
+         "field": "Age"
+         }
+        }
+       }
+      }
+     }
+    }'
+13) Obtener el número de empleados en función de los siguientes tramos de salario: menor de 60.000 dólares (tramo 1), entre 60.000 dólares y 67.000 dólares (tramo 2) y superior a 67.000 dólares (tramo 3).
     ```
+    curl --location --request GET '{{elasticsearch-host}}/employees-alias/_search' \
+    --header 'Content-Type: application/json' \
+    --data '{
+    "size": 0,
+     "aggs": {
+      "salary_ranges": {
+       "range": {
+        "field": "Salary",
+        "ranges": [
+         { "to": 60000 },                   
+         { "from": 60000, "to": 67000 },    
+         { "from": 67000 }                  
+        ]
+       }
+      }
+     }
+    }'
 14) En base a la consulta anterior, para cada tramo, hallar el número de empleados que están casados y no casados.
     ```
+    curl --location --request GET '{{elasticsearch-host}}/employees-alias/_search' \
+    --header 'Content-Type: application/json' \
+    --data '{
+     "size": 0,
+     "aggs": {
+      "salary_ranges": {
+       "range": {
+       "field": "Salary",
+       "ranges": [
+        { "to": 60000 },                  
+        { "from": 60000, "to": 67000 },    
+        { "from": 67000 }                  
+       ]
+      },
+      "aggs": {
+       "marital_status": {
+        "terms": {
+         "field": "MaritalStatus"
+         }
+        }
+       }
+      }
+     }
+    }'
 ### Parte VI) Crear otro índice y modificar el alias
 #
 1) Crea un nuevo índice de la misma forma que hiciste al principio, pero ahora llámalo employees-v2 y mete en él todos los datos del fichero de prueba. Modifica el alias employees-alias que creaste antes para que apunte tanto al índice employees original como al nuevo employees-v2. Puedes comprobar que lo has hecho correctamente ejecutando la operación "Obtener todos los alias" de la colección de Postman.
