@@ -149,3 +149,11 @@
     ```
 14) En base a la consulta anterior, para cada tramo, hallar el número de empleados que están casados y no casados.
     ```
+### Parte VI) Crear otro índice y modificar el alias
+#
+1) Crea un nuevo índice de la misma forma que hiciste al principio, pero ahora llámalo employees-v2 y mete en él todos los datos del fichero de prueba. Modifica el alias employees-alias que creaste antes para que apunte tanto al índice employees original como al nuevo employees-v2. Puedes comprobar que lo has hecho correctamente ejecutando la operación "Obtener todos los alias" de la colección de Postman.
+    ```
+2) Realiza alguna de las consultas anteriores. ¿Qué observas?
+    ```
+3) Elimina employees del conjunto de índices a los que hace referencia el alias.
+    ```
