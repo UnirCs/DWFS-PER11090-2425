@@ -1,0 +1,148 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    margin-bottom: 2rem;
+}
+
+img{
+    border-radius: 100%;
+    width: 25%;
+    border: 5px solid white;
+}
+
+.section_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section_container_left{
+    background: black;
+    width: 30%;
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+
+.section_container_left_comp{
+    color: white;
+    margin-top: 32vw;
+    margin-left:8%;
+}
+.section_container_right{
+    margin-left: 2rem;
+    width: 70%;
+    background: white;
+    margin-top: 2rem;
+    margin-right: 5rem;
+    text-align: justify;
+}
+
+.section_caber_desc_name{
+    font-size: 45px;
+}
+.section_caber_desc_datos{
+    display: flex;
+    flex-direction: column;
+    column-gap: 15%;
+}
+
+.section_caber{
+    margin:  0 auto;
+    width: 84%;
+    background: lightblue;
+    padding: 2rem;
+    position: absolute;
+    top: 13%;
+    left: 8%;
+    border: 10px solid white;
+    color: white;
+}
+
+.section_caber_desc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5%;
+    position: relative;
+
+}
+
+.section_caber_desc_list, .section_container_left_list{
+    list-style: none;
+    line-height: 20px;
+}
+.section_container_left_list li{
+    width: 90%;
+}
+.section_bar { background-color: white;
+    width: 90%;
+    height: 12px;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.section_bar div{
+    background-color: lightblue;
+    height: 12px;
+    border-radius: 10px;
+}
+
+.section_container_left_apt{
+    color: white;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left:8%;
+
+}
+
+.section_container_left_list_apt{
+    list-style-type: square;
+    padding-left: 1rem;
+    color: lightblue;
+}
+
+.section_container_right_obj{
+    margin-top: 32vw;
+}
+
+.iconos{
+    width: 5%;
+    text-align: center;
+    align-items: center;
+}
+
+.sub_title{
+    background: lightblue;
+    padding: 5px 5px;
+    align-items: center;
+    color: white;
+    margin-bottom: 1%;
+    margin-top:1%;
+}
+
+li {
+    list-style: none;
+}
+
+.tecnologia_herramienta li, .ul_proyectos li, .ul_func_resp li, .ul_curso li, 
+.ul_certificado li, .ul_referencia li, .ul_aptitudes li{
+    list-style:circle;
+    margin-left: 3%;
+}
+
+.text_concept{
+    font-size: 13px;
+}
+
+.text_concept_apt{
+    font-size: 13px;
+    color: white;
+}
+
+.sub_seccion{
+    margin-top: 0.5rem;
+}
