@@ -1,0 +1,46 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212; /* Fondo oscuro estilo moderno */
+    color: #00e5ff; /* Color neón azul claro */
+}
+
+/* Contenedor centrado */
+#container {
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Estilo del texto del chiste */
+#chiste {
+    margin-bottom: 20px; /* Espacio entre el chiste y el botón */
+    font-size: 20px;
+    font-weight: 300;
+    color: #00e5ff;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.8);
+}
+
+/* Botón centrado y moderno */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #121212; /* Color del texto del botón */
+    background-color: #00e5ff; /* Fondo neón azul claro */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efectos al pasar sobre el botón */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.8), 0 0 20px rgba(0, 229, 255, 0.5);
+}
