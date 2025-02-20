@@ -49,6 +49,10 @@ body {
     cursor: not-allowed;
 }
 
+.seat.selected {
+    background-color: green;
+}
+
 .footer {
     background-color: #07382b;
     color: white;
