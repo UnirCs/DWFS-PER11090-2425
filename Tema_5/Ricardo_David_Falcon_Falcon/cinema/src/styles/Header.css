@@ -1,0 +1,39 @@
+/* Estilos del Header */
+.header {
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px 0;
+    text-align: center; /* Asegura el centrado del título */
+    font-family: Arial, sans-serif;
+  }
+  
+  .header-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #ffcc00; /* Amarillo */
+    text-align: center; /* Centra el título */
+  }
+  
+  .header-nav {
+    width: 100%;
+  }
+  
+  .header-nav ul {
+    display: flex;
+    justify-content: space-around; /* Distribuye los elementos uniformemente */
+    list-style: none; /* Elimina los bullets */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header-nav a {
+    text-decoration: none;
+    color: #ffffff; /* Blanco */
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .header-nav a:hover {
+    color: #ffcc00; /* Amarillo al pasar el mouse */
+  }
+  
