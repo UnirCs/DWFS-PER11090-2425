@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+.cinema-screen {
+  width: 80%;
+  height: 100px;
+  display: grid;
+  place-items: center;
+  margin: 40px auto;
+  background: #333;
+  color: white;
+  padding: 10px;
+}
+
+form {
+  margin: 20px auto;
+}
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+/* Ejemplo básico de estilo para los asientos */
+.asiento {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: lightgray;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+}
+
+/* Estilo para cada fila */
+.fila {
+  margin-bottom: 10px; /* Espacio entre filas */
+}
+
+/* Estilo para los asientos sugeridos */
+.asiento.sugerido {
+  background-color: yellow; /* Cambia el color a amarillo para indicar la sugerencia */
+}
+
+.asiento.selected {
+  background-color: #4caf50; /* Color de fondo para asientos seleccionados */
+  color: white; /* Color del texto para asientos seleccionados */
+}
