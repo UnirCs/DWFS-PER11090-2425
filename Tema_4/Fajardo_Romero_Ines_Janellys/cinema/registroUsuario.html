@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UNIR - CINEMA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="./css/index.css" rel="stylesheet">
+  <link href="./css/registroUsuario.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top bg-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand nav-cinema" href="#">
+      <img src="./img/cinema.webp" alt="Logo" class="d-inline-block align-text-top logo-cinema">
+      <div>UNIR - CINEMA</div>
+    </a>
+    <div class="collapse navbar-collapse" id="navbar_Nav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active font-color" aria-current="page" href="/">HOME</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid body-content">
+  <div class="row body-content-text-butacas">
+    <div class="col-12 text-center">
+      <h4>REGISTRO DE USUARIOS</h4>
+    </div>
+  </div>
+  <div class="container text-center d-grid gap-3">
+    <div class="container">
+      <form id="userForm">
+        <div class="input-field">
+          <input id="fullName" type="text" name="fullName" class="validate input-font" required>
+          <label for="fullName">Nombre y apellidos</label>
+        </div>
+
+        <div class="input-field">
+          <input id="username" type="text" name="username" class="validate input-font" required >
+          <label for="username">Nombre de usuario</label>
+        </div>
+
+        <div class="input-field">
+          <input id="password" type="password" name="password" class="validate input-font" required>
+          <label for="password">Contraseña</label>
+        </div>
+
+        <div class="input-field">
+          <input id="confirmPassword" type="password" name="confirmPassword" class="validate input-font" required>
+          <label for="confirmPassword">Confirmar contraseña</label>
+        </div>
+
+        <div class="input-field">
+          <input id="email" type="email" name="email" class="validate input-font" required>
+          <label for="email">Email</label>
+        </div>
+
+        <button type="submit" id="registrarUsuario" class="mb-3 btn waves-effect waves-light">
+          Registrar Usuario
+        </button>
+      </form>
+    </div>
+  </div>
+
+  </div>
+  <div class="row body-content-text-footer">
+    <div class="col-12 text-center">
+      <h6>Cinema Unir</h6>
+      <h6>Dirección: Calle Avenida de la Paz, 137. Logroño</h6>
+      <h6>Teléfono: 941209743</h6>
+      <h6>Email: cinefullstack@unircinema.com</h6>
+    </div>
+  </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="./js/registroUsuario.js"></script>
+</body>
+</html>
