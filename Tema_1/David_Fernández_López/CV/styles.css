@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: dodgerblue;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 10px;
+}
+
+.profile-picture {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+header h1 {
+    margin: 0.5em;
+}
+
+header h2 {
+    margin: 0.5em;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    margin: 1em;
+    border: black solid 1px;
+    border-radius: 10px;
+}
+
+section h3 {
+    font-weight: bold;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+ul h3 {
+    display: inline;
+}
+
+.italic-text {
+    font-style: italic;
+    font-size: 1.2em;
+}

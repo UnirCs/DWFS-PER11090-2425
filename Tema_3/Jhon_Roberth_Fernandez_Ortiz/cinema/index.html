@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>UNIR-Cinema</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0,
+        maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shorcut icon" href="img/html5.ico" type="image/x-icon">
+  <script src="cinema.js"></script>
+
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <h1>UNIR CINEMA</h1>
+  </header>
+
+  <section>
+    <article>
+
+      <div class="screen"></div>
+      <table>
+        <thead></thead>
+        <tbody>
+        <tr>
+          <th id="celdaA0">Fila A</th>
+          <th id="celdaA1" class="chair"></th>
+          <th id="celdaA2" class="chair"></th>
+          <th id="celdaA3" class="chair"></th>
+          <th id="celdaA4" class="chair"></th>
+          <th id="celdaA5" class="chair"></th>
+          <th id="celdaA6" class="chair"></th>
+          <th id="celdaA7" class="chair"></th>
+          <th id="celdaA8" class="chair"></th>
+          <th id="celdaA9" class="chair"></th>
+          <th id="celdaA10" class="chair"></th>
+          <th id="celdaA11" class="chair"></th>
+          <th id="celdaA12" class="chair"></th>
+          <th id="celdaA13" class="chair"></th>
+        </tr>
+        <tr>
+          <th id="celdaB0">Fila B</th>
+          <th id="celdaB1" class="chair"></th>
+          <th id="celdaB2" class="chair"></th>
+          <th id="celdaB3" class="chair"></th>
+          <th id="celdaB4" class="chair"></th>
+          <th id="celdaB5" class="chair"></th>
+          <th id="celdaB6" class="chair"></th>
+          <th id="celdaB7" class="chair"></th>
+          <th id="celdaB8" class="chair"></th>
+          <th id="celdaB9" class="chair"></th>
+          <th id="celdaB10" class="chair"></th>
+          <th id="celdaB11" class="chair"></th>
+          <th id="celdaB12" class="chair"></th>
+          <th id="celdaB13" class="chair"></th>
+        </tr>
+
+        <tr>
+          <th id="celdaC0">Fila C</th>
+          <th id="celdaC1" class="chair"></th>
+          <th id="celdaC2" class="chair"></th>
+          <th id="celdaC3" class="chair"></th>
+          <th id="celdaC4" class="chair"></th>
+          <th id="celdaC5" class="chair"></th>
+          <th id="celdaC6" class="chair"></th>
+          <th id="celdaC7" class="chair"></th>
+          <th id="celdaC8" class="chair"></th>
+          <th id="celdaC9" class="chair"></th>
+          <th id="celdaC10" class="chair"></th>
+          <th id="celdaC11" class="chair"></th>
+          <th id="celdaC12" class="chair"></th>
+          <th id="celdaC13" class="chair"></th>
+        </tr>
+
+        <tr>
+          <th id="celdaD0">Fila D</th>
+          <th id="celdaD1" class="chair"></th>
+          <th id="celdaD2" class="chair"></th>
+          <th id="celdaD3" class="chair"></th>
+          <th id="celdaD4" class="chair"></th>
+          <th id="celdaD5" class="chair"></th>
+          <th id="celdaD6" class="chair"></th>
+          <th id="celdaD7" class="chair"></th>
+          <th id="celdaD8" class="chair"></th>
+          <th id="celdaD9" class="chair"></th>
+          <th id="celdaD10" class="chair"></th>
+          <th id="celdaD11" class="chair"></th>
+          <th id="celdaD12" class="chair"></th>
+          <th id="celdaD13" class="chair"></th>
+        </tr>
+
+        <tr>
+          <th id="celdaE0">Fila E</th>
+          <th id="celdaE1" class="chair"></th>
+          <th id="celdaE2" class="chair"></th>
+          <th id="celdaE3" class="chair"></th>
+          <th id="celdaE4" class="chair"></th>
+          <th id="celdaE5" class="chair"></th>
+          <th id="celdaE6" class="chair"></th>
+          <th id="celdaE7" class="chair"></th>
+          <th id="celdaE8" class="chair"></th>
+          <th id="celdaE9" class="chair"></th>
+          <th id="celdaE10" class="chair"></th>
+          <th id="celdaE11" class="chair"></th>
+          <th id="celdaE12" class="chair"></th>
+          <th id="celdaE13" class="chair"></th>
+        </tr>
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+
+      <form>
+        <h3>Número de sillas a reservar</h3>
+        <input type="number" value="" name="Number of tikets" id="inputNumberChairs" oninput="suggest()">
+        <input id="button" type="button" value="Confirmar Reserva" />
+      </form>
+    </article>
+  </section>
+
+  <aside>
+    <h2>Selecciona pelicula</h2>
+    <ul>
+      <li>Predators</li>
+      <li>Batman - El Caballero de la noche</li>
+      <li>Pobres criaturas</li>
+    </ul>
+    <h2>Tipo de compra</h2>
+    <ul>
+      <li>Corriente</li>
+      <li>Convenio</li>
+    </ul>
+  </aside>
+
+  <footer>
+    <h4>Cinema UNIR-CINEMA Colombia</h4>
+    <h4>Address: Medellín Antioquia - Robledo el Diamante</h4>
+    <h4>Phone: (+57) 3205832295</h4>
+    <h4>Mail: jhonfernandez0303@gmail.com</h4>
+  </footer>
+
+</div>
+</body>
+
+</html>

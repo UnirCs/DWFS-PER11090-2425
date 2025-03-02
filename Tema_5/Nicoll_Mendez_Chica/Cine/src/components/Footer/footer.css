@@ -1,0 +1,29 @@
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  background-color: #1b1b1b; 
+  position: sticky;
+  z-index: 3;
+  top: 0;
+}
+
+.footer-content h3 {
+  position: relative;
+  justify-self: start;
+  margin-left: 20px;
+  color: #fff;
+  margin-top: 4vh;
+  cursor: pointer;
+  text-align: center;
+}
+
+.footer-content p {
+  position: relative;
+  justify-self: start;
+  margin-left: 20px;
+  color: #fff;
+  margin-top: 4vh;
+  cursor: pointer;
+  text-align: center;
+}

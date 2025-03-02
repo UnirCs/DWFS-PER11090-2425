@@ -1,0 +1,50 @@
+.movie_card {
+    background-color: #a1a0a0; /* Light gray background */
+    border: 1px solid  rgb(50, 143, 50); /* Light border */
+    border-radius: 4px; /* Slightly rounded corners */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.486); /* Subtle shadow */
+    margin: 20px 10px; /* Increased margin for top and bottom, space around each card */
+    padding: 10px; /* Space inside each card */
+    text-align: left; /* Align text to the left */
+    transition: transform 0.2s; /* Smooth hover effect */
+    width: 450px; /* Increased width */
+    height: 250px; /* Adjusted height */
+    display: flex; /* Use flexbox for layout */
+}
+
+.movie_card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.movie_card img {
+    max-width: 40%; /* Ensure images fit within the card */
+    border-radius: 4px; /* Slightly rounded corners for images */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover the area */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.movie_card_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.movie_card h3 {
+    color: rgb(164, 219, 52); /* Dark text color */
+    font-size: 1.4em; /* Slightly larger font size */
+    margin: 0 0 10px 0; /* Space around the title */
+    white-space: normal; /* Allow text to wrap */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+.movie_card p {
+    font-size: 1em; /* Normal font size */
+    margin: 5px 0; /* Space around paragraphs */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}

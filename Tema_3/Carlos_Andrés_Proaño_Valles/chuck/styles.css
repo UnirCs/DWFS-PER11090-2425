@@ -1,0 +1,9 @@
+body {
+  display: flex;
+}
+
+p {
+  margin-left: 18px;
+  padding-top: 18px;
+  font-size: 18px;
+}
