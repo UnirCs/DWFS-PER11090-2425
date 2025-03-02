@@ -1,0 +1,17 @@
+h1{
+    margin: 0;
+}
+.header {
+    background-color: var(--color-primary);
+    height: 60px;
+}
+.header__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header__content__logo{
+    height: 100%;
+}

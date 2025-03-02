@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chistes Chuck Norris</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div id="container">
+        <!-- Contenedor para el chiste -->
+        <p id="chiste">¿Listo para reír? ¡Haz clic en el botón!</p>
+        <!-- Botón para solicitar el chiste -->
+        <button id="solicitarChiste" onclick="obtenerChiste()">Pedir Chiste</button>
+    </div>
+
+    <script>
+        function obtenerChiste() {
+            // URL de la API
+            const apiUrl = "https://api.chucknorris.io/jokes/random";
+
+            // Llamada a la API usando fetch
+            fetch(apiUrl)
+                .then(response => {
+                    // Verificar que la respuesta es correcta
+                    if (!response.ok) {
+                        throw new Error(`Error en la solicitud: ${response.status}`);
+                    }
+                    return response.json(); // Convertir la respuesta a JSON
+                })
+                .then(data => {
+                    // Actualizar el contenido del párrafo con el chiste
+                    document.getElementById('chiste').innerHTML = data.value;
+                })
+                .catch(error => {
+                    console.error("Hubo un problema con la solicitud:", error);
+                    document.getElementById('chiste').innerHTML = "Error al obtener un chiste. Inténtalo de nuevo más tarde.";
+                });
+        }
+    </script>
+</body>

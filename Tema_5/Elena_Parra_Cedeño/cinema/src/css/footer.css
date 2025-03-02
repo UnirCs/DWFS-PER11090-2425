@@ -1,0 +1,14 @@
+.footer {
+    background-color: #7d3c98;
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer__content {
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    height: 100%;
+}

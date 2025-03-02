@@ -1,0 +1,21 @@
+.input-font{
+    color:#ffff;
+}
+
+#registrarUsuario{
+    background: yellow;
+    border: 1px solid yellow;
+    color: #000000;
+    font-weight: bold;
+}
+
+p {
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    text-align: justify;
+}
+
+.error {
+    color: red;
+}
