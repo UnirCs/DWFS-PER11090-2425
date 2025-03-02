@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Promesas en JavaScript - Chuck Norris Jokes</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Función que llama a la API y retorna una promesa
+    function obtenerChiste() {
+      const url = "https://api.chucknorris.io/jokes/random";
+
+      // Retornamos la promesa que devuelve fetch
+      return fetch(url)
+              .then((response) => response.json())
+              .then((data) => {
+                // Insertamos el chiste en el párrafo
+                let p = document.getElementById("chiste");
+                p.innerHTML = data.value;
+              })
+              .catch((error) => {
+                console.error('Error al obtener el chiste:', error);
+              });
+    }
+  </script>
+</head>
+<body>
+<!-- En el botón, usamos la propiedad onClick para llamar a la función -->
+<button id="chisteBtn" onclick="obtenerChiste()">¡Dame un chiste!</button>
+<p id="chiste"></p>
+
+
+</body>
+</html>
