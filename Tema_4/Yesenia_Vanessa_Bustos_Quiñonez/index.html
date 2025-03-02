@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Registro del cine</h1>
+        <form id="formulario">
+            <div class="input-field">
+                <input id="nombreCompleto" type="text" name="nombreCompleto" class="validate" required>
+                <label for="nombreCompleto">Nombre y apellidos</label>
+            </div>
+            <div class="input-field">
+                <input id="usuario" type="text" name="usuario" class="validate" required>
+                <label for="usuario">Usuario</label>
+            </div>
+            <div class="input-field">
+                <input id="password" type="password" name="password" class="validate" required>
+                <label for="password">Contraseña</label>
+            </div>
+            <div class="input-field">
+                <input id="confirmacion" type="password" name="confirmacion" class="validate" required>
+                <label for="confirmacion">Confirmar contraseña</label>
+            </div>
+            <div class="input-field">
+                <input id="correo" type="email" name="correo" class="validate" required>
+                <label for="correo">Correo</label>
+            </div>
+            <button type="submit">Enviar
+            </button>
+        </form>
+    </div>
+<script src="registro.js"></script>
+</body>
+</html>
