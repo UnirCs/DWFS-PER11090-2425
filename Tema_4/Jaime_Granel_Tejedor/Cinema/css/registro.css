@@ -1,0 +1,76 @@
+/* Estilos generales del formulario de registro */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Fondo oscuro */
+    color: #eee;           /* Texto claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 6px;
+    max-width: 400px;
+    width: 90%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffd700; /* Un tono amarillo */
+}
+
+.campo {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input[type="text"],
+.campo input[type="password"],
+.campo input[type="email"] {
+    padding: 8px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background-color: #444;
+    color: #fff;
+}
+
+.campo input:focus {
+    outline: none;
+    border-color: #ffd700;
+}
+
+.boton {
+    background-color: #ffd700;
+    border: none;
+    color: #000;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #e8c80b;
+}
+
+.error {
+    color: #ff5252;
+    font-size: 0.85em;
+    margin-top: 5px;
+    text-align: center;
+}

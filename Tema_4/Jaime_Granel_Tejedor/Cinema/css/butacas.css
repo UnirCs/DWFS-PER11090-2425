@@ -1,0 +1,121 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    font-family: Arial, sans-serif;
+    color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 700px;
+    width: 90%;
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.header h1 {
+    margin: 0;
+    color: #ffd700;
+}
+
+.screen {
+    background-color: #333;
+    height: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.control {
+    margin-bottom: 20px;
+}
+
+.control label {
+    margin-right: 10px;
+}
+
+.control input {
+    width: 60px;
+    padding: 5px;
+    text-align: center;
+}
+
+.control button {
+    background-color: #ffd700;
+    border: none;
+    color: #000;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.control button:hover {
+    background-color: #e8c800;
+}
+
+/* Sala de cine */
+.sala {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Cada fila */
+.fila {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Butacas */
+.butaca {
+    width: 28px;
+    height: 28px;
+    border: 2px solid #ffd700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.butaca:hover {
+    box-shadow: inset 0 0 10px #a39703;
+}
+
+/* Butaca sugerida temporalmente */
+.butaca.sugerida {
+    background-color: #ffd700;
+    color: #000;
+}
+
+/* Butaca ya reservada */
+.butaca.reservada {
+    background-color: #555;
+    border-color: #555;
+    cursor: not-allowed;
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: #333;
+    border-radius: 4px;
+    padding: 10px;
+}
