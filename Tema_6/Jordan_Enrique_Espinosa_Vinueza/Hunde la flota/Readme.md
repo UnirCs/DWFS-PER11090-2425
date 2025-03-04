@@ -16,46 +16,21 @@ Para simplificar el diseño, la API manejará **tres recursos principales**:
 ---
 
 ### 📌 **Operaciones Soportadas y Endpoints**
-
-| Método HTTP | URI                                    | Query Params       | Request Body                     | Response Body                                       | Códigos HTTP de respuesta |
-|------------|--------------------------------------|--------------------|--------------------------------|--------------------------------------------------|---------------------------|
-| **Usuarios** |  |  |  |  |
-| POST       | `/api/v1/usuarios`                 | -                  | `{ "nombre": "Juan" }`         | `{ "id": 1, "nombre": "Juan" }`                   | 201, 400 |
-| GET        | `/api/v1/usuarios/{id}`            | -                  | -                              | `{ "id": 1, "nombre": "Juan" }`                   | 200, 404 |
-| DELETE     | `/api/v1/usuarios/{id}`            | -                  | -                              | `{ "mensaje": "Usuario eliminado" }`             | 200, 404 |
-| **Partidas** |  |  |  |  |
-| POST       | `/api/v1/partidas`                 | -                  | `{ "jugador1": 1, "jugador2": 2 }` | `{ "id": 5, "estado": "creada" }`       | 201, 400 |
-| PUT        | `/api/v1/partidas/{id}`            | -                  | `{ "estado": "iniciada" }`     | `{ "id": 5, "estado": "iniciada" }`             | 200, 400, 404 |
-| GET        | `/api/v1/partidas/{id}`            | -                  | -                              | `{ "id": 5, "jugadores": [1,2], "estado": "activa", "ganador": null }` | 200, 404 |
-| DELETE     | `/api/v1/partidas/{id}`            | -                  | -                              | `{ "mensaje": "Partida eliminada" }`             | 200, 404 |
-| **Tableros (Barcos y Disparos)** |  |  |  |  |
-| POST       | `/api/v1/tableros/{id}/barcos`     | -                  | `{ "jugador_id": 1, "barco": { "tipo": "submarino", "posicion": [[2,3]] }}` | `{ "mensaje": "Barco añadido" }` | 201, 400 |
-| DELETE     | `/api/v1/tableros/{id}/barcos/{barco_id}` | -           | -                              | `{ "mensaje": "Barco eliminado" }`               | 200, 404 |
-| GET        | `/api/v1/tableros/{id}/barcos?jugador_id=1` | -         | -                              | `{ "barcos": [{ "tipo": "submarino", "posicion": [[2,3]] }] }` | 200, 404 |
-| POST       | `/api/v1/tableros/{id}/disparos`   | -                  | `{ "jugador_id": 1, "posicion": [5,5] }` | `{ "resultado": "agua" }` | 201, 400 |
-| GET        | `/api/v1/tableros/{id}/disparos`   | -                  | -                              | `{ "disparos": [{ "jugador": 1, "posicion": [5,5], "resultado": "agua" }] }` | 200, 404 |
-
----
-
-### 📌 **Descripción de los Recursos**
-
-#### 🎭 **Gestión de Usuarios**
-- **POST `/api/v1/usuarios`**: Crea un usuario (puede ser un usuario registrado o un anónimo con ID generado).
-- **GET `/api/v1/usuarios/{id}`**: Obtiene la información de un usuario.
-- **DELETE `/api/v1/usuarios/{id}`**: Elimina un usuario del sistema.
-
-#### 🏆 **Gestión de Partidas**
-- **POST `/api/v1/partidas`**: Crea una nueva partida entre dos jugadores.
-- **PUT `/api/v1/partidas/{id}`**: Modifica el estado de una partida (ej. "iniciada", "finalizada").
-- **GET `/api/v1/partidas/{id}`**: Obtiene el estado actual de una partida.
-- **DELETE `/api/v1/partidas/{id}`**: Elimina una partida.
-
-#### 🚢 **Gestión de Tableros y Disparos**
-- **POST `/api/v1/tableros/{id}/barcos`**: Agrega un barco al tablero de un jugador, asegurando que siga las reglas.
-- **DELETE `/api/v1/tableros/{id}/barcos/{barco_id}`**: Elimina un barco del tablero de un jugador.
-- **GET `/api/v1/tableros/{id}/barcos?jugador_id=1`**: Obtiene la lista de barcos de un jugador en la partida.
-- **POST `/api/v1/tableros/{id}/disparos`**: Registra un disparo de un jugador hacia una posición en el tablero rival.
-- **GET `/api/v1/tableros/{id}/disparos`**: Consulta los disparos registrados en la partida.
+| Método Http | Endpoint                                        | Query Params | Cuerpo JSON de la petición                                                                 | Respuesta JSON de la petición                                                                                                                     | Códigos HTTP de respuesta posibles |
+|-------------|-------------------------------------------------|--------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
+| POST        | /games                                          |              | `{"player1Id": "integer", "player2Id": "integer"}`                                         | `{"id": "integer", "player1Id": "integer", "player2Id": "integer", "status": "string"}`                                                           | 201 Created, 400 Bad Request       |
+| PATCH       | /games/{gameId}                                 |              | `{"status": "string"}`                                                                     | `{"id": "integer", "status": "string"}`                                                                                                           | 200 OK, 404 NotFound               |
+| DELETE      | /games/{gameId}                                 |              |                                                                                            |                                                                                                                                                   | 200 OK, 404 Not Found              |
+| POST        | /games/{gameId}/boards                          |              | `{"playerId": "integer"}`                                                                  | `{"id": "integer", "gameId": "integer", "playerId": "integer"}`                                                                                   | 201 Created, 400 Bad Request       |
+| POST        | /games/{gameId}/boards/{boardId}/ships          |              | `{"type": "string", "size": "integer", "coordinates": [{"x": "integer", "y": "integer"}]}` | `{"id": "integer", "type": "string", "coordinates": "array"}`                                                                                     | 201 Created, 400 Bad Request       |
+| DELETE      | /games/{gameId}/boards/{boardId}/ships/{shipId} |              |                                                                                            |                                                                                                                                                   | 200 OK, 404 Not Found              |
+| GET         | /games/{gameId}/boards/{boardId}/ships          |              |                                                                                            | `{"ships": ["array"]}`                                                                                                                            | 200 OK, 400 Bad Request            |
+| POST        | /games/{gameId}/shots                           |              | `{"playerId": "integer", "targetX": "integer", "targetY": "integer"}`                      | `{"id": "integer", "result": "string"}`                                                                                                           | 201 Created, 400 Bad Request       |
+| GET         | /games/{gameId}                                 |              |                                                                                            | `{"id": "integer", "player1Id": "integer", "player2Id": "integer", "status": "string", "winner": "integer", "boards": "array", "shots": "array"}` | 200 OK, 400 Bad Request            |
+| GET         | /games/{gameId}/shots                           |              |                                                                                            | `{"id": "integer", "playerId": "integer", "targetX": "integer", "targetY": "integer", "result": "string"}`                                        | 200 OK, 400 Bad Request            |
+| POST        | /users                                          |              | `{"username": "string", "email": "string"}`                                                | `{"id": "integer", "username": "string", "email": "string"}`                                                                                      | 201 Created, 400 Bad Request       |
+| GET         | /users/{userId}                                 |              |                                                                                            | `{"id": "integer", "username": "string", "email": "string"}`                                                                                      | 200 OK, 400 Bad Request            |
+| DELETE      | /users/{userId}                                 |              |                                                                                            |                                                                                                                                                   | 200 OK, 404 Not Found              |
 
 ---
 
