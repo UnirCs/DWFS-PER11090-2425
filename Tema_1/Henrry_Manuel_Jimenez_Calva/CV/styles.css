@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding:0; 
+    box-sizing: border-box; 
+}
+
+/*Vamos a definir las fuentes que vamos a utilizar*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/*Centrar el  contenido de la pagina*/
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    
+    
+}
+
+/* Estilos para el main*/
+
+.main{
+    display: grid;
+    gap: 10px;
+    align-items: flex-start;
+    
+}
+
+
+
+/* Estilos para la img*/
+
+
+.cv-img{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+
+}
+
+.cv{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+
+
+}
+
+
+/*Estilos para el header*/
+
+.header{
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.header h1{
+    font-size: 1.8rem;
+    color:#333;
+    margin-bottom: 10px;
+}
+
+.header p{
+    font-size: 1.2rem;
+    color: #333;
+    
+}
+
+/*Estilos para las secciones de la main*/
+
+.main-left, .main-right{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    
+}
+
+/*Estilos para el section*/
+
+
+section{
+    margin-bottom: 10px;
+    padding: 30px;
+    border:2px solid #ddd;  
+    border-radius: 8px;
+    background-color: #fafafa;
+    
+}
+
+/*Estilos para el h2*/
+
+h2{
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/*Estilos para el h3*/ 
+
+h3{
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/*Estilos para el p*/
+
+p{
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.cuerpo{
+    padding-left: 30px;
+    box-shadow: 0 0 10px 2px rgba(255,165,0,0.8);
+}
+
+ul{
+    font-size: 1.1rem;
+    list-style-type:circle;
+    padding-left: 30px;
+    box-shadow: 0 0 10px 2px rgba(255,165,0,0.8);
+     
+
+}
+/*Pie de página*/
+
+.footer{
+    background-color: #333;
+    
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+
+
+}
+
+.footer p{
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: white;
+
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 768px){
+
+    .main{
+        grid-template-columns: 1fr;
+
+    }
+
+    .header h1{
+            font-size: 2rem;
+        }
+
+    .header p{
+            font-size: 1rem;
+        }
+
+    .cv{margin-bottom: 25px;}
+
+    .footer p{
+        font-size: 0.9rem;
+        
+    }
+
+    
+
+}
+
