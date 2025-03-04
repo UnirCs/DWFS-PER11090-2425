@@ -4,7 +4,7 @@
 Esta API permite gestionar la cartelera de un cine, la administración de salas, usuarios y la reserva de butacas. También incluye el proceso de pago de las reservas
 
 ### 📌 **Operaciones Soportadas**
-La API debe permitir:
+La API debe permitir
 1. **Películas**: Crear, eliminar y modificar información.
 2. **Salas**: Crear, eliminar y modificar parcialmente la información de salas.
 3. **Usuarios**: Crear, eliminar y modificar parcialmente los datos de los usuarios.

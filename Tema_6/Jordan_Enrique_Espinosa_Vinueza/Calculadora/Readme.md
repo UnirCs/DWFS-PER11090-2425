@@ -4,7 +4,7 @@
 Esta API permite realizar operaciones matemáticas básicas y avanzadas, además de almacenar el historial de operaciones realizadas
 
 ### 📌 Operaciones Soportadas
-La API debe soportar las siguientes operaciones matemáticas:
+La API debe soportar las siguientes operaciones matemáticas
 
 1. **Suma** de N elementos (ejemplo: `2+2`, `2+2+2`).
 2. **Resta** de N elementos (ejemplo: `10-5`, `10-5-2`).
