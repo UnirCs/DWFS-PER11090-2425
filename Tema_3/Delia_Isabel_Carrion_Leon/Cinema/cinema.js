@@ -30,44 +30,59 @@ console.log(butacas);
 function suggest(seats, numSeats) {
   const rowCount = seats.length;
   const colCount = seats[0].length;
-
-  // Si el número de asientos solicitados excede el tamaño máximo de la fila
+  
+  // arrreglo para almacenar resultados
+  const foundSeats = new Set();
+  
+  // Bandera para indicar si se encontraron los asientos
+  let seatsFound = false;
+  
+  // Se verifica la capacidad de la sala
   if (numSeats > colCount) {
-    return new Set();
-  }
-
-  // Empezar desde la fila más lejana a la pantalla
-  let row = rowCount - 1;
-  while (row >= 0) {
-  let count = 0;
-  let startIdx = -1;
-  let col = 0;
-      while (col < colCount) {
-      if (!seats[row][col].estado) {
-        if (count === 0) {
-         startIdx = col;
-        }
-        count++;
-         if (count === numSeats) {
-          const result = new Set();
-          let i = startIdx;
-          while (i < startIdx + numSeats) {
-            result.add(seats[row][i].id);
-            i++;
-          }
-        return result;
-      }
-    } else {
-      // Reiniciar el conteo si se encuentra un asiento ocupado
-      count = 0;
-    }
-    col++;
+    return foundSeats;
   }
   
-  row--;
-}
-   // Si no se encuentran suficientes asientos juntos en ninguna fila
-  return new Set();
+  // Empezar desde la fila más lejana a la pantalla
+  let row = rowCount - 1;
+  
+  while (row >= 0 && !seatsFound) {
+    let count = 0;
+    let startIdx = -1;
+    let col = 0;
+    
+    while (col < colCount && !seatsFound) {
+      if (!seats[row][col].estado) {
+        if (count === 0) {
+          startIdx = col;
+        }
+        count++;
+        
+        if (count === numSeats) {
+          // Agregamos los asientos al conjunto
+          let i = startIdx;
+          while (i < startIdx + numSeats) {
+            foundSeats.add(seats[row][i].id);
+            i++;
+          }
+          
+          // Marcamos que encontramos los asientos
+          seatsFound = true;
+        }
+      } else {
+        // Reiniciar el conteo si se encuentra un asiento ocupado
+        count = 0;
+        startIdx = -1;
+      }
+      
+      col++;
+    }
+    
+    // Movernos a la siguiente fila si no hemos encontrado asientos
+    if (!seatsFound) {
+      row--;
+    }
+  }
+ return foundSeats;
 }
 
 function buscarAsientos() {
