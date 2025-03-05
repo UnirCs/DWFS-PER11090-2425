@@ -22,35 +22,37 @@ function setup() {
 }
 
 // Implementación de la función suggest
-function suggest(numAsientos) {
-    let asientosEncontrados = new Set();
-    let i = N - 1; // Comenzar desde la última fila
+//Se busca la butaca
+  while (i >= 0 && !encontrado) {
+      let fila = butacas[i];
+      let asientosContinuos = [];
+      let j = 0; // Índice de la columna
 
-    while (i >= 0) {
-        let fila = butacas[i];
-        let asientosContinuos = [];
-        let j = 0; // Índice de la columna
+      while (j < N) {
+          if (!fila[j].estado) {
+              asientosContinuos.push(fila[j].id);
+          } else {
+              asientosContinuos = []; // Se inicializa cuando hay un asiento ocupado
+          }
 
-        while (j < N) {
-            if (!fila[j].estado) {
-                asientosContinuos.push(fila[j].id);
-            } else {
-                asientosContinuos = []; // Reset cuando hay un asiento ocupado
-            }
+          // Verificación de asientos consecutivos fuera del proceso de acumulación
+          if (asientosContinuos.length === numAsientos) {
+              asientosContinuos.forEach(asiento => {
+                  asientosEncontrados.add(asiento);
+              });
+              encontrado = true;
+          }
+          
+          j++;
+      }
 
-            if (asientosContinuos.length === numAsientos) {
-                // Solo agregar sin sobrescribir
-                for (let asiento of asientosContinuos) {
-                    asientosEncontrados.add(asiento);
-                }
-                return asientosEncontrados; // Ahora respetamos la invariante saliendo correctamente
-            }
-            j++;
-        }
-        i--;
-    }
+      //estoy usando una bandera para continuar el ciclo 
+      if (!encontrado) {
+          i--;
+      }
+  }
 
-    return asientosEncontrados; // Si no se encontraron suficientes, devolvemos el set vacío
+  return asientosEncontrados;
 }
 
 
