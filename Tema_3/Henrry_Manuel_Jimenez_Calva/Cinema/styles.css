@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding:0; 
+    box-sizing: border-box;
+}
+
+/*Vamos a definir las fuentes que vamos a utilizar*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+
+/*Centrar el  contenido de la pagina*/
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    
+    
+}
+
+
+/* Estilos para el main*/
+
+.main{
+    display: grid;
+    gap: 10px;
+    align-items: flex-start;
+    
+}
+
+
+/*Estilos para el header*/
+
+.header{
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+
+h1{
+    text-align: center;
+    font-size: 3em;
+    color: #e6ecf3;
+    margin-bottom: 20px;
+}
+
+
+
+/*Estilos para el section*/
+
+
+section{
+    margin-bottom: 10px;
+    padding: 30px;
+    border:2px solid #ddd;  
+    border-radius: 8px;
+    background-color: #fafafa;
+    
+}
+
+
+.pantalla{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 100px;
+
+}
+
+.nombre-cine{
+    text-align: center;
+    font-size: 1em;
+    padding: 10px;
+    background-color: #525557;
+}
+
+
+
+
+table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 20px;
+    margin-top: 20px;
+}
+
+td{
+    padding: 1px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.fila-principal{
+    width: 90%;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    background-color: #77797a;
+}
+
+input[type="checkbox"]{ 
+    display: none;
+
+}
+
+
+.label-butaca {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+
+.label-butaca:hover {
+    background-color: #2980b9;
+}
+
+
+input[type="checkbox"]:checked + .label-butaca{
+    background-color: #27ae60;
+
+}
+
+.label-butaca.butaca-coloreada{
+    background-color: #27ae60;
+
+}
+
+
+.reservar input, .reservar button{
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.reservar button{
+    background-color: #3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+ }
+
+ .reservar button:hover{
+     background-color: #2980b9;
+ }
+
+ footer{
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+
+
+}
+
+footer p{
+    margin: 5px 0;
+    font-size: 1.1rem;
+    color: white;
+
+}
+
+
+/* Responsive */
+
+@media (max-width: 1200px){
+
+    .main{
+        grid-template-columns: 1fr;
+
+    }
+
+    .header h1{
+            font-size: 2rem;
+        }
+
+    .header p{
+            font-size: 1rem;
+        }
+
+    table{ 
+        width: 100%;
+        border-collapse: collapse;
+     }
+
+     td{    
+        display: inline-block;
+        width: 32%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        
+     }
+
+     
+
+     .header{
+        display: block;
+        overflow-x: auto;
+
+     }
+
+    .footer p{
+        font-size: 0.9rem;
+        
+    }
+
+    .fila-principal{
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        background-color: #77797a;
+    }
+
+    
+
+}
+
