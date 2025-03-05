@@ -1,0 +1,17 @@
+.movie-list-container {
+    padding: 20px;
+  }
+  
+  .movie-list-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
