@@ -38,7 +38,7 @@ export function CardBook({
                         <div className="d-flex gap-1">
                             {[...Array(5)].map((_, index) => (
                                 <img
-                                    key={index}
+                                    key={index + rating}
                                     src={`/img/icon/${index < rating ? "start" : "start-1"}.svg`}
                                     alt="Star"
                                 />

@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import {ButacaProvider} from "../context/butacaContext/ButacaProvider";
 
 function Header(props) {
     return (

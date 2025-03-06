@@ -3,8 +3,7 @@ import "./movie.css";
 import * as api from "../../services/apiServices";
 import React, {useState, useEffect} from "react";
 import Header from "../../layout/Header";
-import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function Movie() {
     const [pelicula, setPelicula] = useState({});
@@ -48,7 +47,7 @@ function Movie() {
                                 <div className="d-flex gap-1">
                                     {[...Array(5)].map((_, index) => (
                                         <img
-                                            key={index}
+                                            key={index + pelicula.rating}
                                             src={`/img/icon/${index < pelicula.rating ? "start" : "start-1"}.svg`}
                                             alt="Star"
                                         />

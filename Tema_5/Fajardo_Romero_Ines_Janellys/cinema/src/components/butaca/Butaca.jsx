@@ -1,7 +1,7 @@
 import Header from "../../layout/Header";
 import "./butacas.css";
 import "../../index.css";
-import React, {useState, useEffect} from "react";
+import React, { useEffect} from "react";
 import { useButaca } from "../../hook/useButaca";
 
 function Butaca() {
@@ -22,8 +22,8 @@ function Butaca() {
             <Header title='Butacas'/>
             <div className="body-content-pantalla"></div>
             <div className="container text-center body-content-butacas d-grid gap-3" id="butacas">
-                {ButacaItems.map((butacas, index) => (
-                    <div className="row" key={index}>
+                {ButacaItems.map((butacas, butacaid) => (
+                    <div className="row" key={butacaid}>
                         <div className="col-10">
                             <div className="row">
                                 <div className="col-1 p-3 fila-desc">Fila {index + 1}</div>
@@ -57,7 +57,7 @@ function Butaca() {
             </div>
             <div className="container text-center ">
                 <div className="mb-3">
-                    <label for="num_asientos" className="form-label label_text">Indica cuántos asientos quieres</label>
+                    <label htmlFor="num_asientos" className="form-label label_text">Indica cuántos asientos quieres</label>
                     <input
                         type="number"
                         min="0"
