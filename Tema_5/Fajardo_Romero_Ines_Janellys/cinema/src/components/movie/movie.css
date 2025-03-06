@@ -72,10 +72,11 @@ img {
     min-width: 0;
     color: #5c6c75;
     word-wrap: break-word;
+    background: #2F2e2e;
     background-clip: border-box;
     border: 2px solid yellow;
     border-radius: 0.5rem;
-    background: #2F2e2e;
+
 }
 
 .img-fluid, .img-thumbnail {
