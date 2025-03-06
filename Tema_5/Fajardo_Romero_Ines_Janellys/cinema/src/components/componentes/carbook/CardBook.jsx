@@ -63,18 +63,10 @@ export function CardBook({
     );
 }
 
-// PropTypes para validar las propiedades del componente
 CardBook.propTypes = {
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
-    category: PropTypes.string,
     rating: PropTypes.number,
     reviews: PropTypes.number,
-    badges: PropTypes.arrayOf(
-        PropTypes.shape({
-            text: PropTypes.string.isRequired,
-            color: PropTypes.string.isRequired,
-        })
-    ),
 };
