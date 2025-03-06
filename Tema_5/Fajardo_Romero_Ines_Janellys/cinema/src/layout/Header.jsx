@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+import {ButacaProvider} from "../context/butacaContext/ButacaProvider";
 
 function Header(props) {
     return (
@@ -9,3 +11,7 @@ function Header(props) {
     )
 }
 export default Header;
+
+Header.propTypes = {
+    title: PropTypes.string.isRequired, // Asegura que children es un nodo válido y obligatorio
+};

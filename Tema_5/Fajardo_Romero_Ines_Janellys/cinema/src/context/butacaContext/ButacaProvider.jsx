@@ -1,6 +1,7 @@
 import {  useState } from 'react';
 import ButacaContext from './ButacaContext';
 import * as api from "../../services/apiServices";
+import PropTypes from "prop-types";
 
 export function ButacaProvider({ children }) {
     const [ButacaItems, setButacaItems] = useState([]);
@@ -47,3 +48,7 @@ export function ButacaProvider({ children }) {
         </ButacaContext.Provider>
     );
 }
+
+ButacaProvider.propTypes = {
+    children: PropTypes.node.isRequired, // Asegura que children es un nodo válido y obligatorio
+};

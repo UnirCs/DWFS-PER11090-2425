@@ -65,6 +65,7 @@ export function CardBook({
 
 CardBook.propTypes = {
     id: PropTypes.number.isRequired,
+    genre: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     rating: PropTypes.number,

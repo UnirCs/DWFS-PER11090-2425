@@ -57,7 +57,7 @@ function Butaca() {
             </div>
             <div className="container text-center ">
                 <div className="mb-3">
-                    <label className="form-label label_text">Indica cuántos asientos quieres</label>
+                    <label for="num_asientos" className="form-label label_text">Indica cuántos asientos quieres</label>
                     <input
                         type="number"
                         min="0"
