@@ -1,0 +1,97 @@
+.card-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-center.position-relative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-product-action {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card-product-action button {
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-small.mb-1 {
+    margin-bottom: 0.5rem;
+}
+
+.d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+img {
+    margin-right: 0.5rem;
+}
+
+.card-product .btn-action {
+    color: #21313c;
+    height: 34px;
+    width: 34px;
+    font-size: 14px;
+    border-radius: .5rem;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 34px;
+    transition: all .3s ease 0s;
+    box-shadow: 0 2px 4px -1px rgba(145,158,171,.2),0 4px 5px 0 rgba(145,158,171,.14),0 1px 10px 0 rgba(145,158,171,.12);
+    border: none;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    color: #5c6c75;
+    word-wrap: break-word;
+    background: #2F2e2e;
+    background-clip: border-box;
+    border: 2px solid yellow;
+    border-radius: 0.5rem;
+
+}
+
+.img-fluid, .img-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+a img {
+    vertical-align: middle !important;
+}
+
+.mb-3 {
+    margin-bottom: .75rem!important;
+}
+
+.text-font{
+    color: #fff;
+}

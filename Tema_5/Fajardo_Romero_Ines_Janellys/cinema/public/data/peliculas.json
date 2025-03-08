@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "year": 2010,
+    "genre": "Ciencia Ficción, Acción, Aventura",
+    "director": "Christopher Nolan",
+    "plot": "Un ladrón que entra en las mentes de otros a través de sus sueños recibe la oportunidad de borrar su historial criminal si puede realizar con éxito una 'inception'.",
+    "rating": 8.8,
+    "image": "https://image.tmdb.org/t/p/original/xymM5aW6MDcH5AR9I3CamSegJd6.jpg"
+  },
+  {
+    "id": 2,
+    "title": "The Dark Knight",
+    "year": 2008,
+    "genre": "Acción, Crimen, Drama",
+    "director": "Christopher Nolan",
+    "plot": "Batman enfrenta a un nuevo enemigo, el Joker, un genio criminal que busca crear caos en Gotham City.",
+    "rating": 9.0,
+    "image": "https://th.bing.com/th/id/OIP.NN9rKH-vZbFgtH4FuoW7OwHaLH?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": 3,
+    "title": "The Matrix",
+    "year": 1999,
+    "genre": "Acción, Ciencia Ficción",
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "plot": "Un hacker informático descubre la verdadera naturaleza de su realidad y su papel en la guerra contra los controladores de esta.",
+    "rating": 8.7,
+    "image": "https://th.bing.com/th/id/R.b973c86678ff4930c7371205be0682fb?rik=M26tkCgoBVSezw&pid=ImgRaw&r=0"
+  },
+  {
+    "id": 4,
+    "title": "The Godfather",
+    "year": 1972,
+    "genre": "Crimen, Drama",
+    "director": "Francis Ford Coppola",
+    "plot": "El patriarca envejecido de una dinastía criminal transfiere el control de su imperio clandestino a su renuente hijo.",
+    "rating": 9.2,
+    "image": "https://th.bing.com/th/id/OIP.bf9BoG-mwcAEjtyFqykgrQHaLH?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": 5,
+    "title": "Forrest Gump",
+    "year": 1994,
+    "genre": "Drama, Romance",
+    "director": "Robert Zemeckis",
+    "plot": "Las presidencias de Kennedy y Johnson, la guerra de Vietnam, el escándalo de Watergate y otros eventos históricos se desarrollan desde la perspectiva de un hombre de Alabama con una historia de vida extraordinaria.",
+    "rating": 8.8,
+    "image": "https://image.tmdb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg"
+  },
+  {
+    "id": 6,
+    "title": "The Shawshank Redemption",
+    "year": 1994,
+    "genre": "Drama",
+    "director": "Frank Darabont",
+    "plot": "Dos hombres, un preso condenado a cadena perpetua y un trabajador del sistema penitenciario, crean una amistad a lo largo de varios años en la prisión de Shawshank.",
+    "rating": 9.3,
+    "image": "https://image.tmdb.org/t/p/original/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"
+  },
+  {
+    "id": 7,
+    "title": "The Lord of the Rings: The Return of the King",
+    "year": 2003,
+    "genre": "Aventura, Drama, Fantasía",
+    "director": "Peter Jackson",
+    "plot": "Frodo y Sam se embarcan en la última etapa de su viaje para destruir el Anillo Único, mientras que los otros miembros de la Comunidad luchan para derrotar al malvado Sauron.",
+    "rating": 8.9,
+    "image": "https://www.themoviedb.org/t/p/original/dbmVvwTwKxPZoZVz6YYoRv4fumz.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Fight Club",
+    "year": 1999,
+    "genre": "Drama",
+    "director": "David Fincher",
+    "plot": "Un hombre insatisfecho con su vida se une a un club de lucha clandestino dirigido por un hombre carismático y rebelde.",
+    "rating": 8.8,
+    "image": "https://th.bing.com/th/id/OIP.E9QckJAlJ2ievlIVtSjzIAHaLH?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": 9,
+    "title": "Pulp Fiction",
+    "year": 1994,
+    "genre": "Crimen, Drama",
+    "director": "Quentin Tarantino",
+    "plot": "El entrelazado de historias de violencia y redención en Los Ángeles, que involucra a personajes tan diversos como criminales y un boxeador.",
+    "rating": 8.9,
+    "image": "https://image.tmdb.org/t/p/original/gSnbhR0vftfJ2U6KpGmR7WzZlVo.jpg"
+  },
+  {
+    "id": 10,
+    "title": "The Avengers",
+    "year": 2012,
+    "genre": "Acción, Aventura, Ciencia Ficción",
+    "director": "Joss Whedon",
+    "plot": "Los superhéroes más poderosos de la Tierra se unen para luchar contra un invasor alienígena que amenaza con destruir el planeta.",
+    "rating": 8.0,
+    "image": "https://www.themoviedb.org/t/p/original/rWkHFHM8YL7IvEVxXBxgXw79RvX.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Gladiator",
+    "year": 2000,
+    "genre": "Acción, Aventura, Drama",
+    "director": "Ridley Scott",
+    "plot": "Un general romano es traicionado y obligado a convertirse en gladiador. Ahora, busca vengar la muerte de su familia y su emperador.",
+    "rating": 8.5,
+    "image": "https://image.tmdb.org/t/p/original/vK1sK1B3WglfgVWPn6Xj4nNsw1q.jpg"
+  },
+  {
+    "id": 12,
+    "title": "The Lion King",
+    "year": 1994,
+    "genre": "Animación, Aventura, Drama",
+    "director": "Roger Allers, Rob Minkoff",
+    "plot": "Un joven león que debe asumir su lugar como rey tras la muerte de su padre.",
+    "rating": 8.5,
+    "image": "https://www.themoviedb.org/t/p/original/fFPohhQvodv0ahMpwkUZQYHuxpN.jpg"
+  },
+  {
+    "id": 13,
+    "title": "The Silence of the Lambs",
+    "year": 1991,
+    "genre": "Crimen, Drama, Suspenso",
+    "director": "Jonathan Demme",
+    "plot": "Una joven investigadora del FBI busca la ayuda de un asesino en serie encarcelado para capturar a otro asesino.",
+    "rating": 8.6,
+    "image": "https://wallpaperaccess.com/full/1676541.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Interstellar",
+    "year": 2014,
+    "genre": "Aventura, Drama, Ciencia Ficción",
+    "director": "Christopher Nolan",
+    "plot": "Un equipo de astronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.",
+    "rating": 8.6,
+    "image": "https://th.bing.com/th/id/OIP.jVVUF1D1uEuSPvQtvM5uXgHaLH?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": 15,
+    "title": "Schindler's List",
+    "year": 1993,
+    "genre": "Biografía, Drama, Historia",
+    "director": "Steven Spielberg",
+    "plot": "La verdadera historia de Oskar Schindler, un hombre de negocios que salvó a más de mil judíos durante el Holocausto.",
+    "rating": 9.0,
+    "image": "https://th.bing.com/th/id/OIP.Av8QxMYWERjqXtfIsBtGHAHaLH?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": 16,
+    "title": "Star Wars: Episode V - The Empire Strikes Back",
+    "year": 1980,
+    "genre": "Acción, Aventura, Ciencia Ficción",
+    "director": "Irvin Kershner",
+    "plot": "Mientras Luke Skywalker entrena con Yoda, Darth Vader continúa su búsqueda de los rebeldes y su lucha contra el joven Jedi.",
+    "rating": 8.7,
+    "image": "https://image.tmdb.org/t/p/original/iXXSUFpfBKZimPyugKQShUO5NMS.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Back to the Future",
+    "year": 1985,
+    "genre": "Aventura, Comedia, Ciencia Ficción",
+    "director": "Robert Zemeckis",
+    "plot": "Un joven viaja al pasado con la ayuda de una máquina del tiempo y debe asegurarse de que sus padres se conozcan.",
+    "rating": 8.5,
+    "image": "https://www.themoviedb.org/t/p/original/xxVJKT68HdLCyJfi70I0KOOzqGo.jpg"
+  },
+  {
+    "id": 19,
+    "title": "Avatar",
+    "year": 2009,
+    "genre": "Acción, Aventura, Ciencia Ficción",
+    "director": "James Cameron",
+    "plot": "Un ex-marine se infiltra en una tribu alienígena para robarles recursos, pero empieza a cuestionar sus lealtades.",
+    "rating": 7.8,
+    "image": "https://www.themoviedb.org/t/p/original/6EiRUJpuoeQPghrs3YNktfnqOVh.jpg"
+  },
+  {
+    "id": 20,
+    "title": "The Prestige",
+    "year": 2006,
+    "genre": "Drama, Misterio, Suspenso",
+    "director": "Christopher Nolan",
+    "plot": "Dos magos rivales luchan por superar a su competidor a través de una serie de trucos y engaños.",
+    "rating": 8.5,
+    "image": "https://www.themoviedb.org/t/p/original/Ag2B2KHKQPukjH7WutmgnnSNurZ.jpg"
+  },
+  {
+    "id": 21,
+    "title": "Se7en",
+    "year": 1995,
+    "genre": "Crimen, Drama, Misterio",
+    "director": "David Fincher",
+    "plot": "Dos detectives investigan una serie de asesinatos basados en los siete pecados capitales.",
+    "rating": 8.6,
+    "image": "https://th.bing.com/th/id/OIP.kLn708fwHlqYYda01iwFaQHaLH?rs=1&pid=ImgDetMain"
+  },
+  {
+    "id": 22,
+    "title": "The Departed",
+    "year": 2006,
+    "genre": "Crimen, Drama, Suspenso",
+    "director": "Martin Scorsese",
+    "plot": "Un policía se infiltra en una organización criminal mientras un criminal se infiltra en la policía.",
+    "rating": 8.5,
+    "image": "https://th.bing.com/th/id/R.365ab1c4e9a242aaed50fce673633ec9?rik=8XUdu%2bVNQ%2fSqcQ&pid=ImgRaw&r=0"
+  },
+  {
+    "id": 23,
+    "title": "The Social Network",
+    "year": 2010,
+    "genre": "Biografía, Drama",
+    "director": "David Fincher",
+    "plot": "La historia de la creación de Facebook y los conflictos legales que surgieron de ella.",
+    "rating": 8.0,
+    "image": "https://www.themoviedb.org/t/p/original/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg"
+  },
+  {
+    "id": 24,
+    "title": "The Usual Suspects",
+    "year": 1995,
+    "genre": "Crimen, Drama, Misterio",
+    "director": "Bryan Singer",
+    "plot": "Un detective investiga una serie de crímenes vinculados a un misterioso criminal conocido como Keyser Söze.",
+    "rating": 8.5,
+    "image": "https://image.tmdb.org/t/p/original/6Dr8vu5nvjp5x67QfohU1O7xKcO.jpg"
+  }
+]
